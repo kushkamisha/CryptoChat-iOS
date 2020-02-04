@@ -32,7 +32,7 @@
                                 <rect key="frame" x="319" y="206" width="715" height="356"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpc-jx-KZY">
-                                        <rect key="frame" x="526" y="133" width="241" height="90"/>
+                                        <rect key="frame" x="521" y="133" width="241" height="90"/>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="75"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -123,7 +123,7 @@
                                         <viewLayoutGuide key="safeArea" id="1vT-0r-sJl"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3kI-BC-Krl">
-                                        <rect key="frame" x="236" y="144" width="130" height="29"/>
+                                        <rect key="frame" x="236" y="134" width="130" height="29"/>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="14"/>
                                         <state key="normal" title="Forgot a Password?">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -160,10 +160,10 @@
                                     <constraint firstItem="rpc-jx-KZY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XD9-ez-qcG" secondAttribute="leading" constant="20" symbolic="YES" id="98P-ok-Gu3"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Qrm-w1-2tQ" secondAttribute="trailing" constant="20" symbolic="YES" id="AGA-kn-QV2"/>
                                     <constraint firstItem="Qrm-w1-2tQ" firstAttribute="leading" secondItem="XD9-ez-qcG" secondAttribute="leading" constant="20" id="FXX-dz-113"/>
-                                    <constraint firstItem="3kI-BC-Krl" firstAttribute="top" secondItem="LiA-eP-bi1" secondAttribute="bottom" constant="20" id="Jpf-aV-8NG"/>
+                                    <constraint firstItem="3kI-BC-Krl" firstAttribute="top" secondItem="LiA-eP-bi1" secondAttribute="bottom" constant="10" id="Jpf-aV-8NG"/>
                                     <constraint firstItem="rpc-jx-KZY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3kI-BC-Krl" secondAttribute="trailing" constant="8" symbolic="YES" id="M1J-8C-PQI"/>
                                     <constraint firstItem="LiA-eP-bi1" firstAttribute="leading" secondItem="XD9-ez-qcG" secondAttribute="leading" constant="20" id="NhZ-uk-aky"/>
-                                    <constraint firstAttribute="trailing" secondItem="rpc-jx-KZY" secondAttribute="trailing" constant="-52" id="Nt3-HM-YWr"/>
+                                    <constraint firstAttribute="trailing" secondItem="rpc-jx-KZY" secondAttribute="trailing" constant="-47" id="Nt3-HM-YWr"/>
                                     <constraint firstItem="LiA-eP-bi1" firstAttribute="top" secondItem="JAb-AY-4ID" secondAttribute="bottom" constant="20" id="QPV-hG-ydg"/>
                                     <constraint firstItem="SBM-X5-nqB" firstAttribute="leading" secondItem="XD9-ez-qcG" secondAttribute="leading" constant="20" id="W8K-DH-DiT"/>
                                     <constraint firstItem="JAb-AY-4ID" firstAttribute="leading" secondItem="XD9-ez-qcG" secondAttribute="leading" constant="20" id="kNm-Nz-fBL"/>
@@ -201,6 +201,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="138.8671875" y="137.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ekY-yw-uKf">
+            <objects>
+                <viewController id="7c5-gH-Y0g" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jaa-ii-CgZ">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Logged In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ms3-dh-lz4">
+                                <rect key="frame" x="474" y="374" width="76" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Jk3-UD-Pv8"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ol-tz-LSw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="819" y="138"/>
         </scene>
     </scenes>
     <resources>
