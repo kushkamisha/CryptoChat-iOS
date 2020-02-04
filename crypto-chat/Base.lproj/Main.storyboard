@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="crypto_chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="1Fe-dy-sXL">
+                                <rect key="frame" x="20" y="20" width="984" height="728"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XD9-ez-qcG" userLabel="Sign In">
+                                <rect key="frame" x="319" y="206" width="715" height="356"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpc-jx-KZY">
+                                        <rect key="frame" x="526" y="133" width="241" height="90"/>
+                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="75"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.47843137250000001" green="0.54901960780000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="rpc-jx-KZY" firstAttribute="centerY" secondItem="XD9-ez-qcG" secondAttribute="centerY" id="0gc-ys-AbL"/>
+                                    <constraint firstItem="rpc-jx-KZY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XD9-ez-qcG" secondAttribute="leading" constant="20" symbolic="YES" id="98P-ok-Gu3"/>
+                                    <constraint firstAttribute="trailing" secondItem="rpc-jx-KZY" secondAttribute="trailing" constant="-52" id="Nt3-HM-YWr"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JAb-AY-4ID" userLabel="Email" customClass="InputBox" customModule="crypto_chat" customModuleProvider="target">
+                                <rect key="frame" x="339" y="250" width="346" height="42"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="zAu-F5-gT8">
+                                        <rect key="frame" x="91" y="0.0" width="256" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="256" id="fGt-QP-X18"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nte-cw-0JR" userLabel="Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="90.5" height="42"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OK7-AR-FEw" userLabel="Email">
+                                                <rect key="frame" x="25" y="11" width="40.5" height="20"/>
+                                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
+                                                <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="OK7-AR-FEw" firstAttribute="leading" secondItem="Nte-cw-0JR" secondAttribute="leading" constant="25" id="JJr-Tt-WiP"/>
+                                            <constraint firstItem="OK7-AR-FEw" firstAttribute="centerX" secondItem="Nte-cw-0JR" secondAttribute="centerX" id="jnl-t4-cWR"/>
+                                            <constraint firstItem="OK7-AR-FEw" firstAttribute="centerY" secondItem="Nte-cw-0JR" secondAttribute="centerY" id="loZ-MC-Ghb"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="68m-h6-fxi"/>
+                                    <constraint firstItem="zAu-F5-gT8" firstAttribute="leading" secondItem="Nte-cw-0JR" secondAttribute="trailing" id="949-Tc-d4U"/>
+                                    <constraint firstItem="Nte-cw-0JR" firstAttribute="top" secondItem="zAu-F5-gT8" secondAttribute="top" id="Ha0-e7-bz1"/>
+                                    <constraint firstAttribute="width" constant="346" id="Q1I-n0-aag"/>
+                                    <constraint firstAttribute="bottom" secondItem="Nte-cw-0JR" secondAttribute="bottom" id="c5w-3t-pn4"/>
+                                    <constraint firstItem="Nte-cw-0JR" firstAttribute="bottom" secondItem="zAu-F5-gT8" secondAttribute="bottom" id="pac-FT-TKS"/>
+                                    <constraint firstItem="Nte-cw-0JR" firstAttribute="top" secondItem="JAb-AY-4ID" secondAttribute="top" id="rQz-vr-cay"/>
+                                    <constraint firstItem="Nte-cw-0JR" firstAttribute="leading" secondItem="JAb-AY-4ID" secondAttribute="leading" id="uk9-1V-mBV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1Fe-dy-sXL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="NXu-y5-6LC"/>
+                            <constraint firstItem="XD9-ez-qcG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="10" id="NmX-GQ-FcE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Fe-dy-sXL" secondAttribute="trailing" constant="20" id="OLN-JS-BKC"/>
+                            <constraint firstItem="JAb-AY-4ID" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="250" id="Qm6-sW-HeZ"/>
+                            <constraint firstItem="XD9-ez-qcG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Xkq-Wc-XfB"/>
+                            <constraint firstItem="XD9-ez-qcG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="319" id="dXv-yM-t2p"/>
+                            <constraint firstItem="1Fe-dy-sXL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gx7-MH-BDG"/>
+                            <constraint firstItem="XD9-ez-qcG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="206" id="h5x-qE-V9O"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1Fe-dy-sXL" secondAttribute="bottom" constant="20" id="keT-qh-Myb"/>
+                            <constraint firstItem="JAb-AY-4ID" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xwa-Fg-7Kp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailInputLabel" destination="Nte-cw-0JR" id="050-XO-sTo"/>
+                        <outlet property="signInBigLabel" destination="rpc-jx-KZY" id="WXY-yv-ANf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.8671875" y="137.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background.png" width="971" height="680"/>
+    </resources>
+</document>

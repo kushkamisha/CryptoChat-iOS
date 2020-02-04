@@ -1,0 +1,639 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5228DE8E23E9BC6A00D4F08B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228DE8D23E9BC6A00D4F08B /* AppDelegate.swift */; };
+		5228DE9023E9BC6A00D4F08B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228DE8F23E9BC6A00D4F08B /* SceneDelegate.swift */; };
+		5228DE9523E9BC6A00D4F08B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5228DE9323E9BC6A00D4F08B /* Main.storyboard */; };
+		5228DE9723E9BC6C00D4F08B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5228DE9623E9BC6C00D4F08B /* Assets.xcassets */; };
+		5228DE9A23E9BC6C00D4F08B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5228DE9823E9BC6C00D4F08B /* LaunchScreen.storyboard */; };
+		5228DEA523E9BC6C00D4F08B /* crypto_chatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228DEA423E9BC6C00D4F08B /* crypto_chatTests.swift */; };
+		5228DEB023E9BC6C00D4F08B /* crypto_chatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228DEAF23E9BC6C00D4F08B /* crypto_chatUITests.swift */; };
+		5228DEC023E9C05100D4F08B /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5228DEBE23E9C05100D4F08B /* SF-Pro-Text-Regular.otf */; };
+		5228DEC123E9C05100D4F08B /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5228DEBF23E9C05100D4F08B /* SF-Pro-Text-Bold.otf */; };
+		5228DEC423E9C1E100D4F08B /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 5228DEC323E9C1E100D4F08B /* Background.png */; };
+		5228DEC623E9D6AB00D4F08B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228DEC523E9D6AB00D4F08B /* LoginViewController.swift */; };
+		5228DECB23E9DB1700D4F08B /* UIView.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228DECA23E9DB1700D4F08B /* UIView.ext.swift */; };
+		5228DECD23E9E74E00D4F08B /* InputBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228DECC23E9E74E00D4F08B /* InputBox.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5228DEA123E9BC6C00D4F08B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5228DE8223E9BC6A00D4F08B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5228DE8923E9BC6A00D4F08B;
+			remoteInfo = "crypto-chat";
+		};
+		5228DEAC23E9BC6C00D4F08B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5228DE8223E9BC6A00D4F08B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5228DE8923E9BC6A00D4F08B;
+			remoteInfo = "crypto-chat";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5228DE8A23E9BC6A00D4F08B /* crypto-chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "crypto-chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5228DE8D23E9BC6A00D4F08B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5228DE8F23E9BC6A00D4F08B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5228DE9423E9BC6A00D4F08B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5228DE9623E9BC6C00D4F08B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5228DE9923E9BC6C00D4F08B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5228DE9B23E9BC6C00D4F08B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5228DEA023E9BC6C00D4F08B /* crypto-chatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "crypto-chatTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5228DEA423E9BC6C00D4F08B /* crypto_chatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = crypto_chatTests.swift; sourceTree = "<group>"; };
+		5228DEA623E9BC6C00D4F08B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5228DEAB23E9BC6C00D4F08B /* crypto-chatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "crypto-chatUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5228DEAF23E9BC6C00D4F08B /* crypto_chatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = crypto_chatUITests.swift; sourceTree = "<group>"; };
+		5228DEB123E9BC6C00D4F08B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5228DEBE23E9C05100D4F08B /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
+		5228DEBF23E9C05100D4F08B /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
+		5228DEC323E9C1E100D4F08B /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
+		5228DEC523E9D6AB00D4F08B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
+		5228DECA23E9DB1700D4F08B /* UIView.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.ext.swift; sourceTree = "<group>"; };
+		5228DECC23E9E74E00D4F08B /* InputBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputBox.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5228DE8723E9BC6A00D4F08B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5228DE9D23E9BC6C00D4F08B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5228DEA823E9BC6C00D4F08B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5228DE8123E9BC6A00D4F08B = {
+			isa = PBXGroup;
+			children = (
+				5228DE8C23E9BC6A00D4F08B /* crypto-chat */,
+				5228DEA323E9BC6C00D4F08B /* crypto-chatTests */,
+				5228DEAE23E9BC6C00D4F08B /* crypto-chatUITests */,
+				5228DE8B23E9BC6A00D4F08B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5228DE8B23E9BC6A00D4F08B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5228DE8A23E9BC6A00D4F08B /* crypto-chat.app */,
+				5228DEA023E9BC6C00D4F08B /* crypto-chatTests.xctest */,
+				5228DEAB23E9BC6C00D4F08B /* crypto-chatUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5228DE8C23E9BC6A00D4F08B /* crypto-chat */ = {
+			isa = PBXGroup;
+			children = (
+				5228DEC223E9C1D200D4F08B /* Images */,
+				5228DEBD23E9BFED00D4F08B /* Fonts */,
+				5228DEC723E9DA5700D4F08B /* Extensions */,
+				5228DE8D23E9BC6A00D4F08B /* AppDelegate.swift */,
+				5228DE8F23E9BC6A00D4F08B /* SceneDelegate.swift */,
+				5228DEC523E9D6AB00D4F08B /* LoginViewController.swift */,
+				5228DE9323E9BC6A00D4F08B /* Main.storyboard */,
+				5228DE9623E9BC6C00D4F08B /* Assets.xcassets */,
+				5228DE9823E9BC6C00D4F08B /* LaunchScreen.storyboard */,
+				5228DE9B23E9BC6C00D4F08B /* Info.plist */,
+			);
+			path = "crypto-chat";
+			sourceTree = "<group>";
+		};
+		5228DEA323E9BC6C00D4F08B /* crypto-chatTests */ = {
+			isa = PBXGroup;
+			children = (
+				5228DEA423E9BC6C00D4F08B /* crypto_chatTests.swift */,
+				5228DEA623E9BC6C00D4F08B /* Info.plist */,
+			);
+			path = "crypto-chatTests";
+			sourceTree = "<group>";
+		};
+		5228DEAE23E9BC6C00D4F08B /* crypto-chatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5228DEAF23E9BC6C00D4F08B /* crypto_chatUITests.swift */,
+				5228DEB123E9BC6C00D4F08B /* Info.plist */,
+			);
+			path = "crypto-chatUITests";
+			sourceTree = "<group>";
+		};
+		5228DEBD23E9BFED00D4F08B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5228DEBF23E9C05100D4F08B /* SF-Pro-Text-Bold.otf */,
+				5228DEBE23E9C05100D4F08B /* SF-Pro-Text-Regular.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		5228DEC223E9C1D200D4F08B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				5228DEC323E9C1E100D4F08B /* Background.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		5228DEC723E9DA5700D4F08B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5228DECA23E9DB1700D4F08B /* UIView.ext.swift */,
+				5228DECC23E9E74E00D4F08B /* InputBox.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5228DE8923E9BC6A00D4F08B /* crypto-chat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5228DEB423E9BC6C00D4F08B /* Build configuration list for PBXNativeTarget "crypto-chat" */;
+			buildPhases = (
+				5228DE8623E9BC6A00D4F08B /* Sources */,
+				5228DE8723E9BC6A00D4F08B /* Frameworks */,
+				5228DE8823E9BC6A00D4F08B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "crypto-chat";
+			productName = "crypto-chat";
+			productReference = 5228DE8A23E9BC6A00D4F08B /* crypto-chat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5228DE9F23E9BC6C00D4F08B /* crypto-chatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5228DEB723E9BC6C00D4F08B /* Build configuration list for PBXNativeTarget "crypto-chatTests" */;
+			buildPhases = (
+				5228DE9C23E9BC6C00D4F08B /* Sources */,
+				5228DE9D23E9BC6C00D4F08B /* Frameworks */,
+				5228DE9E23E9BC6C00D4F08B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5228DEA223E9BC6C00D4F08B /* PBXTargetDependency */,
+			);
+			name = "crypto-chatTests";
+			productName = "crypto-chatTests";
+			productReference = 5228DEA023E9BC6C00D4F08B /* crypto-chatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5228DEAA23E9BC6C00D4F08B /* crypto-chatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5228DEBA23E9BC6C00D4F08B /* Build configuration list for PBXNativeTarget "crypto-chatUITests" */;
+			buildPhases = (
+				5228DEA723E9BC6C00D4F08B /* Sources */,
+				5228DEA823E9BC6C00D4F08B /* Frameworks */,
+				5228DEA923E9BC6C00D4F08B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5228DEAD23E9BC6C00D4F08B /* PBXTargetDependency */,
+			);
+			name = "crypto-chatUITests";
+			productName = "crypto-chatUITests";
+			productReference = 5228DEAB23E9BC6C00D4F08B /* crypto-chatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5228DE8223E9BC6A00D4F08B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Misha Kushka";
+				TargetAttributes = {
+					5228DE8923E9BC6A00D4F08B = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					5228DE9F23E9BC6C00D4F08B = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 5228DE8923E9BC6A00D4F08B;
+					};
+					5228DEAA23E9BC6C00D4F08B = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 5228DE8923E9BC6A00D4F08B;
+					};
+				};
+			};
+			buildConfigurationList = 5228DE8523E9BC6A00D4F08B /* Build configuration list for PBXProject "crypto-chat" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5228DE8123E9BC6A00D4F08B;
+			productRefGroup = 5228DE8B23E9BC6A00D4F08B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5228DE8923E9BC6A00D4F08B /* crypto-chat */,
+				5228DE9F23E9BC6C00D4F08B /* crypto-chatTests */,
+				5228DEAA23E9BC6C00D4F08B /* crypto-chatUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5228DE8823E9BC6A00D4F08B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5228DE9A23E9BC6C00D4F08B /* LaunchScreen.storyboard in Resources */,
+				5228DEC123E9C05100D4F08B /* SF-Pro-Text-Bold.otf in Resources */,
+				5228DE9723E9BC6C00D4F08B /* Assets.xcassets in Resources */,
+				5228DEC423E9C1E100D4F08B /* Background.png in Resources */,
+				5228DEC023E9C05100D4F08B /* SF-Pro-Text-Regular.otf in Resources */,
+				5228DE9523E9BC6A00D4F08B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5228DE9E23E9BC6C00D4F08B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5228DEA923E9BC6C00D4F08B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5228DE8623E9BC6A00D4F08B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5228DEC623E9D6AB00D4F08B /* LoginViewController.swift in Sources */,
+				5228DECB23E9DB1700D4F08B /* UIView.ext.swift in Sources */,
+				5228DE8E23E9BC6A00D4F08B /* AppDelegate.swift in Sources */,
+				5228DE9023E9BC6A00D4F08B /* SceneDelegate.swift in Sources */,
+				5228DECD23E9E74E00D4F08B /* InputBox.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5228DE9C23E9BC6C00D4F08B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5228DEA523E9BC6C00D4F08B /* crypto_chatTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5228DEA723E9BC6C00D4F08B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5228DEB023E9BC6C00D4F08B /* crypto_chatUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5228DEA223E9BC6C00D4F08B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5228DE8923E9BC6A00D4F08B /* crypto-chat */;
+			targetProxy = 5228DEA123E9BC6C00D4F08B /* PBXContainerItemProxy */;
+		};
+		5228DEAD23E9BC6C00D4F08B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5228DE8923E9BC6A00D4F08B /* crypto-chat */;
+			targetProxy = 5228DEAC23E9BC6C00D4F08B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5228DE9323E9BC6A00D4F08B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5228DE9423E9BC6A00D4F08B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5228DE9823E9BC6C00D4F08B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5228DE9923E9BC6C00D4F08B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5228DEB223E9BC6C00D4F08B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5228DEB323E9BC6C00D4F08B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5228DEB523E9BC6C00D4F08B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9P5NG74SNG;
+				INFOPLIST_FILE = "crypto-chat/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Misha-Kushka.crypto-chat";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5228DEB623E9BC6C00D4F08B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9P5NG74SNG;
+				INFOPLIST_FILE = "crypto-chat/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Misha-Kushka.crypto-chat";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5228DEB823E9BC6C00D4F08B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9P5NG74SNG;
+				INFOPLIST_FILE = "crypto-chatTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Misha-Kushka.crypto-chatTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/crypto-chat.app/crypto-chat";
+			};
+			name = Debug;
+		};
+		5228DEB923E9BC6C00D4F08B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9P5NG74SNG;
+				INFOPLIST_FILE = "crypto-chatTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Misha-Kushka.crypto-chatTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/crypto-chat.app/crypto-chat";
+			};
+			name = Release;
+		};
+		5228DEBB23E9BC6C00D4F08B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9P5NG74SNG;
+				INFOPLIST_FILE = "crypto-chatUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Misha-Kushka.crypto-chatUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "crypto-chat";
+			};
+			name = Debug;
+		};
+		5228DEBC23E9BC6C00D4F08B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9P5NG74SNG;
+				INFOPLIST_FILE = "crypto-chatUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Misha-Kushka.crypto-chatUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "crypto-chat";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5228DE8523E9BC6A00D4F08B /* Build configuration list for PBXProject "crypto-chat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5228DEB223E9BC6C00D4F08B /* Debug */,
+				5228DEB323E9BC6C00D4F08B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5228DEB423E9BC6C00D4F08B /* Build configuration list for PBXNativeTarget "crypto-chat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5228DEB523E9BC6C00D4F08B /* Debug */,
+				5228DEB623E9BC6C00D4F08B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5228DEB723E9BC6C00D4F08B /* Build configuration list for PBXNativeTarget "crypto-chatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5228DEB823E9BC6C00D4F08B /* Debug */,
+				5228DEB923E9BC6C00D4F08B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5228DEBA23E9BC6C00D4F08B /* Build configuration list for PBXNativeTarget "crypto-chatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5228DEBB23E9BC6C00D4F08B /* Debug */,
+				5228DEBC23E9BC6C00D4F08B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5228DE8223E9BC6A00D4F08B /* Project object */;
+}
