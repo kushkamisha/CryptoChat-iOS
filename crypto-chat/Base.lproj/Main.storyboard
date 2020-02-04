@@ -52,21 +52,22 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JAb-AY-4ID" userLabel="Email" customClass="InputBox" customModule="crypto_chat" customModuleProvider="target">
-                                <rect key="frame" x="339" y="250" width="346" height="42"/>
+                                <rect key="frame" x="339" y="225" width="346" height="42"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="zAu-F5-gT8">
-                                        <rect key="frame" x="91" y="0.0" width="256" height="42"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="email@example.com" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="zAu-F5-gT8">
+                                        <rect key="frame" x="120" y="0.0" width="226" height="42"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="256" id="fGt-QP-X18"/>
+                                            <constraint firstAttribute="width" constant="226" id="fGt-QP-X18"/>
                                         </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nte-cw-0JR" userLabel="Label">
-                                        <rect key="frame" x="0.0" y="0.0" width="90.5" height="42"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="42"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OK7-AR-FEw" userLabel="Email">
-                                                <rect key="frame" x="25" y="11" width="40.5" height="20"/>
+                                                <rect key="frame" x="30" y="11" width="40.5" height="20"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
                                                 <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -74,8 +75,8 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="OK7-AR-FEw" firstAttribute="leading" secondItem="Nte-cw-0JR" secondAttribute="leading" constant="25" id="JJr-Tt-WiP"/>
-                                            <constraint firstItem="OK7-AR-FEw" firstAttribute="centerX" secondItem="Nte-cw-0JR" secondAttribute="centerX" id="jnl-t4-cWR"/>
+                                            <constraint firstItem="OK7-AR-FEw" firstAttribute="leading" secondItem="Nte-cw-0JR" secondAttribute="leading" constant="30" id="JJr-Tt-WiP"/>
+                                            <constraint firstItem="OK7-AR-FEw" firstAttribute="centerX" secondItem="Nte-cw-0JR" secondAttribute="centerX" constant="0.25" id="jnl-t4-cWR"/>
                                             <constraint firstItem="OK7-AR-FEw" firstAttribute="centerY" secondItem="Nte-cw-0JR" secondAttribute="centerY" id="loZ-MC-Ghb"/>
                                         </constraints>
                                     </view>
@@ -83,7 +84,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="68m-h6-fxi"/>
-                                    <constraint firstItem="zAu-F5-gT8" firstAttribute="leading" secondItem="Nte-cw-0JR" secondAttribute="trailing" id="949-Tc-d4U"/>
+                                    <constraint firstItem="zAu-F5-gT8" firstAttribute="leading" secondItem="Nte-cw-0JR" secondAttribute="trailing" constant="20" id="949-Tc-d4U"/>
                                     <constraint firstItem="Nte-cw-0JR" firstAttribute="top" secondItem="zAu-F5-gT8" secondAttribute="top" id="Ha0-e7-bz1"/>
                                     <constraint firstAttribute="width" constant="346" id="Q1I-n0-aag"/>
                                     <constraint firstAttribute="bottom" secondItem="Nte-cw-0JR" secondAttribute="bottom" id="c5w-3t-pn4"/>
@@ -92,24 +93,70 @@
                                     <constraint firstItem="Nte-cw-0JR" firstAttribute="leading" secondItem="JAb-AY-4ID" secondAttribute="leading" id="uk9-1V-mBV"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LiA-eP-bi1" userLabel="Pass" customClass="InputBox" customModule="crypto_chat" customModuleProvider="target">
+                                <rect key="frame" x="339" y="287" width="346" height="42"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="********" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="FVs-hp-1jH" userLabel="********">
+                                        <rect key="frame" x="120" y="0.0" width="226" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="226" id="PNT-S6-AZ5"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vbh-UJ-R31" userLabel="Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="42"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pass" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUt-4t-8F4" userLabel="Pass">
+                                                <rect key="frame" x="30" y="11" width="35.5" height="20"/>
+                                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
+                                                <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="xUt-4t-8F4" firstAttribute="centerY" secondItem="Vbh-UJ-R31" secondAttribute="centerY" id="26l-7Y-S4j"/>
+                                            <constraint firstItem="xUt-4t-8F4" firstAttribute="leading" secondItem="Vbh-UJ-R31" secondAttribute="leading" constant="30" id="QQo-GQ-x3D"/>
+                                            <constraint firstItem="xUt-4t-8F4" firstAttribute="centerX" secondItem="Vbh-UJ-R31" secondAttribute="centerX" constant="-2.25" id="cIS-JU-zGt"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="ADM-CA-5K5"/>
+                                    <constraint firstItem="Vbh-UJ-R31" firstAttribute="bottom" secondItem="FVs-hp-1jH" secondAttribute="bottom" id="HNa-q0-hbd"/>
+                                    <constraint firstItem="FVs-hp-1jH" firstAttribute="leading" secondItem="Vbh-UJ-R31" secondAttribute="trailing" constant="20" id="Ks8-mR-lDR"/>
+                                    <constraint firstItem="Vbh-UJ-R31" firstAttribute="leading" secondItem="LiA-eP-bi1" secondAttribute="leading" id="SOU-h0-QU6"/>
+                                    <constraint firstAttribute="bottom" secondItem="Vbh-UJ-R31" secondAttribute="bottom" id="Z8n-Qx-cLY"/>
+                                    <constraint firstAttribute="width" constant="346" id="cm5-Hm-reH"/>
+                                    <constraint firstItem="Vbh-UJ-R31" firstAttribute="top" secondItem="FVs-hp-1jH" secondAttribute="top" id="ooI-D5-slp"/>
+                                    <constraint firstItem="Vbh-UJ-R31" firstAttribute="top" secondItem="LiA-eP-bi1" secondAttribute="top" id="zmm-XC-Ats"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="1vT-0r-sJl"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="1Fe-dy-sXL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="NXu-y5-6LC"/>
                             <constraint firstItem="XD9-ez-qcG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="10" id="NmX-GQ-FcE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Fe-dy-sXL" secondAttribute="trailing" constant="20" id="OLN-JS-BKC"/>
-                            <constraint firstItem="JAb-AY-4ID" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="250" id="Qm6-sW-HeZ"/>
+                            <constraint firstItem="LiA-eP-bi1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PV8-Q5-14i"/>
+                            <constraint firstItem="JAb-AY-4ID" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="225" id="Qm6-sW-HeZ"/>
                             <constraint firstItem="XD9-ez-qcG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Xkq-Wc-XfB"/>
                             <constraint firstItem="XD9-ez-qcG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="319" id="dXv-yM-t2p"/>
                             <constraint firstItem="1Fe-dy-sXL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gx7-MH-BDG"/>
                             <constraint firstItem="XD9-ez-qcG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="206" id="h5x-qE-V9O"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1Fe-dy-sXL" secondAttribute="bottom" constant="20" id="keT-qh-Myb"/>
                             <constraint firstItem="JAb-AY-4ID" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xwa-Fg-7Kp"/>
+                            <constraint firstItem="LiA-eP-bi1" firstAttribute="top" secondItem="JAb-AY-4ID" secondAttribute="bottom" constant="20" id="y2B-9R-K8o"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="emailInputLabel" destination="Nte-cw-0JR" id="050-XO-sTo"/>
+                        <outlet property="passInputLabel" destination="Vbh-UJ-R31" id="MXF-bp-qep"/>
                         <outlet property="signInBigLabel" destination="rpc-jx-KZY" id="WXY-yv-ANf"/>
                     </connections>
                 </viewController>
