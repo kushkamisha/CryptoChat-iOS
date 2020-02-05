@@ -32,7 +32,8 @@ class LoginViewController: UIViewController {
                     if (status == "success") {
                         debugPrint("success")
                     } else {
-                        let alert = UIAlertController(title: "Oops", message: "loginError", preferredStyle: .alert)
+//                        NSLocalizedString("Email or password is incorrect. Please, try again", comment: "")
+                        let alert = UIAlertController(title: NSLocalizedString("Oops", comment: ""), message: NSLocalizedString("loginError", comment: ""), preferredStyle: .alert)
                         self.present(alert, animated: true)
                         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                     }

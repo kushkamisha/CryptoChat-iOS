@@ -173,6 +173,7 @@
                                     <constraint firstItem="Qrm-w1-2tQ" firstAttribute="leading" secondItem="XD9-ez-qcG" secondAttribute="leading" constant="20" id="FXX-dz-113"/>
                                     <constraint firstItem="3kI-BC-Krl" firstAttribute="leading" secondItem="XD9-ez-qcG" secondAttribute="leading" constant="20" id="GIS-V9-2gs"/>
                                     <constraint firstItem="LiA-eP-bi1" firstAttribute="leading" secondItem="XD9-ez-qcG" secondAttribute="leading" constant="20" id="NhZ-uk-aky"/>
+                                    <constraint firstItem="rpc-jx-KZY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3kI-BC-Krl" secondAttribute="trailing" constant="8" symbolic="YES" id="Nny-Mc-adG"/>
                                     <constraint firstAttribute="trailing" secondItem="rpc-jx-KZY" secondAttribute="trailing" constant="-47" id="Nt3-HM-YWr"/>
                                     <constraint firstItem="LiA-eP-bi1" firstAttribute="top" secondItem="JAb-AY-4ID" secondAttribute="bottom" constant="20" id="QPV-hG-ydg"/>
                                     <constraint firstItem="SBM-X5-nqB" firstAttribute="leading" secondItem="XD9-ez-qcG" secondAttribute="leading" constant="20" id="W8K-DH-DiT"/>
