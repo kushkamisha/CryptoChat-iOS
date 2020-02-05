@@ -24,6 +24,8 @@
 		5228DECF23E9F83200D4F08B /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228DECE23E9F83200D4F08B /* MyButton.swift */; };
 		524B082623EB001800DB4ECF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524B082523EB001800DB4ECF /* ViewController.swift */; };
 		525691DC23EB237100DB09D9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 525691DE23EB237100DB09D9 /* Localizable.strings */; };
+		525691E123EB360700DB09D9 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525691E023EB360700DB09D9 /* MessagesViewController.swift */; };
+		525691E323EB443000DB09D9 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525691E223EB443000DB09D9 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		525691D923EB1D1B00DB09D9 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		525691DD23EB237100DB09D9 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		525691DF23EB241000DB09D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		525691E023EB360700DB09D9 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		525691E223EB443000DB09D9 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		B27DD069B7C70D0AAAB9A897 /* Pods_crypto_chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_crypto_chat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3679EE945E128D810648400 /* Pods-crypto-chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-crypto-chat.debug.xcconfig"; path = "Target Support Files/Pods-crypto-chat/Pods-crypto-chat.debug.xcconfig"; sourceTree = "<group>"; };
 		E5E61724F7728D6D33303528 /* Pods-crypto-chat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-crypto-chat.release.xcconfig"; path = "Target Support Files/Pods-crypto-chat/Pods-crypto-chat.release.xcconfig"; sourceTree = "<group>"; };
@@ -140,6 +144,7 @@
 				5228DE8F23E9BC6A00D4F08B /* SceneDelegate.swift */,
 				5228DEC523E9D6AB00D4F08B /* LoginViewController.swift */,
 				5228DE9323E9BC6A00D4F08B /* Main.storyboard */,
+				525691E023EB360700DB09D9 /* MessagesViewController.swift */,
 				5228DE9623E9BC6C00D4F08B /* Assets.xcassets */,
 				5228DE9823E9BC6C00D4F08B /* LaunchScreen.storyboard */,
 				5228DE9B23E9BC6C00D4F08B /* Info.plist */,
@@ -190,6 +195,7 @@
 				5228DECA23E9DB1700D4F08B /* UIView.ext.swift */,
 				5228DECC23E9E74E00D4F08B /* InputBox.swift */,
 				5228DECE23E9F83200D4F08B /* MyButton.swift */,
+				525691E223EB443000DB09D9 /* Utils.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -385,10 +391,12 @@
 			files = (
 				5228DEC623E9D6AB00D4F08B /* LoginViewController.swift in Sources */,
 				5228DECB23E9DB1700D4F08B /* UIView.ext.swift in Sources */,
+				525691E323EB443000DB09D9 /* Utils.swift in Sources */,
 				5228DE8E23E9BC6A00D4F08B /* AppDelegate.swift in Sources */,
 				5228DE9023E9BC6A00D4F08B /* SceneDelegate.swift in Sources */,
 				524B082623EB001800DB4ECF /* ViewController.swift in Sources */,
 				5228DECD23E9E74E00D4F08B /* InputBox.swift in Sources */,
+				525691E123EB360700DB09D9 /* MessagesViewController.swift in Sources */,
 				5228DECF23E9F83200D4F08B /* MyButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
