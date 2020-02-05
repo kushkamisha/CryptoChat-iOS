@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0781141A6A825356B61DC018 /* Pods_crypto_chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27DD069B7C70D0AAAB9A897 /* Pods_crypto_chat.framework */; };
 		5228DE8E23E9BC6A00D4F08B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228DE8D23E9BC6A00D4F08B /* AppDelegate.swift */; };
 		5228DE9023E9BC6A00D4F08B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228DE8F23E9BC6A00D4F08B /* SceneDelegate.swift */; };
 		5228DE9523E9BC6A00D4F08B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5228DE9323E9BC6A00D4F08B /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 		5228DECB23E9DB1700D4F08B /* UIView.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228DECA23E9DB1700D4F08B /* UIView.ext.swift */; };
 		5228DECD23E9E74E00D4F08B /* InputBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228DECC23E9E74E00D4F08B /* InputBox.swift */; };
 		5228DECF23E9F83200D4F08B /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228DECE23E9F83200D4F08B /* MyButton.swift */; };
+		524B082623EB001800DB4ECF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524B082523EB001800DB4ECF /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5228DE8A23E9BC6A00D4F08B /* crypto-chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "crypto-chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5228DE8A23E9BC6A00D4F08B /* Crypto Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crypto Chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5228DE8D23E9BC6A00D4F08B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5228DE8F23E9BC6A00D4F08B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5228DE9423E9BC6A00D4F08B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,6 +63,12 @@
 		5228DECA23E9DB1700D4F08B /* UIView.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.ext.swift; sourceTree = "<group>"; };
 		5228DECC23E9E74E00D4F08B /* InputBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputBox.swift; sourceTree = "<group>"; };
 		5228DECE23E9F83200D4F08B /* MyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
+		524B082523EB001800DB4ECF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		525691D823EB1D1B00DB09D9 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Main.strings; sourceTree = "<group>"; };
+		525691D923EB1D1B00DB09D9 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		B27DD069B7C70D0AAAB9A897 /* Pods_crypto_chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_crypto_chat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3679EE945E128D810648400 /* Pods-crypto-chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-crypto-chat.debug.xcconfig"; path = "Target Support Files/Pods-crypto-chat/Pods-crypto-chat.debug.xcconfig"; sourceTree = "<group>"; };
+		E5E61724F7728D6D33303528 /* Pods-crypto-chat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-crypto-chat.release.xcconfig"; path = "Target Support Files/Pods-crypto-chat/Pods-crypto-chat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0781141A6A825356B61DC018 /* Pods_crypto_chat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +97,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B769D74112AB9C43E9875D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B27DD069B7C70D0AAAB9A897 /* Pods_crypto_chat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5228DE8123E9BC6A00D4F08B = {
 			isa = PBXGroup;
 			children = (
@@ -95,13 +112,15 @@
 				5228DEA323E9BC6C00D4F08B /* crypto-chatTests */,
 				5228DEAE23E9BC6C00D4F08B /* crypto-chatUITests */,
 				5228DE8B23E9BC6A00D4F08B /* Products */,
+				764DE826A94ABC44ADC6E730 /* Pods */,
+				4B769D74112AB9C43E9875D0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		5228DE8B23E9BC6A00D4F08B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5228DE8A23E9BC6A00D4F08B /* crypto-chat.app */,
+				5228DE8A23E9BC6A00D4F08B /* Crypto Chat.app */,
 				5228DEA023E9BC6C00D4F08B /* crypto-chatTests.xctest */,
 				5228DEAB23E9BC6C00D4F08B /* crypto-chatUITests.xctest */,
 			);
@@ -121,6 +140,7 @@
 				5228DE9623E9BC6C00D4F08B /* Assets.xcassets */,
 				5228DE9823E9BC6C00D4F08B /* LaunchScreen.storyboard */,
 				5228DE9B23E9BC6C00D4F08B /* Info.plist */,
+				524B082523EB001800DB4ECF /* ViewController.swift */,
 			);
 			path = "crypto-chat";
 			sourceTree = "<group>";
@@ -170,6 +190,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		764DE826A94ABC44ADC6E730 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D3679EE945E128D810648400 /* Pods-crypto-chat.debug.xcconfig */,
+				E5E61724F7728D6D33303528 /* Pods-crypto-chat.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -177,9 +206,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5228DEB423E9BC6C00D4F08B /* Build configuration list for PBXNativeTarget "crypto-chat" */;
 			buildPhases = (
+				C196F070600108A1152369CB /* [CP] Check Pods Manifest.lock */,
 				5228DE8623E9BC6A00D4F08B /* Sources */,
 				5228DE8723E9BC6A00D4F08B /* Frameworks */,
 				5228DE8823E9BC6A00D4F08B /* Resources */,
+				712F4BB9DC67F67B42971192 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -187,7 +218,7 @@
 			);
 			name = "crypto-chat";
 			productName = "crypto-chat";
-			productReference = 5228DE8A23E9BC6A00D4F08B /* crypto-chat.app */;
+			productReference = 5228DE8A23E9BC6A00D4F08B /* Crypto Chat.app */;
 			productType = "com.apple.product-type.application";
 		};
 		5228DE9F23E9BC6C00D4F08B /* crypto-chatTests */ = {
@@ -256,6 +287,15 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
+				he,
+				"zh-Hans",
+				ja,
+				es,
+				it,
+				"zh-Hant",
+				fr,
+				uk,
 			);
 			mainGroup = 5228DE8123E9BC6A00D4F08B;
 			productRefGroup = 5228DE8B23E9BC6A00D4F08B /* Products */;
@@ -299,6 +339,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		712F4BB9DC67F67B42971192 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-crypto-chat/Pods-crypto-chat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-crypto-chat/Pods-crypto-chat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-crypto-chat/Pods-crypto-chat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C196F070600108A1152369CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-crypto-chat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5228DE8623E9BC6A00D4F08B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -308,6 +390,7 @@
 				5228DECB23E9DB1700D4F08B /* UIView.ext.swift in Sources */,
 				5228DE8E23E9BC6A00D4F08B /* AppDelegate.swift in Sources */,
 				5228DE9023E9BC6A00D4F08B /* SceneDelegate.swift in Sources */,
+				524B082623EB001800DB4ECF /* ViewController.swift in Sources */,
 				5228DECD23E9E74E00D4F08B /* InputBox.swift in Sources */,
 				5228DECF23E9F83200D4F08B /* MyButton.swift in Sources */,
 			);
@@ -349,6 +432,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				5228DE9423E9BC6A00D4F08B /* Base */,
+				525691D823EB1D1B00DB09D9 /* uk */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -357,6 +441,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				5228DE9923E9BC6C00D4F08B /* Base */,
+				525691D923EB1D1B00DB09D9 /* uk */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -480,6 +565,7 @@
 		};
 		5228DEB523E9BC6C00D4F08B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3679EE945E128D810648400 /* Pods-crypto-chat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -490,7 +576,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Misha-Kushka.crypto-chat";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Crypto Chat";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -498,6 +584,7 @@
 		};
 		5228DEB623E9BC6C00D4F08B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5E61724F7728D6D33303528 /* Pods-crypto-chat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -508,7 +595,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Misha-Kushka.crypto-chat";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Crypto Chat";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

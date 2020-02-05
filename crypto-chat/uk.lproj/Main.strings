@@ -1,0 +1,27 @@
+
+/* Class = "UIButton"; normalTitle = "Forgot a Password?"; ObjectID = "3kI-BC-Krl"; */
+"3kI-BC-Krl.normalTitle" = "Забули пароль?";
+
+/* Class = "UITextField"; text = "********"; ObjectID = "FVs-hp-1jH"; */
+"FVs-hp-1jH.text" = "********";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "OK7-AR-FEw"; */
+"OK7-AR-FEw.text" = "Email";
+
+/* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "Qrm-w1-2tQ"; */
+"Qrm-w1-2tQ.normalTitle" = "Зареєструватися";
+
+/* Class = "UIButton"; normalTitle = "Sign In"; ObjectID = "SBM-X5-nqB"; */
+"SBM-X5-nqB.normalTitle" = "Увійти";
+
+/* Class = "UILabel"; text = "Logged In"; ObjectID = "ms3-dh-lz4"; */
+"ms3-dh-lz4.text" = "Logged In";
+
+/* Class = "UILabel"; text = "Sign In"; ObjectID = "rpc-jx-KZY"; */
+"rpc-jx-KZY.text" = "Увійти";
+
+/* Class = "UILabel"; text = "Pass"; ObjectID = "xUt-4t-8F4"; */
+"xUt-4t-8F4.text" = "Пароль";
+
+/* Class = "UITextField"; text = "email@example.com"; ObjectID = "zAu-F5-gT8"; */
+"zAu-F5-gT8.text" = "email@example.com";
