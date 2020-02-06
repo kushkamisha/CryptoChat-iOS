@@ -54,7 +54,7 @@ class LoginViewController: UIViewController {
                     let dict = data as! NSDictionary
                     let status = dict["status"] as! String
                     if (status == "success") {
-                        self.navigateToScreen(screenName: "NavigationScreen")
+                        self.navigateToScreen(screenName: "MessagesScreen")
                     } else {
                         let alert = UIAlertController(title: NSLocalizedString("Oops", comment: ""), message: NSLocalizedString("loginError", comment: ""), preferredStyle: .alert)
                         self.present(alert, animated: true)
