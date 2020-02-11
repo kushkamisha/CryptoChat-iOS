@@ -31,9 +31,9 @@ class ChatViewController: UIViewController {
     func fillChats() -> [Chat] {
         var tmpChats: [Chat] = []
         
-        let chat1 = Chat(avatar: #imageLiteral(resourceName: "user-1"), chatType: #imageLiteral(resourceName: "unlocked"), username: "Ann Ketnye", message: "Do you know what does word \"thief\" mean?", msgTime: "just now")
-        let chat2 = Chat(avatar: #imageLiteral(resourceName: "user-3"), chatType: #imageLiteral(resourceName: "free"), username: "Bro Walker", message: "Hi, man. What's up?", msgTime: "5 minutes ago")
-        let chat3 = Chat(avatar: #imageLiteral(resourceName: "user-2"), chatType: #imageLiteral(resourceName: "free"), username: "Susanna", message: "You won't believe in what was just happened!!", msgTime: "3 hours ago")
+        let chat1 = Chat(avatar: #imageLiteral(resourceName: "user-1"), chatType: #imageLiteral(resourceName: "unlocked"), chatTypeSelected: #imageLiteral(resourceName: "unlocked white"), username: "Ann Ketnye", message: "Do you know what does word \"thief\" mean?", msgTime: "just now")
+        let chat2 = Chat(avatar: #imageLiteral(resourceName: "user-3"), chatType: #imageLiteral(resourceName: "free"), chatTypeSelected: #imageLiteral(resourceName: "free white"), username: "Bro Walker", message: "Hi, man. What's up?", msgTime: "5 minutes ago")
+        let chat3 = Chat(avatar: #imageLiteral(resourceName: "user-2"), chatType: #imageLiteral(resourceName: "free"), chatTypeSelected: #imageLiteral(resourceName: "free white"), username: "Susanna", message: "You won't believe in what was just happened!!", msgTime: "3 hours ago")
         
         tmpChats.append(chat1)
         tmpChats.append(chat2)
@@ -55,7 +55,13 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChatCell") as! ChatCell
         cell.setChat(chat: chat)
         
+        cell.selectionColor = UIColor.init(red: 122/255, green: 140/255, blue: 255/255, alpha: 1)
+        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Row number \(indexPath.row) is selected")
     }
     
 }

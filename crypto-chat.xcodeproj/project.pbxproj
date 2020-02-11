@@ -10,6 +10,7 @@
 		0781141A6A825356B61DC018 /* Pods_crypto_chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27DD069B7C70D0AAAB9A897 /* Pods_crypto_chat.framework */; };
 		5225A4D323F2B3DC00EB677B /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5225A4D223F2B3DC00EB677B /* ChatCell.swift */; };
 		5225A4D523F2B53E00EB677B /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5225A4D423F2B53E00EB677B /* Chat.swift */; };
+		5225A4D723F2EBC800EB677B /* TableViewCell.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5225A4D623F2EBC800EB677B /* TableViewCell.ext.swift */; };
 		5228DE8E23E9BC6A00D4F08B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228DE8D23E9BC6A00D4F08B /* AppDelegate.swift */; };
 		5228DE9023E9BC6A00D4F08B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228DE8F23E9BC6A00D4F08B /* SceneDelegate.swift */; };
 		5228DE9523E9BC6A00D4F08B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5228DE9323E9BC6A00D4F08B /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 		5225A4D123F2ACF500EB677B /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
 		5225A4D223F2B3DC00EB677B /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatCell.swift; path = "crypto-chat/ChatCell.swift"; sourceTree = SOURCE_ROOT; };
 		5225A4D423F2B53E00EB677B /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		5225A4D623F2EBC800EB677B /* TableViewCell.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.ext.swift; sourceTree = "<group>"; };
 		5228DE8A23E9BC6A00D4F08B /* Crypto Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crypto Chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5228DE8D23E9BC6A00D4F08B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5228DE8F23E9BC6A00D4F08B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				5228DECC23E9E74E00D4F08B /* InputBox.swift */,
 				5228DECE23E9F83200D4F08B /* MyButton.swift */,
 				525691E223EB443000DB09D9 /* Utils.swift */,
+				5225A4D623F2EBC800EB677B /* TableViewCell.ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5225A4D323F2B3DC00EB677B /* ChatCell.swift in Sources */,
+				5225A4D723F2EBC800EB677B /* TableViewCell.ext.swift in Sources */,
 				5228DEC623E9D6AB00D4F08B /* LoginViewController.swift in Sources */,
 				5228DECB23E9DB1700D4F08B /* UIView.ext.swift in Sources */,
 				525691E323EB443000DB09D9 /* Utils.swift in Sources */,

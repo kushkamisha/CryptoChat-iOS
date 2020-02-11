@@ -13,13 +13,15 @@ class Chat {
     
     var avatar: UIImage
     var chatType: UIImage
+    var chatTypeSelected: UIImage
     var username: String
     var message: String
     var msgTime: String
     
-    init (avatar: UIImage, chatType: UIImage, username: String, message: String, msgTime: String) {
+    init (avatar: UIImage, chatType: UIImage, chatTypeSelected: UIImage, username: String, message: String, msgTime: String) {
         self.avatar = avatar
         self.chatType = chatType
+        self.chatTypeSelected = chatTypeSelected
         self.username = username
         self.message = message
         self.msgTime = msgTime

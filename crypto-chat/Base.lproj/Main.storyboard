@@ -254,14 +254,14 @@
                                     <constraint firstAttribute="height" constant="70" id="Lxm-YK-O42"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r8Y-Sp-7jj">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r8Y-Sp-7jj">
                                 <rect key="frame" x="0.0" y="70" width="360" height="698"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="360" id="Ftk-Tc-Hh7"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatCell" rowHeight="75" id="RjV-FA-r2L" customClass="ChatCell" customModule="Crypto_Chat" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" indentationWidth="10" reuseIdentifier="ChatCell" rowHeight="75" id="RjV-FA-r2L" customClass="ChatCell" customModule="Crypto_Chat" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="360" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RjV-FA-r2L" id="Ed0-xe-DRp">
@@ -280,6 +280,13 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="25" id="7If-kJ-bIR"/>
                                                         <constraint firstAttribute="width" secondItem="JYu-Ca-elK" secondAttribute="height" multiplier="1:1" id="GlT-Bc-V4x"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kAl-fX-wD1" userLabel="Chat type selected">
+                                                    <rect key="frame" x="315" y="25" width="25" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="kAl-fX-wD1" secondAttribute="height" multiplier="1:1" id="Nta-BS-lac"/>
+                                                        <constraint firstAttribute="width" constant="25" id="a96-D9-uiP"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Az9-Fz-fie">
@@ -325,18 +332,21 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="kAl-fX-wD1" secondAttribute="trailing" constant="5" id="27d-ce-GTX"/>
                                                 <constraint firstItem="JYu-Ca-elK" firstAttribute="centerY" secondItem="Ed0-xe-DRp" secondAttribute="centerY" id="5eL-HI-h6W"/>
                                                 <constraint firstItem="Az9-Fz-fie" firstAttribute="centerY" secondItem="Ed0-xe-DRp" secondAttribute="centerY" id="Cje-wQ-cpf"/>
                                                 <constraint firstItem="Ans-HW-ncC" firstAttribute="leading" secondItem="Ed0-xe-DRp" secondAttribute="leadingMargin" constant="5" id="XtO-Jr-B69"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="JYu-Ca-elK" secondAttribute="trailing" constant="5" id="dpu-On-iR5"/>
                                                 <constraint firstItem="Az9-Fz-fie" firstAttribute="leading" secondItem="Ans-HW-ncC" secondAttribute="trailing" constant="8" id="hUW-sN-a8g"/>
                                                 <constraint firstItem="Ans-HW-ncC" firstAttribute="centerY" secondItem="Ed0-xe-DRp" secondAttribute="centerY" id="ng7-r5-WNn"/>
+                                                <constraint firstItem="kAl-fX-wD1" firstAttribute="centerY" secondItem="Ed0-xe-DRp" secondAttribute="centerY" id="npf-rg-V97"/>
                                                 <constraint firstItem="JYu-Ca-elK" firstAttribute="leading" secondItem="Az9-Fz-fie" secondAttribute="trailing" constant="8" id="yOx-v5-pij"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="avatarImageView" destination="Ans-HW-ncC" id="DxO-Om-Q6K"/>
                                             <outlet property="chatTypeImageView" destination="JYu-Ca-elK" id="y6D-cw-yuW"/>
+                                            <outlet property="chatTypeSelected" destination="kAl-fX-wD1" id="cdu-JO-QpK"/>
                                             <outlet property="msgTimeLabel" destination="k5h-E3-FKU" id="4QE-ua-3G4"/>
                                             <outlet property="userMsgLabel" destination="fzO-EV-U64" id="5RE-oN-6xs"/>
                                             <outlet property="usernameLabel" destination="FgS-rx-MT9" id="JUJ-EL-fg7"/>
