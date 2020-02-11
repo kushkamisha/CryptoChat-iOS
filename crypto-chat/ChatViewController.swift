@@ -20,6 +20,7 @@ class ChatViewController: UIViewController {
         setStatusBarBackgroundColor(color : UIColor.init(red: 122/255, green: 140/255, blue: 255/255, alpha: 1))
         
         chats = fillChats()
+        tableView.rowHeight = 75
     }
     
     override var preferredStatusBarStyle : UIStatusBarStyle {
