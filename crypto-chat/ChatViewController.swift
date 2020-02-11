@@ -13,6 +13,10 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var searchUserBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var topBarUsername: UILabel!
+    @IBOutlet weak var topBarAvatar: UIImageView!
+    @IBOutlet weak var topBarChatType: UIImageView!
+    
     var chats: [Chat] = []
     
     override func viewDidLoad() {
@@ -62,6 +66,11 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Row number \(indexPath.row) is selected")
+//        print(chats[indexPath.row].username)
+//        print(topBarUsername.text)
+        topBarUsername.text = chats[indexPath.row].username
+        topBarAvatar.image = chats[indexPath.row].avatar
+        topBarChatType.image = chats[indexPath.row].chatTypeSelected
     }
     
 }

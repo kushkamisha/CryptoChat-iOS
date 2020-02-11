@@ -243,15 +243,87 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GOq-RQ-6ga">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="70"/>
                                 <subviews>
-                                    <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5PR-J9-mDg">
-                                        <rect key="frame" x="43" y="13" width="275" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="5PR-J9-mDg">
+                                        <rect key="frame" x="65" y="7" width="230" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="cOd-QY-Iev"/>
+                                            <constraint firstAttribute="width" constant="230" id="tkf-G3-5ZL"/>
+                                        </constraints>
                                         <textInputTraits key="textInputTraits"/>
                                     </searchBar>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings" translatesAutoresizingMaskIntoConstraints="NO" id="j67-Vi-djx">
+                                        <rect key="frame" x="20" y="22.5" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="j67-Vi-djx" secondAttribute="height" multiplier="1:1" id="MZQ-f7-YvN"/>
+                                            <constraint firstAttribute="width" constant="25" id="mYe-jG-vzO"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filter" translatesAutoresizingMaskIntoConstraints="NO" id="EQ4-HR-ITR">
+                                        <rect key="frame" x="315" y="22.5" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="EQ4-HR-ITR" secondAttribute="height" multiplier="1:1" id="4wY-av-krK"/>
+                                            <constraint firstAttribute="width" constant="25" id="aOJ-jS-9FY"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filter" translatesAutoresizingMaskIntoConstraints="NO" id="Eb2-ro-vJR">
+                                        <rect key="frame" x="979" y="22.5" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Eb2-ro-vJR" secondAttribute="height" multiplier="1:1" id="e5F-K5-d7j"/>
+                                            <constraint firstAttribute="width" constant="25" id="rgj-RY-Bcr"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="video call" translatesAutoresizingMaskIntoConstraints="NO" id="V14-ts-phL">
+                                        <rect key="frame" x="889" y="22.5" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="8h6-Nv-NhR"/>
+                                            <constraint firstAttribute="width" secondItem="V14-ts-phL" secondAttribute="height" multiplier="1:1" id="z4t-Rp-AZc"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filter" translatesAutoresizingMaskIntoConstraints="NO" id="cWQ-wZ-mUe">
+                                        <rect key="frame" x="667" y="10" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="cWQ-wZ-mUe" secondAttribute="height" multiplier="1:1" id="FuE-oj-ZSl"/>
+                                            <constraint firstAttribute="width" constant="50" id="Zck-3I-HEH"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJL-ku-036">
+                                        <rect key="frame" x="380" y="26" width="41" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="41" id="EO3-ns-UCy"/>
+                                            <constraint firstAttribute="width" secondItem="jJL-ku-036" secondAttribute="height" multiplier="41:18" id="ew6-S6-LI3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="audio call" translatesAutoresizingMaskIntoConstraints="NO" id="Q9K-kP-X9W">
+                                        <rect key="frame" x="934" y="22.5" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="Dtt-FW-m0E"/>
+                                            <constraint firstAttribute="width" secondItem="Q9K-kP-X9W" secondAttribute="height" multiplier="1:1" id="Tbf-d6-cdJ"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.47843137250000001" green="0.54901960780000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="Eb2-ro-vJR" firstAttribute="centerY" secondItem="GOq-RQ-6ga" secondAttribute="centerY" id="9QS-BL-nMi"/>
+                                    <constraint firstItem="jJL-ku-036" firstAttribute="centerY" secondItem="GOq-RQ-6ga" secondAttribute="centerY" id="9nZ-5M-At4"/>
+                                    <constraint firstItem="j67-Vi-djx" firstAttribute="centerY" secondItem="GOq-RQ-6ga" secondAttribute="centerY" id="Ibp-8a-Od1"/>
+                                    <constraint firstItem="cWQ-wZ-mUe" firstAttribute="centerY" secondItem="GOq-RQ-6ga" secondAttribute="centerY" id="K86-NA-DAG"/>
                                     <constraint firstAttribute="height" constant="70" id="Lxm-YK-O42"/>
+                                    <constraint firstItem="EQ4-HR-ITR" firstAttribute="centerY" secondItem="GOq-RQ-6ga" secondAttribute="centerY" id="MBt-iP-os5"/>
+                                    <constraint firstItem="Q9K-kP-X9W" firstAttribute="centerY" secondItem="GOq-RQ-6ga" secondAttribute="centerY" id="PNm-R7-eFa"/>
+                                    <constraint firstItem="j67-Vi-djx" firstAttribute="leading" secondItem="GOq-RQ-6ga" secondAttribute="leading" constant="20" id="RFo-rw-VG5"/>
+                                    <constraint firstItem="Q9K-kP-X9W" firstAttribute="leading" secondItem="V14-ts-phL" secondAttribute="trailing" constant="20" id="SPQ-RY-8xX"/>
+                                    <constraint firstAttribute="trailing" secondItem="Eb2-ro-vJR" secondAttribute="trailing" constant="20" id="Tv2-yV-5gk"/>
+                                    <constraint firstItem="jJL-ku-036" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EQ4-HR-ITR" secondAttribute="trailing" constant="8" symbolic="YES" id="cdX-xM-o7r"/>
+                                    <constraint firstItem="cWQ-wZ-mUe" firstAttribute="leading" secondItem="EQ4-HR-ITR" secondAttribute="trailing" constant="327" id="cji-fm-Sh7"/>
+                                    <constraint firstItem="Eb2-ro-vJR" firstAttribute="leading" secondItem="Q9K-kP-X9W" secondAttribute="trailing" constant="20" id="ffE-rg-ijV"/>
+                                    <constraint firstItem="5PR-J9-mDg" firstAttribute="centerY" secondItem="GOq-RQ-6ga" secondAttribute="centerY" id="hk2-wA-U6v"/>
+                                    <constraint firstItem="V14-ts-phL" firstAttribute="centerY" secondItem="GOq-RQ-6ga" secondAttribute="centerY" id="iDY-dK-IUV"/>
+                                    <constraint firstItem="5PR-J9-mDg" firstAttribute="leading" secondItem="GOq-RQ-6ga" secondAttribute="leading" constant="65" id="mRr-JW-f2h"/>
+                                    <constraint firstItem="cWQ-wZ-mUe" firstAttribute="leading" secondItem="jJL-ku-036" secondAttribute="trailing" constant="246" id="oyG-wP-Jkr"/>
+                                    <constraint firstItem="EQ4-HR-ITR" firstAttribute="leading" secondItem="5PR-J9-mDg" secondAttribute="trailing" constant="20" id="rUW-DB-pYZ"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r8Y-Sp-7jj">
@@ -374,6 +446,9 @@
                     <connections>
                         <outlet property="searchUserBar" destination="5PR-J9-mDg" id="qe1-dK-pO1"/>
                         <outlet property="tableView" destination="r8Y-Sp-7jj" id="mVU-Jn-kmG"/>
+                        <outlet property="topBarAvatar" destination="cWQ-wZ-mUe" id="woG-Zf-HVT"/>
+                        <outlet property="topBarChatType" destination="Eb2-ro-vJR" id="62O-D1-oT1"/>
+                        <outlet property="topBarUsername" destination="jJL-ku-036" id="Nly-W0-tti"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ol-tz-LSw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -383,5 +458,9 @@
     </scenes>
     <resources>
         <image name="Background.png" width="971" height="680"/>
+        <image name="audio call" width="25" height="25"/>
+        <image name="filter" width="25" height="20"/>
+        <image name="settings" width="25" height="25"/>
+        <image name="video call" width="25" height="15"/>
     </resources>
 </document>

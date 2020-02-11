@@ -25,7 +25,6 @@
 		5228DECB23E9DB1700D4F08B /* UIView.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228DECA23E9DB1700D4F08B /* UIView.ext.swift */; };
 		5228DECD23E9E74E00D4F08B /* InputBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228DECC23E9E74E00D4F08B /* InputBox.swift */; };
 		5228DECF23E9F83200D4F08B /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228DECE23E9F83200D4F08B /* MyButton.swift */; };
-		524B082623EB001800DB4ECF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524B082523EB001800DB4ECF /* ViewController.swift */; };
 		525691DC23EB237100DB09D9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 525691DE23EB237100DB09D9 /* Localizable.strings */; };
 		525691E123EB360700DB09D9 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525691E023EB360700DB09D9 /* ChatViewController.swift */; };
 		525691E323EB443000DB09D9 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525691E223EB443000DB09D9 /* Utils.swift */; };
@@ -74,7 +73,6 @@
 		5228DECA23E9DB1700D4F08B /* UIView.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.ext.swift; sourceTree = "<group>"; };
 		5228DECC23E9E74E00D4F08B /* InputBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputBox.swift; sourceTree = "<group>"; };
 		5228DECE23E9F83200D4F08B /* MyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
-		524B082523EB001800DB4ECF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		525691D823EB1D1B00DB09D9 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Main.strings; sourceTree = "<group>"; };
 		525691D923EB1D1B00DB09D9 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		525691DD23EB237100DB09D9 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -214,7 +212,6 @@
 			isa = PBXGroup;
 			children = (
 				5228DEC523E9D6AB00D4F08B /* LoginViewController.swift */,
-				524B082523EB001800DB4ECF /* ViewController.swift */,
 				525691E023EB360700DB09D9 /* ChatViewController.swift */,
 				5225A4D223F2B3DC00EB677B /* ChatCell.swift */,
 				5225A4D423F2B53E00EB677B /* Chat.swift */,
@@ -419,7 +416,6 @@
 				5228DE8E23E9BC6A00D4F08B /* AppDelegate.swift in Sources */,
 				52731C6023ECA6E2009A6C2A /* UIViewController.swift in Sources */,
 				5228DE9023E9BC6A00D4F08B /* SceneDelegate.swift in Sources */,
-				524B082623EB001800DB4ECF /* ViewController.swift in Sources */,
 				5228DECD23E9E74E00D4F08B /* InputBox.swift in Sources */,
 				5225A4D523F2B53E00EB677B /* Chat.swift in Sources */,
 				525691E123EB360700DB09D9 /* ChatViewController.swift in Sources */,
