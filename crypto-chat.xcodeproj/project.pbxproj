@@ -29,6 +29,8 @@
 		525691E123EB360700DB09D9 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525691E023EB360700DB09D9 /* ChatViewController.swift */; };
 		525691E323EB443000DB09D9 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525691E223EB443000DB09D9 /* Utils.swift */; };
 		52731C6023ECA6E2009A6C2A /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52731C5F23ECA6E2009A6C2A /* UIViewController.swift */; };
+		52E1EB9F23F46BCD008BA69E /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E1EB9E23F46BCD008BA69E /* MessageCell.swift */; };
+		52E1EBA123F473F8008BA69E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E1EBA023F473F8008BA69E /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		525691E023EB360700DB09D9 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		525691E223EB443000DB09D9 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		52731C5F23ECA6E2009A6C2A /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		52E1EB9E23F46BCD008BA69E /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		52E1EBA023F473F8008BA69E /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		B27DD069B7C70D0AAAB9A897 /* Pods_crypto_chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_crypto_chat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3679EE945E128D810648400 /* Pods-crypto-chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-crypto-chat.debug.xcconfig"; path = "Target Support Files/Pods-crypto-chat/Pods-crypto-chat.debug.xcconfig"; sourceTree = "<group>"; };
 		E5E61724F7728D6D33303528 /* Pods-crypto-chat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-crypto-chat.release.xcconfig"; path = "Target Support Files/Pods-crypto-chat/Pods-crypto-chat.release.xcconfig"; sourceTree = "<group>"; };
@@ -215,6 +219,8 @@
 				525691E023EB360700DB09D9 /* ChatViewController.swift */,
 				5225A4D223F2B3DC00EB677B /* ChatCell.swift */,
 				5225A4D423F2B53E00EB677B /* Chat.swift */,
+				52E1EB9E23F46BCD008BA69E /* MessageCell.swift */,
+				52E1EBA023F473F8008BA69E /* Message.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -412,6 +418,7 @@
 				5225A4D723F2EBC800EB677B /* TableViewCell.ext.swift in Sources */,
 				5228DEC623E9D6AB00D4F08B /* LoginViewController.swift in Sources */,
 				5228DECB23E9DB1700D4F08B /* UIView.ext.swift in Sources */,
+				52E1EB9F23F46BCD008BA69E /* MessageCell.swift in Sources */,
 				525691E323EB443000DB09D9 /* Utils.swift in Sources */,
 				5228DE8E23E9BC6A00D4F08B /* AppDelegate.swift in Sources */,
 				52731C6023ECA6E2009A6C2A /* UIViewController.swift in Sources */,
@@ -420,6 +427,7 @@
 				5225A4D523F2B53E00EB677B /* Chat.swift in Sources */,
 				525691E123EB360700DB09D9 /* ChatViewController.swift in Sources */,
 				5228DECF23E9F83200D4F08B /* MyButton.swift in Sources */,
+				52E1EBA123F473F8008BA69E /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

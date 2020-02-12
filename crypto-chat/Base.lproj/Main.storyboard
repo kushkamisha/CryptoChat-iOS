@@ -420,10 +420,6 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="7c5-gH-Y0g" id="v1t-xl-AUH"/>
-                                    <outlet property="delegate" destination="7c5-gH-Y0g" id="5YI-kd-3Rg"/>
-                                </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qEA-AK-oPn" userLabel="Separator">
                                 <rect key="frame" x="360" y="70" width="0.5" height="698"/>
@@ -462,12 +458,53 @@
                                     <constraint firstAttribute="trailing" secondItem="D1H-9P-KYt" secondAttribute="trailing" constant="20" id="zpb-Ds-87z"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kz0-Z4-MAw">
+                                <rect key="frame" x="360" y="70" width="664" height="643"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" rowHeight="54" id="ryv-CV-2Vl" customClass="MessageCell" customModule="Crypto_Chat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="664" height="54"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ryv-CV-2Vl" id="tk7-sS-Hs7">
+                                            <rect key="frame" x="0.0" y="0.0" width="664" height="54"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsa-05-AFI" userLabel="Timestamp">
+                                                    <rect key="frame" x="525" y="17" width="42" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKe-xT-o2e" userLabel="Message">
+                                                    <rect key="frame" x="587" y="17" width="42" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZKe-xT-o2e" firstAttribute="leading" secondItem="dsa-05-AFI" secondAttribute="trailing" constant="20" id="MPD-cd-Cv1"/>
+                                                <constraint firstItem="ZKe-xT-o2e" firstAttribute="centerY" secondItem="tk7-sS-Hs7" secondAttribute="centerY" id="ZUA-2f-M6c"/>
+                                                <constraint firstItem="dsa-05-AFI" firstAttribute="centerY" secondItem="tk7-sS-Hs7" secondAttribute="centerY" id="ez9-uZ-1Rx"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ZKe-xT-o2e" secondAttribute="trailing" constant="20" id="fe8-AF-ait"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="msg" destination="ZKe-xT-o2e" id="z1B-37-enm"/>
+                                            <outlet property="time" destination="dsa-05-AFI" id="PLk-3n-6F4"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Kz0-Z4-MAw" firstAttribute="top" secondItem="GOq-RQ-6ga" secondAttribute="bottom" id="04L-7I-wL9"/>
+                            <constraint firstItem="Mvr-7h-di0" firstAttribute="top" secondItem="Kz0-Z4-MAw" secondAttribute="bottom" id="886-Rt-cv4"/>
                             <constraint firstItem="r8Y-Sp-7jj" firstAttribute="top" secondItem="GOq-RQ-6ga" secondAttribute="bottom" id="Eje-4O-y68"/>
                             <constraint firstItem="qEA-AK-oPn" firstAttribute="top" secondItem="Jaa-ii-CgZ" secondAttribute="topMargin" constant="70" id="FSC-yT-knb"/>
                             <constraint firstItem="qEA-AK-oPn" firstAttribute="bottom" secondItem="Jaa-ii-CgZ" secondAttribute="bottomMargin" id="Lyf-iX-xtZ"/>
+                            <constraint firstItem="Kz0-Z4-MAw" firstAttribute="trailing" secondItem="Jk3-UD-Pv8" secondAttribute="trailing" id="M03-ad-T4F"/>
                             <constraint firstItem="Mvr-7h-di0" firstAttribute="leading" secondItem="r8Y-Sp-7jj" secondAttribute="trailing" id="MzE-O6-Eiv"/>
                             <constraint firstItem="GOq-RQ-6ga" firstAttribute="top" secondItem="Jk3-UD-Pv8" secondAttribute="top" id="Okc-vN-IEG"/>
                             <constraint firstItem="GOq-RQ-6ga" firstAttribute="trailing" secondItem="Jk3-UD-Pv8" secondAttribute="trailing" id="Q8X-GT-ub9"/>
@@ -477,14 +514,16 @@
                             <constraint firstItem="r8Y-Sp-7jj" firstAttribute="bottom" secondItem="Jk3-UD-Pv8" secondAttribute="bottom" id="oGE-5W-hRb"/>
                             <constraint firstItem="GOq-RQ-6ga" firstAttribute="leading" secondItem="Jk3-UD-Pv8" secondAttribute="leading" id="u1R-Uz-dZQ"/>
                             <constraint firstItem="Mvr-7h-di0" firstAttribute="bottom" secondItem="Jk3-UD-Pv8" secondAttribute="bottom" id="vDt-Al-Qcp"/>
+                            <constraint firstItem="Kz0-Z4-MAw" firstAttribute="leading" secondItem="r8Y-Sp-7jj" secondAttribute="trailing" id="zkL-6O-5QF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jk3-UD-Pv8"/>
                     </view>
                     <navigationItem key="navigationItem" id="saU-Nl-9oc"/>
                     <connections>
+                        <outlet property="chatsTableView" destination="r8Y-Sp-7jj" id="nPo-nF-Kq1"/>
+                        <outlet property="msgsTableView" destination="Kz0-Z4-MAw" id="u08-fm-hby"/>
                         <outlet property="searchUserBar" destination="5PR-J9-mDg" id="qe1-dK-pO1"/>
                         <outlet property="sendMessageTextField" destination="26i-bk-gMe" id="uiu-HH-qLP"/>
-                        <outlet property="tableView" destination="r8Y-Sp-7jj" id="mVU-Jn-kmG"/>
                         <outlet property="topBarAvatar" destination="cWQ-wZ-mUe" id="woG-Zf-HVT"/>
                         <outlet property="topBarChatType" destination="Eb2-ro-vJR" id="62O-D1-oT1"/>
                         <outlet property="topBarUsername" destination="jJL-ku-036" id="Nly-W0-tti"/>

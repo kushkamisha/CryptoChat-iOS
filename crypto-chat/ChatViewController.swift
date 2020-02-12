@@ -11,7 +11,8 @@ import UIKit
 class ChatViewController: UIViewController {
 
     @IBOutlet weak var searchUserBar: UISearchBar!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var chatsTableView: UITableView!
+    @IBOutlet weak var msgsTableView: UITableView!
     
     @IBOutlet weak var topBarUsername: UILabel!
     @IBOutlet weak var topBarAvatar: UIImageView!
@@ -20,13 +21,23 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var sendMessageTextField: UITextField!
 
     var chats: [Chat] = []
+    var msgs: [Message] = [
+        Message(msg: "Hello", time: "3:50 AM"),
+        Message(msg: "Hi", time: "3:51 AM"),
+        Message(msg: "Whoa", time: "5:05 AM")
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setStatusBarBackgroundColor(color : UIColor.init(red: 122/255, green: 140/255, blue: 255/255, alpha: 1))
         
+        chatsTableView.delegate = self
+        chatsTableView.dataSource = self
+        msgsTableView.delegate = self
+        msgsTableView.dataSource = self
+        
         chats = fillChats()
-        tableView.rowHeight = 75
+        chatsTableView.rowHeight = 75
         sendMessageTextField.attributedPlaceholder = NSAttributedString(string: "Type your message here...", attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(displayP3Red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5)])
     }
     
@@ -53,27 +64,33 @@ class ChatViewController: UIViewController {
 
 extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return chats.count
+        return tableView == msgsTableView ? msgs.count : chats.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let chat = chats[indexPath.row]
+        if (tableView == chatsTableView) {
+            let chat = chats[indexPath.row]
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ChatCell") as! ChatCell
+            cell.setChat(chat: chat)
+            
+            cell.selectionColor = UIColor.init(red: 122/255, green: 140/255, blue: 255/255, alpha: 1)
+            
+            return cell
+        }
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ChatCell") as! ChatCell
-        cell.setChat(chat: chat)
-        
-        cell.selectionColor = UIColor.init(red: 122/255, green: 140/255, blue: 255/255, alpha: 1)
+        let msg = msgs[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MessageCell") as! MessageCell
+        cell.setMessage(message: msg)
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Row number \(indexPath.row) is selected")
-//        print(chats[indexPath.row].username)
-//        print(topBarUsername.text)
-        topBarUsername.text = chats[indexPath.row].username
-        topBarAvatar.image = chats[indexPath.row].avatar
-        topBarChatType.image = chats[indexPath.row].chatTypeSelected
+        if (tableView == chatsTableView) {
+            topBarUsername.text = chats[indexPath.row].username
+            topBarAvatar.image = chats[indexPath.row].avatar
+            topBarChatType.image = chats[indexPath.row].chatTypeSelected
+        }
     }
     
 }

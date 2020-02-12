@@ -52,11 +52,3 @@ class ChatCell: UITableViewCell {
     }
 
 }
-
-extension UIImageView{
-    func changePngColorTo(color: UIColor){
-        guard let image =  self.image else {return}
-        self.image = image.withRenderingMode(.alwaysTemplate)
-        self.tintColor = color
-    }
-}
