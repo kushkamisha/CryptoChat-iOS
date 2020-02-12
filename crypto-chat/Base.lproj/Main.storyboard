@@ -61,7 +61,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JAb-AY-4ID" userLabel="Email" customClass="InputBox" customModule="Crypto_Chat" customModuleProvider="target">
                                         <rect key="frame" x="20" y="20" width="346" height="42"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email@example.com" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="zAu-F5-gT8">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="zAu-F5-gT8">
                                                 <rect key="frame" x="120" y="0.0" width="216" height="42"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="216" id="fGt-QP-X18"/>
@@ -103,7 +103,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LiA-eP-bi1" userLabel="Pass" customClass="InputBox" customModule="Crypto_Chat" customModuleProvider="target">
                                         <rect key="frame" x="20" y="82" width="346" height="42"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="FVs-hp-1jH" userLabel="********">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="FVs-hp-1jH" userLabel="********">
                                                 <rect key="frame" x="120" y="0.0" width="216" height="42"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="216" id="PNT-S6-AZ5"/>
@@ -435,7 +435,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mvr-7h-di0">
                                 <rect key="frame" x="360" y="713" width="664" height="55"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type your message here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="26i-bk-gMe">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="26i-bk-gMe">
                                         <rect key="frame" x="20" y="10.5" width="579" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="bcs-dv-qpA"/>
@@ -483,6 +483,7 @@
                     <navigationItem key="navigationItem" id="saU-Nl-9oc"/>
                     <connections>
                         <outlet property="searchUserBar" destination="5PR-J9-mDg" id="qe1-dK-pO1"/>
+                        <outlet property="sendMessageTextField" destination="26i-bk-gMe" id="uiu-HH-qLP"/>
                         <outlet property="tableView" destination="r8Y-Sp-7jj" id="mVU-Jn-kmG"/>
                         <outlet property="topBarAvatar" destination="cWQ-wZ-mUe" id="woG-Zf-HVT"/>
                         <outlet property="topBarChatType" destination="Eb2-ro-vJR" id="62O-D1-oT1"/>

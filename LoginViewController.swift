@@ -29,6 +29,8 @@ class LoginViewController: UIViewController {
         emailInputLabel.roundCorners(corners: [.topLeft, .bottomLeft], radius: 10)
         passInputLabel.roundCorners(corners: [.topLeft, .bottomLeft], radius: 10)
         signInBigLabel.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2)
+        emailInputField.attributedPlaceholder = NSAttributedString(string: "email@example.com", attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(displayP3Red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5)])
+        passInputField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(displayP3Red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5)])
     }
     
     func navigateToScreen(screenName: String, storyboardName: String = "Main") {

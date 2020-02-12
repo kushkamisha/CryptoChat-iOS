@@ -17,6 +17,8 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var topBarAvatar: UIImageView!
     @IBOutlet weak var topBarChatType: UIImageView!
     
+    @IBOutlet weak var sendMessageTextField: UITextField!
+
     var chats: [Chat] = []
     
     override func viewDidLoad() {
@@ -25,6 +27,7 @@ class ChatViewController: UIViewController {
         
         chats = fillChats()
         tableView.rowHeight = 75
+        sendMessageTextField.attributedPlaceholder = NSAttributedString(string: "Type your message here...", attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(displayP3Red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5)])
     }
     
     override var preferredStatusBarStyle : UIStatusBarStyle {
