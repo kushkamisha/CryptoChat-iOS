@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChatViewController: UIViewController {
+class ChatViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var searchUserBar: UISearchBar!
     @IBOutlet weak var chatsTableView: UITableView!
@@ -19,12 +19,13 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var topBarChatType: UIImageView!
     
     @IBOutlet weak var sendMessageTextField: UITextField!
-
+    @IBOutlet weak var sendMessageButton: UIButton!
+    
     var chats: [Chat] = []
     var msgs: [Message] = [
-        Message(userId: 1, msg: "Hello", time: "3:50 AM"),
-        Message(userId: 2, msg: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a tortor ac sapien suscipit vestibulum", time: "3:51 AM"),
-        Message(userId: 1, msg: "Whoa", time: "5:05 AM")
+        Message(userId: 1, msg: "Hello", time: "13:50"),
+        Message(userId: 2, msg: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a tortor ac sapien suscipit vestibulum", time: "13:51"),
+        Message(userId: 1, msg: "Whoa", time: "15:05")
     ]
     
     override func viewDidLoad() {
@@ -36,6 +37,8 @@ class ChatViewController: UIViewController {
         msgsTableView.delegate = self
         msgsTableView.dataSource = self
         
+        sendMessageTextField.delegate = self
+        
         msgsTableView.rowHeight = UITableView.automaticDimension
         
         chats = fillChats()
@@ -46,6 +49,27 @@ class ChatViewController: UIViewController {
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
         //return UIStatusBarStyle.default   // Make dark again
+    }
+    
+    // A new msg is entered in the send text field
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        let toSend = sendMessageTextField.text
+        
+        if (toSend == "") { return true }
+        
+        // Current time
+        let date = Date()
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: date)
+        let minutes = calendar.component(.minute, from: date)
+        
+        msgs.append(Message(userId: 1, msg: toSend ?? "", time: "\(hour):\(minutes)"))
+        
+        sendMessageTextField.text = ""
+        
+        msgsTableView.reloadData()
+        
+        return true
     }
     
     func fillChats() -> [Chat] {

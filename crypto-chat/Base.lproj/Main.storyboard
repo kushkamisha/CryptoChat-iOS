@@ -433,7 +433,7 @@
                                 <rect key="frame" x="360" y="713" width="664" height="55"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="26i-bk-gMe">
-                                        <rect key="frame" x="20" y="10.5" width="579" height="34"/>
+                                        <rect key="frame" x="20" y="10.5" width="5" height="34"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="bcs-dv-qpA"/>
@@ -442,22 +442,22 @@
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="send message" translatesAutoresizingMaskIntoConstraints="NO" id="D1H-9P-KYt">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0Q-tS-2eq" userLabel="Send message button">
                                         <rect key="frame" x="619" y="15" width="25" height="25"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="25" id="IIK-wy-Aya"/>
-                                            <constraint firstAttribute="width" secondItem="D1H-9P-KYt" secondAttribute="height" multiplier="1:1" id="aPf-yA-Wyf"/>
+                                            <constraint firstAttribute="width" secondItem="J0Q-tS-2eq" secondAttribute="height" multiplier="1:1" id="2RQ-Kk-hCT"/>
+                                            <constraint firstAttribute="width" constant="25" id="X56-8O-Afs"/>
                                         </constraints>
-                                    </imageView>
+                                        <state key="normal" image="send message"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.47843137254901957" green="0.5490196078431373" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="J0Q-tS-2eq" firstAttribute="centerY" secondItem="Mvr-7h-di0" secondAttribute="centerY" id="5Pi-Gs-Ru9"/>
                                     <constraint firstItem="26i-bk-gMe" firstAttribute="leading" secondItem="Mvr-7h-di0" secondAttribute="leading" constant="20" id="6eR-1a-sOH"/>
-                                    <constraint firstItem="D1H-9P-KYt" firstAttribute="centerY" secondItem="Mvr-7h-di0" secondAttribute="centerY" id="Pms-Ay-PvT"/>
-                                    <constraint firstItem="D1H-9P-KYt" firstAttribute="leading" secondItem="26i-bk-gMe" secondAttribute="trailing" constant="20" id="Wfr-bH-0gn"/>
+                                    <constraint firstAttribute="trailing" secondItem="J0Q-tS-2eq" secondAttribute="trailing" constant="20" id="XAc-RK-hsp"/>
                                     <constraint firstAttribute="height" constant="55" id="Yy9-QG-yOg"/>
                                     <constraint firstItem="26i-bk-gMe" firstAttribute="centerY" secondItem="Mvr-7h-di0" secondAttribute="centerY" id="n3t-8m-vMt"/>
-                                    <constraint firstAttribute="trailing" secondItem="D1H-9P-KYt" secondAttribute="trailing" constant="20" id="zpb-Ds-87z"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kz0-Z4-MAw">
@@ -562,6 +562,7 @@
                         <outlet property="chatsTableView" destination="r8Y-Sp-7jj" id="nPo-nF-Kq1"/>
                         <outlet property="msgsTableView" destination="Kz0-Z4-MAw" id="u08-fm-hby"/>
                         <outlet property="searchUserBar" destination="5PR-J9-mDg" id="qe1-dK-pO1"/>
+                        <outlet property="sendMessageButton" destination="J0Q-tS-2eq" id="fK7-lI-4XR"/>
                         <outlet property="sendMessageTextField" destination="26i-bk-gMe" id="uiu-HH-qLP"/>
                         <outlet property="topBarAvatar" destination="cWQ-wZ-mUe" id="woG-Zf-HVT"/>
                         <outlet property="topBarChatType" destination="Eb2-ro-vJR" id="62O-D1-oT1"/>
