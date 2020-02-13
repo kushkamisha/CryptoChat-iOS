@@ -10,13 +10,12 @@ import UIKit
 
 class MessageCell: UITableViewCell {
 
-    // @IBOutlet weak var time: UILabel!
+    @IBOutlet weak var time: UILabel!
     @IBOutlet weak var msg: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-//        text
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -28,7 +27,7 @@ class MessageCell: UITableViewCell {
     
     func setMessage(message: Message) {
         msg.text = message.msg
-        // time.text = message.time
+        time.text = message.time
     }
 
 }
