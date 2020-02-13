@@ -22,9 +22,9 @@ class ChatViewController: UIViewController {
 
     var chats: [Chat] = []
     var msgs: [Message] = [
-        Message(msg: "Hello", time: "3:50 AM"),
-        Message(msg: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a tortor ac sapien suscipit vestibulum. Ut eu mi dolor. Quisque tempor nibh condimentum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a tortor ac sapien suscipit vestibulum. Ut eu mi dolor. Quisque tempor nibh condimentum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a tortor ac sapien suscipit vestibulum. Ut eu mi dolor. Quisque tempor nibh condimentum", time: "3:51 AM"),
-        Message(msg: "Whoa", time: "5:05 AM")
+        Message(userId: 1, msg: "Hello", time: "3:50 AM"),
+        Message(userId: 2, msg: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a tortor ac sapien suscipit vestibulum", time: "3:51 AM"),
+        Message(userId: 1, msg: "Whoa", time: "5:05 AM")
     ]
     
     override func viewDidLoad() {
@@ -37,7 +37,6 @@ class ChatViewController: UIViewController {
         msgsTableView.dataSource = self
         
         msgsTableView.rowHeight = UITableView.automaticDimension
-//        msgsTableView.estimatedRowHeight = 600
         
         chats = fillChats()
         chatsTableView.rowHeight = 75
@@ -82,10 +81,15 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
         }
         
         let msg = msgs[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MessageCell") as! MessageCell
-        cell.setMessage(message: msg)
-        
-        return cell
+        if (msg.userId == 1) {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MessageRightCell") as! MessageRightCell
+            cell.setMessage(message: msg)
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MessageLeftCell") as! MessageLeftCell
+            cell.setMessage(message: msg)
+            return cell
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

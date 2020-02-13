@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MessageCell: UITableViewCell {
+class MessageRightCell: UITableViewCell {
 
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var msg: UILabel!

@@ -12,8 +12,10 @@ class Message {
     
     var msg : String
     var time : String
+    var userId: Int
     
-    init(msg: String, time: String) {
+    init(userId: Int, msg: String, time: String) {
+        self.userId = userId
         self.msg = msg
         self.time = time
     }

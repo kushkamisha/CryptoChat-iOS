@@ -25,12 +25,13 @@
 		5228DECB23E9DB1700D4F08B /* UIView.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228DECA23E9DB1700D4F08B /* UIView.ext.swift */; };
 		5228DECD23E9E74E00D4F08B /* InputBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228DECC23E9E74E00D4F08B /* InputBox.swift */; };
 		5228DECF23E9F83200D4F08B /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228DECE23E9F83200D4F08B /* MyButton.swift */; };
+		5248085923F5CE6700700620 /* MessageLeftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5248085823F5CE6700700620 /* MessageLeftCell.swift */; };
 		525691DC23EB237100DB09D9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 525691DE23EB237100DB09D9 /* Localizable.strings */; };
 		525691E123EB360700DB09D9 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525691E023EB360700DB09D9 /* ChatViewController.swift */; };
 		525691E323EB443000DB09D9 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525691E223EB443000DB09D9 /* Utils.swift */; };
 		52731C6023ECA6E2009A6C2A /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52731C5F23ECA6E2009A6C2A /* UIViewController.swift */; };
 		529180C923F59C7100BD6751 /* UILabel.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529180C823F59C7100BD6751 /* UILabel.ext.swift */; };
-		52E1EB9F23F46BCD008BA69E /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E1EB9E23F46BCD008BA69E /* MessageCell.swift */; };
+		52E1EB9F23F46BCD008BA69E /* MessageRightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E1EB9E23F46BCD008BA69E /* MessageRightCell.swift */; };
 		52E1EBA123F473F8008BA69E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E1EBA023F473F8008BA69E /* Message.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		5228DECA23E9DB1700D4F08B /* UIView.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.ext.swift; sourceTree = "<group>"; };
 		5228DECC23E9E74E00D4F08B /* InputBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputBox.swift; sourceTree = "<group>"; };
 		5228DECE23E9F83200D4F08B /* MyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
+		5248085823F5CE6700700620 /* MessageLeftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageLeftCell.swift; sourceTree = "<group>"; };
 		525691D823EB1D1B00DB09D9 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Main.strings; sourceTree = "<group>"; };
 		525691D923EB1D1B00DB09D9 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		525691DD23EB237100DB09D9 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -84,7 +86,7 @@
 		525691E223EB443000DB09D9 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		52731C5F23ECA6E2009A6C2A /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		529180C823F59C7100BD6751 /* UILabel.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.ext.swift; sourceTree = "<group>"; };
-		52E1EB9E23F46BCD008BA69E /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		52E1EB9E23F46BCD008BA69E /* MessageRightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRightCell.swift; sourceTree = "<group>"; };
 		52E1EBA023F473F8008BA69E /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		B27DD069B7C70D0AAAB9A897 /* Pods_crypto_chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_crypto_chat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3679EE945E128D810648400 /* Pods-crypto-chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-crypto-chat.debug.xcconfig"; path = "Target Support Files/Pods-crypto-chat/Pods-crypto-chat.debug.xcconfig"; sourceTree = "<group>"; };
@@ -222,7 +224,8 @@
 				525691E023EB360700DB09D9 /* ChatViewController.swift */,
 				5225A4D223F2B3DC00EB677B /* ChatCell.swift */,
 				5225A4D423F2B53E00EB677B /* Chat.swift */,
-				52E1EB9E23F46BCD008BA69E /* MessageCell.swift */,
+				52E1EB9E23F46BCD008BA69E /* MessageRightCell.swift */,
+				5248085823F5CE6700700620 /* MessageLeftCell.swift */,
 				52E1EBA023F473F8008BA69E /* Message.swift */,
 			);
 			name = ViewControllers;
@@ -417,12 +420,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5248085923F5CE6700700620 /* MessageLeftCell.swift in Sources */,
 				5225A4D323F2B3DC00EB677B /* ChatCell.swift in Sources */,
 				5225A4D723F2EBC800EB677B /* TableViewCell.ext.swift in Sources */,
 				5228DEC623E9D6AB00D4F08B /* LoginViewController.swift in Sources */,
 				5228DECB23E9DB1700D4F08B /* UIView.ext.swift in Sources */,
 				529180C923F59C7100BD6751 /* UILabel.ext.swift in Sources */,
-				52E1EB9F23F46BCD008BA69E /* MessageCell.swift in Sources */,
+				52E1EB9F23F46BCD008BA69E /* MessageRightCell.swift in Sources */,
 				525691E323EB443000DB09D9 /* Utils.swift in Sources */,
 				5228DE8E23E9BC6A00D4F08B /* AppDelegate.swift in Sources */,
 				52731C6023ECA6E2009A6C2A /* UIViewController.swift in Sources */,

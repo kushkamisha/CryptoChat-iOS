@@ -434,6 +434,7 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="26i-bk-gMe">
                                         <rect key="frame" x="20" y="10.5" width="579" height="34"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="bcs-dv-qpA"/>
                                         </constraints>
@@ -463,7 +464,7 @@
                                 <rect key="frame" x="361" y="70" width="664" height="643"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" id="ryv-CV-2Vl" customClass="MessageCell" customModule="Crypto_Chat" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageRightCell" id="ryv-CV-2Vl" customClass="MessageRightCell" customModule="Crypto_Chat" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="664" height="38"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ryv-CV-2Vl" id="tk7-sS-Hs7">
@@ -489,13 +490,47 @@
                                                 <constraint firstItem="ZKe-xT-o2e" firstAttribute="top" secondItem="tk7-sS-Hs7" secondAttribute="top" constant="20" symbolic="YES" id="Vbh-LY-R8Y"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="kt6-51-NZ5" secondAttribute="bottom" id="Ymh-G0-gev"/>
                                                 <constraint firstItem="ZKe-xT-o2e" firstAttribute="leading" secondItem="kt6-51-NZ5" secondAttribute="trailing" constant="20" id="mKn-fZ-gAj"/>
-                                                <constraint firstItem="kt6-51-NZ5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tk7-sS-Hs7" secondAttribute="leading" constant="20" symbolic="YES" id="v1q-iI-ZYv"/>
                                                 <constraint firstAttribute="trailing" secondItem="ZKe-xT-o2e" secondAttribute="trailing" constant="20" id="vHk-eo-Ybd"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="msg" destination="ZKe-xT-o2e" id="z1B-37-enm"/>
                                             <outlet property="time" destination="kt6-51-NZ5" id="UKK-cm-t01"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageLeftCell" id="1uX-Yu-emZ" userLabel="MessageLeftCell" customClass="MessageLeftCell" customModule="Crypto_Chat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="66" width="664" height="58"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1uX-Yu-emZ" id="Vc1-wy-qDn">
+                                            <rect key="frame" x="0.0" y="0.0" width="664" height="58"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Message" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8Z-c2-QpF" userLabel="Message">
+                                                    <rect key="frame" x="20" y="20" width="284" height="18"/>
+                                                    <color key="backgroundColor" red="0.47843137250000001" green="0.54901960780000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:99 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5f-Cx-KZt">
+                                                    <rect key="frame" x="103.5" y="16.5" width="48.5" height="14.5"/>
+                                                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="q8Z-c2-QpF" firstAttribute="leading" secondItem="Vc1-wy-qDn" secondAttribute="leading" constant="20" id="82G-kq-oAB"/>
+                                                <constraint firstItem="l5f-Cx-KZt" firstAttribute="leading" secondItem="q8Z-c2-QpF" secondAttribute="trailing" constant="20" id="Bsd-Nd-gVg"/>
+                                                <constraint firstItem="q8Z-c2-QpF" firstAttribute="leading" secondItem="Vc1-wy-qDn" secondAttribute="leading" constant="20" id="FQW-gX-e28"/>
+                                                <constraint firstItem="q8Z-c2-QpF" firstAttribute="top" secondItem="Vc1-wy-qDn" secondAttribute="top" constant="20" symbolic="YES" id="K39-Nj-iAW"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="l5f-Cx-KZt" secondAttribute="bottom" constant="16" id="Xke-u0-pAq"/>
+                                                <constraint firstAttribute="bottom" secondItem="q8Z-c2-QpF" secondAttribute="bottom" constant="20" symbolic="YES" id="sfl-fC-aDT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="msg" destination="q8Z-c2-QpF" id="TNl-ir-f1g"/>
+                                            <outlet property="time" destination="l5f-Cx-KZt" id="8jf-AZ-Dog"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
