@@ -21,8 +21,9 @@ class MessageCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
-//        msg.roundCorners(corners: [.topRight], radius: 10)
         msg.padding = UIEdgeInsets(top: 8, left: 15, bottom: 8, right: 15)
+        msg.layer.masksToBounds = true
+        msg.layer.cornerRadius = 10
     }
     
     func setMessage(message: Message) {

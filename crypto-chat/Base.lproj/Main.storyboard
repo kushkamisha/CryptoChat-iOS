@@ -50,7 +50,7 @@
                                 <rect key="frame" x="319" y="206" width="715" height="356"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpc-jx-KZY">
-                                        <rect key="frame" x="521" y="133" width="241" height="90"/>
+                                        <rect key="frame" x="530" y="134.5" width="232" height="87.5"/>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="75"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -62,7 +62,7 @@
                                         <rect key="frame" x="20" y="20" width="346" height="42"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="zAu-F5-gT8">
-                                                <rect key="frame" x="120" y="0.0" width="216" height="42"/>
+                                                <rect key="frame" x="119" y="0.0" width="216" height="42"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="216" id="fGt-QP-X18"/>
                                                 </constraints>
@@ -71,10 +71,10 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nte-cw-0JR" userLabel="Label">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="42"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="99" height="42"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OK7-AR-FEw" userLabel="Email">
-                                                        <rect key="frame" x="30" y="11" width="40.5" height="20"/>
+                                                        <rect key="frame" x="30" y="11.5" width="39.5" height="19"/>
                                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
                                                         <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -116,7 +116,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="42"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pass" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUt-4t-8F4" userLabel="Pass">
-                                                        <rect key="frame" x="30" y="11" width="35.5" height="20"/>
+                                                        <rect key="frame" x="30.5" y="11.5" width="35" height="19"/>
                                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
                                                         <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -286,9 +286,8 @@
                                             <constraint firstAttribute="width" constant="50" id="Zck-3I-HEH"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJL-ku-036">
-                                        <rect key="frame" x="380" y="26" width="75.5" height="18"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJL-ku-036">
+                                        <rect key="frame" x="380" y="26" width="267" height="18"/>
                                         <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -304,6 +303,7 @@
                                 <color key="backgroundColor" red="0.47843137250000001" green="0.54901960780000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="Eb2-ro-vJR" firstAttribute="centerY" secondItem="GOq-RQ-6ga" secondAttribute="centerY" id="9QS-BL-nMi"/>
+                                    <constraint firstItem="cWQ-wZ-mUe" firstAttribute="leading" secondItem="jJL-ku-036" secondAttribute="trailing" constant="20" id="GqN-kc-nYW"/>
                                     <constraint firstItem="j67-Vi-djx" firstAttribute="centerY" secondItem="GOq-RQ-6ga" secondAttribute="centerY" id="Ibp-8a-Od1"/>
                                     <constraint firstItem="cWQ-wZ-mUe" firstAttribute="centerY" secondItem="GOq-RQ-6ga" secondAttribute="centerY" id="K86-NA-DAG"/>
                                     <constraint firstAttribute="height" constant="70" id="Lxm-YK-O42"/>
@@ -312,9 +312,11 @@
                                     <constraint firstItem="j67-Vi-djx" firstAttribute="leading" secondItem="GOq-RQ-6ga" secondAttribute="leading" constant="20" id="RFo-rw-VG5"/>
                                     <constraint firstItem="Q9K-kP-X9W" firstAttribute="leading" secondItem="V14-ts-phL" secondAttribute="trailing" constant="20" id="SPQ-RY-8xX"/>
                                     <constraint firstAttribute="trailing" secondItem="Eb2-ro-vJR" secondAttribute="trailing" constant="20" id="Tv2-yV-5gk"/>
+                                    <constraint firstItem="jJL-ku-036" firstAttribute="centerY" secondItem="GOq-RQ-6ga" secondAttribute="centerY" id="ahj-3L-dyo"/>
                                     <constraint firstItem="cWQ-wZ-mUe" firstAttribute="leading" secondItem="EQ4-HR-ITR" secondAttribute="trailing" constant="327" id="cji-fm-Sh7"/>
                                     <constraint firstItem="Eb2-ro-vJR" firstAttribute="leading" secondItem="Q9K-kP-X9W" secondAttribute="trailing" constant="20" id="ffE-rg-ijV"/>
                                     <constraint firstItem="5PR-J9-mDg" firstAttribute="centerY" secondItem="GOq-RQ-6ga" secondAttribute="centerY" id="hk2-wA-U6v"/>
+                                    <constraint firstItem="jJL-ku-036" firstAttribute="leading" secondItem="EQ4-HR-ITR" secondAttribute="trailing" constant="40" id="i7S-zg-Jgz"/>
                                     <constraint firstItem="V14-ts-phL" firstAttribute="centerY" secondItem="GOq-RQ-6ga" secondAttribute="centerY" id="iDY-dK-IUV"/>
                                     <constraint firstItem="5PR-J9-mDg" firstAttribute="leading" secondItem="GOq-RQ-6ga" secondAttribute="leading" constant="65" id="mRr-JW-f2h"/>
                                     <constraint firstItem="EQ4-HR-ITR" firstAttribute="leading" secondItem="5PR-J9-mDg" secondAttribute="trailing" constant="20" id="rUW-DB-pYZ"/>
@@ -458,7 +460,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kz0-Z4-MAw">
-                                <rect key="frame" x="360" y="70" width="664" height="643"/>
+                                <rect key="frame" x="361" y="70" width="664" height="643"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" id="ryv-CV-2Vl" customClass="MessageCell" customModule="Crypto_Chat" customModuleProvider="target">
@@ -472,7 +474,7 @@
                                                     <rect key="frame" x="360" y="20" width="284" height="18"/>
                                                     <color key="backgroundColor" red="0.47843137250000001" green="0.54901960780000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:99 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kt6-51-NZ5">
@@ -506,7 +508,7 @@
                             <constraint firstItem="r8Y-Sp-7jj" firstAttribute="top" secondItem="GOq-RQ-6ga" secondAttribute="bottom" id="Eje-4O-y68"/>
                             <constraint firstItem="qEA-AK-oPn" firstAttribute="top" secondItem="Jaa-ii-CgZ" secondAttribute="topMargin" constant="70" id="FSC-yT-knb"/>
                             <constraint firstItem="qEA-AK-oPn" firstAttribute="bottom" secondItem="Jaa-ii-CgZ" secondAttribute="bottomMargin" id="Lyf-iX-xtZ"/>
-                            <constraint firstItem="Kz0-Z4-MAw" firstAttribute="trailing" secondItem="Jk3-UD-Pv8" secondAttribute="trailing" id="M03-ad-T4F"/>
+                            <constraint firstItem="Kz0-Z4-MAw" firstAttribute="trailing" secondItem="Jk3-UD-Pv8" secondAttribute="trailing" constant="1" id="M03-ad-T4F"/>
                             <constraint firstItem="Mvr-7h-di0" firstAttribute="leading" secondItem="r8Y-Sp-7jj" secondAttribute="trailing" id="MzE-O6-Eiv"/>
                             <constraint firstItem="GOq-RQ-6ga" firstAttribute="top" secondItem="Jk3-UD-Pv8" secondAttribute="top" id="Okc-vN-IEG"/>
                             <constraint firstItem="GOq-RQ-6ga" firstAttribute="trailing" secondItem="Jk3-UD-Pv8" secondAttribute="trailing" id="Q8X-GT-ub9"/>
@@ -516,7 +518,7 @@
                             <constraint firstItem="r8Y-Sp-7jj" firstAttribute="bottom" secondItem="Jk3-UD-Pv8" secondAttribute="bottom" id="oGE-5W-hRb"/>
                             <constraint firstItem="GOq-RQ-6ga" firstAttribute="leading" secondItem="Jk3-UD-Pv8" secondAttribute="leading" id="u1R-Uz-dZQ"/>
                             <constraint firstItem="Mvr-7h-di0" firstAttribute="bottom" secondItem="Jk3-UD-Pv8" secondAttribute="bottom" id="vDt-Al-Qcp"/>
-                            <constraint firstItem="Kz0-Z4-MAw" firstAttribute="leading" secondItem="r8Y-Sp-7jj" secondAttribute="trailing" id="zkL-6O-5QF"/>
+                            <constraint firstItem="Kz0-Z4-MAw" firstAttribute="leading" secondItem="r8Y-Sp-7jj" secondAttribute="trailing" constant="1" id="zkL-6O-5QF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jk3-UD-Pv8"/>
                     </view>
