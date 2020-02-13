@@ -23,7 +23,7 @@ class ChatViewController: UIViewController {
     var chats: [Chat] = []
     var msgs: [Message] = [
         Message(msg: "Hello", time: "3:50 AM"),
-        Message(msg: "Hi", time: "3:51 AM"),
+        Message(msg: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a tortor ac sapien suscipit vestibulum. Ut eu mi dolor. Quisque tempor nibh condimentum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a tortor ac sapien suscipit vestibulum. Ut eu mi dolor. Quisque tempor nibh condimentum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a tortor ac sapien suscipit vestibulum. Ut eu mi dolor. Quisque tempor nibh condimentum", time: "3:51 AM"),
         Message(msg: "Whoa", time: "5:05 AM")
     ]
     
@@ -35,6 +35,9 @@ class ChatViewController: UIViewController {
         chatsTableView.dataSource = self
         msgsTableView.delegate = self
         msgsTableView.dataSource = self
+        
+        msgsTableView.rowHeight = UITableView.automaticDimension
+//        msgsTableView.estimatedRowHeight = 600
         
         chats = fillChats()
         chatsTableView.rowHeight = 75
