@@ -21,6 +21,11 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var sendMessageTextField: UITextField!
     @IBOutlet weak var sendMessageButton: UIButton!
     
+    
+    @IBAction func sendMsg(_ sender: Any) {
+        sendMsg()
+    }
+    
     var chats: [Chat] = []
     var msgs: [Message] = [
         Message(userId: 1, msg: "Hello", time: "13:50"),
@@ -53,6 +58,10 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     
     // A new msg is entered in the send text field
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return sendMsg()
+    }
+    
+    func sendMsg() -> Bool {
         let toSend = sendMessageTextField.text
         
         if (toSend == "") { return true }
