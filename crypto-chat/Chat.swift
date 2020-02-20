@@ -11,6 +11,7 @@ import UIKit
 
 class Chat {
     
+    var userId: String
     var avatar: UIImage
     var chatType: UIImage
     var chatTypeSelected: UIImage
@@ -18,7 +19,8 @@ class Chat {
     var message: String
     var msgTime: String
     
-    init (avatar: UIImage, chatType: UIImage, chatTypeSelected: UIImage, username: String, message: String, msgTime: String) {
+    init (userId: String, avatar: UIImage, chatType: UIImage, chatTypeSelected: UIImage, username: String, message: String, msgTime: String) {
+        self.userId = userId
         self.avatar = avatar
         self.chatType = chatType
         self.chatTypeSelected = chatTypeSelected

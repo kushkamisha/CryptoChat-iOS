@@ -191,7 +191,7 @@
 		5228DE8C23E9BC6A00D4F08B /* crypto-chat */ = {
 			isa = PBXGroup;
 			children = (
-				52FF99DF23FE92B0000758A6 /* App */,
+				52FF99DF23FE92B0000758A6 /* Services */,
 				5228DEC223E9C1D200D4F08B /* Images */,
 				5228DEBD23E9BFED00D4F08B /* Fonts */,
 				5228DEC723E9DA5700D4F08B /* Extensions */,
@@ -272,12 +272,12 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
-		52FF99DF23FE92B0000758A6 /* App */ = {
+		52FF99DF23FE92B0000758A6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				52FF99E023FE92C9000758A6 /* Socket.swift */,
 			);
-			path = App;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		764DE826A94ABC44ADC6E730 /* Pods */ = {

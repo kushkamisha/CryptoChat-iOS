@@ -10,11 +10,11 @@ import Foundation
 
 class Message {
     
+    var userId: String
     var msg : String
     var time : String
-    var userId: Int
     
-    init(userId: Int, msg: String, time: String) {
+    init(userId: String, msg: String, time: String) {
         self.userId = userId
         self.msg = msg
         self.time = time

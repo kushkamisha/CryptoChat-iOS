@@ -31,12 +31,10 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
         sendMsg()
     }
     
+    let userId: String = "1"
+    
     var chats: [Chat] = []
-    var msgs: [Message] = [
-        Message(userId: 1, msg: "Hello", time: "13:50"),
-        Message(userId: 2, msg: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a tortor ac sapien suscipit vestibulum", time: "13:51"),
-        Message(userId: 1, msg: "Whoa", time: "15:05")
-    ]
+    var msgs: [Message] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,12 +44,10 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
         chatsTableView.dataSource = self
         msgsTableView.delegate = self
         msgsTableView.dataSource = self
-        
         sendMessageTextField.delegate = self
         
         msgsTableView.rowHeight = UITableView.automaticDimension
         
-//        chats = fillChats()
         chatsTableView.rowHeight = 75
         sendMessageTextField.attributedPlaceholder = NSAttributedString(string: "Type your message here...", attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(displayP3Red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5)])
         
@@ -60,7 +56,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     
     func loadChats() {
         let params: [String: String] = [
-            "userId": String(1),
+            "userId": self.userId,
         ]
         
         AF.request("http://localhost:3000/userSessionCheck",
@@ -76,8 +72,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
                             socket.requestUserChats()
                             .subscribe(onNext: { userList in
                                 for user in userList {
-//                                    self.chats.append(Chat(avatar: #imageLiteral(resourceName: "user-default"), chatType: #imageLiteral(resourceName: "unlocked"), chatTypeSelected: #imageLiteral(resourceName: "unlocked white"), username: user["username"] ?? "No username", message: ".....", msgTime: "just now"))
-                                    self.chats.append(Chat(avatar: #imageLiteral(resourceName: "user-default"), chatType: #imageLiteral(resourceName: "free"), chatTypeSelected: #imageLiteral(resourceName: "free white"), username: user["username"] ?? "", message: "Do you know what does word \"thief\" mean?", msgTime: "just now"))
+                                    self.chats.append(Chat(userId: user["id"] ?? "", avatar: #imageLiteral(resourceName: "user-default"), chatType: #imageLiteral(resourceName: "free"), chatTypeSelected: #imageLiteral(resourceName: "free white"), username: user["username"] ?? "", message: "Do you know what does word \"thief\" mean?", msgTime: "just now"))
                                 }
                                 self.chatsTableView.reloadData()
                             })
@@ -85,6 +80,41 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
                 
                 case .failure(let error):
                     print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func getMessages(friendId: String) -> Future<[Dictionary<String, String>]> {
+        return Future { completion in
+            let params: [String: String] = [
+                "userId": self.userId,
+                "toUserId": friendId
+            ]
+            AF.request("http://localhost:3000/getMessages",
+                       method: .post,
+                       parameters: params,
+                       encoder: JSONParameterEncoder.default).responseJSON { response in
+                switch response.result {
+                    case .success(let data):
+                        let messages = (data as! NSDictionary)["messages"] as! NSArray
+                        var msgList = [[String: String]]()
+                        for msg in messages {
+                            let m = msg as! NSDictionary
+                            var tmp = [String: String]()
+                            
+                            tmp["msgId"] = "\(m["id"] as! Int)"
+                            tmp["fromUserId"] = m["fromUserId"] as? String
+                            tmp["toUserId"] = m["toUserId"] as? String
+                            tmp["message"] = m["message"] as? String
+                            
+                            msgList.append(tmp)
+                        }
+                        
+                        completion(.success(msgList))
+                        break
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                }
             }
         }
     }
@@ -110,27 +140,13 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
         let hour = calendar.component(.hour, from: date)
         let minutes = calendar.component(.minute, from: date)
         
-        msgs.append(Message(userId: 1, msg: toSend ?? "", time: "\(hour):\(minutes)"))
+        msgs.append(Message(userId: self.userId, msg: toSend ?? "", time: "\(hour):\(minutes)"))
         
         sendMessageTextField.text = ""
         
         msgsTableView.reloadData()
         
         return true
-    }
-    
-    func fillChats() -> [Chat] {
-        var tmpChats: [Chat] = []
-        
-        let chat1 = Chat(avatar: #imageLiteral(resourceName: "user-1"), chatType: #imageLiteral(resourceName: "unlocked"), chatTypeSelected: #imageLiteral(resourceName: "unlocked white"), username: "Ann Ketnye", message: "Do you know what does word \"thief\" mean?", msgTime: "just now")
-        let chat2 = Chat(avatar: #imageLiteral(resourceName: "user-3"), chatType: #imageLiteral(resourceName: "free"), chatTypeSelected: #imageLiteral(resourceName: "free white"), username: "Bro Walker", message: "Hi, man. What's up?", msgTime: "5 minutes ago")
-        let chat3 = Chat(avatar: #imageLiteral(resourceName: "user-default"), chatType: #imageLiteral(resourceName: "free"), chatTypeSelected: #imageLiteral(resourceName: "free white"), username: "Susanna", message: "You won't believe in what was just happened!!", msgTime: "3 hours ago")
-        
-        tmpChats.append(chat1)
-        tmpChats.append(chat2)
-        tmpChats.append(chat3)
-        
-        return tmpChats
     }
 
 }
@@ -152,7 +168,7 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
         }
         
         let msg = msgs[indexPath.row]
-        if (msg.userId == 1) {
+        if (msg.userId == self.userId) {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MessageRightCell") as! MessageRightCell
             cell.setMessage(message: msg)
             return cell
@@ -165,6 +181,16 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if (tableView == chatsTableView) {
+            let friendId = chats[indexPath.row].userId
+            getMessages(friendId: friendId)
+                .subscribe(onNext: { msgList in
+                    self.msgs = []
+                    for msg in msgList {
+                        self.msgs.append(Message(userId: msg["fromUserId"] ?? "", msg: msg["message"] ?? "", time: "xx:xx"))
+                    }
+                    self.msgsTableView.reloadData()
+                })
+            
             topBarUsername.text = chats[indexPath.row].username
             topBarAvatar.image = chats[indexPath.row].avatar
             topBarChatType.image = chats[indexPath.row].chatTypeSelected

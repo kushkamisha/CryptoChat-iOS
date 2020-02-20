@@ -39,27 +39,17 @@ class Socket {
         }
     }
     
-//    func getUser(withID id: Int) -> Future<User> {
-//      return Future { completion in
-//        // Here you call an API
-//        // that returns the user you are looking for.
-//        APIClient.get(getUserURL(id: id)) { user in
-//          completion(.success(user))
-//        }
-//      }
-//    }
-    
     func requestUserChats() -> Future<[Dictionary<String, String>]> {
         return Future { completion in
             print("\n\nEmitting a socket msg")
             self.socket.emit("chat-list", self.userId)
             
             self.socket.on("chat-list-response") { ( dataArray, ack) -> Void in
-                let chatUsers = ((dataArray[0] as! NSDictionary)["chatList"] as! NSArray)
-                var userList = [[String:String]]()
+                let chatUsers = (dataArray[0] as! NSDictionary)["chatList"] as! NSArray
+                var userList = [[String: String]]()
                 for user in chatUsers {
                     let u = user as! NSDictionary
-                    var tmp = [String:String]()
+                    var tmp = [String: String]()
 
                     tmp["id"] = "\(u["id"] as! Int)"
                     tmp["online"] = u["online"] as? String
