@@ -7,6 +7,11 @@
 //
 
 import UIKit
+import Alamofire
+
+struct LoadChats: Encodable {
+    let userId: Int
+}
 
 class ChatViewController: UIViewController, UITextFieldDelegate {
 
@@ -46,9 +51,39 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
         
         msgsTableView.rowHeight = UITableView.automaticDimension
         
-        chats = fillChats()
+//        chats = fillChats()
         chatsTableView.rowHeight = 75
         sendMessageTextField.attributedPlaceholder = NSAttributedString(string: "Type your message here...", attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(displayP3Red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5)])
+        
+        loadChats()
+    }
+    
+    func loadChats() {
+        let params: [String: String] = [
+            "userId": String(1),
+        ]
+        
+        AF.request("http://localhost:3000/userSessionCheck",
+                   method: .post,
+                   parameters: params,
+                   encoder: JSONParameterEncoder.default).responseJSON { response in
+//            switch response.result {
+                print(response)
+                let socket = Socket.init(userId: 1)
+//                case .success(let data):
+//                    let dict = data as! NSDictionary
+//                    let status = dict["status"] as! String
+//                    if (status == "success") {
+//                        self.navigateToScreen(screenName: "MessagesScreen")
+//                    } else {
+//                        let alert = UIAlertController(title: NSLocalizedString("Oops", comment: ""), message: NSLocalizedString("loginError", comment: ""), preferredStyle: .alert)
+//                        self.present(alert, animated: true)
+//                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//                    }
+//                case .failure(let error):
+//                    print(error.localizedDescription)
+//            }
+        }
     }
     
     override var preferredStatusBarStyle : UIStatusBarStyle {

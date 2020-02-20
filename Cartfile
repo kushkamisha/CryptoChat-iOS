@@ -1,0 +1,3 @@
+github "Alamofire/Alamofire"
+github "swiftsocket/SwiftSocket"
+github "socketio/socket.io-client-swift" ~> 15.2.0

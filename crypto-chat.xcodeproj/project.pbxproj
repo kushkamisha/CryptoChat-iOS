@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -30,9 +30,16 @@
 		525691E123EB360700DB09D9 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525691E023EB360700DB09D9 /* ChatViewController.swift */; };
 		525691E323EB443000DB09D9 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525691E223EB443000DB09D9 /* Utils.swift */; };
 		52731C6023ECA6E2009A6C2A /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52731C5F23ECA6E2009A6C2A /* UIViewController.swift */; };
+		5287030A23FEA261004DB7EC /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5287030923FEA260004DB7EC /* Starscream.framework */; };
+		5287030B23FEA261004DB7EC /* Starscream.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5287030923FEA260004DB7EC /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		529180C923F59C7100BD6751 /* UILabel.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529180C823F59C7100BD6751 /* UILabel.ext.swift */; };
 		52E1EB9F23F46BCD008BA69E /* MessageRightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E1EB9E23F46BCD008BA69E /* MessageRightCell.swift */; };
 		52E1EBA123F473F8008BA69E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E1EBA023F473F8008BA69E /* Message.swift */; };
+		52E94DBB23FE98FB00ABD416 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E94DB823FE98FB00ABD416 /* Alamofire.framework */; };
+		52E94DBC23FE98FB00ABD416 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52E94DB823FE98FB00ABD416 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		52E94DBF23FE9EAA00ABD416 /* SocketIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E94DBE23FE9EAA00ABD416 /* SocketIO.framework */; };
+		52E94DC023FE9EAA00ABD416 /* SocketIO.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52E94DBE23FE9EAA00ABD416 /* SocketIO.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		52FF99E123FE92C9000758A6 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FF99E023FE92C9000758A6 /* Socket.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +58,22 @@
 			remoteInfo = "crypto-chat";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		52E94DBD23FE98FB00ABD416 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				52E94DC023FE9EAA00ABD416 /* SocketIO.framework in Embed Frameworks */,
+				5287030B23FEA261004DB7EC /* Starscream.framework in Embed Frameworks */,
+				52E94DBC23FE98FB00ABD416 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5225A4D123F2ACF500EB677B /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
@@ -85,9 +108,15 @@
 		525691E023EB360700DB09D9 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		525691E223EB443000DB09D9 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		52731C5F23ECA6E2009A6C2A /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		5287030923FEA260004DB7EC /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
 		529180C823F59C7100BD6751 /* UILabel.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.ext.swift; sourceTree = "<group>"; };
 		52E1EB9E23F46BCD008BA69E /* MessageRightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRightCell.swift; sourceTree = "<group>"; };
 		52E1EBA023F473F8008BA69E /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		52E94DB323FE989400ABD416 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
+		52E94DB723FE98FB00ABD416 /* SwiftSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSocket.framework; path = Carthage/Build/iOS/SwiftSocket.framework; sourceTree = "<group>"; };
+		52E94DB823FE98FB00ABD416 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		52E94DBE23FE9EAA00ABD416 /* SocketIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SocketIO.framework; path = Carthage/Build/iOS/SocketIO.framework; sourceTree = "<group>"; };
+		52FF99E023FE92C9000758A6 /* Socket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
 		B27DD069B7C70D0AAAB9A897 /* Pods_crypto_chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_crypto_chat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3679EE945E128D810648400 /* Pods-crypto-chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-crypto-chat.debug.xcconfig"; path = "Target Support Files/Pods-crypto-chat/Pods-crypto-chat.debug.xcconfig"; sourceTree = "<group>"; };
 		E5E61724F7728D6D33303528 /* Pods-crypto-chat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-crypto-chat.release.xcconfig"; path = "Target Support Files/Pods-crypto-chat/Pods-crypto-chat.release.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +128,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0781141A6A825356B61DC018 /* Pods_crypto_chat.framework in Frameworks */,
+				5287030A23FEA261004DB7EC /* Starscream.framework in Frameworks */,
+				52E94DBB23FE98FB00ABD416 /* Alamofire.framework in Frameworks */,
+				52E94DBF23FE9EAA00ABD416 /* SocketIO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +154,11 @@
 		4B769D74112AB9C43E9875D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5287030923FEA260004DB7EC /* Starscream.framework */,
+				52E94DBE23FE9EAA00ABD416 /* SocketIO.framework */,
+				52E94DB323FE989400ABD416 /* Alamofire.framework */,
+				52E94DB823FE98FB00ABD416 /* Alamofire.framework */,
+				52E94DB723FE98FB00ABD416 /* SwiftSocket.framework */,
 				B27DD069B7C70D0AAAB9A897 /* Pods_crypto_chat.framework */,
 			);
 			name = Frameworks;
@@ -152,6 +189,7 @@
 		5228DE8C23E9BC6A00D4F08B /* crypto-chat */ = {
 			isa = PBXGroup;
 			children = (
+				52FF99DF23FE92B0000758A6 /* App */,
 				5228DEC223E9C1D200D4F08B /* Images */,
 				5228DEBD23E9BFED00D4F08B /* Fonts */,
 				5228DEC723E9DA5700D4F08B /* Extensions */,
@@ -231,6 +269,14 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
+		52FF99DF23FE92B0000758A6 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				52FF99E023FE92C9000758A6 /* Socket.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		764DE826A94ABC44ADC6E730 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,7 +297,7 @@
 				5228DE8623E9BC6A00D4F08B /* Sources */,
 				5228DE8723E9BC6A00D4F08B /* Frameworks */,
 				5228DE8823E9BC6A00D4F08B /* Resources */,
-				712F4BB9DC67F67B42971192 /* [CP] Embed Pods Frameworks */,
+				52E94DBD23FE98FB00ABD416 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -374,23 +420,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		712F4BB9DC67F67B42971192 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-crypto-chat/Pods-crypto-chat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-crypto-chat/Pods-crypto-chat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-crypto-chat/Pods-crypto-chat-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C196F070600108A1152369CB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -420,6 +449,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52FF99E123FE92C9000758A6 /* Socket.swift in Sources */,
 				5248085923F5CE6700700620 /* MessageLeftCell.swift in Sources */,
 				5225A4D323F2B3DC00EB677B /* ChatCell.swift in Sources */,
 				5225A4D723F2EBC800EB677B /* TableViewCell.ext.swift in Sources */,
@@ -624,6 +654,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9P5NG74SNG;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "crypto-chat/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -632,7 +667,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Misha-Kushka.crypto-chat";
 				PRODUCT_NAME = "Crypto Chat";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -643,6 +678,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9P5NG74SNG;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "crypto-chat/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -651,7 +691,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Misha-Kushka.crypto-chat";
 				PRODUCT_NAME = "Crypto Chat";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

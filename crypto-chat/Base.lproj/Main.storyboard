@@ -74,7 +74,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="42"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OK7-AR-FEw" userLabel="Email">
-                                                        <rect key="frame" x="30" y="11.5" width="40.5" height="19"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="42"/>
                                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
                                                         <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -82,9 +82,10 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="OK7-AR-FEw" firstAttribute="leading" secondItem="Nte-cw-0JR" secondAttribute="leading" constant="30" id="JJr-Tt-WiP"/>
-                                                    <constraint firstItem="OK7-AR-FEw" firstAttribute="centerX" secondItem="Nte-cw-0JR" secondAttribute="centerX" constant="0.25" id="jnl-t4-cWR"/>
-                                                    <constraint firstItem="OK7-AR-FEw" firstAttribute="centerY" secondItem="Nte-cw-0JR" secondAttribute="centerY" id="loZ-MC-Ghb"/>
+                                                    <constraint firstItem="OK7-AR-FEw" firstAttribute="centerX" secondItem="Nte-cw-0JR" secondAttribute="centerX" id="Ah2-OC-rWb"/>
+                                                    <constraint firstItem="OK7-AR-FEw" firstAttribute="top" secondItem="Nte-cw-0JR" secondAttribute="top" id="bgX-Gd-NuU"/>
+                                                    <constraint firstItem="OK7-AR-FEw" firstAttribute="centerY" secondItem="Nte-cw-0JR" secondAttribute="centerY" id="gVQ-cQ-OY8"/>
+                                                    <constraint firstItem="OK7-AR-FEw" firstAttribute="leading" secondItem="Nte-cw-0JR" secondAttribute="leading" id="hnA-pd-Vls"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -94,6 +95,7 @@
                                             <constraint firstItem="zAu-F5-gT8" firstAttribute="leading" secondItem="Nte-cw-0JR" secondAttribute="trailing" constant="20" id="949-Tc-d4U"/>
                                             <constraint firstItem="Nte-cw-0JR" firstAttribute="top" secondItem="zAu-F5-gT8" secondAttribute="top" id="Ha0-e7-bz1"/>
                                             <constraint firstAttribute="width" constant="346" id="Q1I-n0-aag"/>
+                                            <constraint firstAttribute="trailing" secondItem="zAu-F5-gT8" secondAttribute="trailing" constant="10" id="QZt-qv-0HK"/>
                                             <constraint firstAttribute="bottom" secondItem="Nte-cw-0JR" secondAttribute="bottom" id="c5w-3t-pn4"/>
                                             <constraint firstItem="Nte-cw-0JR" firstAttribute="bottom" secondItem="zAu-F5-gT8" secondAttribute="bottom" id="pac-FT-TKS"/>
                                             <constraint firstItem="Nte-cw-0JR" firstAttribute="top" secondItem="JAb-AY-4ID" secondAttribute="top" id="rQz-vr-cay"/>
@@ -116,7 +118,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="42"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pass" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUt-4t-8F4" userLabel="Pass">
-                                                        <rect key="frame" x="30.5" y="11.5" width="35" height="19"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="42"/>
                                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
                                                         <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -124,8 +126,10 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="xUt-4t-8F4" firstAttribute="centerY" secondItem="Vbh-UJ-R31" secondAttribute="centerY" id="26l-7Y-S4j"/>
-                                                    <constraint firstItem="xUt-4t-8F4" firstAttribute="centerX" secondItem="Vbh-UJ-R31" secondAttribute="centerX" constant="-2.25" id="cIS-JU-zGt"/>
+                                                    <constraint firstItem="xUt-4t-8F4" firstAttribute="centerX" secondItem="Vbh-UJ-R31" secondAttribute="centerX" id="5jj-nG-DaB"/>
+                                                    <constraint firstItem="xUt-4t-8F4" firstAttribute="leading" secondItem="Vbh-UJ-R31" secondAttribute="leading" id="Wbb-el-xOO"/>
+                                                    <constraint firstItem="xUt-4t-8F4" firstAttribute="centerY" secondItem="Vbh-UJ-R31" secondAttribute="centerY" id="daY-Tu-YZm"/>
+                                                    <constraint firstItem="xUt-4t-8F4" firstAttribute="top" secondItem="Vbh-UJ-R31" secondAttribute="top" id="knl-Gy-uI5"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
