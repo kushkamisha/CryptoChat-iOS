@@ -1,3 +1,16 @@
-PODFILE CHECKSUM: 6889fed3bbfa1eacbba69ee473d80402309ebe05
+PODS:
+  - Microfutures (0.1.2)
+
+DEPENDENCIES:
+  - Microfutures
+
+SPEC REPOS:
+  trunk:
+    - Microfutures
+
+SPEC CHECKSUMS:
+  Microfutures: a7256087d89f835e8b2fdb72f7d6864ad3dd3fd9
+
+PODFILE CHECKSUM: 81e50c75e55bf7601ae00bd0f6c9857fd11a9dbf
 
 COCOAPODS: 1.8.4

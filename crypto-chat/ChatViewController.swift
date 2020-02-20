@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import Microfutures
 
 struct LoadChats: Encodable {
     let userId: Int
@@ -67,22 +68,21 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
                    method: .post,
                    parameters: params,
                    encoder: JSONParameterEncoder.default).responseJSON { response in
-//            switch response.result {
-                print(response)
-                let socket = Socket.init(userId: 1)
-//                case .success(let data):
-//                    let dict = data as! NSDictionary
-//                    let status = dict["status"] as! String
-//                    if (status == "success") {
-//                        self.navigateToScreen(screenName: "MessagesScreen")
-//                    } else {
-//                        let alert = UIAlertController(title: NSLocalizedString("Oops", comment: ""), message: NSLocalizedString("loginError", comment: ""), preferredStyle: .alert)
-//                        self.present(alert, animated: true)
-//                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-//                    }
-//                case .failure(let error):
-//                    print(error.localizedDescription)
-//            }
+            switch response.result {
+                case .success(let data):
+                    print(response)
+                    let socket = Socket.init(userId: 1)
+                    socket.connect()
+                        .subscribe(onNext: { _ in
+                            socket.requestUserChats()
+                            .subscribe(onNext: { userList in
+                                print(userList)
+                            })
+                        })
+                
+                case .failure(let error):
+                    print(error.localizedDescription)
+            }
         }
     }
     

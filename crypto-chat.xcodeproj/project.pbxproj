@@ -298,6 +298,7 @@
 				5228DE8723E9BC6A00D4F08B /* Frameworks */,
 				5228DE8823E9BC6A00D4F08B /* Resources */,
 				52E94DBD23FE98FB00ABD416 /* Embed Frameworks */,
+				9F645D60FC5A3BE9B856A51C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -420,6 +421,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		9F645D60FC5A3BE9B856A51C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-crypto-chat/Pods-crypto-chat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-crypto-chat/Pods-crypto-chat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-crypto-chat/Pods-crypto-chat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C196F070600108A1152369CB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
