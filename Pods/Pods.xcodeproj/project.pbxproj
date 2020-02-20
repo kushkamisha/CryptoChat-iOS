@@ -3,117 +3,71 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0324EB848DBBFD9EF927E829CEEF9763 /* Pods-crypto-chat-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B3EF7197870A0B98AF52D4B86B8F166 /* Pods-crypto-chat-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0ADC6621C8859970CC69471A373BE0EE /* Microfutures-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E521826753E8DBDC4640B4F302A5910D /* Microfutures-dummy.m */; };
-		27AE24B8880C6EDBEB2A4F53B13F4A00 /* Microfutures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDFDEC5DAD681A5D5BD2FD6A5DCE467 /* Microfutures.swift */; };
-		547EDA955FB76F2438A96023F2293F7C /* Pods-crypto-chat-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE0DF17F4C84D1C88AD21195BE7050A /* Pods-crypto-chat-dummy.m */; };
-		5ED3F5924096688F9BFE93960ECD222C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		A32BB31008094EB344F29E6ABB266684 /* Microfutures-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8949FE371C2ECBE812F91DA21048FA11 /* Microfutures-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D678886E20DF9F7121DFF1F357F929AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		8FD40AAFEB946828FA6400E3E0D75522 /* Pods-crypto-chat-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3A477BDE5E04BE4BBECF5DB026F64A /* Pods-crypto-chat-dummy.m */; };
+		9843BFF03D0C50ABAC28FC19085E22C0 /* Pods-crypto-chat-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B1FF7E91432B463A8B3117E925A2180 /* Pods-crypto-chat-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		98E4E3D3FA4C1BDC47F7E1FBE3EEF70B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		379D5E312377F52ABFC84F449983AAA4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BF444D35D0F10D14D5B3DA5F709242F2;
-			remoteInfo = Microfutures;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		07D568AD98553CC74D1D87ACAA22DE6C /* Microfutures.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Microfutures.xcconfig; sourceTree = "<group>"; };
-		1B3EF7197870A0B98AF52D4B86B8F166 /* Pods-crypto-chat-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-crypto-chat-umbrella.h"; sourceTree = "<group>"; };
-		1DE0DF17F4C84D1C88AD21195BE7050A /* Pods-crypto-chat-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-crypto-chat-dummy.m"; sourceTree = "<group>"; };
-		269C33C8EF34B6F0D3E5DA483075DB18 /* Microfutures.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Microfutures.framework; path = Microfutures.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0723EB082DE72B2108C84EE2F8283014 /* Pods-crypto-chat-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-crypto-chat-Info.plist"; sourceTree = "<group>"; };
+		0742631857933A5B60F10E5D5A592EBF /* Pods-crypto-chat.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-crypto-chat.modulemap"; sourceTree = "<group>"; };
+		2B1FF7E91432B463A8B3117E925A2180 /* Pods-crypto-chat-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-crypto-chat-umbrella.h"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		3EEAC94E35CB5C67446B97789C980A30 /* Microfutures-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Microfutures-Info.plist"; sourceTree = "<group>"; };
-		69B9D682F51A069AC0609B984FFB33A1 /* Pods-crypto-chat-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-crypto-chat-acknowledgements.plist"; sourceTree = "<group>"; };
-		7CC681564DD4CFE2B0E9CAE3400C85DA /* Pods-crypto-chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-crypto-chat.debug.xcconfig"; sourceTree = "<group>"; };
-		8949FE371C2ECBE812F91DA21048FA11 /* Microfutures-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Microfutures-umbrella.h"; sourceTree = "<group>"; };
-		8BDFDEC5DAD681A5D5BD2FD6A5DCE467 /* Microfutures.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Microfutures.swift; path = Microfutures/Classes/Microfutures.swift; sourceTree = "<group>"; };
+		3A7CA5ADF27E7E7E88EB6F9E5E1F3CB0 /* Pods-crypto-chat-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-crypto-chat-acknowledgements.plist"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A2DAFD204AB3A522387D21FB8172F347 /* Microfutures.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Microfutures.modulemap; sourceTree = "<group>"; };
+		AC94B8F99F6C4541CCDA36A10F15DB60 /* Pods-crypto-chat-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-crypto-chat-acknowledgements.markdown"; sourceTree = "<group>"; };
 		BAB0EE45CF168BD876BA271FD445A753 /* Pods_crypto_chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_crypto_chat.framework; path = "Pods-crypto-chat.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA0986115B7CE4EBBA4C95DE2CAF12F8 /* Pods-crypto-chat.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-crypto-chat.modulemap"; sourceTree = "<group>"; };
-		E06C761038B0D2D3946933F0941834EC /* Microfutures-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Microfutures-prefix.pch"; sourceTree = "<group>"; };
-		E38EF06A5FC4071A9D4346B8FAC01379 /* Pods-crypto-chat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-crypto-chat.release.xcconfig"; sourceTree = "<group>"; };
-		E521826753E8DBDC4640B4F302A5910D /* Microfutures-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Microfutures-dummy.m"; sourceTree = "<group>"; };
-		E6096AE72C166056665E3A9305024042 /* Pods-crypto-chat-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-crypto-chat-Info.plist"; sourceTree = "<group>"; };
-		E73DE7EB1A34657BF63BA5123BFC6885 /* Pods-crypto-chat-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-crypto-chat-frameworks.sh"; sourceTree = "<group>"; };
-		F71F4353BB3A9AB04A2E7337D05621F5 /* Pods-crypto-chat-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-crypto-chat-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CE3A477BDE5E04BE4BBECF5DB026F64A /* Pods-crypto-chat-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-crypto-chat-dummy.m"; sourceTree = "<group>"; };
+		DDBC2BE7A792E4AFFE5726D339177D2E /* Pods-crypto-chat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-crypto-chat.release.xcconfig"; sourceTree = "<group>"; };
+		F80DE0CC8A0A8BDD5744A5BCD9F3ACBE /* Pods-crypto-chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-crypto-chat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		23DDDAF7ECB76F53D17BF39E0CEF67B0 /* Frameworks */ = {
+		BDE3180253F2BE31E22302615BF19E24 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D678886E20DF9F7121DFF1F357F929AC /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D0506438EC9BE63E11D896BDBDC7CB6B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5ED3F5924096688F9BFE93960ECD222C /* Foundation.framework in Frameworks */,
+				98E4E3D3FA4C1BDC47F7E1FBE3EEF70B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		56102E534CFF48B079297C2BE7A9D49E /* Targets Support Files */ = {
+		4CB215E51EFAA10B7CD8AC87B97F7C7C /* Pods-crypto-chat */ = {
 			isa = PBXGroup;
 			children = (
-				BBCFE4551892E06D407EC1B06626A69F /* Pods-crypto-chat */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		6AB7C95D2D76AFAD29894651FC301385 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				EB38EDB0987A4C91C48BACEC913056A4 /* Microfutures */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		93E732B75F1116E4B570BB3A2B851223 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				A2DAFD204AB3A522387D21FB8172F347 /* Microfutures.modulemap */,
-				07D568AD98553CC74D1D87ACAA22DE6C /* Microfutures.xcconfig */,
-				E521826753E8DBDC4640B4F302A5910D /* Microfutures-dummy.m */,
-				3EEAC94E35CB5C67446B97789C980A30 /* Microfutures-Info.plist */,
-				E06C761038B0D2D3946933F0941834EC /* Microfutures-prefix.pch */,
-				8949FE371C2ECBE812F91DA21048FA11 /* Microfutures-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Microfutures";
-			sourceTree = "<group>";
-		};
-		BBCFE4551892E06D407EC1B06626A69F /* Pods-crypto-chat */ = {
-			isa = PBXGroup;
-			children = (
-				CA0986115B7CE4EBBA4C95DE2CAF12F8 /* Pods-crypto-chat.modulemap */,
-				F71F4353BB3A9AB04A2E7337D05621F5 /* Pods-crypto-chat-acknowledgements.markdown */,
-				69B9D682F51A069AC0609B984FFB33A1 /* Pods-crypto-chat-acknowledgements.plist */,
-				1DE0DF17F4C84D1C88AD21195BE7050A /* Pods-crypto-chat-dummy.m */,
-				E73DE7EB1A34657BF63BA5123BFC6885 /* Pods-crypto-chat-frameworks.sh */,
-				E6096AE72C166056665E3A9305024042 /* Pods-crypto-chat-Info.plist */,
-				1B3EF7197870A0B98AF52D4B86B8F166 /* Pods-crypto-chat-umbrella.h */,
-				7CC681564DD4CFE2B0E9CAE3400C85DA /* Pods-crypto-chat.debug.xcconfig */,
-				E38EF06A5FC4071A9D4346B8FAC01379 /* Pods-crypto-chat.release.xcconfig */,
+				0742631857933A5B60F10E5D5A592EBF /* Pods-crypto-chat.modulemap */,
+				AC94B8F99F6C4541CCDA36A10F15DB60 /* Pods-crypto-chat-acknowledgements.markdown */,
+				3A7CA5ADF27E7E7E88EB6F9E5E1F3CB0 /* Pods-crypto-chat-acknowledgements.plist */,
+				CE3A477BDE5E04BE4BBECF5DB026F64A /* Pods-crypto-chat-dummy.m */,
+				0723EB082DE72B2108C84EE2F8283014 /* Pods-crypto-chat-Info.plist */,
+				2B1FF7E91432B463A8B3117E925A2180 /* Pods-crypto-chat-umbrella.h */,
+				F80DE0CC8A0A8BDD5744A5BCD9F3ACBE /* Pods-crypto-chat.debug.xcconfig */,
+				DDBC2BE7A792E4AFFE5726D339177D2E /* Pods-crypto-chat.release.xcconfig */,
 			);
 			name = "Pods-crypto-chat";
 			path = "Target Support Files/Pods-crypto-chat";
+			sourceTree = "<group>";
+		};
+		4F75D0EFCDCC87909B5673D6238E60B4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BAB0EE45CF168BD876BA271FD445A753 /* Pods_crypto_chat.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		71513A3C6DC8ED58F2EA359F2343D02F /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4CB215E51EFAA10B7CD8AC87B97F7C7C /* Pods-crypto-chat */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -129,9 +83,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				6AB7C95D2D76AFAD29894651FC301385 /* Pods */,
-				EB89A50EF3DEEA5CE5BE91384E7CD0D8 /* Products */,
-				56102E534CFF48B079297C2BE7A9D49E /* Targets Support Files */,
+				4F75D0EFCDCC87909B5673D6238E60B4 /* Products */,
+				71513A3C6DC8ED58F2EA359F2343D02F /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,41 +96,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EB38EDB0987A4C91C48BACEC913056A4 /* Microfutures */ = {
-			isa = PBXGroup;
-			children = (
-				8BDFDEC5DAD681A5D5BD2FD6A5DCE467 /* Microfutures.swift */,
-				93E732B75F1116E4B570BB3A2B851223 /* Support Files */,
-			);
-			name = Microfutures;
-			path = Microfutures;
-			sourceTree = "<group>";
-		};
-		EB89A50EF3DEEA5CE5BE91384E7CD0D8 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				269C33C8EF34B6F0D3E5DA483075DB18 /* Microfutures.framework */,
-				BAB0EE45CF168BD876BA271FD445A753 /* Pods_crypto_chat.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		A8CE13BDE3F59C9F73D17E5B9DDC7A03 /* Headers */ = {
+		F7CD0E7D1EF7E975A54A57F4A51FA65B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0324EB848DBBFD9EF927E829CEEF9763 /* Pods-crypto-chat-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FB82B2E40FFB9156DB083AF2059691EA /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A32BB31008094EB344F29E6ABB266684 /* Microfutures-umbrella.h in Headers */,
+				9843BFF03D0C50ABAC28FC19085E22C0 /* Pods-crypto-chat-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,39 +112,20 @@
 /* Begin PBXNativeTarget section */
 		2D0A32BE32FFEB1A1CC4980E6CDB04C6 /* Pods-crypto-chat */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A997132D2CBD9D081A83AC43DDA55EB4 /* Build configuration list for PBXNativeTarget "Pods-crypto-chat" */;
+			buildConfigurationList = 35A6DAC71846209A8DE74AD56A9CAECC /* Build configuration list for PBXNativeTarget "Pods-crypto-chat" */;
 			buildPhases = (
-				A8CE13BDE3F59C9F73D17E5B9DDC7A03 /* Headers */,
-				DB5C61F6C74E4E3F6959A3CDCEF7261D /* Sources */,
-				D0506438EC9BE63E11D896BDBDC7CB6B /* Frameworks */,
-				21993466FA1B494DC819281A80B6486C /* Resources */,
+				F7CD0E7D1EF7E975A54A57F4A51FA65B /* Headers */,
+				36D5AD4487FA8C9DACFA49E1A42FA6CC /* Sources */,
+				BDE3180253F2BE31E22302615BF19E24 /* Frameworks */,
+				C58050808A1A40ADBCD6D8AAD4DFFC40 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F2822125DD2A86E918A99D26E7DF9BB8 /* PBXTargetDependency */,
 			);
 			name = "Pods-crypto-chat";
 			productName = "Pods-crypto-chat";
 			productReference = BAB0EE45CF168BD876BA271FD445A753 /* Pods_crypto_chat.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		BF444D35D0F10D14D5B3DA5F709242F2 /* Microfutures */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 69E2EFA599B762C1309615BF092068B2 /* Build configuration list for PBXNativeTarget "Microfutures" */;
-			buildPhases = (
-				FB82B2E40FFB9156DB083AF2059691EA /* Headers */,
-				4925794B29670153A6C32DCF8E0DE443 /* Sources */,
-				23DDDAF7ECB76F53D17BF39E0CEF67B0 /* Frameworks */,
-				0BA7728052CF9FF54F3F3C0FFF049D8C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Microfutures;
-			productName = Microfutures;
-			productReference = 269C33C8EF34B6F0D3E5DA483075DB18 /* Microfutures.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -231,7 +138,7 @@
 				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -239,25 +146,17 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = EB89A50EF3DEEA5CE5BE91384E7CD0D8 /* Products */;
+			productRefGroup = 4F75D0EFCDCC87909B5673D6238E60B4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BF444D35D0F10D14D5B3DA5F709242F2 /* Microfutures */,
 				2D0A32BE32FFEB1A1CC4980E6CDB04C6 /* Pods-crypto-chat */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0BA7728052CF9FF54F3F3C0FFF049D8C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		21993466FA1B494DC819281A80B6486C /* Resources */ = {
+		C58050808A1A40ADBCD6D8AAD4DFFC40 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -267,33 +166,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4925794B29670153A6C32DCF8E0DE443 /* Sources */ = {
+		36D5AD4487FA8C9DACFA49E1A42FA6CC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0ADC6621C8859970CC69471A373BE0EE /* Microfutures-dummy.m in Sources */,
-				27AE24B8880C6EDBEB2A4F53B13F4A00 /* Microfutures.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DB5C61F6C74E4E3F6959A3CDCEF7261D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				547EDA955FB76F2438A96023F2293F7C /* Pods-crypto-chat-dummy.m in Sources */,
+				8FD40AAFEB946828FA6400E3E0D75522 /* Pods-crypto-chat-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		F2822125DD2A86E918A99D26E7DF9BB8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Microfutures;
-			target = BF444D35D0F10D14D5B3DA5F709242F2 /* Microfutures */;
-			targetProxy = 379D5E312377F52ABFC84F449983AAA4 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1032B0780CAC3F6CD936DEF37E0E0E5C /* Release */ = {
@@ -420,118 +301,9 @@
 			};
 			name = Debug;
 		};
-		62E74BB85B29E5DA075C11A0F60533DE /* Release */ = {
+		6BD1B2C903DE9AAF11A66ABB94CC140F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07D568AD98553CC74D1D87ACAA22DE6C /* Microfutures.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Microfutures/Microfutures-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Microfutures/Microfutures-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/Microfutures/Microfutures.modulemap";
-				PRODUCT_MODULE_NAME = Microfutures;
-				PRODUCT_NAME = Microfutures;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		6ACC15D24AA6A8E4FE46FCCE3968118B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7CC681564DD4CFE2B0E9CAE3400C85DA /* Pods-crypto-chat.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-crypto-chat/Pods-crypto-chat-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-crypto-chat/Pods-crypto-chat.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		8EC1466CBB443524533D2A389C3560B1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07D568AD98553CC74D1D87ACAA22DE6C /* Microfutures.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Microfutures/Microfutures-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Microfutures/Microfutures-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/Microfutures/Microfutures.modulemap";
-				PRODUCT_MODULE_NAME = Microfutures;
-				PRODUCT_NAME = Microfutures;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		EF2905659369B17E23D00E2C4C6B8392 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E38EF06A5FC4071A9D4346B8FAC01379 /* Pods-crypto-chat.release.xcconfig */;
+			baseConfigurationReference = DDBC2BE7A792E4AFFE5726D339177D2E /* Pods-crypto-chat.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -567,33 +339,62 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		C935A2A3A27D3311DE9DC9031C55BB33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F80DE0CC8A0A8BDD5744A5BCD9F3ACBE /* Pods-crypto-chat.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-crypto-chat/Pods-crypto-chat-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-crypto-chat/Pods-crypto-chat.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		35A6DAC71846209A8DE74AD56A9CAECC /* Build configuration list for PBXNativeTarget "Pods-crypto-chat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C935A2A3A27D3311DE9DC9031C55BB33 /* Debug */,
+				6BD1B2C903DE9AAF11A66ABB94CC140F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3DCABF71ABF98C4E186DBF23A89D8D7F /* Debug */,
 				1032B0780CAC3F6CD936DEF37E0E0E5C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		69E2EFA599B762C1309615BF092068B2 /* Build configuration list for PBXNativeTarget "Microfutures" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8EC1466CBB443524533D2A389C3560B1 /* Debug */,
-				62E74BB85B29E5DA075C11A0F60533DE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A997132D2CBD9D081A83AC43DDA55EB4 /* Build configuration list for PBXNativeTarget "Pods-crypto-chat" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6ACC15D24AA6A8E4FE46FCCE3968118B /* Debug */,
-				EF2905659369B17E23D00E2C4C6B8392 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

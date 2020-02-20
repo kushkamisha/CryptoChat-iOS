@@ -8,7 +8,6 @@
 
 import Foundation
 import SocketIO
-import Microfutures
 
 class Socket {
     

@@ -8,7 +8,6 @@
 
 import UIKit
 import Alamofire
-import Microfutures
 
 struct LoadChats: Encodable {
     let userId: Int
@@ -76,7 +75,11 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
                         .subscribe(onNext: { _ in
                             socket.requestUserChats()
                             .subscribe(onNext: { userList in
-                                print(userList)
+                                for user in userList {
+//                                    self.chats.append(Chat(avatar: #imageLiteral(resourceName: "user-default"), chatType: #imageLiteral(resourceName: "unlocked"), chatTypeSelected: #imageLiteral(resourceName: "unlocked white"), username: user["username"] ?? "No username", message: ".....", msgTime: "just now"))
+                                    self.chats.append(Chat(avatar: #imageLiteral(resourceName: "user-default"), chatType: #imageLiteral(resourceName: "free"), chatTypeSelected: #imageLiteral(resourceName: "free white"), username: user["username"] ?? "", message: "Do you know what does word \"thief\" mean?", msgTime: "just now"))
+                                }
+                                self.chatsTableView.reloadData()
                             })
                         })
                 
@@ -121,7 +124,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
         
         let chat1 = Chat(avatar: #imageLiteral(resourceName: "user-1"), chatType: #imageLiteral(resourceName: "unlocked"), chatTypeSelected: #imageLiteral(resourceName: "unlocked white"), username: "Ann Ketnye", message: "Do you know what does word \"thief\" mean?", msgTime: "just now")
         let chat2 = Chat(avatar: #imageLiteral(resourceName: "user-3"), chatType: #imageLiteral(resourceName: "free"), chatTypeSelected: #imageLiteral(resourceName: "free white"), username: "Bro Walker", message: "Hi, man. What's up?", msgTime: "5 minutes ago")
-        let chat3 = Chat(avatar: #imageLiteral(resourceName: "user-2"), chatType: #imageLiteral(resourceName: "free"), chatTypeSelected: #imageLiteral(resourceName: "free white"), username: "Susanna", message: "You won't believe in what was just happened!!", msgTime: "3 hours ago")
+        let chat3 = Chat(avatar: #imageLiteral(resourceName: "user-default"), chatType: #imageLiteral(resourceName: "free"), chatTypeSelected: #imageLiteral(resourceName: "free white"), username: "Susanna", message: "You won't believe in what was just happened!!", msgTime: "3 hours ago")
         
         tmpChats.append(chat1)
         tmpChats.append(chat2)

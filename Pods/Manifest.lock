@@ -1,16 +1,3 @@
-PODS:
-  - Microfutures (0.1.2)
-
-DEPENDENCIES:
-  - Microfutures
-
-SPEC REPOS:
-  trunk:
-    - Microfutures
-
-SPEC CHECKSUMS:
-  Microfutures: a7256087d89f835e8b2fdb72f7d6864ad3dd3fd9
-
-PODFILE CHECKSUM: 81e50c75e55bf7601ae00bd0f6c9857fd11a9dbf
+PODFILE CHECKSUM: 1bab009db3b38ea22b6d68dfc9a5a79449952c62
 
 COCOAPODS: 1.8.4

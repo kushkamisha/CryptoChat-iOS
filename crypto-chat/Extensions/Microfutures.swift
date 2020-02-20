@@ -5,7 +5,6 @@
 //  Created by Fernando on 27/1/17.
 //  Copyright © 2017 Fernando. All rights reserved.
 //
-
 import Foundation
 
 public enum Result<T> {
