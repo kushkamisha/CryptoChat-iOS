@@ -141,10 +141,9 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
         let minutes = calendar.component(.minute, from: date)
         
         msgs.append(Message(userId: self.userId, msg: toSend ?? "", time: "\(hour):\(minutes)"))
-        
         sendMessageTextField.text = ""
         
-        msgsTableView.reloadData()
+        updateTable()
         
         return true
     }
@@ -188,12 +187,19 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
                     for msg in msgList {
                         self.msgs.append(Message(userId: msg["fromUserId"] ?? "", msg: msg["message"] ?? "", time: "xx:xx"))
                     }
-                    self.msgsTableView.reloadData()
+                    self.updateTable()
                 })
             
             topBarUsername.text = chats[indexPath.row].username
             topBarAvatar.image = chats[indexPath.row].avatar
             topBarChatType.image = chats[indexPath.row].chatTypeSelected
+        }
+    }
+    
+    func updateTable() {
+        self.msgsTableView.reloadData()
+        if self.msgs.count > 0 {
+            self.msgsTableView.scrollToRow(at: IndexPath(item:self.msgs.count-1, section: 0), at: .bottom, animated: false)
         }
     }
     
