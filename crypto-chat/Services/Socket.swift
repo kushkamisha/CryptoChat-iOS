@@ -13,11 +13,11 @@ class Socket {
     
     var socket : SocketIOClient!
     static var manager : SocketManager?
-    var userId : Int
+    var userId : String
     
-    init(userId: Int) {
+    init(userId: String) {
         self.userId = userId
-        Socket.self.manager = SocketManager(socketURL: URL(string: "http://localhost:3000")!, config: [.log(true), .compress, .connectParams(["userId": 1])])
+        Socket.self.manager = SocketManager(socketURL: URL(string: "http://localhost:3000")!, config: [.log(false), .compress, .connectParams(["userId": userId])])
     }
     
     func connect() -> Future<Bool> {
@@ -26,15 +26,14 @@ class Socket {
                         
                     self.socket.on("connect") { ( dataArray, ack) -> Void in
                         print("connected to external server")
-            //            self.requestUserChats()
                         completion(.success(true))
                     }
                     
-                    self.socket.onAny { data in
-                        print("\n\ndata")
-                        print(data)
-                    }
-                
+//                    self.socket.onAny { data in
+//                        print("\n\ndata")
+//                        print(data)
+//                    }
+
                     self.socket.connect()
         }
     }

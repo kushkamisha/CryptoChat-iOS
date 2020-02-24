@@ -2,3 +2,4 @@ github "Alamofire/Alamofire"
 github "swiftsocket/SwiftSocket"
 github "socketio/socket.io-client-swift" ~> 15.2.0
 github "fmo91/microfutures"
+github "SwiftyJSON/SwiftyJSON"
