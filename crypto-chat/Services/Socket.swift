@@ -52,7 +52,7 @@ class Socket {
 
                     tmp["id"] = "\(u["id"] as! Int)"
                     tmp["online"] = u["online"] as? String
-                    tmp["socketid"] = u["socketid"] as? String
+                    tmp["socketId"] = u["socketid"] as? String
                     tmp["username"] = u["username"] as? String
                     
                     userList.append(tmp)
@@ -65,6 +65,7 @@ class Socket {
     
     func socketOn(event: String, callback success: @escaping (_ data: Any) -> Void) {
         self.socket.on(event) { (dataArr, ack) in
+            print(dataArr) // don't remove. Otherwise messages will be added multiple times to the msgs list
             success(dataArr)
         }
     }

@@ -67,7 +67,6 @@ extension ChatViewController {
                                         print("\n\nUsers:")
                                         print(users)
                                         for user in users {
-    //                                        "socketid": "TQKf_7op9g1JnLAHAAAW", "id": "5", "online": "Y", "username": "mark"
                                             self.chats.append(Chat(
                                                 userId: user["id"]!,
                                                 socketId: user["socketId"] ?? "",

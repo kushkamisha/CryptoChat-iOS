@@ -62,18 +62,32 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     @IBAction func sendMsg(_ sender: Any) { sendMsg() } // By send button press...
     
     func sendMsg() {
-        let toSend = sendMessageTextField.text
+        let msg = sendMessageTextField.text
         
-        if (toSend != "") {
+        if (msg != "") {
             // Current time
             let date = Date()
             let calendar = Calendar.current
             let hour = calendar.component(.hour, from: date)
             let minutes = calendar.component(.minute, from: date)
             
-            msgs.append(Message(userId: self.userId, msg: toSend ?? "", time: "\(hour):\(minutes)"))
-            sendMessageTextField.text = ""
+            msgs.append(Message(userId: self.userId, msg: msg ?? "", time: "\(hour):\(minutes)"))
             
+            var toSocketId: String = ""
+            for chat in self.chats {
+                if chat.userId == self.selectedFriendId {
+                    toSocketId = chat.socketId
+                    break
+                }
+            }
+            self.socket.socket.emit("add-message", [
+                "message": msg,
+                "fromUserId": self.userId,
+                "toUserId": self.selectedFriendId,
+                "toSocketId": toSocketId
+            ])
+            
+            sendMessageTextField.text = ""
             updateMessages()
         }
     }
