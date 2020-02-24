@@ -62,5 +62,11 @@ class Socket {
             }
         }
     }
+    
+    func socketOn(event: String, callback success: @escaping (_ data: Any) -> Void) {
+        self.socket.on(event) { (dataArr, ack) in
+            success(dataArr)
+        }
+    }
 
 }

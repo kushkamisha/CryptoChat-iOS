@@ -7,8 +7,7 @@
 //
 
 import UIKit
-import Alamofire
-import SwiftyJSON
+
 
 struct LoadChats: Encodable {
     let userId: Int
@@ -27,8 +26,6 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var sendMessageTextField: UITextField!
     @IBOutlet weak var sendMessageButton: UIButton!
     
-    @IBAction func sendMsg(_ sender: Any) { sendMsg() }
-    
     let userId: String = "1"
     var username: String = ""
     var selectedFriendId: String = ""
@@ -36,6 +33,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     var chats: [Chat] = []
     var msgs: [Message] = []
     var socket: Socket!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,75 +53,29 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
         loadChats()
     }
     
-    func loadChats() {
-        let params: [String: String] = [
-            "userId": self.userId,
-        ]
-        
-        AF.request("http://localhost:3000/userSessionCheck",
-                   method: .post,
-                   parameters: params,
-                   encoder: JSONParameterEncoder.default).responseJSON { response in
-            switch response.result {
-                case .success(let data):
-                    let json = JSON(data)
-                    self.username = json["username"].stringValue
-                    
-                    self.socket = Socket.init(userId: self.userId)
-                    self.socket.connect()
-                        .subscribe(onNext: { _ in
-                            self.socket.requestUserChats()
-                                .subscribe(onNext: { users in
-                                    print("\n\nUsers:")
-                                    print(users)
-                                    for user in users {
-//                                        "socketid": "TQKf_7op9g1JnLAHAAAW", "id": "5", "online": "Y", "username": "mark"
-                                        self.chats.append(Chat(
-                                            userId: user["id"]!,
-                                            socketId: user["socketId"] ?? "",
-                                            avatar: #imageLiteral(resourceName: "user-default"),
-                                            chatType: #imageLiteral(resourceName: "free"),
-                                            chatTypeSelected: #imageLiteral(resourceName: "free white"),
-                                            username: user["username"]!
-                                        ))
-                                    }
-                                    self.chatsTableView.reloadData()
-                                })
-                        })
-                
-                case .failure(let error):
-                    print(error.localizedDescription)
-            }
-        }
-    }
-    
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
         //return UIStatusBarStyle.default   // Make dark again
     }
     
-    // A new msg is entered in the send text field
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        return sendMsg()
-    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool { sendMsg(); return true } // By "Enter" press...
+    @IBAction func sendMsg(_ sender: Any) { sendMsg() } // By send button press...
     
-    func sendMsg() -> Bool {
+    func sendMsg() {
         let toSend = sendMessageTextField.text
         
-        if (toSend == "") { return true }
-        
-        // Current time
-        let date = Date()
-        let calendar = Calendar.current
-        let hour = calendar.component(.hour, from: date)
-        let minutes = calendar.component(.minute, from: date)
-        
-        msgs.append(Message(userId: self.userId, msg: toSend ?? "", time: "\(hour):\(minutes)"))
-        sendMessageTextField.text = ""
-        
-        updateMessages()
-        
-        return true
+        if (toSend != "") {
+            // Current time
+            let date = Date()
+            let calendar = Calendar.current
+            let hour = calendar.component(.hour, from: date)
+            let minutes = calendar.component(.minute, from: date)
+            
+            msgs.append(Message(userId: self.userId, msg: toSend ?? "", time: "\(hour):\(minutes)"))
+            sendMessageTextField.text = ""
+            
+            updateMessages()
+        }
     }
 
 }

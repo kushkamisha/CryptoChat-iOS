@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,9 +39,22 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if (tableView == chatsTableView) {
-            let friendId = chats[indexPath.row].userId
+            socket.socketOn(event: "add-message-response", callback: { data in
+                let json = JSON(data)[0]
+                
+                if (json["fromUserId"].stringValue == self.selectedFriendId) {
+                    self.msgs.append(Message(
+                        userId: json["fromUserId"].stringValue,
+                        msg: json["message"].stringValue,
+                        time: "xx:xx"
+                    ))
+                    self.updateMessages()
+                }
+            })
+            
+            self.selectedFriendId = chats[indexPath.row].userId
 
-            getMessages(friendId: friendId)
+            getMessages(friendId: self.selectedFriendId)
                 .subscribe(onNext: { msgList in
                     self.msgs = []
                     for msg in msgList {

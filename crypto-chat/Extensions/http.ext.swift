@@ -7,6 +7,7 @@
 //
 
 import Alamofire
+import SwiftyJSON
 
 extension ChatViewController {
     func getMessages(friendId: String) -> Future<[Dictionary<String, String>]> {
@@ -43,4 +44,46 @@ extension ChatViewController {
             }
         }
     }
+    
+    func loadChats() {
+            let params: [String: String] = [
+                "userId": self.userId,
+            ]
+            
+            AF.request("http://localhost:3000/userSessionCheck",
+                       method: .post,
+                       parameters: params,
+                       encoder: JSONParameterEncoder.default).responseJSON { response in
+                switch response.result {
+                    case .success(let data):
+                        let json = JSON(data)
+                        self.username = json["username"].stringValue
+                        
+                        self.socket = Socket.init(userId: self.userId)
+                        self.socket.connect()
+                            .subscribe(onNext: { _ in
+                                self.socket.requestUserChats()
+                                    .subscribe(onNext: { users in
+                                        print("\n\nUsers:")
+                                        print(users)
+                                        for user in users {
+    //                                        "socketid": "TQKf_7op9g1JnLAHAAAW", "id": "5", "online": "Y", "username": "mark"
+                                            self.chats.append(Chat(
+                                                userId: user["id"]!,
+                                                socketId: user["socketId"] ?? "",
+                                                avatar: #imageLiteral(resourceName: "user-default"),
+                                                chatType: #imageLiteral(resourceName: "free"),
+                                                chatTypeSelected: #imageLiteral(resourceName: "free white"),
+                                                username: user["username"]!
+                                            ))
+                                        }
+                                        self.chatsTableView.reloadData()
+                                    })
+                            })
+                    
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                }
+            }
+        }
 }
