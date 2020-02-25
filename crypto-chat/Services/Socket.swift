@@ -13,11 +13,11 @@ class Socket {
     
     var socket : SocketIOClient!
     static var manager : SocketManager?
-    var userId : String
+    var token : String
     
-    init(userId: String) {
-        self.userId = userId
-        Socket.self.manager = SocketManager(socketURL: URL(string: "http://localhost:3000")!, config: [.log(false), .compress, .connectParams(["userId": userId])])
+    init(token: String) {
+        self.token = token
+        Socket.self.manager = SocketManager(socketURL: URL(string: "http://localhost:8080")!, config: [.log(false), .compress, .connectParams(["token": token])])
     }
     
     func connect() -> Future<Bool> {
@@ -40,8 +40,8 @@ class Socket {
     
     func requestUserChats() -> Future<[Dictionary<String, String>]> {
         return Future { completion in
-            print("\n\nEmitting a socket msg")
-            self.socket.emit("chat-list", self.userId)
+//            print("\n\nEmitting a socket msg")
+//            self.socket.emit("chat-list", self.token)
             
             self.socket.on("chat-list-response") { ( dataArray, ack) -> Void in
                 let chatUsers = (dataArray[0] as! NSDictionary)["chatList"] as! NSArray

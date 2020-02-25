@@ -31,6 +31,8 @@ class LoginViewController: UIViewController {
         signInBigLabel.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2)
         emailInputField.attributedPlaceholder = NSAttributedString(string: "email@example.com", attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(displayP3Red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5)])
         passInputField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(displayP3Red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5)])
+        emailInputField.text = "bob"
+        passInputField.text = "bob"
     }
     
     func navigateToScreen(screenName: String, storyboardName: String = "Main") {
@@ -47,7 +49,7 @@ class LoginViewController: UIViewController {
         debugPrint(passHash)
         let login = Login(email: emailInputField.text ?? "", pass: passHash)
         
-        AF.request("http://localhost:8080/api/login",
+        AF.request("http://localhost:8080/auth/login",
                    method: .post,
                    parameters: login,
                    encoder: JSONParameterEncoder.default).responseJSON { response in
@@ -55,8 +57,12 @@ class LoginViewController: UIViewController {
                 case .success(let data):
                     let dict = data as! NSDictionary
                     let status = dict["status"] as! String
+                    print(dict)
                     if (status == "success") {
-                        self.navigateToScreen(screenName: "MessagesScreen")
+                        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "MessagesScreen") as! ChatViewController
+                        vc.modalPresentationStyle = .fullScreen
+                        vc.jwt = dict["jwt"] as! String
+                        self.present(vc, animated: true, completion: nil)
                     } else {
                         let alert = UIAlertController(title: NSLocalizedString("Oops", comment: ""), message: NSLocalizedString("loginError", comment: ""), preferredStyle: .alert)
                         self.present(alert, animated: true)

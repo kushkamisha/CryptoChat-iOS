@@ -33,7 +33,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     var chats: [Chat] = []
     var msgs: [Message] = []
     var socket: Socket!
-    
+    var jwt: String = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcsImlhdCI6MTU4MjY0ODMzNiwiZXhwIjoxNjE4NjQ0NzM2fQ.UYco7IDmL23ktkvq3K8pc8N0licAnGzxVGsU-CRgOxgxx"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,8 +46,8 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
         sendMessageTextField.delegate = self
         
         msgsTableView.rowHeight = UITableView.automaticDimension
-        
         chatsTableView.rowHeight = 75
+        
         sendMessageTextField.attributedPlaceholder = NSAttributedString(string: "Type your message here...", attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(displayP3Red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5)])
         
         loadChats()

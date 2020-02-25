@@ -46,43 +46,74 @@ extension ChatViewController {
     }
     
     func loadChats() {
-            let params: [String: String] = [
-                "userId": self.userId,
-            ]
-            
-            AF.request("http://localhost:3000/userSessionCheck",
-                       method: .post,
-                       parameters: params,
-                       encoder: JSONParameterEncoder.default).responseJSON { response in
-                switch response.result {
-                    case .success(let data):
-                        let json = JSON(data)
-                        self.username = json["username"].stringValue
-                        
-                        self.socket = Socket.init(userId: self.userId)
-                        self.socket.connect()
-                            .subscribe(onNext: { _ in
-                                self.socket.requestUserChats()
-                                    .subscribe(onNext: { users in
-                                        print("\n\nUsers:")
-                                        print(users)
-                                        for user in users {
-                                            self.chats.append(Chat(
-                                                userId: user["id"]!,
-                                                socketId: user["socketId"] ?? "",
-                                                avatar: #imageLiteral(resourceName: "user-default"),
-                                                chatType: #imageLiteral(resourceName: "free"),
-                                                chatTypeSelected: #imageLiteral(resourceName: "free white"),
-                                                username: user["username"]!
-                                            ))
-                                        }
-                                        self.chatsTableView.reloadData()
-                                    })
-                            })
-                    
-                    case .failure(let error):
-                        print(error.localizedDescription)
-                }
-            }
-        }
+//        let params: [String: String] = [
+//            "token": self.jwt,
+//        ]
+//
+//        print("\nCall loadChats()")
+//
+//        AF.request("http://localhost:8080/chat/home",
+//                   method: .post,
+//                   parameters: params,
+//                   encoder: JSONParameterEncoder.default,
+//                   headers: nil, interceptor: nil).responseJSON { response in
+//                        print(response)
+//            }
+        
+            self.socket = Socket.init(token: self.jwt)
+            self.socket.connect()
+                .subscribe(onNext: { _ in
+//                    self.socket.requestUserChats()
+//                        .subscribe(onNext: { users in
+//                            print("\n\nUsers:")
+//                            print(users)
+//                            for user in users {
+//                                self.chats.append(Chat(
+//                                    userId: user["id"]!,
+//                                    socketId: user["socketId"] ?? "",
+//                                    avatar: #imageLiteral(resourceName: "user-default"),
+//                                    chatType: #imageLiteral(resourceName: "free"),
+//                                    chatTypeSelected: #imageLiteral(resourceName: "free white"),
+//                                    username: user["username"]!
+//                                ))
+//                            }
+//                            self.chatsTableView.reloadData()
+//                        })
+                })
+        
+//        AF.request("http://localhost:8080/chat/home",
+//                   method: .get,
+////                   parameters: params,
+//                   encoder: JSONParameterEncoder.default).responseJSON { response in
+//            switch response.result {
+//                case .success(let data):
+//                    let json = JSON(data)
+//                    self.username = json["username"].stringValue
+//
+//                    self.socket = Socket.init(userId: self.userId)
+//                    self.socket.connect()
+//                        .subscribe(onNext: { _ in
+//                            self.socket.requestUserChats()
+//                                .subscribe(onNext: { users in
+//                                    print("\n\nUsers:")
+//                                    print(users)
+//                                    for user in users {
+//                                        self.chats.append(Chat(
+//                                            userId: user["id"]!,
+//                                            socketId: user["socketId"] ?? "",
+//                                            avatar: #imageLiteral(resourceName: "user-default"),
+//                                            chatType: #imageLiteral(resourceName: "free"),
+//                                            chatTypeSelected: #imageLiteral(resourceName: "free white"),
+//                                            username: user["username"]!
+//                                        ))
+//                                    }
+//                                    self.chatsTableView.reloadData()
+//                                })
+//                        })
+//
+//                case .failure(let error):
+//                    print(error.localizedDescription)
+//            }
+//        }
+    }
 }
