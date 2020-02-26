@@ -11,56 +11,29 @@ import SocketIO
 
 class Socket {
     
-    var socket : SocketIOClient!
-    static var manager : SocketManager?
-    var token : String
+    var socket: SocketIOClient!
+    static var manager: SocketManager?
+    var token: String
+    var isConnected: Bool = false
     
     init(token: String) {
         self.token = token
         Socket.self.manager = SocketManager(socketURL: URL(string: "http://localhost:8080")!, config: [.log(false), .compress, .connectParams(["token": token])])
     }
     
-    func connect() -> Future<Bool> {
-        return Future { completion in
-            self.socket = Socket.self.manager?.defaultSocket
+    func connect() {
+        self.socket = Socket.self.manager?.defaultSocket
                         
-                    self.socket.on("connect") { ( dataArray, ack) -> Void in
-                        print("connected to external server")
-                        completion(.success(true))
-                    }
-                    
-//                    self.socket.onAny { data in
-//                        print("\n\ndata")
-//                        print(data)
-//                    }
-
-                    self.socket.connect()
+        self.socket.on(clientEvent: .connect) { data, ack in
+            print("connected to external server")
+            self.isConnected = true
         }
-    }
     
-    func requestUserChats() -> Future<[Dictionary<String, String>]> {
-        return Future { completion in
-//            print("\n\nEmitting a socket msg")
-//            self.socket.emit("chat-list", self.token)
-            
-            self.socket.on("chat-list-response") { ( dataArray, ack) -> Void in
-                let chatUsers = (dataArray[0] as! NSDictionary)["chatList"] as! NSArray
-                var userList = [[String: String]]()
-                for user in chatUsers {
-                    let u = user as! NSDictionary
-                    var tmp = [String: String]()
-
-                    tmp["id"] = "\(u["id"] as! Int)"
-                    tmp["online"] = u["online"] as? String
-                    tmp["socketId"] = u["socketid"] as? String
-                    tmp["username"] = u["username"] as? String
-                    
-                    userList.append(tmp)
-                }
-
-                completion(.success(userList))
-            }
+        self.socket.on(clientEvent: .disconnect) { data, ack in
+            self.isConnected = false
         }
+
+        self.socket.connect()
     }
     
     func socketOn(event: String, callback success: @escaping (_ data: Any) -> Void) {

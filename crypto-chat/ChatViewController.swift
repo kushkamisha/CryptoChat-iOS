@@ -33,7 +33,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     var chats: [Chat] = []
     var msgs: [Message] = []
     var socket: Socket!
-    var jwt: String = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcsImlhdCI6MTU4MjY0ODMzNiwiZXhwIjoxNjE4NjQ0NzM2fQ.UYco7IDmL23ktkvq3K8pc8N0licAnGzxVGsU-CRgOxgxx"
+    var jwt: String = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTU4MjcyMjY2NSwiZXhwIjoxNjE4NzE5MDY1fQ.lZojTFdi3Imvxj43YbzFioXE9sDnYzXvHYoLt1zXVU0"
     
     override func viewDidLoad() {
         super.viewDidLoad()
