@@ -43,7 +43,7 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
             socket.socketOn(event: "add-message-response", callback: { data in
                 let json = JSON(data)[0]
                 
-                if (json["fromUserId"].stringValue == self.selectedFriendId) {
+                if (json["fromUserId"].stringValue == self.selectedChatId) {
                     self.msgs.append(Message(
                         userId: json["fromUserId"].stringValue,
                         msg: json["message"].stringValue,
@@ -53,9 +53,9 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
                 }
             })
             
-            self.selectedFriendId = chats[indexPath.row].userId
+            self.selectedChatId = chats[indexPath.row].chatId
 
-            getMessages(friendId: self.selectedFriendId)
+            getMessages(friendId: self.selectedChatId)
                 .subscribe(onNext: { msgList in
                     self.msgs = []
                     for msg in msgList {
@@ -68,7 +68,7 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
                     self.updateMessages()
                 })
             
-            topBarUsername.text = chats[indexPath.row].username
+            topBarUsername.text = chats[indexPath.row].name
             topBarAvatar.image = chats[indexPath.row].avatar
             topBarChatType.image = chats[indexPath.row].chatTypeSelected
         }

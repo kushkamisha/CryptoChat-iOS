@@ -28,7 +28,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     
     let userId: String = "1"
     var username: String = ""
-    var selectedFriendId: String = ""
+    var selectedChatId: String = ""
     var selectedFriendName: String = ""
     var chats: [Chat] = []
     var msgs: [Message] = []
@@ -94,17 +94,17 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
             
             var toSocketId: String = ""
             for chat in self.chats {
-                if chat.userId == self.selectedFriendId {
+                if chat.chatId == self.selectedChatId {
                     toSocketId = chat.socketId
                     break
                 }
             }
-            self.socket.socket.emit("add-message", [
-                "message": msg,
-                "fromUserId": self.userId,
-                "toUserId": self.selectedFriendId,
-                "toSocketId": toSocketId
-            ])
+//            self.socket.socket.emit("add-message", [
+//                "message": msg,
+//                "fromUserId": self.userId,
+//                "toUserId": self.selectedFriendId,
+//                "toSocketId": toSocketId
+//            ])
             
             sendMessageTextField.text = ""
             updateMessages()

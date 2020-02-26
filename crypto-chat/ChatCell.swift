@@ -46,9 +46,7 @@ class ChatCell: UITableViewCell {
         avatarImageView.image = chat.avatar
         chatTypeImageView.image = chat.chatType
         chatTypeSelected.image = chat.chatTypeSelected
-        usernameLabel.text = chat.username
-//        userMsgLabel.text = chat.message
-//        msgTimeLabel.text = chat.msgTime
+        usernameLabel.text = chat.name
     }
 
 }

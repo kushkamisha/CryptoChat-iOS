@@ -10,24 +10,20 @@ import Foundation
 import UIKit
 
 class Chat {
-    
-    var userId: String
+
+    var chatId: String
     var socketId: String
+    var name: String
     var avatar: UIImage
     var chatType: UIImage
     var chatTypeSelected: UIImage
-    var username: String
-//    var message: String
-//    var msgTime: String
     
-    init (userId: String, socketId: String, avatar: UIImage, chatType: UIImage, chatTypeSelected: UIImage, username: String) {
-        self.userId = userId
+    init (chatId: String, socketId: String, name: String, avatar: UIImage, chatType: UIImage, chatTypeSelected: UIImage) {
+        self.chatId = chatId
         self.socketId = socketId
+        self.name = name
         self.avatar = avatar
         self.chatType = chatType
         self.chatTypeSelected = chatTypeSelected
-        self.username = username
-//        self.message = message
-//        self.msgTime = msgTime
     }
 }

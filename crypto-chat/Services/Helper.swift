@@ -12,31 +12,16 @@ import SwiftyJSON
 extension ChatViewController {
     func getMessages(friendId: String) -> Future<[Dictionary<String, String>]> {
         return Future { completion in
-            let params: [String: String] = [
-                "userId": self.userId,
-                "toUserId": friendId
-            ]
-            AF.request("http://localhost:3000/getMessages",
-                       method: .post,
-                       parameters: params,
-                       encoder: JSONParameterEncoder.default).responseJSON { response in
+            AF.request("http://localhost:8080/chat/messages",
+                       parameters: [
+                           "token": self.jwt,
+                           "friendId": friendId
+                       ]).responseJSON { response in
                 switch response.result {
                     case .success(let data):
-                        let messages = (data as! NSDictionary)["messages"] as! NSArray
-                        var msgList = [[String: String]]()
-                        for msg in messages {
-                            let m = msg as! NSDictionary
-                            var tmp = [String: String]()
-                            
-                            tmp["msgId"] = "\(m["id"] as! Int)"
-                            tmp["fromUserId"] = m["fromUserId"] as? String
-                            tmp["toUserId"] = m["toUserId"] as? String
-                            tmp["message"] = m["message"] as? String
-                            
-                            msgList.append(tmp)
-                        }
+                        print(data)
                         
-                        completion(.success(msgList))
+//                        completion(.success([String: String]))
                         break
                     case .failure(let error):
                         print(error.localizedDescription)
@@ -62,12 +47,12 @@ extension ChatViewController {
                     for (_, chat) in chats {
                         let name = "\(chat["firstName"].stringValue) \(chat["lastName"].stringValue)"
                         self.chats.append(Chat(
-                            userId: chat["userId"].stringValue,
+                            chatId: chat["chatId"].stringValue,
                             socketId: "",
+                            name: name,
                             avatar: #imageLiteral(resourceName: "user-default"),
                             chatType: #imageLiteral(resourceName: "free"),
-                            chatTypeSelected: #imageLiteral(resourceName: "free white"),
-                            username: name
+                            chatTypeSelected: #imageLiteral(resourceName: "free white")
                         ))
                     }
                     self.chatsTableView.reloadData()
