@@ -10,6 +10,7 @@ import UIKit
 import SwiftyJSON
 
 extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableView == msgsTableView ? msgs.count : chats.count
     }

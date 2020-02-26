@@ -35,6 +35,22 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     var socket: Socket!
     var jwt: String = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTU4MjcyMjY2NSwiZXhwIjoxNjE4NzE5MDY1fQ.lZojTFdi3Imvxj43YbzFioXE9sDnYzXvHYoLt1zXVU0"
     
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action:
+            #selector(ChatViewController.handleRefresh(_:)),
+                                 for: UIControl.Event.valueChanged)
+        refreshControl.tintColor = UIColor.init(red: 122/255, green: 140/255, blue: 255/255, alpha: 1)
+        
+        return refreshControl
+    }()
+    
+    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+//        establishSocketConnection()
+        loadChats()
+        refreshControl.endRefreshing()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setStatusBarBackgroundColor(color : UIColor.init(red: 122/255, green: 140/255, blue: 255/255, alpha: 1))
@@ -50,6 +66,9 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
         
         sendMessageTextField.attributedPlaceholder = NSAttributedString(string: "Type your message here...", attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(displayP3Red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5)])
         
+        self.chatsTableView.addSubview(self.refreshControl)
+        
+        establishSocketConnection()
         loadChats()
     }
     

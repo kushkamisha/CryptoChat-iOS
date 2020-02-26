@@ -45,19 +45,20 @@ extension ChatViewController {
         }
     }
     
-    func loadChats() {
-        print("\nCall loadChats()")
-        
+    func establishSocketConnection() {
         // Establish a socket connection
         self.socket = Socket.init(token: self.jwt)
         self.socket.connect()
-        
+    }
+    
+    func loadChats() {
         // Send request to load chats to the server
         AF.request("http://localhost:8080/chat/home",
                    parameters: ["token": self.jwt]).responseJSON { response in
             switch response.result {
                 case .success(let data):
                     let chats = JSON(data)["chats"]
+                    self.chats = []
                     for (_, chat) in chats {
                         let name = "\(chat["firstName"].stringValue) \(chat["lastName"].stringValue)"
                         self.chats.append(Chat(

@@ -31,10 +31,10 @@
 		525691E323EB443000DB09D9 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525691E223EB443000DB09D9 /* Utils.swift */; };
 		52731C6023ECA6E2009A6C2A /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52731C5F23ECA6E2009A6C2A /* UIViewController.swift */; };
 		529180C923F59C7100BD6751 /* UILabel.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529180C823F59C7100BD6751 /* UILabel.ext.swift */; };
-		529B7C8B2403F75B00C32272 /* ChatViewController.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B7C8A2403F75B00C32272 /* ChatViewController.ext.swift */; };
+		529B7C8B2403F75B00C32272 /* ChatTables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B7C8A2403F75B00C32272 /* ChatTables.swift */; };
 		529B7C8D2403F7F700C32272 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 529B7C8C2403F7F700C32272 /* SwiftyJSON.framework */; };
 		529B7C8E2403F7F700C32272 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 529B7C8C2403F7F700C32272 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		529B7C922404005700C32272 /* http.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B7C912404005700C32272 /* http.ext.swift */; };
+		529B7C922404005700C32272 /* http.e.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B7C912404005700C32272 /* http.e.swift */; };
 		529C8D6523FEE419005B6A1C /* Microfutures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529C8D6423FEE419005B6A1C /* Microfutures.swift */; };
 		529C8D6623FEE5D0005B6A1C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E94DB823FE98FB00ABD416 /* Alamofire.framework */; };
 		529C8D6723FEE5D0005B6A1C /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52E94DB823FE98FB00ABD416 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -116,9 +116,9 @@
 		52731C5F23ECA6E2009A6C2A /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		5287030923FEA260004DB7EC /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
 		529180C823F59C7100BD6751 /* UILabel.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.ext.swift; sourceTree = "<group>"; };
-		529B7C8A2403F75B00C32272 /* ChatViewController.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.ext.swift; sourceTree = "<group>"; };
+		529B7C8A2403F75B00C32272 /* ChatTables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTables.swift; sourceTree = "<group>"; };
 		529B7C8C2403F7F700C32272 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
-		529B7C912404005700C32272 /* http.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = http.ext.swift; sourceTree = "<group>"; };
+		529B7C912404005700C32272 /* http.e.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = http.e.swift; sourceTree = "<group>"; };
 		529C8D6423FEE419005B6A1C /* Microfutures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Microfutures.swift; sourceTree = "<group>"; };
 		52E1EB9E23F46BCD008BA69E /* MessageRightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRightCell.swift; sourceTree = "<group>"; };
 		52E1EBA023F473F8008BA69E /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -264,8 +264,6 @@
 				5225A4D623F2EBC800EB677B /* TableViewCell.ext.swift */,
 				529180C823F59C7100BD6751 /* UILabel.ext.swift */,
 				529C8D6423FEE419005B6A1C /* Microfutures.swift */,
-				529B7C8A2403F75B00C32272 /* ChatViewController.ext.swift */,
-				529B7C912404005700C32272 /* http.ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -288,6 +286,8 @@
 			isa = PBXGroup;
 			children = (
 				52FF99E023FE92C9000758A6 /* Socket.swift */,
+				529B7C8A2403F75B00C32272 /* ChatTables.swift */,
+				529B7C912404005700C32272 /* http.e.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -464,7 +464,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				529B7C922404005700C32272 /* http.ext.swift in Sources */,
+				529B7C922404005700C32272 /* http.e.swift in Sources */,
 				52FF99E123FE92C9000758A6 /* Socket.swift in Sources */,
 				5248085923F5CE6700700620 /* MessageLeftCell.swift in Sources */,
 				5225A4D323F2B3DC00EB677B /* ChatCell.swift in Sources */,
@@ -477,7 +477,7 @@
 				525691E323EB443000DB09D9 /* Utils.swift in Sources */,
 				5228DE8E23E9BC6A00D4F08B /* AppDelegate.swift in Sources */,
 				52731C6023ECA6E2009A6C2A /* UIViewController.swift in Sources */,
-				529B7C8B2403F75B00C32272 /* ChatViewController.ext.swift in Sources */,
+				529B7C8B2403F75B00C32272 /* ChatTables.swift in Sources */,
 				5228DE9023E9BC6A00D4F08B /* SceneDelegate.swift in Sources */,
 				5228DECD23E9E74E00D4F08B /* InputBox.swift in Sources */,
 				5225A4D523F2B53E00EB677B /* Chat.swift in Sources */,
