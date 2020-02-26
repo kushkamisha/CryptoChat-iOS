@@ -61,7 +61,8 @@ class LoginViewController: UIViewController {
                     if (status == "success") {
                         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "MessagesScreen") as! ChatViewController
                         vc.modalPresentationStyle = .fullScreen
-                        vc.jwt = dict["jwt"] as! String
+                        vc.jwt = dict["token"] as! String
+                        vc.userId = "\(dict["userId"]!)"
                         self.present(vc, animated: true, completion: nil)
                     } else {
                         let alert = UIAlertController(title: NSLocalizedString("Oops", comment: ""), message: NSLocalizedString("loginError", comment: ""), preferredStyle: .alert)

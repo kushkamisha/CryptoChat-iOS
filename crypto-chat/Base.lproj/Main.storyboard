@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7c5-gH-Y0g">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -469,7 +469,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kz0-Z4-MAw">
-                                <rect key="frame" x="368" y="70" width="657" height="644"/>
+                                <rect key="frame" x="368" y="70" width="657" height="643"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageLeftCell" id="1uX-Yu-emZ" userLabel="MessageLeftCell" customClass="MessageLeftCell" customModule="Crypto_Chat" customModuleProvider="target">
@@ -489,8 +489,11 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:99 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5f-Cx-KZt">
-                                                    <rect key="frame" x="240" y="16.5" width="48.5" height="14.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:99 AM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5f-Cx-KZt">
+                                                    <rect key="frame" x="240" y="16.5" width="100" height="14.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="Mep-P6-6rr"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -516,8 +519,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="657" height="58"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:99 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ici-DB-G62">
-                                                    <rect key="frame" x="353.5" y="16.5" width="48.5" height="14.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:99 AM" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ici-DB-G62">
+                                                    <rect key="frame" x="302" y="16.5" width="100" height="14.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="X9v-wF-k87"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -552,7 +558,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Kz0-Z4-MAw" firstAttribute="top" secondItem="GOq-RQ-6ga" secondAttribute="bottom" id="04L-7I-wL9"/>
-                            <constraint firstItem="Mvr-7h-di0" firstAttribute="top" secondItem="Kz0-Z4-MAw" secondAttribute="bottom" constant="-1" id="886-Rt-cv4"/>
+                            <constraint firstItem="Mvr-7h-di0" firstAttribute="top" secondItem="Kz0-Z4-MAw" secondAttribute="bottom" id="886-Rt-cv4"/>
                             <constraint firstItem="r8Y-Sp-7jj" firstAttribute="top" secondItem="GOq-RQ-6ga" secondAttribute="bottom" id="Eje-4O-y68"/>
                             <constraint firstItem="qEA-AK-oPn" firstAttribute="top" secondItem="Jaa-ii-CgZ" secondAttribute="topMargin" constant="70" id="FSC-yT-knb"/>
                             <constraint firstItem="qEA-AK-oPn" firstAttribute="bottom" secondItem="Jaa-ii-CgZ" secondAttribute="bottomMargin" id="Lyf-iX-xtZ"/>

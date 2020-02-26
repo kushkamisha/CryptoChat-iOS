@@ -10,35 +10,26 @@ import Alamofire
 import SwiftyJSON
 
 extension ChatViewController {
-    func getMessages(chatId: String) {
-        AF.request("http://localhost:8080/chat/messages",
-                   parameters: [
-                       "token": self.jwt,
-                       "chatId": chatId
-                   ]).responseJSON { response in
-            switch response.result {
-                case .success(let data):
-                    let msgs = JSON(data)["messages"]
-                    self.msgs = []
-                    for (_, msg) in msgs {
-                        self.msgs.append(Message(
-                            userId: msg["userId"].stringValue,
-                            msg: msg["text"].stringValue,
-                            time: msg["time"].stringValue
-                        ))
-                    }
-                    self.updateMessages()
-                    break
-                case .failure(let error):
-                    print(error.localizedDescription)
-            }
-        }
-    }
     
     func establishSocketConnection() {
         // Establish a socket connection
         self.socket = Socket.init(token: self.jwt)
         self.socket.connect()
+    }
+    
+    func listen2NewMessages() {
+        self.socket.socket.on("new-message") { data, ack in
+            print("event new-message")
+            let message = JSON(data)[0]
+            if message["userId"].stringValue != self.userId {
+                self.msgs.append(Message(
+                    userId: message["userId"].stringValue,
+                    msg: message["message"].stringValue,
+                    time: message["time"].stringValue
+                ))
+                self.updateMessages()
+            }
+        }
     }
     
     func loadChats() {
@@ -65,6 +56,40 @@ extension ChatViewController {
                 case .failure(let error):
                     print(error.localizedDescription)
             }
+        }
+    }
+    
+    func getMessages(chatId: String) {
+        AF.request("http://localhost:8080/chat/messages",
+                   parameters: [
+                       "token": self.jwt,
+                       "chatId": chatId
+                   ]).responseJSON { response in
+            switch response.result {
+                case .success(let data):
+                    let msgs = JSON(data)["messages"]
+                    self.msgs = []
+                    for (_, msg) in msgs {
+                        self.msgs.append(Message(
+                            userId: msg["userId"].stringValue,
+                            msg: msg["text"].stringValue,
+                            time: msg["time"].stringValue
+                        ))
+                    }
+                    self.updateMessages()
+                    break
+                case .failure(let error):
+                    print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func sendMessage(chatId: String, message: String) {
+        AF.request("http://localhost:8080/chat/message",
+                   method: .post,
+                   parameters: ["token": self.jwt, "chatId": chatId, "message": message],
+                   encoder: JSONParameterEncoder.default).responseJSON { status in
+            print(status)
         }
     }
 }

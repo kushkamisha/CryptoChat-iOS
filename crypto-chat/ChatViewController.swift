@@ -26,10 +26,9 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var sendMessageTextField: UITextField!
     @IBOutlet weak var sendMessageButton: UIButton!
     
-    let userId: String = "1"
+    var userId: String = ""
     var username: String = ""
     var selectedChatId: String = ""
-    var selectedFriendName: String = ""
     var chats: [Chat] = []
     var msgs: [Message] = []
     var socket: Socket!
@@ -69,6 +68,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
         self.chatsTableView.addSubview(self.refreshControl)
         
         establishSocketConnection()
+        listen2NewMessages()
         loadChats()
     }
     
@@ -81,30 +81,18 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     @IBAction func sendMsg(_ sender: Any) { sendMsg() } // By send button press...
     
     func sendMsg() {
-        let msg = sendMessageTextField.text
+        let msg = sendMessageTextField.text!
         
         if (msg != "") {
+            sendMessage(chatId: self.selectedChatId, message: msg)
+
             // Current time
             let date = Date()
             let calendar = Calendar.current
             let hour = calendar.component(.hour, from: date)
             let minutes = calendar.component(.minute, from: date)
             
-            msgs.append(Message(userId: self.userId, msg: msg ?? "", time: "\(hour):\(minutes)"))
-            
-            var toSocketId: String = ""
-            for chat in self.chats {
-                if chat.chatId == self.selectedChatId {
-                    toSocketId = chat.socketId
-                    break
-                }
-            }
-//            self.socket.socket.emit("add-message", [
-//                "message": msg,
-//                "fromUserId": self.userId,
-//                "toUserId": self.selectedFriendId,
-//                "toSocketId": toSocketId
-//            ])
+            msgs.append(Message(userId: self.userId, msg: msg, time: "\(hour):\(minutes)"))
             
             sendMessageTextField.text = ""
             updateMessages()
