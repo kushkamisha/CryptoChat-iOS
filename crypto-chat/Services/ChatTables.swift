@@ -55,18 +55,7 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
             
             self.selectedChatId = chats[indexPath.row].chatId
 
-            getMessages(friendId: self.selectedChatId)
-                .subscribe(onNext: { msgList in
-                    self.msgs = []
-                    for msg in msgList {
-                        self.msgs.append(Message(
-                            userId: msg["fromUserId"] ?? "",
-                            msg: msg["message"] ?? "",
-                            time: "xx:xx"
-                        ))
-                    }
-                    self.updateMessages()
-                })
+            getMessages(chatId: self.selectedChatId)
             
             topBarUsername.text = chats[indexPath.row].name
             topBarAvatar.image = chats[indexPath.row].avatar

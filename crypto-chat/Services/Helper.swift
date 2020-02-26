@@ -10,22 +10,27 @@ import Alamofire
 import SwiftyJSON
 
 extension ChatViewController {
-    func getMessages(friendId: String) -> Future<[Dictionary<String, String>]> {
-        return Future { completion in
-            AF.request("http://localhost:8080/chat/messages",
-                       parameters: [
-                           "token": self.jwt,
-                           "friendId": friendId
-                       ]).responseJSON { response in
-                switch response.result {
-                    case .success(let data):
-                        print(data)
-                        
-//                        completion(.success([String: String]))
-                        break
-                    case .failure(let error):
-                        print(error.localizedDescription)
-                }
+    func getMessages(chatId: String) {
+        AF.request("http://localhost:8080/chat/messages",
+                   parameters: [
+                       "token": self.jwt,
+                       "chatId": chatId
+                   ]).responseJSON { response in
+            switch response.result {
+                case .success(let data):
+                    let msgs = JSON(data)["messages"]
+                    self.msgs = []
+                    for (_, msg) in msgs {
+                        self.msgs.append(Message(
+                            userId: msg["userId"].stringValue,
+                            msg: msg["text"].stringValue,
+                            time: msg["time"].stringValue
+                        ))
+                    }
+                    self.updateMessages()
+                    break
+                case .failure(let error):
+                    print(error.localizedDescription)
             }
         }
     }
@@ -38,7 +43,7 @@ extension ChatViewController {
     
     func loadChats() {
         // Send request to load chats to the server
-        AF.request("http://localhost:8080/chat/home",
+        AF.request("http://localhost:8080/chat/chatList",
                    parameters: ["token": self.jwt]).responseJSON { response in
             switch response.result {
                 case .success(let data):
