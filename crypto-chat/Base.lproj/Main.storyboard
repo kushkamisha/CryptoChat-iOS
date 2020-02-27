@@ -465,30 +465,44 @@
                                     <constraint firstAttribute="height" constant="66" id="xAj-xQ-GKA"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="55F-1r-QNi">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="214" height="47"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="fMA-Yd-IEh">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="keyword" id="fMA-Yd-IEh" customClass="KeywordCell" customModule="Crypto_Chat" customModuleProvider="target">
+                                        <rect key="frame" x="66" y="0.0" width="214" height="47"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4WT-SU-ett" customClass="InputBox" customModule="Crypto_Chat" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4WT-SU-ett">
+                                            <rect key="frame" x="0.0" y="0.0" width="214" height="47"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="consulting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htQ-r1-AfS">
-                                                    <rect key="frame" x="0.0" y="15" width="80" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htQ-r1-AfS">
+                                                    <rect key="frame" x="0.0" y="0.0" width="214" height="47"/>
+                                                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="htQ-r1-AfS" firstAttribute="top" secondItem="4WT-SU-ett" secondAttribute="top" id="886-Vb-mXm"/>
+                                                <constraint firstItem="htQ-r1-AfS" firstAttribute="leading" secondItem="4WT-SU-ett" secondAttribute="leading" id="S8G-iJ-5Ib"/>
+                                                <constraint firstAttribute="trailing" secondItem="htQ-r1-AfS" secondAttribute="trailing" id="Wxx-m0-UJ3"/>
+                                                <constraint firstAttribute="bottom" secondItem="htQ-r1-AfS" secondAttribute="bottom" id="aAV-ok-cGF"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
+                                        <size key="customSize" width="214" height="47"/>
+                                        <connections>
+                                            <outlet property="keywordLabel" destination="htQ-r1-AfS" id="Uih-Tm-iHm"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="5b0-f5-cpD" id="Gmr-xU-hoP"/>
+                                    <outlet property="delegate" destination="5b0-f5-cpD" id="9Br-v9-bpp"/>
+                                </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xEu-lP-TCv">
                                 <rect key="frame" x="372.5" y="24" width="279" height="90"/>
@@ -515,10 +529,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Chk-25-HCr"/>
                     </view>
+                    <connections>
+                        <outlet property="keywordsCollectionView" destination="LUu-j7-HWf" id="bIX-lk-f2h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CsH-gG-FW3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="1652"/>
+            <point key="canvasLocation" x="138.8671875" y="1651.5625"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">

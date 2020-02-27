@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0781141A6A825356B61DC018 /* Pods_crypto_chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27DD069B7C70D0AAAB9A897 /* Pods_crypto_chat.framework */; };
 		522558582408182E00357C09 /* SignUp2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522558572408182E00357C09 /* SignUp2ViewController.swift */; };
+		5225585A24082A6B00357C09 /* SignUpKeywords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5225585924082A6B00357C09 /* SignUpKeywords.swift */; };
+		5225585C24082C9E00357C09 /* KeywordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5225585B24082C9E00357C09 /* KeywordCell.swift */; };
 		5225A4D323F2B3DC00EB677B /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5225A4D223F2B3DC00EB677B /* ChatCell.swift */; };
 		5225A4D523F2B53E00EB677B /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5225A4D423F2B53E00EB677B /* Chat.swift */; };
 		5225A4D723F2EBC800EB677B /* TableViewCell.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5225A4D623F2EBC800EB677B /* TableViewCell.ext.swift */; };
@@ -85,8 +87,10 @@
 
 /* Begin PBXFileReference section */
 		522558572408182E00357C09 /* SignUp2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp2ViewController.swift; sourceTree = "<group>"; };
+		5225585924082A6B00357C09 /* SignUpKeywords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpKeywords.swift; sourceTree = "<group>"; };
+		5225585B24082C9E00357C09 /* KeywordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordCell.swift; sourceTree = "<group>"; };
 		5225A4D123F2ACF500EB677B /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
-		5225A4D223F2B3DC00EB677B /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatCell.swift; path = "crypto-chat/ChatCell.swift"; sourceTree = SOURCE_ROOT; };
+		5225A4D223F2B3DC00EB677B /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatCell.swift; path = "crypto-chat/Extensions/ChatCell.swift"; sourceTree = SOURCE_ROOT; };
 		5225A4D423F2B53E00EB677B /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		5225A4D623F2EBC800EB677B /* TableViewCell.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.ext.swift; sourceTree = "<group>"; };
 		5228DE8A23E9BC6A00D4F08B /* Crypto Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crypto Chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -263,10 +267,14 @@
 			children = (
 				5228DECC23E9E74E00D4F08B /* InputBox.swift */,
 				5228DECE23E9F83200D4F08B /* MyButton.swift */,
+				5225A4D223F2B3DC00EB677B /* ChatCell.swift */,
+				5225A4D623F2EBC800EB677B /* TableViewCell.ext.swift */,
+				5225585B24082C9E00357C09 /* KeywordCell.swift */,
+				52E1EB9E23F46BCD008BA69E /* MessageRightCell.swift */,
+				5248085823F5CE6700700620 /* MessageLeftCell.swift */,
 				5228DECA23E9DB1700D4F08B /* UIView.ext.swift */,
 				52731C5F23ECA6E2009A6C2A /* UIViewController.swift */,
 				525691E223EB443000DB09D9 /* Utils.swift */,
-				5225A4D623F2EBC800EB677B /* TableViewCell.ext.swift */,
 				529180C823F59C7100BD6751 /* UILabel.ext.swift */,
 				529C8D6423FEE419005B6A1C /* Microfutures.swift */,
 			);
@@ -280,10 +288,6 @@
 				52DA96062407DD920060B432 /* SignUpViewController.swift */,
 				522558572408182E00357C09 /* SignUp2ViewController.swift */,
 				525691E023EB360700DB09D9 /* ChatViewController.swift */,
-				5225A4D223F2B3DC00EB677B /* ChatCell.swift */,
-				52E1EB9E23F46BCD008BA69E /* MessageRightCell.swift */,
-				5248085823F5CE6700700620 /* MessageLeftCell.swift */,
-				52E1EBA023F473F8008BA69E /* Message.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -292,6 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				5225A4D423F2B53E00EB677B /* Chat.swift */,
+				52E1EBA023F473F8008BA69E /* Message.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -302,6 +307,7 @@
 				52FF99E023FE92C9000758A6 /* Socket.swift */,
 				529B7C8A2403F75B00C32272 /* ChatTables.swift */,
 				529B7C912404005700C32272 /* Helper.swift */,
+				5225585924082A6B00357C09 /* SignUpKeywords.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -494,6 +500,8 @@
 				52731C6023ECA6E2009A6C2A /* UIViewController.swift in Sources */,
 				529B7C8B2403F75B00C32272 /* ChatTables.swift in Sources */,
 				5228DE9023E9BC6A00D4F08B /* SceneDelegate.swift in Sources */,
+				5225585A24082A6B00357C09 /* SignUpKeywords.swift in Sources */,
+				5225585C24082C9E00357C09 /* KeywordCell.swift in Sources */,
 				52DA96072407DD920060B432 /* SignUpViewController.swift in Sources */,
 				5228DECD23E9E74E00D4F08B /* InputBox.swift in Sources */,
 				5225A4D523F2B53E00EB677B /* Chat.swift in Sources */,

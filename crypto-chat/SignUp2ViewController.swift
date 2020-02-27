@@ -10,6 +10,11 @@ import UIKit
 
 class SignUp2ViewController: UIViewController {
     
+    let keywords: [String] = ["consulting", "blockchain", "smart contracts"]
+    @IBOutlet weak var keywordsCollectionView: UICollectionView!
+    
+    @IBOutlet weak var keywordLabel: UILabel!
+    
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
         //return UIStatusBarStyle.default   // Make dark again
