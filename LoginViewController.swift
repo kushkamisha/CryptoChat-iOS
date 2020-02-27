@@ -37,10 +37,10 @@ class LoginViewController: UIViewController {
     
     func navigateToScreen(screenName: String, storyboardName: String = "Main") {
         // Navigate to the Messages screen
-               let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-               let newViewController = storyBoard.instantiateViewController(withIdentifier: screenName)
-               newViewController.modalPresentationStyle = .fullScreen
-               self.present(newViewController, animated: true, completion: nil)
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: screenName)
+        newViewController.modalPresentationStyle = .fullScreen
+        self.present(newViewController, animated: true, completion: nil)
     }
     
     @IBAction func signIn(_ sender: Any) {

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mEa-Ob-iEM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5b0-f5-cpD">
     <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -379,7 +380,7 @@
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="O7p-u3-ec4"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48f-9b-05Z" userLabel="Sign In" customClass="MyButton" customModule="Crypto_Chat" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48f-9b-05Z" customClass="MyButton" customModule="Crypto_Chat" customModuleProvider="target">
                                 <rect key="frame" x="565" y="676" width="346" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="346" id="2ri-BH-NmP"/>
@@ -390,6 +391,7 @@
                                     <color key="titleColor" white="0.30345676370000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="showNextScreen:" destination="mEa-Ob-iEM" eventType="touchUpInside" id="ejH-BZ-Usb"/>
                                     <action selector="signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q4Q-5U-HAb"/>
                                 </connections>
                             </button>
@@ -446,6 +448,77 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PNM-X0-MEL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="138.8671875" y="904.6875"/>
+        </scene>
+        <!--Sign Up2 View Controller-->
+        <scene sceneID="IOn-6G-Vc9">
+            <objects>
+                <viewController storyboardIdentifier="SignUp2Screen" id="5b0-f5-cpD" customClass="SignUp2ViewController" customModule="Crypto_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sMr-zA-hbu">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LUu-j7-HWf">
+                                <rect key="frame" x="112" y="216" width="346" height="66"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="346" id="7DK-ly-qyh"/>
+                                    <constraint firstAttribute="height" constant="66" id="xAj-xQ-GKA"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="55F-1r-QNi">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="fMA-Yd-IEh">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4WT-SU-ett" customClass="InputBox" customModule="Crypto_Chat" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="consulting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htQ-r1-AfS">
+                                                    <rect key="frame" x="0.0" y="15" width="80" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xEu-lP-TCv">
+                                <rect key="frame" x="372.5" y="24" width="279" height="90"/>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="75"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help others to find you by a keyword" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bME-VB-c18">
+                                <rect key="frame" x="161" y="180" width="259" height="18"/>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.47843137250000001" green="0.54901960780000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="LUu-j7-HWf" firstAttribute="top" secondItem="bME-VB-c18" secondAttribute="bottom" constant="18" id="5kR-fo-HNs"/>
+                            <constraint firstItem="LUu-j7-HWf" firstAttribute="leading" secondItem="Chk-25-HCr" secondAttribute="leading" constant="112" id="DtL-zM-DOP"/>
+                            <constraint firstItem="bME-VB-c18" firstAttribute="leading" secondItem="Chk-25-HCr" secondAttribute="leading" constant="161" id="Vo9-w1-ii5"/>
+                            <constraint firstItem="bME-VB-c18" firstAttribute="top" secondItem="xEu-lP-TCv" secondAttribute="bottom" constant="66" id="YLh-sd-BAS"/>
+                            <constraint firstItem="Chk-25-HCr" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bME-VB-c18" secondAttribute="trailing" symbolic="YES" id="fND-2f-9xp"/>
+                            <constraint firstItem="xEu-lP-TCv" firstAttribute="top" secondItem="Chk-25-HCr" secondAttribute="top" constant="24" id="jlU-ws-lUs"/>
+                            <constraint firstItem="xEu-lP-TCv" firstAttribute="centerX" secondItem="sMr-zA-hbu" secondAttribute="centerX" id="uaX-XU-18i"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Chk-25-HCr"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CsH-gG-FW3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="1652"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">

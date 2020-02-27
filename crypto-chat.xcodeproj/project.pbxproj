@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0781141A6A825356B61DC018 /* Pods_crypto_chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27DD069B7C70D0AAAB9A897 /* Pods_crypto_chat.framework */; };
+		522558582408182E00357C09 /* SignUp2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522558572408182E00357C09 /* SignUp2ViewController.swift */; };
 		5225A4D323F2B3DC00EB677B /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5225A4D223F2B3DC00EB677B /* ChatCell.swift */; };
 		5225A4D523F2B53E00EB677B /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5225A4D423F2B53E00EB677B /* Chat.swift */; };
 		5225A4D723F2EBC800EB677B /* TableViewCell.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5225A4D623F2EBC800EB677B /* TableViewCell.ext.swift */; };
@@ -83,6 +84,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		522558572408182E00357C09 /* SignUp2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp2ViewController.swift; sourceTree = "<group>"; };
 		5225A4D123F2ACF500EB677B /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
 		5225A4D223F2B3DC00EB677B /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatCell.swift; path = "crypto-chat/ChatCell.swift"; sourceTree = SOURCE_ROOT; };
 		5225A4D423F2B53E00EB677B /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
@@ -259,10 +261,10 @@
 		5228DEC723E9DA5700D4F08B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				5228DECA23E9DB1700D4F08B /* UIView.ext.swift */,
-				52731C5F23ECA6E2009A6C2A /* UIViewController.swift */,
 				5228DECC23E9E74E00D4F08B /* InputBox.swift */,
 				5228DECE23E9F83200D4F08B /* MyButton.swift */,
+				5228DECA23E9DB1700D4F08B /* UIView.ext.swift */,
+				52731C5F23ECA6E2009A6C2A /* UIViewController.swift */,
 				525691E223EB443000DB09D9 /* Utils.swift */,
 				5225A4D623F2EBC800EB677B /* TableViewCell.ext.swift */,
 				529180C823F59C7100BD6751 /* UILabel.ext.swift */,
@@ -276,6 +278,7 @@
 			children = (
 				5228DEC523E9D6AB00D4F08B /* LoginViewController.swift */,
 				52DA96062407DD920060B432 /* SignUpViewController.swift */,
+				522558572408182E00357C09 /* SignUp2ViewController.swift */,
 				525691E023EB360700DB09D9 /* ChatViewController.swift */,
 				5225A4D223F2B3DC00EB677B /* ChatCell.swift */,
 				52E1EB9E23F46BCD008BA69E /* MessageRightCell.swift */,
@@ -482,6 +485,7 @@
 				5225A4D723F2EBC800EB677B /* TableViewCell.ext.swift in Sources */,
 				5228DEC623E9D6AB00D4F08B /* LoginViewController.swift in Sources */,
 				529C8D6523FEE419005B6A1C /* Microfutures.swift in Sources */,
+				522558582408182E00357C09 /* SignUp2ViewController.swift in Sources */,
 				5228DECB23E9DB1700D4F08B /* UIView.ext.swift in Sources */,
 				529180C923F59C7100BD6751 /* UILabel.ext.swift in Sources */,
 				52E1EB9F23F46BCD008BA69E /* MessageRightCell.swift in Sources */,
