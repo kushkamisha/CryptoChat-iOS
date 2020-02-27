@@ -20,7 +20,6 @@ extension SignUp2ViewController: UICollectionViewDataSource, UICollectionViewDel
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "keyword", for: indexPath) as! KeywordCell
         cell.keywordLabel.text = keywords[indexPath.row]
-        cell.keywordLabel.roundCorners(corners: [.topLeft, .bottomLeft], radius: 10)
         cell.keywordLabel.padding = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
         
         return cell

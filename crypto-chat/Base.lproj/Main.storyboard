@@ -459,7 +459,6 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LUu-j7-HWf">
                                 <rect key="frame" x="112" y="216" width="346" height="66"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="346" id="7DK-ly-qyh"/>
                                     <constraint firstAttribute="height" constant="66" id="xAj-xQ-GKA"/>
@@ -474,7 +473,7 @@
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="keyword" id="fMA-Yd-IEh" customClass="KeywordCell" customModule="Crypto_Chat" customModuleProvider="target">
                                         <rect key="frame" x="66" y="0.0" width="214" height="47"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4WT-SU-ett">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4WT-SU-ett" customClass="KeywordStyle" customModule="Crypto_Chat" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="214" height="47"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -530,7 +529,7 @@
                         <viewLayoutGuide key="safeArea" id="Chk-25-HCr"/>
                     </view>
                     <connections>
-                        <outlet property="keywordsCollectionView" destination="LUu-j7-HWf" id="bIX-lk-f2h"/>
+                        <outlet property="keywordsCollectionView" destination="LUu-j7-HWf" id="PqU-Mc-Bfh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CsH-gG-FW3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

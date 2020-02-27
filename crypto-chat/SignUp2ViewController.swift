@@ -10,10 +10,8 @@ import UIKit
 
 class SignUp2ViewController: UIViewController {
     
-    let keywords: [String] = ["consulting", "blockchain", "smart contracts"]
+    let keywords: [String] = ["consulting", "blockchain", "smart contracts", "teaching", "+"]
     @IBOutlet weak var keywordsCollectionView: UICollectionView!
-    
-    @IBOutlet weak var keywordLabel: UILabel!
     
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
@@ -25,6 +23,8 @@ class SignUp2ViewController: UIViewController {
         let purple = UIColor.init(red: 122/255, green: 140/255, blue: 255/255, alpha: 1)
         setStatusBarBackgroundColor(color : purple)
         self.view.backgroundColor = purple
+        
+        keywordsCollectionView.backgroundColor = purple
         
 //        setupInputFields()
     }
