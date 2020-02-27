@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5b0-f5-cpD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -19,7 +19,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="mQ7-Bv-H2h">
             <objects>
-                <viewController id="mEa-Ob-iEM" customClass="SignUpViewController" customModule="Crypto_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpScreen" id="mEa-Ob-iEM" customClass="SignUpViewController" customModule="Crypto_Chat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bKb-Lt-7GA">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -358,6 +358,7 @@
                                     </textField>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="bVC-kb-Hor" userLabel="calendar">
                                         <rect key="frame" x="314.5" y="9.5" width="21.5" height="23"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="21.5" id="3OM-5d-DES"/>
                                             <constraint firstAttribute="height" constant="23" id="5IS-cK-26u"/>
@@ -719,6 +720,10 @@
                                         <state key="normal" title="Sign Up">
                                             <color key="titleColor" white="0.30345676370000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="showSignUpScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2ek-Wk-BMw"/>
+                                            <action selector="showSignUpScreen:" destination="WFk-bW-gzG" eventType="touchUpInside" id="CUB-Au-TWQ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBM-X5-nqB" userLabel="Sign In" customClass="MyButton" customModule="Crypto_Chat" customModuleProvider="target">
                                         <rect key="frame" x="20" y="232" width="346" height="42"/>
@@ -784,6 +789,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="WFk-bW-gzG" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="138.8671875" y="137.5"/>
         </scene>

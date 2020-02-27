@@ -60,11 +60,6 @@ class SignUpViewController: UIViewController {
         setupInputFields()
     }
     
-    @IBAction func showNextScreen(_ sender: Any) {
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "SignUp2Screen")
-        newViewController.modalPresentationStyle = .fullScreen
-        self.present(newViewController, animated: true, completion: nil)
-    }
+    @IBAction func showNextScreen(_ sender: Any) { navigateToScreen(screenName: "SignUp2Screen") }
 
 }

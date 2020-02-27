@@ -23,6 +23,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailInputField: UITextField!
     @IBOutlet weak var passInputField: UITextField!
     
+    @IBAction func showSignUpScreen(_ sender: Any) { navigateToScreen(screenName: "SignUpScreen")}
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,14 +36,6 @@ class LoginViewController: UIViewController {
         passInputField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(displayP3Red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5)])
         emailInputField.text = "bob"
         passInputField.text = "bob"
-    }
-    
-    func navigateToScreen(screenName: String, storyboardName: String = "Main") {
-        // Navigate to the Messages screen
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: screenName)
-        newViewController.modalPresentationStyle = .fullScreen
-        self.present(newViewController, animated: true, completion: nil)
     }
     
     @IBAction func signIn(_ sender: Any) {
