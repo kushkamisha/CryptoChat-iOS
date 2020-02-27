@@ -19,6 +19,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var chatsTableView: UITableView!
     @IBOutlet weak var msgsTableView: UITableView!
     
+    @IBOutlet weak var topBarView: UIView!
     @IBOutlet weak var topBarUsername: UILabel!
     @IBOutlet weak var topBarAvatar: UIImageView!
     @IBOutlet weak var topBarChatType: UIImageView!
@@ -50,9 +51,16 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
         refreshControl.endRefreshing()
     }
     
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+        //return UIStatusBarStyle.default   // Make dark again
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setStatusBarBackgroundColor(color : UIColor.init(red: 122/255, green: 140/255, blue: 255/255, alpha: 1))
+        let purple = UIColor.init(red: 122/255, green: 140/255, blue: 255/255, alpha: 1)
+        setStatusBarBackgroundColor(color : purple)
+        topBarView.backgroundColor = purple
         
         chatsTableView.delegate = self
         chatsTableView.dataSource = self
@@ -70,11 +78,6 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
         establishSocketConnection()
         listen2NewMessages()
         loadChats()
-    }
-    
-    override var preferredStatusBarStyle : UIStatusBarStyle {
-        return UIStatusBarStyle.lightContent
-        //return UIStatusBarStyle.default   // Make dark again
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool { sendMsg(); return true } // By "Enter" press...

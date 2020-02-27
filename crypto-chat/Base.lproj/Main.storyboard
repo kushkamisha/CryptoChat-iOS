@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7c5-gH-Y0g">
     <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -15,20 +15,20 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="mQ7-Bv-H2h">
             <objects>
-                <viewController id="mEa-Ob-iEM" sceneMemberID="viewController">
+                <viewController id="mEa-Ob-iEM" customClass="SignUpViewController" customModule="Crypto_Chat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bKb-Lt-7GA">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.47843137254901957" green="0.5490196078431373" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="IqF-Bp-4xu"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PNM-X0-MEL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="-617"/>
+            <point key="canvasLocation" x="139" y="905"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -578,6 +578,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="saU-Nl-9oc"/>
                     <connections>
+                        <outlet property="TopBarView" destination="GOq-RQ-6ga" id="S8W-jj-wEf"/>
                         <outlet property="chatsTableView" destination="r8Y-Sp-7jj" id="nPo-nF-Kq1"/>
                         <outlet property="msgsTableView" destination="Kz0-Z4-MAw" id="u08-fm-hby"/>
                         <outlet property="searchUserBar" destination="5PR-J9-mDg" id="qe1-dK-pO1"/>
