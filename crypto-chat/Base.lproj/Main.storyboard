@@ -426,6 +426,22 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IqF-Bp-4xu"/>
                     </view>
+                    <connections>
+                        <outlet property="birthDateInputField" destination="r5M-xl-zuS" id="6Qd-FE-J4W"/>
+                        <outlet property="birthDateLabel" destination="vlW-hm-mpw" id="1Rz-uJ-TyT"/>
+                        <outlet property="emailInputField" destination="FiE-Ci-V7r" id="TGP-ne-UIE"/>
+                        <outlet property="emailLabel" destination="mm6-0K-4Em" id="23O-xd-3zH"/>
+                        <outlet property="firstNameInputField" destination="Ygs-6H-k0Z" id="Wn4-8v-7FN"/>
+                        <outlet property="firstNameLabel" destination="MH2-6U-awT" id="dp1-eL-Mbc"/>
+                        <outlet property="lastNameInputField" destination="S4G-H2-glu" id="1si-FY-eY1"/>
+                        <outlet property="lastNameLabel" destination="nlZ-cK-NRZ" id="gaQ-R5-41O"/>
+                        <outlet property="middleNameInputField" destination="vye-Pg-nWl" id="LRl-Hj-kgP"/>
+                        <outlet property="middleNameLabel" destination="f9u-Z5-14k" id="s16-sW-wPF"/>
+                        <outlet property="passInputField" destination="QNK-DT-aPb" id="J1Y-Nv-9En"/>
+                        <outlet property="passLabel" destination="w43-sa-0v3" id="v7g-Dt-J3F"/>
+                        <outlet property="repeatPassInputField" destination="oT2-D2-t5e" id="HoL-4m-30V"/>
+                        <outlet property="repeatPassLabel" destination="Eng-eK-pWg" id="PlI-mO-vSY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PNM-X0-MEL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
