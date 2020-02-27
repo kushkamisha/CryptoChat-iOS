@@ -32,6 +32,11 @@ class Socket {
         self.socket.on(clientEvent: .disconnect) { data, ack in
             self.isConnected = false
         }
+        
+        self.socket.onAny { data in
+            print("\n\ndata")
+            print(data)
+        }
 
         self.socket.connect()
     }
