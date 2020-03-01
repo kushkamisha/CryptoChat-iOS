@@ -60,8 +60,12 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         let purple = UIColor.init(red: 122/255, green: 140/255, blue: 255/255, alpha: 1)
         setStatusBarBackgroundColor(color : purple)
-        topBarView.backgroundColor = purple
-        
+
+        searchUserBar.backgroundImage = UIImage()
+        searchUserBar.searchBarStyle = UISearchBar.Style.prominent
+        searchUserBar.searchTextField.backgroundColor = UIColor.white
+        searchUserBar.placeholder = "Search for a user"
+
         chatsTableView.delegate = self
         chatsTableView.dataSource = self
         msgsTableView.delegate = self
