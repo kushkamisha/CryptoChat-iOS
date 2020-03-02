@@ -51,6 +51,9 @@
                                             <constraint firstItem="4v6-aB-FJ6" firstAttribute="top" secondItem="mm6-0K-4Em" secondAttribute="top" id="wSV-p5-8ki"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q7E-8r-2Zj" userLabel="Glowing">
+                                        <rect key="frame" x="116" y="0.0" width="230" height="42"/>
+                                    </view>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="FiE-Ci-V7r">
                                         <rect key="frame" x="136" y="0.0" width="200" height="42"/>
                                         <constraints>
@@ -70,7 +73,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="346" id="4kq-yp-ZAv"/>
+                                    <constraint firstAttribute="bottom" secondItem="Q7E-8r-2Zj" secondAttribute="bottom" id="Aj2-sQ-oQj"/>
                                     <constraint firstItem="mm6-0K-4Em" firstAttribute="top" secondItem="FiE-Ci-V7r" secondAttribute="top" id="GgC-s8-H1A"/>
+                                    <constraint firstItem="Q7E-8r-2Zj" firstAttribute="leading" secondItem="mm6-0K-4Em" secondAttribute="trailing" id="UHS-q1-8Y2"/>
+                                    <constraint firstAttribute="trailing" secondItem="Q7E-8r-2Zj" secondAttribute="trailing" id="UJv-CE-E4j"/>
                                     <constraint firstAttribute="bottom" secondItem="mm6-0K-4Em" secondAttribute="bottom" id="UKs-5g-7MB"/>
                                     <constraint firstAttribute="trailing" secondItem="tQt-qT-j39" secondAttribute="trailing" constant="15" id="Y0G-5w-LUv"/>
                                     <constraint firstItem="tQt-qT-j39" firstAttribute="top" secondItem="ORs-Fe-O7l" secondAttribute="top" constant="12" id="ZTn-0n-jvH"/>
@@ -80,6 +86,7 @@
                                     <constraint firstItem="mm6-0K-4Em" firstAttribute="bottom" secondItem="FiE-Ci-V7r" secondAttribute="bottom" id="hyt-iN-9eV"/>
                                     <constraint firstAttribute="height" constant="42" id="ifV-YT-pbC"/>
                                     <constraint firstItem="tQt-qT-j39" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mm6-0K-4Em" secondAttribute="trailing" constant="8" symbolic="YES" id="u1L-va-tW0"/>
+                                    <constraint firstItem="Q7E-8r-2Zj" firstAttribute="top" secondItem="ORs-Fe-O7l" secondAttribute="top" id="ukD-59-uJi"/>
                                     <constraint firstItem="mm6-0K-4Em" firstAttribute="top" secondItem="ORs-Fe-O7l" secondAttribute="top" id="zwP-cU-dXk"/>
                                 </constraints>
                             </view>
@@ -239,6 +246,10 @@
                                             <constraint firstItem="OyH-wx-KmR" firstAttribute="centerY" secondItem="w43-sa-0v3" secondAttribute="centerY" id="lnx-E3-8Ig"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wdw-l4-92N" userLabel="Glowing">
+                                        <rect key="frame" x="116" y="0.0" width="230" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </view>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="QNK-DT-aPb">
                                         <rect key="frame" x="136" y="0.0" width="200" height="42"/>
                                         <constraints>
@@ -292,6 +303,10 @@
                                             <constraint firstItem="2yh-Ez-JJq" firstAttribute="top" secondItem="Eng-eK-pWg" secondAttribute="top" id="MYG-9k-vIc"/>
                                             <constraint firstItem="2yh-Ez-JJq" firstAttribute="centerX" secondItem="Eng-eK-pWg" secondAttribute="centerX" id="Qkk-g4-bF2"/>
                                         </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="akP-eR-3cQ" userLabel="Glowing">
+                                        <rect key="frame" x="116" y="0.0" width="230" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </view>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="oT2-D2-t5e">
                                         <rect key="frame" x="136" y="0.0" width="200" height="42"/>
@@ -451,6 +466,7 @@
                     <connections>
                         <outlet property="birthDateInputField" destination="r5M-xl-zuS" id="6Qd-FE-J4W"/>
                         <outlet property="birthDateLabel" destination="vlW-hm-mpw" id="1Rz-uJ-TyT"/>
+                        <outlet property="emailGlowingView" destination="Q7E-8r-2Zj" id="kXd-xL-xlJ"/>
                         <outlet property="emailInputField" destination="FiE-Ci-V7r" id="TGP-ne-UIE"/>
                         <outlet property="emailLabel" destination="mm6-0K-4Em" id="23O-xd-3zH"/>
                         <outlet property="firstNameInputField" destination="Ygs-6H-k0Z" id="Wn4-8v-7FN"/>
@@ -459,8 +475,10 @@
                         <outlet property="lastNameLabel" destination="nlZ-cK-NRZ" id="gaQ-R5-41O"/>
                         <outlet property="middleNameInputField" destination="vye-Pg-nWl" id="LRl-Hj-kgP"/>
                         <outlet property="middleNameLabel" destination="f9u-Z5-14k" id="s16-sW-wPF"/>
+                        <outlet property="passGlowingView" destination="wdw-l4-92N" id="oH7-mb-aT2"/>
                         <outlet property="passInputField" destination="QNK-DT-aPb" id="J1Y-Nv-9En"/>
                         <outlet property="passLabel" destination="w43-sa-0v3" id="v7g-Dt-J3F"/>
+                        <outlet property="repeatPassGlowingView" destination="akP-eR-3cQ" id="27s-Pi-wrZ"/>
                         <outlet property="repeatPassInputField" destination="oT2-D2-t5e" id="HoL-4m-30V"/>
                         <outlet property="repeatPassLabel" destination="Eng-eK-pWg" id="PlI-mO-vSY"/>
                         <outlet property="uploadUserPhotoButton" destination="bWm-xN-5f5" id="wpo-5P-fsq"/>

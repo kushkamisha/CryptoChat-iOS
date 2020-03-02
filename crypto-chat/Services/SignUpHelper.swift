@@ -8,8 +8,75 @@
 
 import Foundation
 import UIKit
+import CryptoKit
 
 extension SignUpViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    
+    func setupInputFields() {
+        emailLabel.roundCorners(corners: [.topLeft, .bottomLeft], radius: 10)
+        firstNameLabel.roundCorners(corners: [.topLeft, .bottomLeft], radius: 10)
+        middleNameLabel.roundCorners(corners: [.topLeft, .bottomLeft], radius: 10)
+        lastNameLabel.roundCorners(corners: [.topLeft, .bottomLeft], radius: 10)
+        passLabel.roundCorners(corners: [.topLeft, .bottomLeft], radius: 10)
+        repeatPassLabel.roundCorners(corners: [.topLeft, .bottomLeft], radius: 10)
+        birthDateLabel.roundCorners(corners: [.topLeft, .bottomLeft], radius: 10)
+        
+        let translucentWhite = UIColor.init(displayP3Red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5)
+        emailInputField.attributedPlaceholder = NSAttributedString(string: "john@mail.com", attributes: [NSAttributedString.Key.foregroundColor: translucentWhite])
+        firstNameInputField.attributedPlaceholder = NSAttributedString(string: "John", attributes: [NSAttributedString.Key.foregroundColor: translucentWhite])
+        middleNameInputField.attributedPlaceholder = NSAttributedString(string: "James", attributes: [NSAttributedString.Key.foregroundColor: translucentWhite])
+        lastNameInputField.attributedPlaceholder = NSAttributedString(string: "Doe", attributes: [NSAttributedString.Key.foregroundColor: translucentWhite])
+        passInputField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedString.Key.foregroundColor: translucentWhite])
+        repeatPassInputField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedString.Key.foregroundColor: translucentWhite])
+        birthDateInputField.attributedPlaceholder = NSAttributedString(string: "mm/dd/yyyy", attributes: [NSAttributedString.Key.foregroundColor: translucentWhite])
+        
+        invalidInputData(view: emailGlowingView)
+        invalidInputData(view: passGlowingView)
+        invalidInputData(view: repeatPassGlowingView)
+        emailGlowingView.isHidden = true
+        passGlowingView.isHidden = true
+        repeatPassGlowingView.isHidden = true
+        
+        userImage.layer.borderWidth = 5
+        userImage.layer.masksToBounds = false
+        userImage.layer.borderColor = UIColor.white.cgColor
+        userImage.layer.cornerRadius = userImage.frame.height / 2
+        userImage.clipsToBounds = true
+    }
+    
+    func invalidInputData(view: UIView) {
+        view.roundCorners(corners: [.topRight, .bottomRight], radius: 10)
+        view.addInnerShadow(onSide: UIView.innerShadowSide.all, shadowColor: UIColor.red, shadowSize: 8, shadowOpacity: 2)
+    }
+    
+    func checkInputData() {
+        let email = emailInputField.text ?? ""
+        let pass = passInputField.text ?? ""
+        let repeatPass = repeatPassInputField.text ?? ""
+        
+        if (email == "") {
+            invalidInputData(view: emailGlowingView)
+        } else if (pass == "") {
+            invalidInputData(view: passGlowingView)
+        } else if (repeatPass == "") {
+            invalidInputData(view: repeatPassGlowingView)
+        } else {
+            if (pass != repeatPass) {
+                invalidInputData(view: repeatPassGlowingView)
+            }
+        }
+        
+        let range = NSRange(location: 0, length: email.utf16.count)
+        let regexEmail = try! NSRegularExpression(pattern: "^\\w+@[a-zA-Z_]+?\\.[a-zA-Z]{2,3}$")
+        let regexPass = try! NSRegularExpression(pattern: "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\\$%\\^&\\*])(?=.{8,})")
+        
+        if regexEmail.matches(in: email, options: [], range: range).count == 0 {
+            print("invalid email")
+        } else if regexPass.matches(in: email, options: [], range: range).count == 0 {
+            print("invalid password")
+        }
+        
+    }
 
     func chooseImageFromDevice() {
        imagePicker.allowsEditing = false
