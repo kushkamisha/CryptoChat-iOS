@@ -664,6 +664,23 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1Y-k3-G3R" customClass="MyButton" customModule="Crypto_Chat" customModuleProvider="target">
+                                <rect key="frame" x="339" y="661" width="346" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="346" id="CKi-HA-RU1"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="346" id="PWk-RX-xfk"/>
+                                    <constraint firstAttribute="height" constant="42" id="l0D-BN-Hci"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="42" id="yKn-rI-unr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" white="0.30345676370000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="showNextScreen:" destination="mEa-Ob-iEM" eventType="touchUpInside" id="dEi-RG-jwc"/>
+                                    <action selector="signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FHE-kE-SuK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.47843137250000001" green="0.54901960780000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -674,9 +691,11 @@
                             <constraint firstItem="LUu-j7-HWf" firstAttribute="leading" secondItem="Chk-25-HCr" secondAttribute="leading" constant="112" id="DtL-zM-DOP"/>
                             <constraint firstItem="zcL-8l-wRb" firstAttribute="leading" secondItem="Chk-25-HCr" secondAttribute="leading" constant="112" id="ERO-W6-e1X"/>
                             <constraint firstItem="Chk-25-HCr" firstAttribute="trailing" secondItem="qal-Wu-rzH" secondAttribute="trailing" constant="113" id="KJV-uB-h2g"/>
+                            <constraint firstItem="G1Y-k3-G3R" firstAttribute="centerX" secondItem="sMr-zA-hbu" secondAttribute="centerX" id="Nwh-di-zNW"/>
                             <constraint firstItem="bME-VB-c18" firstAttribute="leading" secondItem="Chk-25-HCr" secondAttribute="leading" constant="161" id="Vo9-w1-ii5"/>
                             <constraint firstItem="qal-Wu-rzH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zcL-8l-wRb" secondAttribute="trailing" constant="8" symbolic="YES" id="Wxn-Fc-8QJ"/>
                             <constraint firstItem="bME-VB-c18" firstAttribute="top" secondItem="xEu-lP-TCv" secondAttribute="bottom" constant="66" id="YLh-sd-BAS"/>
+                            <constraint firstItem="Chk-25-HCr" firstAttribute="bottom" secondItem="G1Y-k3-G3R" secondAttribute="bottom" constant="65" id="a1W-ph-jc7"/>
                             <constraint firstItem="Chk-25-HCr" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bME-VB-c18" secondAttribute="trailing" symbolic="YES" id="fND-2f-9xp"/>
                             <constraint firstItem="xEu-lP-TCv" firstAttribute="top" secondItem="Chk-25-HCr" secondAttribute="top" constant="24" id="jlU-ws-lUs" userLabel="Sign Up.top = Safe Area.top + 30"/>
                             <constraint firstItem="tdD-zB-uqv" firstAttribute="top" secondItem="xEu-lP-TCv" secondAttribute="bottom" constant="70" id="oEa-rX-ICc"/>
