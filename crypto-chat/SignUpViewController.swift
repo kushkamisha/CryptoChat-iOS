@@ -61,5 +61,10 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func showNextScreen(_ sender: Any) { navigateToScreen(screenName: "SignUp2Screen") }
+    
+    @IBAction func uploadUserPhoto(_ sender: Any) {
+        print("Upload a photo...")
+    }
+    
 
 }
