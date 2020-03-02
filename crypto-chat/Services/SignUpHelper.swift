@@ -18,19 +18,18 @@ extension SignUpViewController: UINavigationControllerDelegate, UIImagePickerCon
        present(imagePicker, animated: true, completion: nil)
     }
 
-    // MARK: - UIImagePickerControllerDelegate Methods
-
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-       if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-           userImage.contentMode = .scaleAspectFit
-           userImage.image = pickedImage
-       }
+        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            userImage.contentMode = .scaleAspectFill
+            userImage.image = pickedImage
+            uploadUserPhotoButton.isHidden = true
+        }
        
-       dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-       dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 }
 

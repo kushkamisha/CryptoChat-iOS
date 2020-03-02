@@ -28,6 +28,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var birthDateInputField: UITextField!
     
     @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var uploadUserPhotoButton: UIButton!
     
     let imagePicker = UIImagePickerController()
     
