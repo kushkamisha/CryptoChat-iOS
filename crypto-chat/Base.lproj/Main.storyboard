@@ -458,7 +458,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xEu-lP-TCv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xEu-lP-TCv" userLabel="Sign Up Title">
                                 <rect key="frame" x="373" y="24" width="278.5" height="90"/>
                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="75"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -627,6 +627,43 @@
                                     <constraint firstItem="cUc-cG-DCy" firstAttribute="leading" secondItem="2DW-7n-jZv" secondAttribute="leading" id="vQL-3a-ErY"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="With 0 ETH on it" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcL-8l-wRb">
+                                <rect key="frame" x="112" y="554" width="346" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="346" id="g1C-2a-4Dz"/>
+                                    <constraint firstAttribute="width" secondItem="zcL-8l-wRb" secondAttribute="height" multiplier="173:9" id="lga-vn-H1s"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tdD-zB-uqv" userLabel="QR code">
+                                <rect key="frame" x="565" y="184" width="346" height="346"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LQR-8b-v2a" userLabel="image">
+                                        <rect key="frame" x="10" y="10" width="326" height="326"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="LQR-8b-v2a" firstAttribute="top" secondItem="tdD-zB-uqv" secondAttribute="top" constant="10" id="6EI-nA-JSK"/>
+                                    <constraint firstAttribute="trailing" secondItem="LQR-8b-v2a" secondAttribute="trailing" constant="10" id="9kD-7r-OU8"/>
+                                    <constraint firstItem="LQR-8b-v2a" firstAttribute="leading" secondItem="tdD-zB-uqv" secondAttribute="leading" constant="10" id="E92-A9-b4H"/>
+                                    <constraint firstAttribute="width" constant="346" id="Hgn-EK-IGG"/>
+                                    <constraint firstAttribute="height" constant="346" id="qX3-UD-am4"/>
+                                    <constraint firstAttribute="bottom" secondItem="LQR-8b-v2a" secondAttribute="bottom" constant="10" id="x3a-gG-J2X"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="But you can replenish it using the QR code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qal-Wu-rzH">
+                                <rect key="frame" x="565" y="554" width="346" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qal-Wu-rzH" secondAttribute="height" multiplier="173:9" id="66e-DG-rl6"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="346" id="HDT-Lo-eWr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.47843137250000001" green="0.54901960780000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -635,12 +672,20 @@
                             <constraint firstItem="LUu-j7-HWf" firstAttribute="top" secondItem="bME-VB-c18" secondAttribute="bottom" constant="18" id="5kR-fo-HNs"/>
                             <constraint firstItem="C56-So-dYQ" firstAttribute="leading" secondItem="Chk-25-HCr" secondAttribute="leading" constant="112" id="D0Q-8h-kH9"/>
                             <constraint firstItem="LUu-j7-HWf" firstAttribute="leading" secondItem="Chk-25-HCr" secondAttribute="leading" constant="112" id="DtL-zM-DOP"/>
+                            <constraint firstItem="zcL-8l-wRb" firstAttribute="leading" secondItem="Chk-25-HCr" secondAttribute="leading" constant="112" id="ERO-W6-e1X"/>
+                            <constraint firstItem="Chk-25-HCr" firstAttribute="trailing" secondItem="qal-Wu-rzH" secondAttribute="trailing" constant="113" id="KJV-uB-h2g"/>
                             <constraint firstItem="bME-VB-c18" firstAttribute="leading" secondItem="Chk-25-HCr" secondAttribute="leading" constant="161" id="Vo9-w1-ii5"/>
+                            <constraint firstItem="qal-Wu-rzH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zcL-8l-wRb" secondAttribute="trailing" constant="8" symbolic="YES" id="Wxn-Fc-8QJ"/>
                             <constraint firstItem="bME-VB-c18" firstAttribute="top" secondItem="xEu-lP-TCv" secondAttribute="bottom" constant="66" id="YLh-sd-BAS"/>
                             <constraint firstItem="Chk-25-HCr" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bME-VB-c18" secondAttribute="trailing" symbolic="YES" id="fND-2f-9xp"/>
                             <constraint firstItem="xEu-lP-TCv" firstAttribute="top" secondItem="Chk-25-HCr" secondAttribute="top" constant="24" id="jlU-ws-lUs" userLabel="Sign Up.top = Safe Area.top + 30"/>
+                            <constraint firstItem="tdD-zB-uqv" firstAttribute="top" secondItem="xEu-lP-TCv" secondAttribute="bottom" constant="70" id="oEa-rX-ICc"/>
+                            <constraint firstItem="Chk-25-HCr" firstAttribute="trailing" secondItem="tdD-zB-uqv" secondAttribute="trailing" constant="113" id="r8s-40-cLt"/>
+                            <constraint firstItem="zcL-8l-wRb" firstAttribute="top" secondItem="2DW-7n-jZv" secondAttribute="bottom" constant="24" id="s07-56-OrD"/>
                             <constraint firstItem="C56-So-dYQ" firstAttribute="leading" secondItem="Chk-25-HCr" secondAttribute="leading" constant="112" id="seg-ZH-XSf"/>
+                            <constraint firstItem="qal-Wu-rzH" firstAttribute="baseline" secondItem="zcL-8l-wRb" secondAttribute="baseline" id="uRI-ab-kmd"/>
                             <constraint firstItem="xEu-lP-TCv" firstAttribute="centerX" secondItem="sMr-zA-hbu" secondAttribute="centerX" id="uaX-XU-18i"/>
+                            <constraint firstItem="Chk-25-HCr" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zcL-8l-wRb" secondAttribute="trailing" symbolic="YES" id="vDB-Xn-uyN"/>
                             <constraint firstItem="2DW-7n-jZv" firstAttribute="leading" secondItem="Chk-25-HCr" secondAttribute="leading" constant="112" id="xKn-1u-NkR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Chk-25-HCr"/>
@@ -652,6 +697,8 @@
                         <outlet property="ethAddrTextField" destination="Jff-LW-vzT" id="GVL-y6-AcE"/>
                         <outlet property="ethereumAddrTitleView" destination="cUc-cG-DCy" id="Cgj-Hr-GCN"/>
                         <outlet property="keywordsCollectionView" destination="LUu-j7-HWf" id="PqU-Mc-Bfh"/>
+                        <outlet property="qrCodeImage" destination="LQR-8b-v2a" id="tEQ-33-Bm3"/>
+                        <outlet property="qrCodeView" destination="tdD-zB-uqv" id="h6F-TI-EBw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CsH-gG-FW3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

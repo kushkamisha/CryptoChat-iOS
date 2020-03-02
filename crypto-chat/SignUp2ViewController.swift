@@ -18,9 +18,12 @@ class SignUp2ViewController: UIViewController {
     @IBOutlet weak var copyEthAddrButton: UIButton!
     @IBOutlet weak var descriptionTextBox: UITextView!
     @IBOutlet weak var ethAddrTextField: UITextField!
+    @IBOutlet weak var qrCodeImage: UIImageView!
+    @IBOutlet weak var qrCodeView: UIView!
     
     let translucentWhite = UIColor.init(displayP3Red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5)
     let descriptionText = "Your description goes here..."
+    let ethAddress = "0x635B4764D1939DfAcD3a8014726159abC277BecC"
     
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
@@ -35,6 +38,7 @@ class SignUp2ViewController: UIViewController {
         
         keywordsCollectionView.backgroundColor = purple
         
+        qrCodeImage.image = generateQRCode(from: "eth:\(ethAddress)")
         setupInputFields()
     }
     

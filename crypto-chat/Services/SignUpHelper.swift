@@ -29,6 +29,8 @@ extension SignUp2ViewController: UICollectionViewDataSource, UICollectionViewDel
         descriptionTitleView.roundCorners(corners: [.topLeft, .topRight], radius: 10)
         ethereumAddrTitleView.roundCorners(corners: [.topLeft, .topRight], radius: 10)
         copyEthAddrButton.roundCorners(corners: [.bottomRight], radius: 10)
+        qrCodeView.roundCorners(corners: [.allCorners], radius: 10)
+        ethAddrTextField.text = ethAddress
         descriptionTextBox.text = descriptionText
         descriptionTextBox.textColor = translucentWhite
     }
@@ -45,5 +47,28 @@ extension SignUp2ViewController: UICollectionViewDataSource, UICollectionViewDel
             descriptionTextBox.text = descriptionText
             descriptionTextBox.textColor = translucentWhite
         }
+    }
+    
+    func generateQRCode(from string: String) -> UIImage? {
+        let data = string.data(using: String.Encoding.ascii)
+        
+        guard let filter = CIFilter(name: "CIQRCodeGenerator") else { return nil }
+        filter.setValue(data, forKey: "inputMessage")
+        
+        // Scale the image
+        let transform = CGAffineTransform(scaleX: 10, y: 10)
+        guard let scaledQrImage = filter.outputImage?.transformed(by: transform) else { return nil }
+        
+        // Invert the colors
+//        guard let colorInvertFilter = CIFilter(name: "CIColorInvert") else { return nil }
+//        colorInvertFilter.setValue(scaledQrImage, forKey: "inputImage")
+//        guard let outputInvertedImage = colorInvertFilter.outputImage else { return nil }
+        
+        // Replace the black with transparency
+//        guard let maskToAlphaFilter = CIFilter(name: "CIMaskToAlpha") else { return nil }
+//        maskToAlphaFilter.setValue(scaledQrImage, forKey: "inputImage")
+//        guard let outputCIImage = maskToAlphaFilter.outputImage else { return nil }
+        
+        return UIImage(ciImage: scaledQrImage)
     }
 }
