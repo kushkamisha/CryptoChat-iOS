@@ -9,6 +9,31 @@
 import Foundation
 import UIKit
 
+extension SignUpViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+
+    func chooseImageFromDevice() {
+       imagePicker.allowsEditing = false
+       imagePicker.sourceType = .photoLibrary
+       
+       present(imagePicker, animated: true, completion: nil)
+    }
+
+    // MARK: - UIImagePickerControllerDelegate Methods
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+       if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+           userImage.contentMode = .scaleAspectFit
+           userImage.image = pickedImage
+       }
+       
+       dismiss(animated: true, completion: nil)
+    }
+
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+       dismiss(animated: true, completion: nil)
+    }
+}
+
 extension SignUp2ViewController: UICollectionViewDataSource, UICollectionViewDelegate, UITextViewDelegate {
     
     // Number of views

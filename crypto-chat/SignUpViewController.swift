@@ -27,6 +27,10 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var repeatPassInputField: UITextField!
     @IBOutlet weak var birthDateInputField: UITextField!
     
+    @IBOutlet weak var userImage: UIImageView!
+    
+    let imagePicker = UIImagePickerController()
+    
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
         //return UIStatusBarStyle.default   // Make dark again
@@ -49,6 +53,12 @@ class SignUpViewController: UIViewController {
         passInputField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedString.Key.foregroundColor: translucentWhite])
         repeatPassInputField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedString.Key.foregroundColor: translucentWhite])
         birthDateInputField.attributedPlaceholder = NSAttributedString(string: "mm/dd/yyyy", attributes: [NSAttributedString.Key.foregroundColor: translucentWhite])
+        
+        userImage.layer.borderWidth = 5
+        userImage.layer.masksToBounds = false
+        userImage.layer.borderColor = UIColor.white.cgColor
+        userImage.layer.cornerRadius = userImage.frame.height / 2
+        userImage.clipsToBounds = true
     }
 
     override func viewDidLoad() {
@@ -57,13 +67,15 @@ class SignUpViewController: UIViewController {
         setStatusBarBackgroundColor(color : purple)
         self.view.backgroundColor = purple
         
+        imagePicker.delegate = self
+        
         setupInputFields()
     }
     
     @IBAction func showNextScreen(_ sender: Any) { navigateToScreen(screenName: "SignUp2Screen") }
     
     @IBAction func uploadUserPhoto(_ sender: Any) {
-        print("Upload a photo...")
+        chooseImageFromDevice()
     }
     
 
