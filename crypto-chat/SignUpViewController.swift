@@ -73,7 +73,19 @@ class SignUpViewController: UIViewController {
         setupInputFields()
     }
     
-    @IBAction func showNextScreen(_ sender: Any) { navigateToScreen(screenName: "SignUp2Screen") }
+    @IBAction func showNextScreen(_ sender: Any) {
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SignUp2Screen") as! SignUp2ViewController
+        vc.modalPresentationStyle = .fullScreen
+        vc.userData = UserData(
+            email: emailInputField.text ?? "",
+            pass: passInputField.text ?? "",
+            firstName: firstNameInputField.text ?? "",
+            middleName: middleNameInputField.text ?? "",
+            lastName: lastNameInputField.text ?? "",
+            birthDate: birthDateInputField.text ?? "",
+            photo: userImage.image ?? UIImage())
+        self.present(vc, animated: true, completion: nil)
+    }
     
     @IBAction func uploadUserPhoto(_ sender: Any) {
         chooseImageFromDevice()

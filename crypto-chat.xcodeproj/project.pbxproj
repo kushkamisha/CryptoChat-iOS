@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -43,6 +43,7 @@
 		529C8D6723FEE5D0005B6A1C /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52E94DB823FE98FB00ABD416 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		529C8D6823FEE5D0005B6A1C /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5287030923FEA260004DB7EC /* Starscream.framework */; };
 		529C8D6923FEE5D0005B6A1C /* Starscream.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5287030923FEA260004DB7EC /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		52C9C4E7240D5601002B3953 /* UserRegData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C9C4E6240D5601002B3953 /* UserRegData.swift */; };
 		52DA96072407DD920060B432 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DA96062407DD920060B432 /* SignUpViewController.swift */; };
 		52DB60AA2408516600EF4D46 /* KeywordStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DB60A92408516600EF4D46 /* KeywordStyle.swift */; };
 		52E1EB9F23F46BCD008BA69E /* MessageRightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E1EB9E23F46BCD008BA69E /* MessageRightCell.swift */; };
@@ -128,6 +129,7 @@
 		529B7C8C2403F7F700C32272 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		529B7C912404005700C32272 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		529C8D6423FEE419005B6A1C /* Microfutures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Microfutures.swift; sourceTree = "<group>"; };
+		52C9C4E6240D5601002B3953 /* UserRegData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegData.swift; sourceTree = "<group>"; };
 		52DA96062407DD920060B432 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		52DB60A92408516600EF4D46 /* KeywordStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordStyle.swift; sourceTree = "<group>"; };
 		52E1EB9E23F46BCD008BA69E /* MessageRightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRightCell.swift; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 			children = (
 				5225A4D423F2B53E00EB677B /* Chat.swift */,
 				52E1EBA023F473F8008BA69E /* Message.swift */,
+				52C9C4E6240D5601002B3953 /* UserRegData.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				5228DECB23E9DB1700D4F08B /* UIView.ext.swift in Sources */,
 				529180C923F59C7100BD6751 /* UILabel.ext.swift in Sources */,
 				52E1EB9F23F46BCD008BA69E /* MessageRightCell.swift in Sources */,
+				52C9C4E7240D5601002B3953 /* UserRegData.swift in Sources */,
 				525691E323EB443000DB09D9 /* Utils.swift in Sources */,
 				5228DE8E23E9BC6A00D4F08B /* AppDelegate.swift in Sources */,
 				52731C6023ECA6E2009A6C2A /* UIViewController.swift in Sources */,

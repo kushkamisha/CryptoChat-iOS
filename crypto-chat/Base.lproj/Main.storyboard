@@ -1321,7 +1321,7 @@
         <image name="filter" width="25" height="20"/>
         <image name="send message" width="25" height="25"/>
         <image name="settings" width="25" height="25"/>
-        <image name="upload-photo" width="346" height="346"/>
+        <image name="upload-photo" width="192.5" height="279.5"/>
         <image name="video call" width="25" height="15"/>
     </resources>
 </document>
