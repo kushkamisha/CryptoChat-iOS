@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7c5-gH-Y0g">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5b0-f5-cpD">
     <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -516,10 +516,10 @@
                                     <outlet property="delegate" destination="5b0-f5-cpD" id="9Br-v9-bpp"/>
                                 </connections>
                             </collectionView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C56-So-dYQ" userLabel="Description">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C56-So-dYQ" userLabel="Description" customClass="InputBox" customModule="Crypto_Chat" customModuleProvider="target">
                                 <rect key="frame" x="112" y="312" width="346" height="121"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z14-mg-RwY">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z14-mg-RwY" userLabel="Title">
                                         <rect key="frame" x="0.0" y="0.0" width="346" height="28"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or by a short description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMT-Cu-x3R">
@@ -536,7 +536,7 @@
                                             <constraint firstAttribute="height" constant="28" id="RBp-B1-Muf"/>
                                         </constraints>
                                     </view>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="18W-Sr-bkg">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="18W-Sr-bkg">
                                         <rect key="frame" x="0.0" y="28" width="346" height="93"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -558,9 +558,60 @@
                                     <constraint firstAttribute="bottom" secondItem="18W-Sr-bkg" secondAttribute="bottom" id="yWn-eN-rh9"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2DW-7n-jZv" userLabel="Ethereum address" customClass="InputBox" customModule="Crypto_Chat" customModuleProvider="target">
+                                <rect key="frame" x="112" y="468" width="346" height="62"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUc-cG-DCy" userLabel="Title">
+                                        <rect key="frame" x="0.0" y="0.0" width="346" height="28"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An Ethereum address was generated for you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQn-se-y3C">
+                                                <rect key="frame" x="16" y="5" width="314" height="18"/>
+                                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="IQn-se-y3C" firstAttribute="centerX" secondItem="cUc-cG-DCy" secondAttribute="centerX" id="Fh5-Bg-mp7"/>
+                                            <constraint firstItem="IQn-se-y3C" firstAttribute="centerY" secondItem="cUc-cG-DCy" secondAttribute="centerY" id="eV9-H6-INa"/>
+                                            <constraint firstAttribute="height" constant="28" id="wFn-GZ-gC6"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6v-wX-kpF">
+                                        <rect key="frame" x="290" y="28" width="56" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="56" id="hFJ-2t-ae3"/>
+                                            <constraint firstAttribute="height" constant="34" id="w7n-wq-d80"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0x635B4764D1939DfAcD3a8014726159abC277BecC" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jff-LW-vzT">
+                                        <rect key="frame" x="0.0" y="28" width="290" height="34"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="cUc-cG-DCy" firstAttribute="top" secondItem="2DW-7n-jZv" secondAttribute="top" id="9Bd-au-KsL"/>
+                                    <constraint firstAttribute="height" constant="62" id="GZi-FM-ZXe"/>
+                                    <constraint firstItem="Jff-LW-vzT" firstAttribute="leading" secondItem="2DW-7n-jZv" secondAttribute="leading" id="Hgb-62-dmL"/>
+                                    <constraint firstAttribute="bottom" secondItem="Jff-LW-vzT" secondAttribute="bottom" id="Or1-K4-JyA"/>
+                                    <constraint firstAttribute="width" constant="346" id="WeH-nb-suF"/>
+                                    <constraint firstItem="c6v-wX-kpF" firstAttribute="top" secondItem="cUc-cG-DCy" secondAttribute="bottom" id="aEK-Hz-Kl5"/>
+                                    <constraint firstItem="c6v-wX-kpF" firstAttribute="leading" secondItem="Jff-LW-vzT" secondAttribute="trailing" id="bhZ-KC-QHo"/>
+                                    <constraint firstAttribute="trailing" secondItem="cUc-cG-DCy" secondAttribute="trailing" id="r3C-eY-N8Y"/>
+                                    <constraint firstAttribute="trailing" secondItem="c6v-wX-kpF" secondAttribute="trailing" id="uer-rR-J5r"/>
+                                    <constraint firstItem="Jff-LW-vzT" firstAttribute="top" secondItem="cUc-cG-DCy" secondAttribute="bottom" id="uxG-b9-NXy"/>
+                                    <constraint firstItem="cUc-cG-DCy" firstAttribute="leading" secondItem="2DW-7n-jZv" secondAttribute="leading" id="vQL-3a-ErY"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.47843137250000001" green="0.54901960780000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="2DW-7n-jZv" firstAttribute="top" secondItem="C56-So-dYQ" secondAttribute="bottom" constant="35" id="4N4-as-vny"/>
                             <constraint firstItem="C56-So-dYQ" firstAttribute="top" secondItem="LUu-j7-HWf" secondAttribute="bottom" constant="30" id="59b-Kc-TJ7"/>
                             <constraint firstItem="LUu-j7-HWf" firstAttribute="top" secondItem="bME-VB-c18" secondAttribute="bottom" constant="18" id="5kR-fo-HNs"/>
                             <constraint firstItem="C56-So-dYQ" firstAttribute="leading" secondItem="Chk-25-HCr" secondAttribute="leading" constant="112" id="D0Q-8h-kH9"/>
@@ -571,6 +622,7 @@
                             <constraint firstItem="xEu-lP-TCv" firstAttribute="top" secondItem="Chk-25-HCr" secondAttribute="top" constant="24" id="jlU-ws-lUs" userLabel="Sign Up.top = Safe Area.top + 30"/>
                             <constraint firstItem="C56-So-dYQ" firstAttribute="leading" secondItem="Chk-25-HCr" secondAttribute="leading" constant="112" id="seg-ZH-XSf"/>
                             <constraint firstItem="xEu-lP-TCv" firstAttribute="centerX" secondItem="sMr-zA-hbu" secondAttribute="centerX" id="uaX-XU-18i"/>
+                            <constraint firstItem="2DW-7n-jZv" firstAttribute="leading" secondItem="Chk-25-HCr" secondAttribute="leading" constant="112" id="xKn-1u-NkR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Chk-25-HCr"/>
                     </view>
