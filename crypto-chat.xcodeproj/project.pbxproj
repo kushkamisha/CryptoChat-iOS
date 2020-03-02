@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0781141A6A825356B61DC018 /* Pods_crypto_chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27DD069B7C70D0AAAB9A897 /* Pods_crypto_chat.framework */; };
 		522558582408182E00357C09 /* SignUp2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522558572408182E00357C09 /* SignUp2ViewController.swift */; };
-		5225585A24082A6B00357C09 /* SignUpKeywords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5225585924082A6B00357C09 /* SignUpKeywords.swift */; };
+		5225585A24082A6B00357C09 /* SignUpHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5225585924082A6B00357C09 /* SignUpHelper.swift */; };
 		5225585C24082C9E00357C09 /* KeywordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5225585B24082C9E00357C09 /* KeywordCell.swift */; };
 		5225A4D323F2B3DC00EB677B /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5225A4D223F2B3DC00EB677B /* ChatCell.swift */; };
 		5225A4D523F2B53E00EB677B /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5225A4D423F2B53E00EB677B /* Chat.swift */; };
@@ -88,7 +88,7 @@
 
 /* Begin PBXFileReference section */
 		522558572408182E00357C09 /* SignUp2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp2ViewController.swift; sourceTree = "<group>"; };
-		5225585924082A6B00357C09 /* SignUpKeywords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpKeywords.swift; sourceTree = "<group>"; };
+		5225585924082A6B00357C09 /* SignUpHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpHelper.swift; sourceTree = "<group>"; };
 		5225585B24082C9E00357C09 /* KeywordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordCell.swift; sourceTree = "<group>"; };
 		5225A4D123F2ACF500EB677B /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
 		5225A4D223F2B3DC00EB677B /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatCell.swift; path = "crypto-chat/Extensions/ChatCell.swift"; sourceTree = SOURCE_ROOT; };
@@ -318,7 +318,7 @@
 				52FF99E023FE92C9000758A6 /* Socket.swift */,
 				529B7C8A2403F75B00C32272 /* ChatTables.swift */,
 				529B7C912404005700C32272 /* Helper.swift */,
-				5225585924082A6B00357C09 /* SignUpKeywords.swift */,
+				5225585924082A6B00357C09 /* SignUpHelper.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -344,6 +344,7 @@
 				5228DE8723E9BC6A00D4F08B /* Frameworks */,
 				5228DE8823E9BC6A00D4F08B /* Resources */,
 				52E94DBD23FE98FB00ABD416 /* Embed Frameworks */,
+				C89F9F4BF40B10C72B99EF8D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -488,6 +489,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C89F9F4BF40B10C72B99EF8D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-crypto-chat/Pods-crypto-chat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-crypto-chat/Pods-crypto-chat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-crypto-chat/Pods-crypto-chat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -511,7 +529,7 @@
 				52731C6023ECA6E2009A6C2A /* UIViewController.swift in Sources */,
 				529B7C8B2403F75B00C32272 /* ChatTables.swift in Sources */,
 				5228DE9023E9BC6A00D4F08B /* SceneDelegate.swift in Sources */,
-				5225585A24082A6B00357C09 /* SignUpKeywords.swift in Sources */,
+				5225585A24082A6B00357C09 /* SignUpHelper.swift in Sources */,
 				52DB60AA2408516600EF4D46 /* KeywordStyle.swift in Sources */,
 				5225585C24082C9E00357C09 /* KeywordCell.swift in Sources */,
 				52DA96072407DD920060B432 /* SignUpViewController.swift in Sources */,

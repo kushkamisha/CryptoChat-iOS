@@ -6,12 +6,21 @@
 //  Copyright © 2020 Misha Kushka. All rights reserved.
 //
 
+import Loaf
 import UIKit
 
 class SignUp2ViewController: UIViewController {
     
     let keywords: [String] = ["consulting", "blockchain", "smart contracts", "teaching", "+"]
     @IBOutlet weak var keywordsCollectionView: UICollectionView!
+    @IBOutlet weak var descriptionTitleView: UIView!
+    @IBOutlet weak var ethereumAddrTitleView: UIView!
+    @IBOutlet weak var copyEthAddrButton: UIButton!
+    @IBOutlet weak var descriptionTextBox: UITextView!
+    @IBOutlet weak var ethAddrTextField: UITextField!
+    
+    let translucentWhite = UIColor.init(displayP3Red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5)
+    let descriptionText = "Your description goes here..."
     
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
@@ -26,7 +35,12 @@ class SignUp2ViewController: UIViewController {
         
         keywordsCollectionView.backgroundColor = purple
         
-//        setupInputFields()
+        setupInputFields()
     }
-
+    
+    @IBAction func copyEthAddr(_ sender: Any) {
+        UIPasteboard.general.string = ethAddrTextField.text
+        Loaf("Copied to the clipboard", state: .success, sender: self).show()
+    }
+    
 }
