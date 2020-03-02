@@ -6,11 +6,11 @@
 //  Copyright © 2020 Misha Kushka. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import CryptoKit
+import Loaf
 
-extension SignUpViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+extension SignUpViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
     
     func setupInputFields() {
         emailLabel.roundCorners(corners: [.topLeft, .bottomLeft], radius: 10)
@@ -30,6 +30,13 @@ extension SignUpViewController: UINavigationControllerDelegate, UIImagePickerCon
         repeatPassInputField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedString.Key.foregroundColor: translucentWhite])
         birthDateInputField.attributedPlaceholder = NSAttributedString(string: "mm/dd/yyyy", attributes: [NSAttributedString.Key.foregroundColor: translucentWhite])
         
+        emailInputField.delegate = self
+        passInputField.delegate = self
+        repeatPassInputField.delegate = self
+        emailInputField.addTarget(self, action: #selector(SignUpViewController.removeGlowing(_:)), for: .editingChanged)
+        passInputField.addTarget(self, action: #selector(SignUpViewController.removeGlowing(_:)), for: .editingChanged)
+        repeatPassInputField.addTarget(self, action: #selector(SignUpViewController.removeGlowing(_:)), for: .editingChanged)
+        
         invalidInputData(view: emailGlowingView)
         invalidInputData(view: passGlowingView)
         invalidInputData(view: repeatPassGlowingView)
@@ -44,38 +51,80 @@ extension SignUpViewController: UINavigationControllerDelegate, UIImagePickerCon
         userImage.clipsToBounds = true
     }
     
+    @objc func removeGlowing(_ textField: UITextField) {
+        switch (textField) {
+            case emailInputField:
+                emailGlowingView.isHidden = true
+                break
+            case passInputField:
+                passGlowingView.isHidden = true
+                break
+            case repeatPassInputField:
+                repeatPassGlowingView.isHidden = true
+                break
+            default:
+                break
+        }
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        removeGlowing(textField)
+    }
+    
     func invalidInputData(view: UIView) {
         view.roundCorners(corners: [.topRight, .bottomRight], radius: 10)
         view.addInnerShadow(onSide: UIView.innerShadowSide.all, shadowColor: UIColor.red, shadowSize: 8, shadowOpacity: 2)
     }
     
-    func checkInputData() {
+    func checkInputData() -> Bool {
         let email = emailInputField.text ?? ""
         let pass = passInputField.text ?? ""
         let repeatPass = repeatPassInputField.text ?? ""
         
         if (email == "") {
-            invalidInputData(view: emailGlowingView)
+            emailGlowingView.isHidden = false
+            Loaf("Email can not be empty", state: .error, sender: self).show()
+            return false
         } else if (pass == "") {
-            invalidInputData(view: passGlowingView)
+            passGlowingView.isHidden = false
+            Loaf("Password can not be empty", state: .error, sender: self).show()
+            return false
         } else if (repeatPass == "") {
-            invalidInputData(view: repeatPassGlowingView)
-        } else {
-            if (pass != repeatPass) {
-                invalidInputData(view: repeatPassGlowingView)
-            }
+            repeatPassGlowingView.isHidden = false
+            Loaf("Repeat password can not be empty", state: .error, sender: self).show()
+            return false
+        } else if (pass != repeatPass) {
+            repeatPassGlowingView.isHidden = false
+            Loaf("Repeat password does not equal to password", state: .error, sender: self).show()
+            return false
         }
         
-        let range = NSRange(location: 0, length: email.utf16.count)
+        emailGlowingView.isHidden = true
+        passGlowingView.isHidden = true
+        repeatPassGlowingView.isHidden = true
+        
+        let rangeEmail = NSRange(location: 0, length: email.utf16.count)
         let regexEmail = try! NSRegularExpression(pattern: "^\\w+@[a-zA-Z_]+?\\.[a-zA-Z]{2,3}$")
+        let rangePass = NSRange(location: 0, length: pass.utf16.count)
         let regexPass = try! NSRegularExpression(pattern: "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\\$%\\^&\\*])(?=.{8,})")
         
-        if regexEmail.matches(in: email, options: [], range: range).count == 0 {
-            print("invalid email")
-        } else if regexPass.matches(in: email, options: [], range: range).count == 0 {
-            print("invalid password")
+        if regexEmail.matches(in: email, options: [], range: rangeEmail).count == 0 {
+            Loaf("Your email has incorrect format", state: .error, sender: self).show()
+            emailGlowingView.isHidden = false
+            return false
+        } else if regexPass.matches(in: pass, options: [], range: rangePass).count == 0 {
+            passGlowingView.isHidden = false
+            Loaf("""
+The password must be at least 8 characters long and contain at least:
+    - 1 lowercase letter
+    - 1 uppdercase letter
+    - 1 digit
+    - 1 special character
+""", state: .error, sender: self).show()
+            return false
         }
         
+        return true
     }
 
     func chooseImageFromDevice() {
