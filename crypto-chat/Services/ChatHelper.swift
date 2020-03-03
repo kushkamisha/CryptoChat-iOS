@@ -92,4 +92,20 @@ extension ChatViewController {
             print(status)
         }
     }
+    
+    func isChatSelected(status: Bool) {
+        if (status) {
+            sendMessageView.isHidden = false
+            topBarVideoCall.isHidden = false
+            topBarAudioCall.isHidden = false
+            msgsTableView.isHidden = false
+            noChatsSelectedView.isHidden = true
+        } else {
+            sendMessageView.isHidden = true
+            topBarVideoCall.isHidden = true
+            topBarAudioCall.isHidden = true
+            msgsTableView.isHidden = true
+            noChatsSelectedView.isHidden = false
+        }
+    }
 }

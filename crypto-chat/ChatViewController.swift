@@ -18,22 +18,28 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var searchUserBar: UISearchBar!
     @IBOutlet weak var chatsTableView: UITableView!
     @IBOutlet weak var msgsTableView: UITableView!
+    @IBOutlet weak var noChatsSelectedLabel: UILabel!
+    @IBOutlet weak var noChatsSelectedView: UIView!
     
     @IBOutlet weak var topBarView: UIView!
     @IBOutlet weak var topBarUsername: UILabel!
     @IBOutlet weak var topBarAvatar: UIImageView!
     @IBOutlet weak var topBarChatType: UIImageView!
+    @IBOutlet weak var topBarVideoCall: UIImageView!
+    @IBOutlet weak var topBarAudioCall: UIImageView!
     
     @IBOutlet weak var sendMessageTextField: UITextField!
     @IBOutlet weak var sendMessageButton: UIButton!
+    @IBOutlet weak var sendMessageView: UIView!
     
-    var userId: String = ""
+    var userId: String = "2"
     var username: String = ""
     var selectedChatId: String = ""
     var chats: [Chat] = []
     var msgs: [Message] = []
     var socket: Socket!
-    var jwt: String = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcsImlhdCI6MTU4MjcxNjY3MCwiZXhwIjoxNjE4NzEzMDcwfQ.IbxCHO3tWVPkm7U3xKlut6P98hnla3YSITCA-jAi3bc"
+    var jwt: String = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTU4MzIzOTczNywiZXhwIjoxNjE5MjM2MTM3fQ.vkf-UExOiaDPNmGWN-CdT1cBQ8-kduQ9OfK7GDtPzo8"
+    var chatSelected: Bool = false
     
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
@@ -73,6 +79,12 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
         msgsTableView.dataSource = self
         sendMessageTextField.delegate = self
         
+        noChatsSelectedLabel.text = "No chats are selected"
+        noChatsSelectedLabel.backgroundColor = purple
+        noChatsSelectedLabel.padding = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        noChatsSelectedLabel.layer.masksToBounds = true
+        noChatsSelectedLabel.layer.cornerRadius = 10
+        
         msgsTableView.rowHeight = UITableView.automaticDimension
         chatsTableView.rowHeight = 75
         
@@ -80,6 +92,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
         
         self.chatsTableView.addSubview(self.refreshControl)
         
+        isChatSelected(status: false)
         establishSocketConnection()
         listen2NewMessages()
         loadChats()

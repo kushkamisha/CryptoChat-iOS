@@ -40,6 +40,7 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if (tableView == chatsTableView) {
+            self.isChatSelected(status: true)
             socket.socketOn(event: "add-message-response", callback: { data in
                 let json = JSON(data)[0]
                 

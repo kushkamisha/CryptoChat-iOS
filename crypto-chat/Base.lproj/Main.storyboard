@@ -1029,8 +1029,8 @@
                                             <constraint firstAttribute="width" constant="50" id="Zck-3I-HEH"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJL-ku-036">
-                                        <rect key="frame" x="380" y="26" width="267" height="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJL-ku-036">
+                                        <rect key="frame" x="380" y="35" width="267" height="0.0"/>
                                         <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -1172,7 +1172,7 @@
                                     <constraint firstAttribute="width" constant="0.5" id="izy-9C-cMB"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mvr-7h-di0">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mvr-7h-di0" userLabel="Send message">
                                 <rect key="frame" x="360" y="713" width="664" height="55"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="26i-bk-gMe">
@@ -1205,6 +1205,24 @@
                                     <constraint firstAttribute="height" constant="55" id="Yy9-QG-yOg"/>
                                     <constraint firstItem="J0Q-tS-2eq" firstAttribute="leading" secondItem="26i-bk-gMe" secondAttribute="trailing" constant="20" id="agr-ZC-J74"/>
                                     <constraint firstItem="26i-bk-gMe" firstAttribute="centerY" secondItem="Mvr-7h-di0" secondAttribute="centerY" id="n3t-8m-vMt"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eLN-WJ-oiO" userLabel="No selected chats">
+                                <rect key="frame" x="360" y="70" width="665" height="698"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No chats are selected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Xa-O4-75Z">
+                                        <rect key="frame" x="232.5" y="340" width="200" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="NG2-QB-RTj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="0Xa-O4-75Z" firstAttribute="centerX" secondItem="eLN-WJ-oiO" secondAttribute="centerX" id="ezR-LB-5QG"/>
+                                    <constraint firstItem="0Xa-O4-75Z" firstAttribute="centerY" secondItem="eLN-WJ-oiO" secondAttribute="centerY" id="jZj-DL-E0S"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kz0-Z4-MAw">
@@ -1305,12 +1323,16 @@
                             <constraint firstItem="Mvr-7h-di0" firstAttribute="leading" secondItem="r8Y-Sp-7jj" secondAttribute="trailing" id="MzE-O6-Eiv"/>
                             <constraint firstItem="GOq-RQ-6ga" firstAttribute="top" secondItem="Jk3-UD-Pv8" secondAttribute="top" id="Okc-vN-IEG"/>
                             <constraint firstItem="GOq-RQ-6ga" firstAttribute="trailing" secondItem="Jk3-UD-Pv8" secondAttribute="trailing" id="Q8X-GT-ub9"/>
+                            <constraint firstItem="Mvr-7h-di0" firstAttribute="top" secondItem="eLN-WJ-oiO" secondAttribute="bottom" constant="-55" id="QXV-Jr-hJX"/>
                             <constraint firstItem="qEA-AK-oPn" firstAttribute="leading" secondItem="r8Y-Sp-7jj" secondAttribute="trailing" id="cge-fk-Jgf"/>
                             <constraint firstItem="Mvr-7h-di0" firstAttribute="trailing" secondItem="Jk3-UD-Pv8" secondAttribute="trailing" id="eT7-Gb-ftL"/>
+                            <constraint firstItem="eLN-WJ-oiO" firstAttribute="leading" secondItem="r8Y-Sp-7jj" secondAttribute="trailing" id="lv6-BL-omV"/>
+                            <constraint firstItem="eLN-WJ-oiO" firstAttribute="top" secondItem="GOq-RQ-6ga" secondAttribute="bottom" id="nAC-RZ-Agk"/>
                             <constraint firstItem="r8Y-Sp-7jj" firstAttribute="leading" secondItem="Jk3-UD-Pv8" secondAttribute="leading" id="npw-bm-Sxp"/>
                             <constraint firstItem="r8Y-Sp-7jj" firstAttribute="bottom" secondItem="Jk3-UD-Pv8" secondAttribute="bottom" id="oGE-5W-hRb"/>
                             <constraint firstItem="GOq-RQ-6ga" firstAttribute="leading" secondItem="Jk3-UD-Pv8" secondAttribute="leading" id="u1R-Uz-dZQ"/>
                             <constraint firstItem="Mvr-7h-di0" firstAttribute="bottom" secondItem="Jk3-UD-Pv8" secondAttribute="bottom" id="vDt-Al-Qcp"/>
+                            <constraint firstAttribute="trailing" secondItem="eLN-WJ-oiO" secondAttribute="trailing" constant="-1" id="vGc-Zh-7bs"/>
                             <constraint firstItem="Kz0-Z4-MAw" firstAttribute="leading" secondItem="r8Y-Sp-7jj" secondAttribute="trailing" constant="8" id="zkL-6O-5QF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jk3-UD-Pv8"/>
@@ -1320,12 +1342,17 @@
                         <outlet property="TopBarView" destination="GOq-RQ-6ga" id="S8W-jj-wEf"/>
                         <outlet property="chatsTableView" destination="r8Y-Sp-7jj" id="nPo-nF-Kq1"/>
                         <outlet property="msgsTableView" destination="Kz0-Z4-MAw" id="u08-fm-hby"/>
+                        <outlet property="noChatsSelectedLabel" destination="0Xa-O4-75Z" id="1On-Ch-t3y"/>
+                        <outlet property="noChatsSelectedView" destination="eLN-WJ-oiO" id="xlG-Dy-Dfo"/>
                         <outlet property="searchUserBar" destination="5PR-J9-mDg" id="qe1-dK-pO1"/>
                         <outlet property="sendMessageButton" destination="J0Q-tS-2eq" id="fK7-lI-4XR"/>
                         <outlet property="sendMessageTextField" destination="26i-bk-gMe" id="uiu-HH-qLP"/>
+                        <outlet property="sendMessageView" destination="Mvr-7h-di0" id="b1L-9b-Jdm"/>
+                        <outlet property="topBarAudioCall" destination="Q9K-kP-X9W" id="8ju-74-4uy"/>
                         <outlet property="topBarAvatar" destination="cWQ-wZ-mUe" id="woG-Zf-HVT"/>
                         <outlet property="topBarChatType" destination="Eb2-ro-vJR" id="62O-D1-oT1"/>
                         <outlet property="topBarUsername" destination="jJL-ku-036" id="Nly-W0-tti"/>
+                        <outlet property="topBarVideoCall" destination="V14-ts-phL" id="zAK-tS-5kc"/>
                         <outlet property="topBarView" destination="GOq-RQ-6ga" id="Dgr-x9-Iyy"/>
                     </connections>
                 </viewController>
