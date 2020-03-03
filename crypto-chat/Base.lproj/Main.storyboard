@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mEa-Ob-iEM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -718,6 +718,7 @@
                                 <connections>
                                     <action selector="showNextScreen:" destination="mEa-Ob-iEM" eventType="touchUpInside" id="dEi-RG-jwc"/>
                                     <action selector="signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FHE-kE-SuK"/>
+                                    <action selector="updateUserData:" destination="5b0-f5-cpD" eventType="touchUpInside" id="5rV-YX-rcb"/>
                                 </connections>
                             </button>
                         </subviews>

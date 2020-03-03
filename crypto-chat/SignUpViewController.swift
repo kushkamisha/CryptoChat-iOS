@@ -50,15 +50,8 @@ class SignUpViewController: UIViewController {
         setupInputFields()
     }
     
-    @IBAction func showNextScreen(_ sender: Any) {
-//        if checkInputData() {
-        registerUser()
-//        }
-    }
+    @IBAction func showNextScreen(_ sender: Any) { if checkInputData() { registerUser() } }
     
-    @IBAction func uploadUserPhoto(_ sender: Any) {
-        chooseImageFromDevice()
-    }
-    
+    @IBAction func uploadUserPhoto(_ sender: Any) { chooseImageFromDevice() }
 
 }

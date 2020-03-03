@@ -43,7 +43,7 @@ class SignUp2ViewController: UIViewController {
         print(userId)
         print(address)
         print(token)
-        let prKey: String? = KeychainWrapper.standard.string(forKey: "prKey")
+        guard let prKey: String = KeychainWrapper.standard.string(forKey: "prKey") else { return }
         print(prKey)
         
         keywordsCollectionView.backgroundColor = purple
@@ -56,5 +56,10 @@ class SignUp2ViewController: UIViewController {
         UIPasteboard.general.string = ethAddrTextField.text
         Loaf("Copied to the clipboard", state: .success, sender: self).show()
     }
+    
+    @IBAction func updateUserData(_ sender: Any) {
+        finishUserSignUp()
+    }
+    
     
 }

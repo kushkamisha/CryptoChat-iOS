@@ -8,6 +8,9 @@
 
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+import Loaf
 
 /**
  Second SignUp screen
@@ -63,5 +66,36 @@ extension SignUp2ViewController: UICollectionViewDataSource, UICollectionViewDel
         guard let scaledQrImage = filter.outputImage?.transformed(by: transform) else { return nil }
         
         return UIImage(ciImage: scaledQrImage)
+    }
+    
+    func finishUserSignUp() {
+        AF.request("http://localhost:8080/auth/updateUserData",
+                   method: .post,
+                   parameters: [
+                        "token": self.token,
+                        "description": descriptionTextBox.text,
+                        "keywords": "",
+                   ],
+                   encoder: JSONParameterEncoder.default).responseJSON { response in
+            switch response.result {
+                case .success(let data):
+                    let json = JSON(data)
+                    let status = json["status"]
+                    
+                    if (status == "success") {
+                        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "MessagesScreen") as! ChatViewController
+                        vc.modalPresentationStyle = .fullScreen
+                        vc.jwt = self.token
+                        vc.userId = self.userId
+                        self.present(vc, animated: true, completion: nil)
+                    } else {
+                        Loaf(NSLocalizedString("signup2Error", comment: ""), state: .error, sender: self).show()
+                    }
+                    
+                    break
+                case .failure(let error):
+                    print(error.localizedDescription)
+            }
+        }
     }
 }

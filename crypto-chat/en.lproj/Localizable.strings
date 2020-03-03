@@ -1,3 +1,4 @@
 "Oops" = "Oops";
 "loginError" = "Email or password is incorrect. Please, try again";
 "signupError" = "There is already a user with such email address. Please, try another one";
+"signup2Error" = "Unknown error on a server. You was signed up, but without description and keywords";
