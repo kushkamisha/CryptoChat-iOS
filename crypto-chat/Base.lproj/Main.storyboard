@@ -1326,6 +1326,7 @@
                         <outlet property="topBarAvatar" destination="cWQ-wZ-mUe" id="woG-Zf-HVT"/>
                         <outlet property="topBarChatType" destination="Eb2-ro-vJR" id="62O-D1-oT1"/>
                         <outlet property="topBarUsername" destination="jJL-ku-036" id="Nly-W0-tti"/>
+                        <outlet property="topBarView" destination="GOq-RQ-6ga" id="Dgr-x9-Iyy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ol-tz-LSw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

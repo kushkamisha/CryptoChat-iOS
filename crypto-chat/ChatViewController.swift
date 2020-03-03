@@ -33,7 +33,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     var chats: [Chat] = []
     var msgs: [Message] = []
     var socket: Socket!
-    var jwt: String = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTU4MjcyMjY2NSwiZXhwIjoxNjE4NzE5MDY1fQ.lZojTFdi3Imvxj43YbzFioXE9sDnYzXvHYoLt1zXVU0"
+    var jwt: String = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcsImlhdCI6MTU4MjcxNjY3MCwiZXhwIjoxNjE4NzEzMDcwfQ.IbxCHO3tWVPkm7U3xKlut6P98hnla3YSITCA-jAi3bc"
     
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
@@ -60,6 +60,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         let purple = UIColor.init(red: 122/255, green: 140/255, blue: 255/255, alpha: 1)
         setStatusBarBackgroundColor(color : purple)
+        topBarView.backgroundColor = purple
 
         searchUserBar.backgroundImage = UIImage()
         searchUserBar.searchBarStyle = UISearchBar.Style.prominent
