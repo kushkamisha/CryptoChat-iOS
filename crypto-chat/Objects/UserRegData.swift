@@ -17,6 +17,8 @@ class UserData {
     var lastName: String
     var birthDate: String
     var photo: UIImage
+    var address: String
+    var prKey: String
     
     init(
         email: String,
@@ -25,6 +27,8 @@ class UserData {
         middleName: String = "",
         lastName: String = "",
         birthDate: String = "",
+        address: String = "",
+        prKey: String = "",
         photo: UIImage = UIImage()
     ) {
         self.email = email
@@ -34,5 +38,7 @@ class UserData {
         self.lastName = lastName
         self.birthDate = birthDate
         self.photo = photo
+        self.address = address
+        self.prKey = prKey
     }
 }

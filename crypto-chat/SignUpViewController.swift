@@ -52,19 +52,28 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func showNextScreen(_ sender: Any) {
-        if checkInputData() {
-            let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SignUp2Screen") as! SignUp2ViewController
-            vc.modalPresentationStyle = .fullScreen
-            vc.userData = UserData(
-                email: emailInputField.text ?? "",
-                pass: passInputField.text ?? "",
-                firstName: firstNameInputField.text ?? "",
-                middleName: middleNameInputField.text ?? "",
-                lastName: lastNameInputField.text ?? "",
-                birthDate: birthDateInputField.text ?? "",
-                photo: userImage.image ?? UIImage())
-            self.present(vc, animated: true, completion: nil)
-        }
+//        if checkInputData() {
+        let user = UserData(
+            email: emailInputField.text ?? "",
+            pass: passInputField.text ?? "",
+            firstName: firstNameInputField.text ?? "",
+            middleName: middleNameInputField.text ?? "",
+            lastName: lastNameInputField.text ?? "",
+            birthDate: birthDateInputField.text ?? ""
+        )
+        registerUser(user: user)
+//        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SignUp2Screen") as! SignUp2ViewController
+//        vc.modalPresentationStyle = .fullScreen
+//        vc.userData = UserData(
+//            email: emailInputField.text ?? "",
+//            pass: passInputField.text ?? "",
+//            firstName: firstNameInputField.text ?? "",
+//            middleName: middleNameInputField.text ?? "",
+//            lastName: lastNameInputField.text ?? "",
+//            birthDate: birthDateInputField.text ?? "",
+//            photo: userImage.image ?? UIImage())
+//        self.present(vc, animated: true, completion: nil)
+//        }
     }
     
     @IBAction func uploadUserPhoto(_ sender: Any) {

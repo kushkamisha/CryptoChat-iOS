@@ -9,6 +9,8 @@
 import UIKit
 import CryptoKit
 import Loaf
+import Alamofire
+import SwiftyJSON
 
 extension SignUpViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
     
@@ -146,6 +148,43 @@ The password must be at least 8 characters long and contain at least:
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    func registerUser(user: UserData) {
+        guard let data = user.pass.data(using: .utf8) else { return }
+        let passHash = SHA512.hash(data: data).hexStr
+        
+        AF.request("http://localhost:8080/auth/register",
+                   method: .post,
+                   parameters: [
+                        "email": user.email,
+                        "pass": passHash,
+                        "firstName": user.firstName,
+                        "middleName": user.middleName,
+                        "lastName": user.lastName,
+                        "birthDate": user.birthDate
+                   ],
+                   encoder: JSONParameterEncoder.default).responseJSON { response in
+            switch response.result {
+                case .success(let data):
+                    print(data)
+                    print("\nSuccessfully registered")
+                    let chats = JSON(data)
+                    
+                    user.address = chats["address"].stringValue
+                    user.prKey = chats["prKey"].stringValue
+                    
+                    let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SignUp2Screen") as! SignUp2ViewController
+                    vc.modalPresentationStyle = .fullScreen
+                    vc.userData = user
+                    self.present(vc, animated: true, completion: nil)
+                    
+                    break
+                case .failure(let error):
+                    print(error.localizedDescription)
+            }
+        }
+
     }
 }
 
