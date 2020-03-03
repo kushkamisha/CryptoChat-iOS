@@ -34,6 +34,7 @@
 		525691E323EB443000DB09D9 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525691E223EB443000DB09D9 /* Utils.swift */; };
 		52731C6023ECA6E2009A6C2A /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52731C5F23ECA6E2009A6C2A /* UIViewController.swift */; };
 		529180C923F59C7100BD6751 /* UILabel.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529180C823F59C7100BD6751 /* UILabel.ext.swift */; };
+		52924352240E7ADA00962773 /* SignUp2Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52924351240E7ADA00962773 /* SignUp2Helper.swift */; };
 		529B7C8B2403F75B00C32272 /* ChatTables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B7C8A2403F75B00C32272 /* ChatTables.swift */; };
 		529B7C8D2403F7F700C32272 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 529B7C8C2403F7F700C32272 /* SwiftyJSON.framework */; };
 		529B7C8E2403F7F700C32272 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 529B7C8C2403F7F700C32272 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -43,7 +44,7 @@
 		529C8D6723FEE5D0005B6A1C /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52E94DB823FE98FB00ABD416 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		529C8D6823FEE5D0005B6A1C /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5287030923FEA260004DB7EC /* Starscream.framework */; };
 		529C8D6923FEE5D0005B6A1C /* Starscream.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5287030923FEA260004DB7EC /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		52C9C4E7240D5601002B3953 /* UserRegData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C9C4E6240D5601002B3953 /* UserRegData.swift */; };
+		52C9C4E7240D5601002B3953 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C9C4E6240D5601002B3953 /* UserData.swift */; };
 		52DA96072407DD920060B432 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DA96062407DD920060B432 /* SignUpViewController.swift */; };
 		52DB60AA2408516600EF4D46 /* KeywordStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DB60A92408516600EF4D46 /* KeywordStyle.swift */; };
 		52E1EB9F23F46BCD008BA69E /* MessageRightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E1EB9E23F46BCD008BA69E /* MessageRightCell.swift */; };
@@ -125,11 +126,12 @@
 		52731C5F23ECA6E2009A6C2A /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		5287030923FEA260004DB7EC /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
 		529180C823F59C7100BD6751 /* UILabel.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.ext.swift; sourceTree = "<group>"; };
+		52924351240E7ADA00962773 /* SignUp2Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp2Helper.swift; sourceTree = "<group>"; };
 		529B7C8A2403F75B00C32272 /* ChatTables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTables.swift; sourceTree = "<group>"; };
 		529B7C8C2403F7F700C32272 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		529B7C912404005700C32272 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		529C8D6423FEE419005B6A1C /* Microfutures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Microfutures.swift; sourceTree = "<group>"; };
-		52C9C4E6240D5601002B3953 /* UserRegData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegData.swift; sourceTree = "<group>"; };
+		52C9C4E6240D5601002B3953 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		52DA96062407DD920060B432 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		52DB60A92408516600EF4D46 /* KeywordStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordStyle.swift; sourceTree = "<group>"; };
 		52E1EB9E23F46BCD008BA69E /* MessageRightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRightCell.swift; sourceTree = "<group>"; };
@@ -301,7 +303,7 @@
 			children = (
 				5225A4D423F2B53E00EB677B /* Chat.swift */,
 				52E1EBA023F473F8008BA69E /* Message.swift */,
-				52C9C4E6240D5601002B3953 /* UserRegData.swift */,
+				52C9C4E6240D5601002B3953 /* UserData.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -322,6 +324,7 @@
 				529B7C8A2403F75B00C32272 /* ChatTables.swift */,
 				529B7C912404005700C32272 /* Helper.swift */,
 				5225585924082A6B00357C09 /* SignUpHelper.swift */,
+				52924351240E7ADA00962773 /* SignUp2Helper.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -527,7 +530,7 @@
 				5228DECB23E9DB1700D4F08B /* UIView.ext.swift in Sources */,
 				529180C923F59C7100BD6751 /* UILabel.ext.swift in Sources */,
 				52E1EB9F23F46BCD008BA69E /* MessageRightCell.swift in Sources */,
-				52C9C4E7240D5601002B3953 /* UserRegData.swift in Sources */,
+				52C9C4E7240D5601002B3953 /* UserData.swift in Sources */,
 				525691E323EB443000DB09D9 /* Utils.swift in Sources */,
 				5228DE8E23E9BC6A00D4F08B /* AppDelegate.swift in Sources */,
 				52731C6023ECA6E2009A6C2A /* UIViewController.swift in Sources */,
@@ -538,6 +541,7 @@
 				5225585C24082C9E00357C09 /* KeywordCell.swift in Sources */,
 				52DA96072407DD920060B432 /* SignUpViewController.swift in Sources */,
 				5228DECD23E9E74E00D4F08B /* InputBox.swift in Sources */,
+				52924352240E7ADA00962773 /* SignUp2Helper.swift in Sources */,
 				5225A4D523F2B53E00EB677B /* Chat.swift in Sources */,
 				525691E123EB360700DB09D9 /* ChatViewController.swift in Sources */,
 				5228DECF23E9F83200D4F08B /* MyButton.swift in Sources */,

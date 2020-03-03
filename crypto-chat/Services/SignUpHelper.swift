@@ -11,6 +11,7 @@ import CryptoKit
 import Loaf
 import Alamofire
 import SwiftyJSON
+import SwiftKeychainWrapper
 
 extension SignUpViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
     
@@ -150,104 +151,49 @@ The password must be at least 8 characters long and contain at least:
         dismiss(animated: true, completion: nil)
     }
     
-    func registerUser(user: UserData) {
-        guard let data = user.pass.data(using: .utf8) else { return }
+    func registerUser() {
+        guard let data = passInputField.text?.data(using: .utf8) else { return }
         let passHash = SHA512.hash(data: data).hexStr
         
         AF.request("http://localhost:8080/auth/register",
                    method: .post,
                    parameters: [
-                        "email": user.email,
+                        "email": emailInputField.text ?? "",
                         "pass": passHash,
-                        "firstName": user.firstName,
-                        "middleName": user.middleName,
-                        "lastName": user.lastName,
-                        "birthDate": user.birthDate
+                        "firstName": firstNameInputField.text ?? "",
+                        "middleName": middleNameInputField.text ?? "",
+                        "lastName": lastNameInputField.text ?? "",
+                        "birthDate": birthDateInputField.text ?? ""
                    ],
                    encoder: JSONParameterEncoder.default).responseJSON { response in
             switch response.result {
                 case .success(let data):
-                    print(data)
                     print("\nSuccessfully registered")
-                    let chats = JSON(data)
+                    let json = JSON(data)
+                    print(json)
+                    let status = json["status"].stringValue
                     
-                    user.address = chats["address"].stringValue
-                    user.prKey = chats["prKey"].stringValue
-                    
-                    let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SignUp2Screen") as! SignUp2ViewController
-                    vc.modalPresentationStyle = .fullScreen
-                    vc.userData = user
-                    self.present(vc, animated: true, completion: nil)
+                    if (status == "success") {
+                        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SignUp2Screen") as! SignUp2ViewController
+                        vc.modalPresentationStyle = .fullScreen
+
+                        vc.userId = json["userId"].stringValue
+                        vc.address = json["address"].stringValue
+                        vc.token = json["token"].stringValue
+                        
+                        // Save ethereum private key to keychain
+                        let saveSuccessful: Bool = KeychainWrapper.standard.set(json["prKey"].stringValue, forKey: "prKey")
+                        print("Saving prKey to keychain: \(saveSuccessful)")
+
+                        self.present(vc, animated: true, completion: nil)
+                    } else {
+                        Loaf(NSLocalizedString("signupError", comment: ""), state: .error, sender: self).show()
+                    }
                     
                     break
                 case .failure(let error):
                     print(error.localizedDescription)
             }
         }
-
-    }
-}
-
-extension SignUp2ViewController: UICollectionViewDataSource, UICollectionViewDelegate, UITextViewDelegate {
-    
-    // Number of views
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return keywords.count
-    }
-    
-    // Populate views
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "keyword", for: indexPath) as! KeywordCell
-        cell.keywordLabel.text = keywords[indexPath.row]
-        cell.keywordLabel.padding = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
-        
-        return cell
-    }
-    
-    func setupInputFields() {
-        descriptionTitleView.roundCorners(corners: [.topLeft, .topRight], radius: 10)
-        ethereumAddrTitleView.roundCorners(corners: [.topLeft, .topRight], radius: 10)
-        copyEthAddrButton.roundCorners(corners: [.bottomRight], radius: 10)
-        qrCodeView.roundCorners(corners: [.allCorners], radius: 10)
-        ethAddrTextField.text = ethAddress
-        descriptionTextBox.text = descriptionText
-        descriptionTextBox.textColor = translucentWhite
-    }
-
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        if descriptionTextBox.textColor == translucentWhite {
-            descriptionTextBox.text = nil
-            descriptionTextBox.textColor = UIColor.white
-        }
-    }
-    
-    func textViewDidEndEditing(_ textView: UITextView) {
-        if descriptionTextBox.text.isEmpty {
-            descriptionTextBox.text = descriptionText
-            descriptionTextBox.textColor = translucentWhite
-        }
-    }
-    
-    func generateQRCode(from string: String) -> UIImage? {
-        let data = string.data(using: String.Encoding.ascii)
-        
-        guard let filter = CIFilter(name: "CIQRCodeGenerator") else { return nil }
-        filter.setValue(data, forKey: "inputMessage")
-        
-        // Scale the image
-        let transform = CGAffineTransform(scaleX: 10, y: 10)
-        guard let scaledQrImage = filter.outputImage?.transformed(by: transform) else { return nil }
-        
-        // Invert the colors
-//        guard let colorInvertFilter = CIFilter(name: "CIColorInvert") else { return nil }
-//        colorInvertFilter.setValue(scaledQrImage, forKey: "inputImage")
-//        guard let outputInvertedImage = colorInvertFilter.outputImage else { return nil }
-        
-        // Replace the black with transparency
-//        guard let maskToAlphaFilter = CIFilter(name: "CIMaskToAlpha") else { return nil }
-//        maskToAlphaFilter.setValue(scaledQrImage, forKey: "inputImage")
-//        guard let outputCIImage = maskToAlphaFilter.outputImage else { return nil }
-        
-        return UIImage(ciImage: scaledQrImage)
     }
 }

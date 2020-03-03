@@ -8,6 +8,7 @@
 
 import Loaf
 import UIKit
+import SwiftKeychainWrapper
 
 class SignUp2ViewController: UIViewController {
     
@@ -23,9 +24,10 @@ class SignUp2ViewController: UIViewController {
     let keywords: [String] = ["consulting", "blockchain", "smart contracts", "teaching", "+"]
     let translucentWhite = UIColor.init(displayP3Red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5)
     let descriptionText = "Your description goes here..."
-    let ethAddress = "0x635B4764D1939DfAcD3a8014726159abC277BecC"
     
-    var userData: UserData = UserData(email: "", pass: "")
+    var userId: String = ""
+    var address: String = ""
+    var token: String = ""
     
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
@@ -38,11 +40,15 @@ class SignUp2ViewController: UIViewController {
         setStatusBarBackgroundColor(color : purple)
         self.view.backgroundColor = purple
         
-        print(userData)
+        print(userId)
+        print(address)
+        print(token)
+        let prKey: String? = KeychainWrapper.standard.string(forKey: "prKey")
+        print(prKey)
         
         keywordsCollectionView.backgroundColor = purple
         
-        qrCodeImage.image = generateQRCode(from: "eth:\(ethAddress)")
+        qrCodeImage.image = generateQRCode(from: "eth:\(address)")
         setupInputFields()
     }
     

@@ -3,27 +3,40 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B332F5486904E36B34B9E2F8265E99D /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3820E4DE91723049D2A5F5901E2D1EDB /* Animator.swift */; };
+		01CC6BA2086D24447267EA5CA35DCF7B /* Pods-crypto-chat-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B3EF7197870A0B98AF52D4B86B8F166 /* Pods-crypto-chat-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A1E9D786CA1040C50244F3427482C2C /* SwiftKeychainWrapper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EAFE423E4941FA69F0ACFB75B8B7D88 /* SwiftKeychainWrapper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B332F5486904E36B34B9E2F8265E99D /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA9623BA00AD2A8BA966D10322CCCCD /* Animator.swift */; };
+		1BB72D35C1614D5955F927774DCC7C44 /* SwiftKeychainWrapper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 092C44D99CD0F05A6F1069A1DF811D0E /* SwiftKeychainWrapper-dummy.m */; };
+		2D2699F7F797A53E94C168B9CFA937BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		345138EA73F0966E48935B4BC80F15BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		65F2B3CE0AE57EB95BC502D8D6794C11 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348857154117C5EA4D0A6E6A8BDD24DF /* Icons.swift */; };
-		65F2BFEFD7947B155829AB15D5919975 /* Pods-crypto-chat-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE0DF17F4C84D1C88AD21195BE7050A /* Pods-crypto-chat-dummy.m */; };
-		7A562F5BB492D6B7119B2C5B646CFBCB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		8538A09CEB1FB7E66AF8DE87954208F9 /* Loaf-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C23B49CB568DCF15B5077EB2421726FC /* Loaf-dummy.m */; };
-		973C38DA7AD4EACA5DF8F3D566F2DE6E /* Loaf.h in Headers */ = {isa = PBXBuildFile; fileRef = 031639B1F4E8568C842F438A05B8E988 /* Loaf.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A2282ED110E2E1ACD8AD9CC1878863C9 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94876F3E1ABB5F154D4570B9B24325B5 /* Manager.swift */; };
-		AAF3EDCEB49FCC917BE288F00BC2723D /* Loaf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460EB785100AB474ED4EAF3EB33FA5BE /* Loaf.swift */; };
-		BEB9E72AC351E8B1D421098A3B10393D /* Pods-crypto-chat-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B3EF7197870A0B98AF52D4B86B8F166 /* Pods-crypto-chat-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C6F2ED2408FE80B835D4D97B046ECC76 /* Loaf-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AEEDA21D0A1E98113AD59A6DB000FFEE /* Loaf-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D3F28A942D1A281ABB2A54E11B89B686 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23652EFCB038623DD9A6C9C55B2229E2 /* Controller.swift */; };
-		F62D42944CA26023D9D0AF9B53233424 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961526B4F07DAA4A78FA78904D8DAEE7 /* Extensions.swift */; };
+		35C7EB60E66E2814886504B822190484 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		3A246CB408E326D4798A114169A4D9E3 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14368E49F3E372DA2EC628C4102FDAF1 /* KeychainWrapper.swift */; };
+		65F2B3CE0AE57EB95BC502D8D6794C11 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361DE1E9A7347B47541A2427A33DB8E5 /* Icons.swift */; };
+		7BDEA58982AE38EC64F549D981FD45E6 /* SwiftKeychainWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = C5F3EADB04CC2371DFFD38F85A7C9022 /* SwiftKeychainWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		853500B973255E0957451456FAAD6E31 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE60203C9DABD421F5484A25DDF1EF3 /* KeychainItemAccessibility.swift */; };
+		8538A09CEB1FB7E66AF8DE87954208F9 /* Loaf-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9895E0D8A8A5B072A23CCC3D4E35DD2B /* Loaf-dummy.m */; };
+		89BE6E87B35424FAA8B74AA1CA8D4419 /* Pods-crypto-chat-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE0DF17F4C84D1C88AD21195BE7050A /* Pods-crypto-chat-dummy.m */; };
+		973C38DA7AD4EACA5DF8F3D566F2DE6E /* Loaf.h in Headers */ = {isa = PBXBuildFile; fileRef = 49A773B9B9D15D191983BC5A7D39D806 /* Loaf.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A2282ED110E2E1ACD8AD9CC1878863C9 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE8ED33FF500794B85423DAB3F28620 /* Manager.swift */; };
+		AAF3EDCEB49FCC917BE288F00BC2723D /* Loaf.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31E8EE2FBF7F0AE596117CEE92DB034 /* Loaf.swift */; };
+		C6F2ED2408FE80B835D4D97B046ECC76 /* Loaf-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 74C6DFE31B38E4BE0F0B3BE5704EC2DB /* Loaf-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D3F28A942D1A281ABB2A54E11B89B686 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919664D338FB192C887C90D218DFC7FC /* Controller.swift */; };
+		F62D42944CA26023D9D0AF9B53233424 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B968EAF9D432D49087DA752FBB8B18 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B8373927B1ECD1305328F41E25A5E907 /* PBXContainerItemProxy */ = {
+		027BBA993FFCD9FAD4DC903D658D1039 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF903DF43E111410ECA0C288D36FA21A;
+			remoteInfo = SwiftKeychainWrapper;
+		};
+		7840E9D7DE3FF6BDF116C293DEB0C259 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -33,31 +46,41 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		031639B1F4E8568C842F438A05B8E988 /* Loaf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Loaf.h; path = Loaf/Loaf/Loaf.h; sourceTree = "<group>"; };
+		0846109FC2368078AF3A7C6BC1A5567C /* Loaf.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Loaf.xcconfig; sourceTree = "<group>"; };
+		092C44D99CD0F05A6F1069A1DF811D0E /* SwiftKeychainWrapper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftKeychainWrapper-dummy.m"; sourceTree = "<group>"; };
+		14368E49F3E372DA2EC628C4102FDAF1 /* KeychainWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainWrapper.swift; path = SwiftKeychainWrapper/KeychainWrapper.swift; sourceTree = "<group>"; };
 		1B3EF7197870A0B98AF52D4B86B8F166 /* Pods-crypto-chat-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-crypto-chat-umbrella.h"; sourceTree = "<group>"; };
+		1BDB3935B19B00596D8701D8D8BCEC3A /* Loaf-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Loaf-Info.plist"; sourceTree = "<group>"; };
 		1DE0DF17F4C84D1C88AD21195BE7050A /* Pods-crypto-chat-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-crypto-chat-dummy.m"; sourceTree = "<group>"; };
-		23652EFCB038623DD9A6C9C55B2229E2 /* Controller.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Controller.swift; path = Loaf/Loaf/Presenter/Controller.swift; sourceTree = "<group>"; };
-		24844E91CB37D6F1C8A78E61E674FE7E /* Loaf-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Loaf-Info.plist"; sourceTree = "<group>"; };
+		27D13E3AE684DBCBB504938329B5F8BF /* SwiftKeychainWrapper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftKeychainWrapper.modulemap; sourceTree = "<group>"; };
+		2CE60203C9DABD421F5484A25DDF1EF3 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainItemAccessibility.swift; path = SwiftKeychainWrapper/KeychainItemAccessibility.swift; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		348857154117C5EA4D0A6E6A8BDD24DF /* Icons.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Icons.swift; path = Loaf/Loaf/Icons.swift; sourceTree = "<group>"; };
-		3820E4DE91723049D2A5F5901E2D1EDB /* Animator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animator.swift; path = Loaf/Loaf/Presenter/Animator.swift; sourceTree = "<group>"; };
-		460EB785100AB474ED4EAF3EB33FA5BE /* Loaf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Loaf.swift; path = Loaf/Loaf/Loaf.swift; sourceTree = "<group>"; };
+		35B968EAF9D432D49087DA752FBB8B18 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Loaf/Loaf/Extensions.swift; sourceTree = "<group>"; };
+		361DE1E9A7347B47541A2427A33DB8E5 /* Icons.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Icons.swift; path = Loaf/Loaf/Icons.swift; sourceTree = "<group>"; };
+		49A773B9B9D15D191983BC5A7D39D806 /* Loaf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Loaf.h; path = Loaf/Loaf/Loaf.h; sourceTree = "<group>"; };
 		4BE730510F6EBDAEF7EF02CB99F4B209 /* Loaf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Loaf.framework; path = Loaf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		68D4A963D1B786CCD52A0DBF2BB1D554 /* Loaf.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Loaf.modulemap; sourceTree = "<group>"; };
+		5069D199AB328CCD047E61C632CD7C32 /* SwiftKeychainWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftKeychainWrapper.framework; path = SwiftKeychainWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		540D151411830519A09496F37D4F4A6D /* Loaf-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Loaf-prefix.pch"; sourceTree = "<group>"; };
 		69B9D682F51A069AC0609B984FFB33A1 /* Pods-crypto-chat-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-crypto-chat-acknowledgements.plist"; sourceTree = "<group>"; };
+		74C6DFE31B38E4BE0F0B3BE5704EC2DB /* Loaf-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Loaf-umbrella.h"; sourceTree = "<group>"; };
 		7CC681564DD4CFE2B0E9CAE3400C85DA /* Pods-crypto-chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-crypto-chat.debug.xcconfig"; sourceTree = "<group>"; };
-		93ED2750EB32F20C88F02AD3A6966D60 /* Loaf-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Loaf-prefix.pch"; sourceTree = "<group>"; };
-		94876F3E1ABB5F154D4570B9B24325B5 /* Manager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Manager.swift; path = Loaf/Loaf/Presenter/Manager.swift; sourceTree = "<group>"; };
-		961526B4F07DAA4A78FA78904D8DAEE7 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Loaf/Loaf/Extensions.swift; sourceTree = "<group>"; };
+		7EAFE423E4941FA69F0ACFB75B8B7D88 /* SwiftKeychainWrapper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftKeychainWrapper-umbrella.h"; sourceTree = "<group>"; };
+		8577053B36811CA4475FE8A01136E5A0 /* SwiftKeychainWrapper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftKeychainWrapper.xcconfig; sourceTree = "<group>"; };
+		919664D338FB192C887C90D218DFC7FC /* Controller.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Controller.swift; path = Loaf/Loaf/Presenter/Controller.swift; sourceTree = "<group>"; };
+		97815AE530EE49F22A3618D3A5EEE795 /* SwiftKeychainWrapper-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftKeychainWrapper-Info.plist"; sourceTree = "<group>"; };
+		9895E0D8A8A5B072A23CCC3D4E35DD2B /* Loaf-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Loaf-dummy.m"; sourceTree = "<group>"; };
+		9CA9623BA00AD2A8BA966D10322CCCCD /* Animator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animator.swift; path = Loaf/Loaf/Presenter/Animator.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		AEEDA21D0A1E98113AD59A6DB000FFEE /* Loaf-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Loaf-umbrella.h"; sourceTree = "<group>"; };
 		BAB0EE45CF168BD876BA271FD445A753 /* Pods_crypto_chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_crypto_chat.framework; path = "Pods-crypto-chat.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C23B49CB568DCF15B5077EB2421726FC /* Loaf-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Loaf-dummy.m"; sourceTree = "<group>"; };
-		C3BB293BA86B934C352814C1117C4E98 /* Loaf.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Loaf.xcconfig; sourceTree = "<group>"; };
+		BFF5F9DEDCC62768BF1C9FEF69F547B9 /* Loaf.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Loaf.modulemap; sourceTree = "<group>"; };
+		C5F3EADB04CC2371DFFD38F85A7C9022 /* SwiftKeychainWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftKeychainWrapper.h; path = SwiftKeychainWrapper/SwiftKeychainWrapper.h; sourceTree = "<group>"; };
 		CA0986115B7CE4EBBA4C95DE2CAF12F8 /* Pods-crypto-chat.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-crypto-chat.modulemap"; sourceTree = "<group>"; };
+		CFE8ED33FF500794B85423DAB3F28620 /* Manager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Manager.swift; path = Loaf/Loaf/Presenter/Manager.swift; sourceTree = "<group>"; };
+		E31E8EE2FBF7F0AE596117CEE92DB034 /* Loaf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Loaf.swift; path = Loaf/Loaf/Loaf.swift; sourceTree = "<group>"; };
 		E38EF06A5FC4071A9D4346B8FAC01379 /* Pods-crypto-chat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-crypto-chat.release.xcconfig"; sourceTree = "<group>"; };
 		E6096AE72C166056665E3A9305024042 /* Pods-crypto-chat-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-crypto-chat-Info.plist"; sourceTree = "<group>"; };
 		E73DE7EB1A34657BF63BA5123BFC6885 /* Pods-crypto-chat-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-crypto-chat-frameworks.sh"; sourceTree = "<group>"; };
+		F213D31CF0D2C1D3C1C3FB927B8A0622 /* SwiftKeychainWrapper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftKeychainWrapper-prefix.pch"; sourceTree = "<group>"; };
 		F71F4353BB3A9AB04A2E7337D05621F5 /* Pods-crypto-chat-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-crypto-chat-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,32 +93,45 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EB0DF903FA91A3575C186C57358FF1F5 /* Frameworks */ = {
+		D44BE32F0F2A099860CD3EA3E14F13E2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A562F5BB492D6B7119B2C5B646CFBCB /* Foundation.framework in Frameworks */,
+				35C7EB60E66E2814886504B822190484 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC8291159DA331745EADFA96618699E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D2699F7F797A53E94C168B9CFA937BA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04E3AE7137724F6BF3CDE6F12BA69010 /* Products */ = {
+		3000934E72FD39E2B2CF6DE1A727C99E /* SwiftKeychainWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				2CE60203C9DABD421F5484A25DDF1EF3 /* KeychainItemAccessibility.swift */,
+				14368E49F3E372DA2EC628C4102FDAF1 /* KeychainWrapper.swift */,
+				C5F3EADB04CC2371DFFD38F85A7C9022 /* SwiftKeychainWrapper.h */,
+				8311D85B818842013B2F4A68379F295C /* Support Files */,
+			);
+			name = SwiftKeychainWrapper;
+			path = SwiftKeychainWrapper;
+			sourceTree = "<group>";
+		};
+		3F1BF9F7050C1AFFA654CC729542980F /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				4BE730510F6EBDAEF7EF02CB99F4B209 /* Loaf.framework */,
 				BAB0EE45CF168BD876BA271FD445A753 /* Pods_crypto_chat.framework */,
+				5069D199AB328CCD047E61C632CD7C32 /* SwiftKeychainWrapper.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		3347C2C6914E28A34F0730415015946E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7CC5FF1287ED06CC8AAA403483BFCF86 /* Loaf */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		56102E534CFF48B079297C2BE7A9D49E /* Targets Support Files */ = {
@@ -106,34 +142,43 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		7CC5FF1287ED06CC8AAA403483BFCF86 /* Loaf */ = {
+		8311D85B818842013B2F4A68379F295C /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				3820E4DE91723049D2A5F5901E2D1EDB /* Animator.swift */,
-				23652EFCB038623DD9A6C9C55B2229E2 /* Controller.swift */,
-				961526B4F07DAA4A78FA78904D8DAEE7 /* Extensions.swift */,
-				348857154117C5EA4D0A6E6A8BDD24DF /* Icons.swift */,
-				031639B1F4E8568C842F438A05B8E988 /* Loaf.h */,
-				460EB785100AB474ED4EAF3EB33FA5BE /* Loaf.swift */,
-				94876F3E1ABB5F154D4570B9B24325B5 /* Manager.swift */,
-				A02D504B4F820C67EE5D2BDC3B8D979F /* Support Files */,
+				27D13E3AE684DBCBB504938329B5F8BF /* SwiftKeychainWrapper.modulemap */,
+				8577053B36811CA4475FE8A01136E5A0 /* SwiftKeychainWrapper.xcconfig */,
+				092C44D99CD0F05A6F1069A1DF811D0E /* SwiftKeychainWrapper-dummy.m */,
+				97815AE530EE49F22A3618D3A5EEE795 /* SwiftKeychainWrapper-Info.plist */,
+				F213D31CF0D2C1D3C1C3FB927B8A0622 /* SwiftKeychainWrapper-prefix.pch */,
+				7EAFE423E4941FA69F0ACFB75B8B7D88 /* SwiftKeychainWrapper-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftKeychainWrapper";
+			sourceTree = "<group>";
+		};
+		ACEC885B3ADBC9D4EEB42C495B08FCDD /* Loaf */ = {
+			isa = PBXGroup;
+			children = (
+				9CA9623BA00AD2A8BA966D10322CCCCD /* Animator.swift */,
+				919664D338FB192C887C90D218DFC7FC /* Controller.swift */,
+				35B968EAF9D432D49087DA752FBB8B18 /* Extensions.swift */,
+				361DE1E9A7347B47541A2427A33DB8E5 /* Icons.swift */,
+				49A773B9B9D15D191983BC5A7D39D806 /* Loaf.h */,
+				E31E8EE2FBF7F0AE596117CEE92DB034 /* Loaf.swift */,
+				CFE8ED33FF500794B85423DAB3F28620 /* Manager.swift */,
+				E92640FBD5D7DA6EFDF1098D922731D7 /* Support Files */,
 			);
 			name = Loaf;
 			path = Loaf;
 			sourceTree = "<group>";
 		};
-		A02D504B4F820C67EE5D2BDC3B8D979F /* Support Files */ = {
+		B42732DBC12614C1ACF862D970F5D5D5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				68D4A963D1B786CCD52A0DBF2BB1D554 /* Loaf.modulemap */,
-				C3BB293BA86B934C352814C1117C4E98 /* Loaf.xcconfig */,
-				C23B49CB568DCF15B5077EB2421726FC /* Loaf-dummy.m */,
-				24844E91CB37D6F1C8A78E61E674FE7E /* Loaf-Info.plist */,
-				93ED2750EB32F20C88F02AD3A6966D60 /* Loaf-prefix.pch */,
-				AEEDA21D0A1E98113AD59A6DB000FFEE /* Loaf-umbrella.h */,
+				ACEC885B3ADBC9D4EEB42C495B08FCDD /* Loaf */,
+				3000934E72FD39E2B2CF6DE1A727C99E /* SwiftKeychainWrapper */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Loaf";
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		BBCFE4551892E06D407EC1B06626A69F /* Pods-crypto-chat */ = {
@@ -166,8 +211,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				3347C2C6914E28A34F0730415015946E /* Pods */,
-				04E3AE7137724F6BF3CDE6F12BA69010 /* Products */,
+				B42732DBC12614C1ACF862D970F5D5D5 /* Pods */,
+				3F1BF9F7050C1AFFA654CC729542980F /* Products */,
 				56102E534CFF48B079297C2BE7A9D49E /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -180,17 +225,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E92640FBD5D7DA6EFDF1098D922731D7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BFF5F9DEDCC62768BF1C9FEF69F547B9 /* Loaf.modulemap */,
+				0846109FC2368078AF3A7C6BC1A5567C /* Loaf.xcconfig */,
+				9895E0D8A8A5B072A23CCC3D4E35DD2B /* Loaf-dummy.m */,
+				1BDB3935B19B00596D8701D8D8BCEC3A /* Loaf-Info.plist */,
+				540D151411830519A09496F37D4F4A6D /* Loaf-prefix.pch */,
+				74C6DFE31B38E4BE0F0B3BE5704EC2DB /* Loaf-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Loaf";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		10F06C79DB7972352A056F8AD8BB3613 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BEB9E72AC351E8B1D421098A3B10393D /* Pods-crypto-chat-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		150B2694FAE71C437E16714D34333291 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -200,22 +251,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BCB40E799B6350A11B02F07933E35BD0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01CC6BA2086D24447267EA5CA35DCF7B /* Pods-crypto-chat-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E46D83F0CD00CB6C581A15FACBBDB57E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A1E9D786CA1040C50244F3427482C2C /* SwiftKeychainWrapper-umbrella.h in Headers */,
+				7BDEA58982AE38EC64F549D981FD45E6 /* SwiftKeychainWrapper.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		2D0A32BE32FFEB1A1CC4980E6CDB04C6 /* Pods-crypto-chat */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5E4659B87D258DE7FC4B7CC5AC9C8D9A /* Build configuration list for PBXNativeTarget "Pods-crypto-chat" */;
+			buildConfigurationList = C08BADDADFFFAB17DBDB23A0B01A00BB /* Build configuration list for PBXNativeTarget "Pods-crypto-chat" */;
 			buildPhases = (
-				10F06C79DB7972352A056F8AD8BB3613 /* Headers */,
-				B909BBE48D5C6BE1686096A9906E5871 /* Sources */,
-				EB0DF903FA91A3575C186C57358FF1F5 /* Frameworks */,
-				2D754A9EF74BF2884FEB86834DB30B2A /* Resources */,
+				BCB40E799B6350A11B02F07933E35BD0 /* Headers */,
+				82D54B3197797E961D72431649ADFCB1 /* Sources */,
+				FC8291159DA331745EADFA96618699E9 /* Frameworks */,
+				C31F4B0B5BBBEC21BFA9614970EA2BE4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				ED028D1AF64F1335BD5CED02BFC60E81 /* PBXTargetDependency */,
+				AC1401550D0681D8F8E5D60B96947EDB /* PBXTargetDependency */,
+				9F611290B6A252FB16CF8DDBF268E1A7 /* PBXTargetDependency */,
 			);
 			name = "Pods-crypto-chat";
 			productName = "Pods-crypto-chat";
@@ -240,6 +309,24 @@
 			productReference = 4BE730510F6EBDAEF7EF02CB99F4B209 /* Loaf.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		CF903DF43E111410ECA0C288D36FA21A /* SwiftKeychainWrapper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97C26D1F56B79A699BC4DE26433A422F /* Build configuration list for PBXNativeTarget "SwiftKeychainWrapper" */;
+			buildPhases = (
+				E46D83F0CD00CB6C581A15FACBBDB57E /* Headers */,
+				330DE2BD20DFC08839359EADFE5BBCF0 /* Sources */,
+				D44BE32F0F2A099860CD3EA3E14F13E2 /* Frameworks */,
+				BBE4D27BCC51B5E2A3D3C5FFE924AA40 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftKeychainWrapper;
+			productName = SwiftKeychainWrapper;
+			productReference = 5069D199AB328CCD047E61C632CD7C32 /* SwiftKeychainWrapper.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -250,7 +337,7 @@
 				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -258,25 +345,33 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 04E3AE7137724F6BF3CDE6F12BA69010 /* Products */;
+			productRefGroup = 3F1BF9F7050C1AFFA654CC729542980F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				3E12D5ED3565D8FCC3DD9B9DD89246A9 /* Loaf */,
 				2D0A32BE32FFEB1A1CC4980E6CDB04C6 /* Pods-crypto-chat */,
+				CF903DF43E111410ECA0C288D36FA21A /* SwiftKeychainWrapper */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2D754A9EF74BF2884FEB86834DB30B2A /* Resources */ = {
+		4DB6075B1986D826AB0D01AA877C70B6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4DB6075B1986D826AB0D01AA877C70B6 /* Resources */ = {
+		BBE4D27BCC51B5E2A3D3C5FFE924AA40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C31F4B0B5BBBEC21BFA9614970EA2BE4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -286,6 +381,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		330DE2BD20DFC08839359EADFE5BBCF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				853500B973255E0957451456FAAD6E31 /* KeychainItemAccessibility.swift in Sources */,
+				3A246CB408E326D4798A114169A4D9E3 /* KeychainWrapper.swift in Sources */,
+				1BB72D35C1614D5955F927774DCC7C44 /* SwiftKeychainWrapper-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		587914F143EA64C7D5313D175861D4BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -300,26 +405,67 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B909BBE48D5C6BE1686096A9906E5871 /* Sources */ = {
+		82D54B3197797E961D72431649ADFCB1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65F2BFEFD7947B155829AB15D5919975 /* Pods-crypto-chat-dummy.m in Sources */,
+				89BE6E87B35424FAA8B74AA1CA8D4419 /* Pods-crypto-chat-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		ED028D1AF64F1335BD5CED02BFC60E81 /* PBXTargetDependency */ = {
+		9F611290B6A252FB16CF8DDBF268E1A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftKeychainWrapper;
+			target = CF903DF43E111410ECA0C288D36FA21A /* SwiftKeychainWrapper */;
+			targetProxy = 027BBA993FFCD9FAD4DC903D658D1039 /* PBXContainerItemProxy */;
+		};
+		AC1401550D0681D8F8E5D60B96947EDB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Loaf;
 			target = 3E12D5ED3565D8FCC3DD9B9DD89246A9 /* Loaf */;
-			targetProxy = B8373927B1ECD1305328F41E25A5E907 /* PBXContainerItemProxy */;
+			targetProxy = 7840E9D7DE3FF6BDF116C293DEB0C259 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0D68731B1708A659462C629F01084692 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8577053B36811CA4475FE8A01136E5A0 /* SwiftKeychainWrapper.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper.modulemap";
+				PRODUCT_MODULE_NAME = SwiftKeychainWrapper;
+				PRODUCT_NAME = SwiftKeychainWrapper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		1032B0780CAC3F6CD936DEF37E0E0E5C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -380,9 +526,9 @@
 			};
 			name = Release;
 		};
-		18E971786DF872F51AC05010A0E8AC75 /* Release */ = {
+		35C68F900C8B504B00902C8D3755DB63 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E38EF06A5FC4071A9D4346B8FAC01379 /* Pods-crypto-chat.release.xcconfig */;
+			baseConfigurationReference = 7CC681564DD4CFE2B0E9CAE3400C85DA /* Pods-crypto-chat.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -413,11 +559,10 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		3DCABF71ABF98C4E186DBF23A89D8D7F /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -483,9 +628,45 @@
 			};
 			name = Debug;
 		};
+		43CE06E37A8B99DB615367984EBD4567 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8577053B36811CA4475FE8A01136E5A0 /* SwiftKeychainWrapper.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper.modulemap";
+				PRODUCT_MODULE_NAME = SwiftKeychainWrapper;
+				PRODUCT_NAME = SwiftKeychainWrapper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		979684EAB25C03A20666EE5969A4EADE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3BB293BA86B934C352814C1117C4E98 /* Loaf.xcconfig */;
+			baseConfigurationReference = 0846109FC2368078AF3A7C6BC1A5567C /* Loaf.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -521,7 +702,7 @@
 		};
 		B14AEE874AEB59B15BC2989697D4D693 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3BB293BA86B934C352814C1117C4E98 /* Loaf.xcconfig */;
+			baseConfigurationReference = 0846109FC2368078AF3A7C6BC1A5567C /* Loaf.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -556,9 +737,9 @@
 			};
 			name = Release;
 		};
-		D490C9FD5EF5CE2B733F6343F7726EC3 /* Debug */ = {
+		D029C124A1259BE2003D9A8AAC8750F7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7CC681564DD4CFE2B0E9CAE3400C85DA /* Pods-crypto-chat.debug.xcconfig */;
+			baseConfigurationReference = E38EF06A5FC4071A9D4346B8FAC01379 /* Pods-crypto-chat.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -589,10 +770,11 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -606,20 +788,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5E4659B87D258DE7FC4B7CC5AC9C8D9A /* Build configuration list for PBXNativeTarget "Pods-crypto-chat" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D490C9FD5EF5CE2B733F6343F7726EC3 /* Debug */,
-				18E971786DF872F51AC05010A0E8AC75 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		8EF92E84F9AFB859A0DF71E557564B82 /* Build configuration list for PBXNativeTarget "Loaf" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				979684EAB25C03A20666EE5969A4EADE /* Debug */,
 				B14AEE874AEB59B15BC2989697D4D693 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97C26D1F56B79A699BC4DE26433A422F /* Build configuration list for PBXNativeTarget "SwiftKeychainWrapper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D68731B1708A659462C629F01084692 /* Debug */,
+				43CE06E37A8B99DB615367984EBD4567 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C08BADDADFFFAB17DBDB23A0B01A00BB /* Build configuration list for PBXNativeTarget "Pods-crypto-chat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35C68F900C8B504B00902C8D3755DB63 /* Debug */,
+				D029C124A1259BE2003D9A8AAC8750F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
