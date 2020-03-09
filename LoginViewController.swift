@@ -34,8 +34,8 @@ class LoginViewController: UIViewController {
         signInBigLabel.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2)
         emailInputField.attributedPlaceholder = NSAttributedString(string: "email@example.com", attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(displayP3Red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5)])
         passInputField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(displayP3Red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5)])
-        emailInputField.text = "bob"
-        passInputField.text = "bob"
+//        emailInputField.text = "bob"
+//        passInputField.text = "bob"
     }
     
     @IBAction func signIn(_ sender: Any) {
