@@ -42,6 +42,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     var socket: Socket!
     var jwt: String = ""
     var chatSelected: Bool = false
+    let CHARACTER_PRICE = 0.000005 // ETH = about $0.0006
     
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
@@ -106,23 +107,19 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     func sendMsg() {
         let msg = sendMessageTextField.text!
         
-        // Get private key from keychain
-//        let prKey: String? = KeychainWrapper.standard.string(forKey: "prKey")
-//        print(prKey)
-        
         if (msg != "") {
-            print("Selected chat id: ", self.selectedChatId)
-            let chatType = self.chats[(Int(self.selectedChatId) ?? 0) - 1].chatType
-            let fromUser = self.chats[(Int(self.selectedChatId) ?? 1) - 1].fromUser
+//            print("Selected chat id: ", self.selectedChatId)
+//            let chatType = self.chats[(Int(self.selectedChatId) ?? 0) - 1].chatType
+//            let fromUser = self.chats[(Int(self.selectedChatId) ?? 1) - 1].fromUser
 
-            if (chatType == "paying") {
-                // microtx(from: fromUser)
-                if (fromUser == self.userId) {
-                    // you pays
-                } else {
-                    // your opponent pays
-                }
-            }
+//            if (chatType == "paying") {
+//                // microtx(from: fromUser)
+//                if (fromUser == self.userId) {
+//                    // you pays
+//                } else {
+//                    // your opponent pays
+//                }
+//            }
             
             sendMessage(chatId: self.selectedChatId, message: msg)
 

@@ -9,6 +9,7 @@
 import Alamofire
 import SwiftyJSON
 import UIKit
+import SwiftKeychainWrapper
 
 extension ChatViewController {
     
@@ -95,7 +96,7 @@ extension ChatViewController {
         }
     }
     
-    func getMessages(chatId: String) {
+    func getMessages(chatId: String, chat: Chat) {
         AF.request("http://localhost:8080/chat/messages",
                    parameters: [
                        "token": self.jwt,
@@ -113,10 +114,26 @@ extension ChatViewController {
                             time: msg["time"].stringValue
                         ))
                     }
+                    
+                    self.pay4Msgs(chat: chat)
+                    
                     self.updateMessages()
                     break
                 case .failure(let error):
                     print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func pay4Msgs(chat: Chat) {
+        let chatType = chat.chatType
+        let fromUserId = chat.fromUser
+        if (chatType == "paying" && fromUserId == self.userId) {
+            for msg in self.msgs {
+                if (msg.userId != self.userId && !msg.isRead) {
+                    // pay for others messages
+                    sendMicrotx(toUser: msg.userId, amount: Double(msg.msg.count) * self.CHARACTER_PRICE)
+                }
             }
         }
     }
@@ -127,6 +144,32 @@ extension ChatViewController {
                    parameters: ["token": self.jwt, "chatId": chatId, "message": message],
                    encoder: JSONParameterEncoder.default).responseJSON { status in
             print(status)
+        }
+    }
+    
+    func sendMicrotx(toUser: String, amount: Double) {
+        // Get private key from keychain
+        guard let prKey: String = KeychainWrapper.standard.string(forKey: "prKey") else { return }
+        print(prKey)
+        
+        AF.request("http://localhost:8080/bc/signTransferByUserId",
+                   method: .post,
+                   parameters: [
+                       "token": self.jwt,
+                       "toUserId": toUser,
+                       "amount": String(amount),
+                       "prKey": prKey
+                   ],
+                   encoder: JSONParameterEncoder.default).responseJSON { response in
+            switch response.result {
+                case .success(let data):
+                    let json = JSON(data)
+                    let rawTx = json["rawTx"].stringValue
+                    print("rawTx: \(rawTx)")
+                    break
+                case .failure(let error):
+                    print(error.localizedDescription)
+            }
         }
     }
     
