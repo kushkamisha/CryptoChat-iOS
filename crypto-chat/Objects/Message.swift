@@ -12,11 +12,13 @@ class Message {
     
     var userId: String
     var msg : String
+    var isRead: Bool
     var time : String
     
-    init(userId: String, msg: String, time: String) {
+    init(userId: String, msg: String, isRead: Bool, time: String) {
         self.userId = userId
         self.msg = msg
+        self.isRead = isRead
         self.time = time
     }
 }

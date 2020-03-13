@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftKeychainWrapper
 
 
 struct LoadChats: Encodable {
@@ -41,8 +42,6 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     var socket: Socket!
     var jwt: String = ""
     var chatSelected: Bool = false
-    var chatSelectedType: String = ""
-    var chatSelectedfromUser: String = ""
     
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
@@ -97,7 +96,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
         
         isChatSelected(status: false)
         establishSocketConnection()
-        listen2NewMessages()
+        listen4NewMessages()
         loadChats()
     }
     
@@ -107,8 +106,23 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     func sendMsg() {
         let msg = sendMessageTextField.text!
         
+        // Get private key from keychain
+//        let prKey: String? = KeychainWrapper.standard.string(forKey: "prKey")
+//        print(prKey)
+        
         if (msg != "") {
-//            if (self.chatType)
+            print("Selected chat id: ", self.selectedChatId)
+            let chatType = self.chats[(Int(self.selectedChatId) ?? 0) - 1].chatType
+            let fromUser = self.chats[(Int(self.selectedChatId) ?? 1) - 1].fromUser
+
+            if (chatType == "paying") {
+                // microtx(from: fromUser)
+                if (fromUser == self.userId) {
+                    // you pays
+                } else {
+                    // your opponent pays
+                }
+            }
             
             sendMessage(chatId: self.selectedChatId, message: msg)
 
@@ -118,7 +132,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
             let hour = calendar.component(.hour, from: date)
             let minutes = calendar.component(.minute, from: date)
             
-            msgs.append(Message(userId: self.userId, msg: msg, time: "\(hour):\(minutes)"))
+            msgs.append(Message(userId: self.userId, msg: msg, isRead: false, time: "\(hour):\(minutes)"))
             
             sendMessageTextField.text = ""
             updateMessages()

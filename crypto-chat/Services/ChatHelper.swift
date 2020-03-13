@@ -18,15 +18,17 @@ extension ChatViewController {
         self.socket.connect()
     }
     
-    func listen2NewMessages() {
+    func listen4NewMessages() {
         self.socket.socket.on("new-message") { data, ack in
             print("event new-message")
             let message = JSON(data)[0]
+            print(message)
             if message["userId"].stringValue != self.userId {
                 self.msgs.append(Message(
                     userId: message["userId"].stringValue,
                     msg: message["message"].stringValue,
-                    time: message["time"].stringValue
+                    isRead: true,
+                    time: message["createdAt"].stringValue
                 ))
                 self.updateMessages()
             }
@@ -107,6 +109,7 @@ extension ChatViewController {
                         self.msgs.append(Message(
                             userId: msg["userId"].stringValue,
                             msg: msg["text"].stringValue,
+                            isRead: msg["isRead"].boolValue,
                             time: msg["time"].stringValue
                         ))
                     }
