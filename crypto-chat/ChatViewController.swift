@@ -27,19 +27,22 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var topBarChatType: UIImageView!
     @IBOutlet weak var topBarVideoCall: UIImageView!
     @IBOutlet weak var topBarAudioCall: UIImageView!
+    @IBOutlet weak var topBarEthereum: UILabel!
     
     @IBOutlet weak var sendMessageTextField: UITextField!
     @IBOutlet weak var sendMessageButton: UIButton!
     @IBOutlet weak var sendMessageView: UIView!
     
-    var userId: String = "2"
+    var userId: String = ""
     var username: String = ""
     var selectedChatId: String = ""
     var chats: [Chat] = []
     var msgs: [Message] = []
     var socket: Socket!
-    var jwt: String = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTU4MzIzOTczNywiZXhwIjoxNjE5MjM2MTM3fQ.vkf-UExOiaDPNmGWN-CdT1cBQ8-kduQ9OfK7GDtPzo8"
+    var jwt: String = ""
     var chatSelected: Bool = false
+    var chatSelectedType: String = ""
+    var chatSelectedfromUser: String = ""
     
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
@@ -105,6 +108,8 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
         let msg = sendMessageTextField.text!
         
         if (msg != "") {
+//            if (self.chatType)
+            
             sendMessage(chatId: self.selectedChatId, message: msg)
 
             // Current time

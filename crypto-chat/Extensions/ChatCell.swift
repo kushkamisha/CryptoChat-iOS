@@ -44,8 +44,8 @@ class ChatCell: UITableViewCell {
     
     func setChat(chat: Chat) {
         avatarImageView.image = chat.avatar
-        chatTypeImageView.image = chat.chatType
-        chatTypeSelected.image = chat.chatTypeSelected
+        chatTypeImageView.image = chat.chatTypeImage
+        chatTypeSelected.image = chat.chatTypeSelectedImage
         usernameLabel.text = chat.name
     }
 

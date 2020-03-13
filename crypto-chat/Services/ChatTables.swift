@@ -60,7 +60,7 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
             
             topBarUsername.text = chats[indexPath.row].name
             topBarAvatar.image = chats[indexPath.row].avatar
-            topBarChatType.image = chats[indexPath.row].chatTypeSelected
+            topBarChatType.image = chats[indexPath.row].chatTypeSelectedImage
         }
     }
     

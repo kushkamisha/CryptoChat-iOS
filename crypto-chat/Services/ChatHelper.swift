@@ -8,6 +8,7 @@
 
 import Alamofire
 import SwiftyJSON
+import UIKit
 
 extension ChatViewController {
     
@@ -41,14 +42,47 @@ extension ChatViewController {
                     let chats = JSON(data)["chats"]
                     self.chats = []
                     for (_, chat) in chats {
+                        var chatTypeImage = UIImage()
+                        var chatTypeSelectedImage = UIImage()
+                        
+                        switch(chat["chatType"].stringValue) {
+                            case "free":
+                                chatTypeImage = #imageLiteral(resourceName: "free")
+                                chatTypeSelectedImage = #imageLiteral(resourceName: "free white")
+                                break
+                            case "locked":
+                                chatTypeImage = #imageLiteral(resourceName: "locked-purple")
+                                chatTypeSelectedImage = #imageLiteral(resourceName: "locked-white")
+                                break
+                            case "unlocked":
+                                chatTypeImage = #imageLiteral(resourceName: "unlocked")
+                                chatTypeSelectedImage = #imageLiteral(resourceName: "unlocked white")
+                                break
+                            case "paying":
+                                if self.userId == chat["fromUser"].stringValue {
+                                    chatTypeImage = #imageLiteral(resourceName: "ethereum-out-purple")
+                                    chatTypeSelectedImage = #imageLiteral(resourceName: "ethereum-out-white")
+                                } else {
+                                    chatTypeImage = #imageLiteral(resourceName: "ethereum-in-purple")
+                                    chatTypeSelectedImage = #imageLiteral(resourceName: "ethereum-in-white")
+                                }
+                                break
+                            case "group":
+                                break
+                            default:
+                                break
+                        }
+                        
                         let name = "\(chat["firstName"].stringValue) \(chat["lastName"].stringValue)"
                         self.chats.append(Chat(
                             chatId: chat["chatId"].stringValue,
                             socketId: "",
                             name: name,
+                            chatType: chat["chatType"].stringValue,
+                            fromUser: chat["fromUser"].stringValue,
                             avatar: #imageLiteral(resourceName: "user-default"),
-                            chatType: #imageLiteral(resourceName: "free"),
-                            chatTypeSelected: #imageLiteral(resourceName: "free white")
+                            chatTypeImage: chatTypeImage,
+                            chatTypeSelectedImage: chatTypeSelectedImage
                         ))
                     }
                     self.chatsTableView.reloadData()
@@ -98,12 +132,14 @@ extension ChatViewController {
             sendMessageView.isHidden = false
             topBarVideoCall.isHidden = false
             topBarAudioCall.isHidden = false
+            topBarEthereum.isHidden = false
             msgsTableView.isHidden = false
             noChatsSelectedView.isHidden = true
         } else {
             sendMessageView.isHidden = true
             topBarVideoCall.isHidden = true
             topBarAudioCall.isHidden = true
+            topBarEthereum.isHidden = true
             msgsTableView.isHidden = true
             noChatsSelectedView.isHidden = false
         }
