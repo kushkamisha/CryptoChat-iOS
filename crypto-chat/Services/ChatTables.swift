@@ -42,6 +42,12 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
         if (tableView == chatsTableView) {
             self.isChatSelected(status: true)
             self.selectedChat = chats[indexPath.row]
+            
+            if (self.selectedChat.chatType != "paying") {
+                self.topBarEthereum.isHidden = true
+            } else {
+                self.topBarEthereum.isHidden = false
+            }
 
             getMessages(chat: chats[indexPath.row])
             

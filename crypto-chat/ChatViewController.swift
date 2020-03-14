@@ -42,7 +42,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     var socket: Socket!
     var jwt: String = ""
     var chatSelected: Bool = false
-    let CHARACTER_PRICE = 0.000005 // ETH = about $0.0006
+    let CHARACTER_PRICE = 0.00001 // ETH = about $0.001
     
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()

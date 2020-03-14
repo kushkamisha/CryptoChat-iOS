@@ -118,8 +118,8 @@ extension ChatViewController {
                     }
                     
                     self.pay4Msgs()
-                    
                     self.updateMessages()
+
                     break
                 case .failure(let error):
                     print(error.localizedDescription)
@@ -133,13 +133,11 @@ extension ChatViewController {
         if (chatType == "paying" && fromUserId == self.userId) {
             print("paying...")
             for msg in self.msgs {
-                print(msg.isRead)
                 if (msg.userId != self.userId && !msg.isRead) {
                     // pay for others messages
                     sendMicrotx(toUser: msg.userId, amount: Double(msg.msg.count) * self.CHARACTER_PRICE)
                 }
             }
-            self.readMsgs()
         }
     }
     
@@ -162,9 +160,10 @@ extension ChatViewController {
     }
     
     func sendMicrotx(toUser: String, amount: Double) {
+        print("sending microtx...")
         // Get private key from keychain
         guard let prKey: String = KeychainWrapper.standard.string(forKey: "prKey") else { return }
-        print(prKey)
+//        print(prKey)
         
         AF.request("http://localhost:8080/bc/signTransferByUserId",
                    method: .post,
@@ -179,7 +178,11 @@ extension ChatViewController {
                 case .success(let data):
                     let json = JSON(data)
                     let rawTx = json["rawTx"].stringValue
+                    let totalAmountWei = json["totalAmount"].intValue
+                    let totalAmountEth: Double = Double(totalAmountWei) / 1000000000000000000.0
                     print("rawTx: \(rawTx)")
+                    print("totalAmountEth: " + String(format: "%.5f", totalAmountEth))
+                    self.topBarEthereum.text = String(format: "%.5f", totalAmountEth) + " ETH"
                     break
                 case .failure(let error):
                     print(error.localizedDescription)
