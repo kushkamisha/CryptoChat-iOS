@@ -36,7 +36,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     
     var userId: String = ""
     var username: String = ""
-    var selectedChatId: String = ""
+    var selectedChat: Chat = Chat(chatId: "", socketId: "", name: "", chatType: "", fromUser: "", avatar: UIImage(), chatTypeImage: UIImage(), chatTypeSelectedImage: UIImage())
     var chats: [Chat] = []
     var msgs: [Message] = []
     var socket: Socket!
@@ -108,20 +108,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
         let msg = sendMessageTextField.text!
         
         if (msg != "") {
-//            print("Selected chat id: ", self.selectedChatId)
-//            let chatType = self.chats[(Int(self.selectedChatId) ?? 0) - 1].chatType
-//            let fromUser = self.chats[(Int(self.selectedChatId) ?? 1) - 1].fromUser
-
-//            if (chatType == "paying") {
-//                // microtx(from: fromUser)
-//                if (fromUser == self.userId) {
-//                    // you pays
-//                } else {
-//                    // your opponent pays
-//                }
-//            }
-            
-            sendMessage(chatId: self.selectedChatId, message: msg)
+            sendMessage(chatId: self.selectedChat.chatId, message: msg)
 
             // Current time
             let date = Date()

@@ -31,7 +31,9 @@ extension ChatViewController {
                     isRead: true,
                     time: message["createdAt"].stringValue
                 ))
+
                 self.updateMessages()
+                self.pay4Msgs()
             }
         }
     }
@@ -96,11 +98,11 @@ extension ChatViewController {
         }
     }
     
-    func getMessages(chatId: String, chat: Chat) {
+    func getMessages(chat: Chat) {
         AF.request("http://localhost:8080/chat/messages",
                    parameters: [
                        "token": self.jwt,
-                       "chatId": chatId
+                       "chatId": self.selectedChat.chatId
                    ]).responseJSON { response in
             switch response.result {
                 case .success(let data):
@@ -115,7 +117,7 @@ extension ChatViewController {
                         ))
                     }
                     
-                    self.pay4Msgs(chat: chat)
+                    self.pay4Msgs()
                     
                     self.updateMessages()
                     break
@@ -125,16 +127,28 @@ extension ChatViewController {
         }
     }
     
-    func pay4Msgs(chat: Chat) {
-        let chatType = chat.chatType
-        let fromUserId = chat.fromUser
+    func pay4Msgs() {
+        let chatType = self.selectedChat.chatType
+        let fromUserId = self.selectedChat.fromUser
         if (chatType == "paying" && fromUserId == self.userId) {
+            print("paying...")
             for msg in self.msgs {
+                print(msg.isRead)
                 if (msg.userId != self.userId && !msg.isRead) {
                     // pay for others messages
                     sendMicrotx(toUser: msg.userId, amount: Double(msg.msg.count) * self.CHARACTER_PRICE)
                 }
             }
+            self.readMsgs()
+        }
+    }
+    
+    func readMsgs() {
+        AF.request("http://localhost:8080/chat/readMessages",
+                   method: .post,
+                   parameters: ["token": self.jwt, "chatId": self.selectedChat.chatId],
+                   encoder: JSONParameterEncoder.default).responseJSON { status in
+            print(status)
         }
     }
     

@@ -41,26 +41,9 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if (tableView == chatsTableView) {
             self.isChatSelected(status: true)
-//            socket.socketOn(event: "add-message-response", callback: { data in
-//                let json = JSON(data)[0]
-//
-//                print("new message")
-//                print(json)
-//
-//                if (json["fromUserId"].stringValue == self.selectedChatId) {
-//                    self.msgs.append(Message(
-//                        userId: json["fromUserId"].stringValue,
-//                        msg: json["message"].stringValue,
-//                        isRead: true,
-//                        time: "xx:xx"
-//                    ))
-//                    self.updateMessages()
-//                }
-//            })
-            
-            self.selectedChatId = chats[indexPath.row].chatId
+            self.selectedChat = chats[indexPath.row]
 
-            getMessages(chatId: self.selectedChatId, chat: chats[indexPath.row])
+            getMessages(chat: chats[indexPath.row])
             
             topBarUsername.text = chats[indexPath.row].name
             topBarAvatar.image = chats[indexPath.row].avatar
