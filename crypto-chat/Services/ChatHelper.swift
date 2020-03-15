@@ -24,8 +24,9 @@ extension ChatViewController {
             print("event new-message")
             let message = JSON(data)[0]
             print(message)
-            if message["userId"].stringValue != self.userId {
+            if message["userId"].stringValue != self.userId && message["chatId"].stringValue == self.selectedChat.chatId {
                 self.msgs.append(Message(
+                    msgId: message["msgId"].stringValue,
                     userId: message["userId"].stringValue,
                     msg: message["message"].stringValue,
                     isRead: true,
@@ -110,6 +111,7 @@ extension ChatViewController {
                     self.msgs = []
                     for (_, msg) in msgs {
                         self.msgs.append(Message(
+                            msgId: msg["msgId"].stringValue,
                             userId: msg["userId"].stringValue,
                             msg: msg["text"].stringValue,
                             isRead: msg["isRead"].boolValue,
@@ -132,21 +134,27 @@ extension ChatViewController {
         let fromUserId = self.selectedChat.fromUser
         if (chatType == "paying" && fromUserId == self.userId) {
             print("paying...")
+
             for msg in self.msgs {
                 if (msg.userId != self.userId && !msg.isRead) {
                     // pay for others messages
-                    sendMicrotx(toUser: msg.userId, amount: Double(msg.msg.count) * self.CHARACTER_PRICE)
+                    sendMicrotx(toUser: msg.userId, amount: Double(msg.msg.count) * self.CHARACTER_PRICE, msgId: msg.msgId)
                 }
             }
+        } else {
+            self.readMsgs()
         }
     }
     
-    func readMsgs() {
-        AF.request("http://localhost:8080/chat/readMessages",
-                   method: .post,
-                   parameters: ["token": self.jwt, "chatId": self.selectedChat.chatId],
-                   encoder: JSONParameterEncoder.default).responseJSON { status in
-            print(status)
+    func readMsgs(semaphore: Int = 0) {
+        if (semaphore == 0) {
+            print("read messages")
+            AF.request("http://localhost:8080/chat/readMessages",
+                       method: .post,
+                       parameters: ["token": self.jwt, "chatId": self.selectedChat.chatId],
+                       encoder: JSONParameterEncoder.default).responseJSON { status in
+                print(status)
+            }
         }
     }
     
@@ -159,7 +167,7 @@ extension ChatViewController {
         }
     }
     
-    func sendMicrotx(toUser: String, amount: Double) {
+    func sendMicrotx(toUser: String, amount: Double, msgId: String) {
         print("sending microtx...")
         // Get private key from keychain
         guard let prKey: String = KeychainWrapper.standard.string(forKey: "prKey") else { return }
@@ -169,6 +177,7 @@ extension ChatViewController {
                    method: .post,
                    parameters: [
                        "token": self.jwt,
+                       "msgId": msgId,
                        "toUserId": toUser,
                        "amount": String(amount),
                        "prKey": prKey
@@ -176,6 +185,7 @@ extension ChatViewController {
                    encoder: JSONParameterEncoder.default).responseJSON { response in
             switch response.result {
                 case .success(let data):
+                    print("the mtx is sent")
                     let json = JSON(data)
                     let rawTx = json["rawTx"].stringValue
                     let totalAmountWei = json["totalAmount"].intValue

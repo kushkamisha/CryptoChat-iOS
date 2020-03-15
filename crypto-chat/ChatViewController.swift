@@ -116,7 +116,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
             let hour = calendar.component(.hour, from: date)
             let minutes = calendar.component(.minute, from: date)
             
-            msgs.append(Message(userId: self.userId, msg: msg, isRead: false, time: "\(hour):\(minutes)"))
+            msgs.append(Message(msgId: "", userId: self.userId, msg: msg, isRead: false, time: "\(hour):\(minutes)"))
             
             sendMessageTextField.text = ""
             updateMessages()

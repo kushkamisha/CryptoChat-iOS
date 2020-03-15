@@ -10,12 +10,14 @@ import Foundation
 
 class Message {
     
+    var msgId: String
     var userId: String
     var msg : String
     var isRead: Bool
     var time : String
     
-    init(userId: String, msg: String, isRead: Bool, time: String) {
+    init(msgId: String, userId: String, msg: String, isRead: Bool, time: String) {
+        self.msgId = msgId
         self.userId = userId
         self.msg = msg
         self.isRead = isRead
