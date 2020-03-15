@@ -135,12 +135,20 @@ extension ChatViewController {
         if (chatType == "paying" && fromUserId == self.userId) {
             print("paying chat")
 
+            var totalAmount = 0.0
+            var lastMsgId = ""
+            var lastUserId = ""
             for msg in self.msgs {
                 if (msg.userId != self.userId && !msg.isRead) {
-                    // pay for others messages
-                    sendMicrotx(toUser: msg.userId, amount: Double(msg.msg.count) * self.CHARACTER_PRICE, msgId: msg.msgId)
+                    print("msg.msg: \(msg.msg)")
+                    msg.isRead = true
+                    totalAmount += Double(msg.msg.count) * self.CHARACTER_PRICE
+                    lastMsgId = msg.msgId
+                    lastUserId = msg.userId
                 }
             }
+            // pay for others messages
+            sendMicrotx(toUser: lastUserId, amount: totalAmount, msgId: lastMsgId)
         } else {
             self.readMsgs()
         }
@@ -192,6 +200,7 @@ extension ChatViewController {
                     print("rawTx: \(rawTx)")
                     print("totalAmountEth: " + String(format: "%.5f", totalAmountEth))
                     self.topBarEthereum.text = String(format: "%.5f", totalAmountEth) + " ETH"
+                    self.readMsgs()
                     break
                 case .failure(let error):
                     print(error.localizedDescription)
