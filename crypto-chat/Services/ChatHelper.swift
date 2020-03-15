@@ -29,12 +29,12 @@ extension ChatViewController {
                     msgId: message["msgId"].stringValue,
                     userId: message["userId"].stringValue,
                     msg: message["message"].stringValue,
-                    isRead: true,
+                    isRead: message["isRead"].boolValue,
                     time: message["createdAt"].stringValue
                 ))
 
-                self.updateMessages()
                 self.pay4Msgs()
+                self.updateMessages()
             }
         }
     }
@@ -133,7 +133,7 @@ extension ChatViewController {
         let chatType = self.selectedChat.chatType
         let fromUserId = self.selectedChat.fromUser
         if (chatType == "paying" && fromUserId == self.userId) {
-            print("paying...")
+            print("paying chat")
 
             for msg in self.msgs {
                 if (msg.userId != self.userId && !msg.isRead) {
@@ -146,15 +146,13 @@ extension ChatViewController {
         }
     }
     
-    func readMsgs(semaphore: Int = 0) {
-        if (semaphore == 0) {
-            print("read messages")
-            AF.request("http://localhost:8080/chat/readMessages",
-                       method: .post,
-                       parameters: ["token": self.jwt, "chatId": self.selectedChat.chatId],
-                       encoder: JSONParameterEncoder.default).responseJSON { status in
-                print(status)
-            }
+    func readMsgs() {
+        print("read messages")
+        AF.request("http://localhost:8080/chat/readMessages",
+                   method: .post,
+                   parameters: ["token": self.jwt, "chatId": self.selectedChat.chatId],
+                   encoder: JSONParameterEncoder.default).responseJSON { status in
+            print(status)
         }
     }
     
@@ -172,6 +170,7 @@ extension ChatViewController {
         // Get private key from keychain
         guard let prKey: String = KeychainWrapper.standard.string(forKey: "prKey") else { return }
 //        print(prKey)
+        print("message id: \(msgId)")
         
         AF.request("http://localhost:8080/bc/signTransferByUserId",
                    method: .post,
@@ -179,7 +178,7 @@ extension ChatViewController {
                        "token": self.jwt,
                        "msgId": msgId,
                        "toUserId": toUser,
-                       "amount": String(amount),
+                       "amount": String(amount * 1000000000000000000),
                        "prKey": prKey
                    ],
                    encoder: JSONParameterEncoder.default).responseJSON { response in
