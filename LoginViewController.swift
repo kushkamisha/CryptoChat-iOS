@@ -9,13 +9,14 @@
 import UIKit
 import CryptoKit
 import Alamofire
+import Loaf
 
 struct Login: Encodable {
     let email: String
     let pass: String
 }
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var emailInputLabel: UIView!
     @IBOutlet weak var passInputLabel: UIView!
@@ -36,9 +37,19 @@ class LoginViewController: UIViewController {
         passInputField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(displayP3Red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5)])
 //        emailInputField.text = "bob"
 //        passInputField.text = "bob"
+        
+        passInputField.delegate = self
     }
     
-    @IBAction func signIn(_ sender: Any) {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        print("enter is pressed")
+        signIn()
+        return true
+    } // By "Enter" press...
+    
+    @IBAction func signIn(_ sender: Any) { self.signIn() }
+    
+    func signIn() {
         guard let data = passInputField.text?.data(using: .utf8) else { return }
         let passHash = SHA512.hash(data: data).hexStr
         debugPrint(passHash)
@@ -60,11 +71,10 @@ class LoginViewController: UIViewController {
                         vc.userId = "\(dict["userId"]!)"
                         self.present(vc, animated: true, completion: nil)
                     } else {
-                        let alert = UIAlertController(title: NSLocalizedString("Oops", comment: ""), message: NSLocalizedString("loginError", comment: ""), preferredStyle: .alert)
-                        self.present(alert, animated: true)
-                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        Loaf(NSLocalizedString("loginError", comment: ""), state: .error, sender: self).show()
                     }
                 case .failure(let error):
+                    Loaf(NSLocalizedString("connectionError", comment: ""), state: .error, sender: self).show()
                     print(error.localizedDescription)
             }
         }
