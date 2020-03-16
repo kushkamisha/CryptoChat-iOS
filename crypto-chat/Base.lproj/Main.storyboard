@@ -1139,7 +1139,7 @@
                                                                 <constraint firstAttribute="height" constant="18" id="qW5-ot-Ump"/>
                                                             </constraints>
                                                         </stackView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzO-EV-U64">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzO-EV-U64">
                                                             <rect key="frame" x="0.0" y="22" width="229" height="16"/>
                                                             <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="13"/>
                                                             <nil key="textColor"/>
@@ -1220,9 +1220,9 @@
                                 <rect key="frame" x="360" y="70" width="665" height="698"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No chats are selected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Xa-O4-75Z">
-                                        <rect key="frame" x="232.5" y="340" width="200" height="18"/>
+                                        <rect key="frame" x="207.5" y="340" width="250" height="18"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="NG2-QB-RTj"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="hJF-7Z-cwf"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1230,7 +1230,7 @@
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="0Xa-O4-75Z" firstAttribute="centerX" secondItem="eLN-WJ-oiO" secondAttribute="centerX" id="ezR-LB-5QG"/>
+                                    <constraint firstItem="0Xa-O4-75Z" firstAttribute="centerX" secondItem="eLN-WJ-oiO" secondAttribute="centerX" id="Wa2-aA-OfG"/>
                                     <constraint firstItem="0Xa-O4-75Z" firstAttribute="centerY" secondItem="eLN-WJ-oiO" secondAttribute="centerY" id="jZj-DL-E0S"/>
                                 </constraints>
                             </view>
@@ -1258,7 +1258,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:99 AM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5f-Cx-KZt">
                                                     <rect key="frame" x="240" y="16.5" width="100" height="14.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="100" id="Mep-P6-6rr"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Mep-P6-6rr"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -1269,6 +1269,7 @@
                                                 <constraint firstItem="l5f-Cx-KZt" firstAttribute="leading" secondItem="q8Z-c2-QpF" secondAttribute="trailing" constant="20" id="Bsd-Nd-gVg"/>
                                                 <constraint firstItem="q8Z-c2-QpF" firstAttribute="leading" secondItem="Vc1-wy-qDn" secondAttribute="leading" constant="20" id="FQW-gX-e28"/>
                                                 <constraint firstItem="q8Z-c2-QpF" firstAttribute="top" secondItem="Vc1-wy-qDn" secondAttribute="top" constant="20" symbolic="YES" id="K39-Nj-iAW"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="l5f-Cx-KZt" secondAttribute="trailing" constant="20" symbolic="YES" id="UwF-5P-Py3"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="l5f-Cx-KZt" secondAttribute="bottom" constant="16" id="Xke-u0-pAq"/>
                                                 <constraint firstAttribute="bottom" secondItem="q8Z-c2-QpF" secondAttribute="bottom" constant="20" symbolic="YES" id="sfl-fC-aDT"/>
                                             </constraints>
@@ -1288,7 +1289,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:99 AM" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ici-DB-G62">
                                                     <rect key="frame" x="302" y="16.5" width="100" height="14.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="100" id="X9v-wF-k87"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="X9v-wF-k87"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -1311,6 +1312,7 @@
                                                 <constraint firstItem="7Y8-36-bgr" firstAttribute="top" secondItem="Thb-VY-Sp7" secondAttribute="top" constant="20" symbolic="YES" id="EX4-oq-2cN"/>
                                                 <constraint firstAttribute="bottom" secondItem="7Y8-36-bgr" secondAttribute="bottom" constant="20" symbolic="YES" id="Qu1-Hh-tXK"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="7Y8-36-bgr" secondAttribute="trailing" constant="20" id="TMt-T7-H5q"/>
+                                                <constraint firstItem="Ici-DB-G62" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Thb-VY-Sp7" secondAttribute="leading" constant="20" symbolic="YES" id="gBB-1l-KTH"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

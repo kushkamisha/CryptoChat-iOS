@@ -74,7 +74,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
         searchUserBar.backgroundImage = UIImage()
         searchUserBar.searchBarStyle = UISearchBar.Style.prominent
         searchUserBar.searchTextField.backgroundColor = UIColor.white
-        searchUserBar.placeholder = "Search for a user"
+        searchUserBar.placeholder = NSLocalizedString("searchForAUser", comment: "")
 
         chatsTableView.delegate = self
         chatsTableView.dataSource = self
@@ -82,7 +82,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
         msgsTableView.dataSource = self
         sendMessageTextField.delegate = self
         
-        noChatsSelectedLabel.text = "No chats are selected"
+        noChatsSelectedLabel.text = NSLocalizedString("noChatsSelected", comment: "")
         noChatsSelectedLabel.backgroundColor = purple
         noChatsSelectedLabel.padding = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         noChatsSelectedLabel.layer.masksToBounds = true
@@ -91,7 +91,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
         msgsTableView.rowHeight = UITableView.automaticDimension
         chatsTableView.rowHeight = 75
         
-        sendMessageTextField.attributedPlaceholder = NSAttributedString(string: "Type your message here...", attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(displayP3Red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5)])
+        sendMessageTextField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("typeYourMsgHere", comment: ""), attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(displayP3Red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5)])
         
         self.chatsTableView.addSubview(self.refreshControl)
         

@@ -26,7 +26,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func showSignUpScreen(_ sender: Any) { navigateToScreen(screenName: "SignUpScreen")}
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

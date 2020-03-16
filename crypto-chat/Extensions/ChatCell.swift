@@ -21,6 +21,7 @@ class ChatCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        msgTimeLabel.text = NSLocalizedString("wasActiveAt", comment: "")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
