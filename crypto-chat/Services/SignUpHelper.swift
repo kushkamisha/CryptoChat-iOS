@@ -24,14 +24,16 @@ extension SignUpViewController: UINavigationControllerDelegate, UIImagePickerCon
         repeatPassLabel.roundCorners(corners: [.topLeft, .bottomLeft], radius: 10)
         birthDateLabel.roundCorners(corners: [.topLeft, .bottomLeft], radius: 10)
         
+//        NSLocalizedString("", comment: "")
+        
         let translucentWhite = UIColor.init(displayP3Red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5)
         emailInputField.attributedPlaceholder = NSAttributedString(string: "john@mail.com", attributes: [NSAttributedString.Key.foregroundColor: translucentWhite])
-        firstNameInputField.attributedPlaceholder = NSAttributedString(string: "John", attributes: [NSAttributedString.Key.foregroundColor: translucentWhite])
-        middleNameInputField.attributedPlaceholder = NSAttributedString(string: "James", attributes: [NSAttributedString.Key.foregroundColor: translucentWhite])
-        lastNameInputField.attributedPlaceholder = NSAttributedString(string: "Doe", attributes: [NSAttributedString.Key.foregroundColor: translucentWhite])
-        passInputField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedString.Key.foregroundColor: translucentWhite])
-        repeatPassInputField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedString.Key.foregroundColor: translucentWhite])
-        birthDateInputField.attributedPlaceholder = NSAttributedString(string: "mm/dd/yyyy", attributes: [NSAttributedString.Key.foregroundColor: translucentWhite])
+        firstNameInputField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("john", comment: ""), attributes: [NSAttributedString.Key.foregroundColor: translucentWhite])
+        middleNameInputField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("james", comment: ""), attributes: [NSAttributedString.Key.foregroundColor: translucentWhite])
+        lastNameInputField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("doe", comment: ""), attributes: [NSAttributedString.Key.foregroundColor: translucentWhite])
+        passInputField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("password", comment: ""), attributes: [NSAttributedString.Key.foregroundColor: translucentWhite])
+        repeatPassInputField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("password", comment: ""), attributes: [NSAttributedString.Key.foregroundColor: translucentWhite])
+        birthDateInputField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("mm/dd/yyyy", comment: ""), attributes: [NSAttributedString.Key.foregroundColor: translucentWhite])
         
         emailInputField.delegate = self
         passInputField.delegate = self
@@ -86,19 +88,19 @@ extension SignUpViewController: UINavigationControllerDelegate, UIImagePickerCon
         
         if (email == "") {
             emailGlowingView.isHidden = false
-            Loaf("Email can not be empty", state: .error, sender: self).show()
+            Loaf(NSLocalizedString("emptyEmail", comment: ""), state: .error, sender: self).show()
             return false
         } else if (pass == "") {
             passGlowingView.isHidden = false
-            Loaf("Password can not be empty", state: .error, sender: self).show()
+            Loaf(NSLocalizedString("emptyPass", comment: ""), state: .error, sender: self).show()
             return false
         } else if (repeatPass == "") {
             repeatPassGlowingView.isHidden = false
-            Loaf("Repeat password can not be empty", state: .error, sender: self).show()
+            Loaf(NSLocalizedString("emptyRepeatPass", comment: ""), state: .error, sender: self).show()
             return false
         } else if (pass != repeatPass) {
             repeatPassGlowingView.isHidden = false
-            Loaf("Repeat password does not equal to password", state: .error, sender: self).show()
+            Loaf(NSLocalizedString("notSameRepeatPass", comment: ""), state: .error, sender: self).show()
             return false
         }
         
@@ -112,18 +114,12 @@ extension SignUpViewController: UINavigationControllerDelegate, UIImagePickerCon
         let regexPass = try! NSRegularExpression(pattern: "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\\$%\\^&\\*])(?=.{8,})")
         
         if regexEmail.matches(in: email, options: [], range: rangeEmail).count == 0 {
-            Loaf("Your email has incorrect format", state: .error, sender: self).show()
+            Loaf(NSLocalizedString("incorrectEmailFormat", comment: ""), state: .error, sender: self).show()
             emailGlowingView.isHidden = false
             return false
         } else if regexPass.matches(in: pass, options: [], range: rangePass).count == 0 {
             passGlowingView.isHidden = false
-            Loaf("""
-The password must be at least 8 characters long and contain at least:
-    - 1 lowercase letter
-    - 1 uppdercase letter
-    - 1 digit
-    - 1 special character
-""", state: .error, sender: self).show()
+            Loaf(NSLocalizedString("weakPass", comment: ""), state: .error, sender: self).show()
             return false
         }
         

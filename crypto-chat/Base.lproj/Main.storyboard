@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5b0-f5-cpD">
     <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -24,12 +24,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3iD-tP-RfX">
-                                <rect key="frame" x="372.5" y="24" width="279" height="90"/>
-                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="75"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ORs-Fe-O7l" userLabel="Email" customClass="InputBox" customModule="Crypto_Chat" customModuleProvider="target">
                                 <rect key="frame" x="565" y="164" width="346" height="42"/>
                                 <subviews>
@@ -433,11 +427,17 @@
                                     <action selector="uploadUserPhoto:" destination="mEa-Ob-iEM" eventType="touchUpInside" id="nbd-mx-E5n"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3iD-tP-RfX">
+                                <rect key="frame" x="262" y="20" width="500" height="90"/>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="75"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.47843137254901957" green="0.5490196078431373" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="bWm-xN-5f5" firstAttribute="top" secondItem="3iD-tP-RfX" secondAttribute="bottom" constant="253" id="2b0-eo-mf8"/>
-                            <constraint firstItem="ORs-Fe-O7l" firstAttribute="top" secondItem="3iD-tP-RfX" secondAttribute="bottom" constant="50" id="30A-ij-au2"/>
+                            <constraint firstItem="bWm-xN-5f5" firstAttribute="top" secondItem="3iD-tP-RfX" secondAttribute="bottom" constant="257" id="2b0-eo-mf8"/>
+                            <constraint firstItem="ORs-Fe-O7l" firstAttribute="top" secondItem="3iD-tP-RfX" secondAttribute="bottom" constant="54" id="30A-ij-au2"/>
                             <constraint firstItem="seG-iD-NUL" firstAttribute="top" secondItem="62a-co-Xh0" secondAttribute="bottom" constant="24" id="7Eq-MC-cjr"/>
                             <constraint firstItem="IqF-Bp-4xu" firstAttribute="trailing" secondItem="25Y-Vd-wwj" secondAttribute="trailing" constant="113" id="A7c-vk-uoA"/>
                             <constraint firstItem="IqF-Bp-4xu" firstAttribute="trailing" secondItem="62a-co-Xh0" secondAttribute="trailing" constant="113" id="AxR-fh-r1D"/>
@@ -456,8 +456,8 @@
                             <constraint firstItem="25Y-Vd-wwj" firstAttribute="top" secondItem="QIk-LB-P0f" secondAttribute="bottom" constant="24" id="def-oK-fG9"/>
                             <constraint firstItem="CDq-zH-o9q" firstAttribute="top" secondItem="7qF-jH-oRQ" secondAttribute="bottom" constant="24" id="fJo-8N-4Lr"/>
                             <constraint firstItem="upy-Kp-y40" firstAttribute="leading" secondItem="IqF-Bp-4xu" secondAttribute="leading" constant="112" id="oKc-se-blF"/>
-                            <constraint firstItem="upy-Kp-y40" firstAttribute="top" secondItem="3iD-tP-RfX" secondAttribute="bottom" constant="97" id="ora-TM-rfy"/>
-                            <constraint firstItem="3iD-tP-RfX" firstAttribute="top" secondItem="IqF-Bp-4xu" secondAttribute="top" constant="24" id="rg4-zP-PBN"/>
+                            <constraint firstItem="upy-Kp-y40" firstAttribute="top" secondItem="3iD-tP-RfX" secondAttribute="bottom" constant="101" id="ora-TM-rfy"/>
+                            <constraint firstItem="3iD-tP-RfX" firstAttribute="top" secondItem="IqF-Bp-4xu" secondAttribute="top" constant="20" id="rg4-zP-PBN"/>
                             <constraint firstItem="48f-9b-05Z" firstAttribute="top" secondItem="CDq-zH-o9q" secondAttribute="bottom" constant="74" id="u5a-Gb-yb7"/>
                             <constraint firstItem="62a-co-Xh0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bWm-xN-5f5" secondAttribute="trailing" constant="8" symbolic="YES" id="y4l-l7-BkX"/>
                         </constraints>
@@ -497,14 +497,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xEu-lP-TCv" userLabel="Sign Up Title">
-                                <rect key="frame" x="373" y="24" width="278.5" height="90"/>
-                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="75"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help others to find you by a keyword" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bME-VB-c18">
-                                <rect key="frame" x="161" y="180" width="259" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Help others to find you by a keyword" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bME-VB-c18">
+                                <rect key="frame" x="112" y="180" width="346" height="18"/>
                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -561,8 +555,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z14-mg-RwY" userLabel="Title">
                                         <rect key="frame" x="0.0" y="0.0" width="346" height="28"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or by a short description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMT-Cu-x3R">
-                                                <rect key="frame" x="85" y="5" width="176.5" height="18"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Or by a short description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMT-Cu-x3R">
+                                                <rect key="frame" x="0.0" y="5" width="346" height="18"/>
                                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -693,10 +687,10 @@
                                     <constraint firstAttribute="bottom" secondItem="LQR-8b-v2a" secondAttribute="bottom" constant="10" id="x3a-gG-J2X"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="But you can replenish it using the QR code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qal-Wu-rzH">
-                                <rect key="frame" x="565" y="554" width="346" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="But you can replenish it using the QR code" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qal-Wu-rzH">
+                                <rect key="frame" x="565" y="554" width="346" height="51"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="qal-Wu-rzH" secondAttribute="height" multiplier="173:9" id="66e-DG-rl6"/>
+                                    <constraint firstAttribute="width" secondItem="qal-Wu-rzH" secondAttribute="height" multiplier="173:9" constant="-634.33333333333326" id="66e-DG-rl6"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="346" id="HDT-Lo-eWr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
@@ -721,6 +715,12 @@
                                     <action selector="updateUserData:" destination="5b0-f5-cpD" eventType="touchUpInside" id="5rV-YX-rcb"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xEu-lP-TCv" userLabel="Sign Up Title">
+                                <rect key="frame" x="262" y="24" width="500" height="90"/>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="75"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.47843137250000001" green="0.54901960780000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -732,7 +732,7 @@
                             <constraint firstItem="zcL-8l-wRb" firstAttribute="leading" secondItem="Chk-25-HCr" secondAttribute="leading" constant="112" id="ERO-W6-e1X"/>
                             <constraint firstItem="Chk-25-HCr" firstAttribute="trailing" secondItem="qal-Wu-rzH" secondAttribute="trailing" constant="113" id="KJV-uB-h2g"/>
                             <constraint firstItem="G1Y-k3-G3R" firstAttribute="centerX" secondItem="sMr-zA-hbu" secondAttribute="centerX" id="Nwh-di-zNW"/>
-                            <constraint firstItem="bME-VB-c18" firstAttribute="leading" secondItem="Chk-25-HCr" secondAttribute="leading" constant="161" id="Vo9-w1-ii5"/>
+                            <constraint firstItem="bME-VB-c18" firstAttribute="leading" secondItem="Chk-25-HCr" secondAttribute="leading" constant="112" id="Vo9-w1-ii5"/>
                             <constraint firstItem="qal-Wu-rzH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zcL-8l-wRb" secondAttribute="trailing" constant="8" symbolic="YES" id="Wxn-Fc-8QJ"/>
                             <constraint firstItem="bME-VB-c18" firstAttribute="top" secondItem="xEu-lP-TCv" secondAttribute="bottom" constant="66" id="YLh-sd-BAS"/>
                             <constraint firstItem="Chk-25-HCr" firstAttribute="bottom" secondItem="G1Y-k3-G3R" secondAttribute="bottom" constant="65" id="a1W-ph-jc7"/>
@@ -742,7 +742,7 @@
                             <constraint firstItem="Chk-25-HCr" firstAttribute="trailing" secondItem="tdD-zB-uqv" secondAttribute="trailing" constant="113" id="r8s-40-cLt"/>
                             <constraint firstItem="zcL-8l-wRb" firstAttribute="top" secondItem="2DW-7n-jZv" secondAttribute="bottom" constant="24" id="s07-56-OrD"/>
                             <constraint firstItem="C56-So-dYQ" firstAttribute="leading" secondItem="Chk-25-HCr" secondAttribute="leading" constant="112" id="seg-ZH-XSf"/>
-                            <constraint firstItem="qal-Wu-rzH" firstAttribute="baseline" secondItem="zcL-8l-wRb" secondAttribute="baseline" id="uRI-ab-kmd"/>
+                            <constraint firstItem="qal-Wu-rzH" firstAttribute="baseline" secondItem="zcL-8l-wRb" secondAttribute="baseline" constant="33" id="uRI-ab-kmd"/>
                             <constraint firstItem="xEu-lP-TCv" firstAttribute="centerX" secondItem="sMr-zA-hbu" secondAttribute="centerX" id="uaX-XU-18i"/>
                             <constraint firstItem="Chk-25-HCr" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zcL-8l-wRb" secondAttribute="trailing" symbolic="YES" id="vDB-Xn-uyN"/>
                             <constraint firstItem="2DW-7n-jZv" firstAttribute="leading" secondItem="Chk-25-HCr" secondAttribute="leading" constant="112" id="xKn-1u-NkR"/>
@@ -783,8 +783,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XD9-ez-qcG" userLabel="Sign In">
                                 <rect key="frame" x="319" y="206" width="715" height="356"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpc-jx-KZY">
-                                        <rect key="frame" x="521" y="133" width="241" height="90"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpc-jx-KZY">
+                                        <rect key="frame" x="459" y="133" width="356" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="356" id="1bT-gK-nnw"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="75"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -924,22 +927,21 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.47843137250000001" green="0.54901960780000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="rpc-jx-KZY" firstAttribute="centerY" secondItem="XD9-ez-qcG" secondAttribute="centerY" id="0gc-ys-AbL"/>
                                     <constraint firstItem="3kI-BC-Krl" firstAttribute="top" secondItem="LiA-eP-bi1" secondAttribute="bottom" constant="10" id="20Q-SX-j20"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SBM-X5-nqB" secondAttribute="trailing" constant="20" symbolic="YES" id="30u-PV-R19"/>
                                     <constraint firstItem="JAb-AY-4ID" firstAttribute="top" secondItem="XD9-ez-qcG" secondAttribute="top" constant="20" id="3hB-Ww-KWw"/>
-                                    <constraint firstItem="rpc-jx-KZY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XD9-ez-qcG" secondAttribute="leading" constant="20" symbolic="YES" id="98P-ok-Gu3"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Qrm-w1-2tQ" secondAttribute="trailing" constant="20" symbolic="YES" id="AGA-kn-QV2"/>
                                     <constraint firstItem="Qrm-w1-2tQ" firstAttribute="leading" secondItem="XD9-ez-qcG" secondAttribute="leading" constant="20" id="FXX-dz-113"/>
                                     <constraint firstItem="3kI-BC-Krl" firstAttribute="leading" secondItem="XD9-ez-qcG" secondAttribute="leading" constant="20" id="GIS-V9-2gs"/>
                                     <constraint firstItem="LiA-eP-bi1" firstAttribute="leading" secondItem="XD9-ez-qcG" secondAttribute="leading" constant="20" id="NhZ-uk-aky"/>
-                                    <constraint firstItem="rpc-jx-KZY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3kI-BC-Krl" secondAttribute="trailing" constant="8" symbolic="YES" id="Nny-Mc-adG"/>
-                                    <constraint firstAttribute="trailing" secondItem="rpc-jx-KZY" secondAttribute="trailing" constant="-47" id="Nt3-HM-YWr"/>
                                     <constraint firstItem="LiA-eP-bi1" firstAttribute="top" secondItem="JAb-AY-4ID" secondAttribute="bottom" constant="20" id="QPV-hG-ydg"/>
                                     <constraint firstItem="SBM-X5-nqB" firstAttribute="leading" secondItem="XD9-ez-qcG" secondAttribute="leading" constant="20" id="W8K-DH-DiT"/>
+                                    <constraint firstItem="rpc-jx-KZY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3kI-BC-Krl" secondAttribute="trailing" constant="8" symbolic="YES" id="cJT-c7-hVj"/>
+                                    <constraint firstAttribute="trailing" secondItem="rpc-jx-KZY" secondAttribute="trailing" constant="-100" id="fYz-Vt-OCh"/>
                                     <constraint firstItem="JAb-AY-4ID" firstAttribute="leading" secondItem="XD9-ez-qcG" secondAttribute="leading" constant="20" id="kNm-Nz-fBL"/>
                                     <constraint firstAttribute="bottom" secondItem="Qrm-w1-2tQ" secondAttribute="bottom" constant="20" id="lcs-e9-nQH"/>
                                     <constraint firstItem="Qrm-w1-2tQ" firstAttribute="top" secondItem="SBM-X5-nqB" secondAttribute="bottom" constant="20" id="xXK-0o-qcQ"/>
+                                    <constraint firstItem="rpc-jx-KZY" firstAttribute="centerY" secondItem="XD9-ez-qcG" secondAttribute="centerY" id="yAG-se-yrA"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>

@@ -1,54 +1,39 @@
 
-/* Class = "UIButton"; normalTitle = "Forgot a Password?"; ObjectID = "3kI-BC-Krl"; */
-"3kI-BC-Krl.normalTitle" = "Забули пароль?";
-
-/* Class = "UILabel"; text = "Email"; ObjectID = "OK7-AR-FEw"; */
-"OK7-AR-FEw.text" = "Емейл";
-
-/* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "Qrm-w1-2tQ"; */
-"Qrm-w1-2tQ.normalTitle" = "Зареєструватися";
-
-/* Class = "UILabel"; text = "Sign In"; ObjectID = "rpc-jx-KZY"; */
-"rpc-jx-KZY.text" = "Вхід";
-
-/* Class = "UIButton"; normalTitle = "Sign In"; ObjectID = "SBM-X5-nqB"; */
-"SBM-X5-nqB.normalTitle" = "Увійти";
-
-/* Class = "UILabel"; text = "Pass"; ObjectID = "xUt-4t-8F4"; */
-"xUt-4t-8F4.text" = "Пароль";
-
 /* Class = "UILabel"; text = "No chats are selected"; ObjectID = "0Xa-O4-75Z"; */
-"0Xa-O4-75Z.text" = "Жодного чату не обрано";
+"0Xa-O4-75Z.text" = "No chats are selected";
 
 /* Class = "UILabel"; text = "Repeat Pass"; ObjectID = "2yh-Ez-JJq"; */
-"2yh-Ez-JJq.text" = "Повт. пароль";
+"2yh-Ez-JJq.text" = "Repeat Pass";
 
 /* Class = "UILabel"; text = "Sign Up"; ObjectID = "3iD-tP-RfX"; */
-"3iD-tP-RfX.text" = "Реєстрація";
+"3iD-tP-RfX.text" = "Sign Up";
+
+/* Class = "UIButton"; normalTitle = "Forgot a Password?"; ObjectID = "3kI-BC-Krl"; */
+"3kI-BC-Krl.normalTitle" = "Forgot a Password?";
 
 /* Class = "UIButton"; normalTitle = "Next"; ObjectID = "48f-9b-05Z"; */
-"48f-9b-05Z.normalTitle" = "Далі";
+"48f-9b-05Z.normalTitle" = "Next";
 
 /* Class = "UILabel"; text = "Email"; ObjectID = "4v6-aB-FJ6"; */
-"4v6-aB-FJ6.text" = "Емейл";
+"4v6-aB-FJ6.text" = "Email";
 
 /* Class = "UISearchBar"; placeholder = "Search for a user"; ObjectID = "5PR-J9-mDg"; */
-"5PR-J9-mDg.placeholder" = "Шукати";
+"5PR-J9-mDg.placeholder" = "Search for a user";
 
 /* Class = "UILabel"; text = "Last Name"; ObjectID = "7eC-xs-StW"; */
-"7eC-xs-StW.text" = "Прізвище";
+"7eC-xs-StW.text" = "Last Name";
 
 /* Class = "UILabel"; text = "Message"; ObjectID = "7Y8-36-bgr"; */
-"7Y8-36-bgr.text" = "";
+"7Y8-36-bgr.text" = "Message";
 
 /* Class = "UILabel"; text = "Help others to find you by a keyword"; ObjectID = "bME-VB-c18"; */
-"bME-VB-c18.text" = "Допоможіть знайти Вас за ключовим словом";
+"bME-VB-c18.text" = "Help others to find you by a keyword";
 
 /* Class = "UILabel"; text = "Middle Name"; ObjectID = "bPa-2a-sFs"; */
-"bPa-2a-sFs.text" = "Друге ім'я";
+"bPa-2a-sFs.text" = "Middle Name";
 
 /* Class = "UIButton"; normalTitle = "Upload a photo"; ObjectID = "bWm-xN-5f5"; */
-"bWm-xN-5f5.normalTitle" = "Завантажити фото";
+"bWm-xN-5f5.normalTitle" = "Upload a photo";
 
 /* Class = "UIButton"; normalTitle = "Copy"; ObjectID = "c6v-wX-kpF"; */
 "c6v-wX-kpF.normalTitle" = "Copy";
@@ -57,22 +42,22 @@
 "ccc-bL-moh.text" = "0.0 ETH";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "FgS-rx-MT9"; */
-"FgS-rx-MT9.text" = "";
+"FgS-rx-MT9.text" = "Label";
 
 /* Class = "UILabel"; text = "..."; ObjectID = "fzO-EV-U64"; */
 "fzO-EV-U64.text" = "...";
 
 /* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "G1Y-k3-G3R"; */
-"G1Y-k3-G3R.normalTitle" = "Зареєструватися";
+"G1Y-k3-G3R.normalTitle" = "Sign Up";
 
 /* Class = "UILabel"; text = "label"; ObjectID = "htQ-r1-AfS"; */
-"htQ-r1-AfS.text" = "";
+"htQ-r1-AfS.text" = "label";
 
 /* Class = "UILabel"; text = "9:99 AM"; ObjectID = "Ici-DB-G62"; */
-"Ici-DB-G62.text" = "";
+"Ici-DB-G62.text" = "9:99 AM";
 
 /* Class = "UILabel"; text = "An Ethereum address was generated for you"; ObjectID = "IQn-se-y3C"; */
-"IQn-se-y3C.text" = "Ми створили Вам ефіріум адресу";
+"IQn-se-y3C.text" = "An Ethereum address was generated for you";
 
 /* Class = "UITextField"; text = "0x635B4764D1939DfAcD3a8014726159abC277BecC"; ObjectID = "Jff-LW-vzT"; */
 "Jff-LW-vzT.text" = "0x635B4764D1939DfAcD3a8014726159abC277BecC";
@@ -81,37 +66,52 @@
 "jOo-fJ-wGR.text" = "*";
 
 /* Class = "UILabel"; text = "Birth Date"; ObjectID = "Jyd-VZ-kIe"; */
-"Jyd-VZ-kIe.text" = "Дата народ.";
+"Jyd-VZ-kIe.text" = "Birth Date";
 
 /* Class = "UILabel"; text = "99 minutes ago"; ObjectID = "k5h-E3-FKU"; */
-"k5h-E3-FKU.text" = "учора";
+"k5h-E3-FKU.text" = "99 minutes ago";
 
 /* Class = "UILabel"; text = "9:99 AM"; ObjectID = "l5f-Cx-KZt"; */
-"l5f-Cx-KZt.text" = "";
+"l5f-Cx-KZt.text" = "9:99 AM";
 
 /* Class = "UILabel"; text = "First Name"; ObjectID = "LRI-GU-POd"; */
-"LRI-GU-POd.text" = "Ім'я";
+"LRI-GU-POd.text" = "First Name";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "OK7-AR-FEw"; */
+"OK7-AR-FEw.text" = "Email";
 
 /* Class = "UILabel"; text = "Pass"; ObjectID = "OyH-wx-KmR"; */
-"OyH-wx-KmR.text" = "Пароль";
+"OyH-wx-KmR.text" = "Pass";
 
 /* Class = "UILabel"; text = "*"; ObjectID = "PTv-n8-vNB"; */
 "PTv-n8-vNB.text" = "*";
 
 /* Class = "UILabel"; text = "Message"; ObjectID = "q8Z-c2-QpF"; */
-"q8Z-c2-QpF.text" = "";
+"q8Z-c2-QpF.text" = "Message";
 
 /* Class = "UILabel"; text = "But you can replenish it using the QR code"; ObjectID = "qal-Wu-rzH"; */
-"qal-Wu-rzH.text" = "Але Ви можете поповнити її за допомогою QR коду";
+"qal-Wu-rzH.text" = "But you can replenish it using the QR code";
 
 /* Class = "UILabel"; text = "Or by a short description"; ObjectID = "qMT-Cu-x3R"; */
-"qMT-Cu-x3R.text" = "Або за коротким описом";
+"qMT-Cu-x3R.text" = "Or by a short description";
+
+/* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "Qrm-w1-2tQ"; */
+"Qrm-w1-2tQ.normalTitle" = "Sign Up";
+
+/* Class = "UILabel"; text = "Sign In"; ObjectID = "rpc-jx-KZY"; */
+"rpc-jx-KZY.text" = "Sign In";
+
+/* Class = "UIButton"; normalTitle = "Sign In"; ObjectID = "SBM-X5-nqB"; */
+"SBM-X5-nqB.normalTitle" = "Sign In";
 
 /* Class = "UILabel"; text = "*"; ObjectID = "tQt-qT-j39"; */
 "tQt-qT-j39.text" = "*";
 
 /* Class = "UILabel"; text = "Sign Up"; ObjectID = "xEu-lP-TCv"; */
-"xEu-lP-TCv.text" = "Реєстрація";
+"xEu-lP-TCv.text" = "Sign Up";
+
+/* Class = "UILabel"; text = "Pass"; ObjectID = "xUt-4t-8F4"; */
+"xUt-4t-8F4.text" = "Pass";
 
 /* Class = "UILabel"; text = "With 0 ETH on it"; ObjectID = "zcL-8l-wRb"; */
-"zcL-8l-wRb.text" = "З 0 ETH на ній";
+"zcL-8l-wRb.text" = "With 0 ETH on it";

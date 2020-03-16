@@ -1,11 +1,105 @@
-"Oops" = "Упс";
-"loginError" = "Неправильний логін або пароль, спробуйте знову";
+
+/* No comment provided by engineer. */
 "connectionError" = "Не вдалося під'єднатися до сервера, спробуйте пізніше";
 
-"signupError" = "Користувач з такою адресою електронної пошти вже зареєстровано, спробуйте іншу адресу";
+/* No comment provided by engineer. */
+"doe" = "Доу";
+
+/* No comment provided by engineer. */
+"emptyEmail" = "Емейл не може бути порожнім";
+
+/* No comment provided by engineer. */
+"emptyPass" = "Пароль не може бути порожнім";
+
+/* No comment provided by engineer. */
+"emptyRepeatPass" = "Повторення паролю не може бути порожнім";
+
+/* No comment provided by engineer. */
+"incorrectEmailFormat" = "Емейл має неправильний формат";
+
+/* No comment provided by engineer. */
+"james" = "Джеймс";
+
+/* No comment provided by engineer. */
+"john" = "Джон";
+
+/* No comment provided by engineer. */
+"loginError" = "Неправильний логін або пароль, спробуйте знову";
+
+/* No comment provided by engineer. */
+"mm/dd/yyyy" = "мм/дд/рррр";
+
+/* No comment provided by engineer. */
+"noChatsSelected" = "Жодного чату не обрано";
+
+/* No comment provided by engineer. */
+"notSameRepeatPass" = "Повторення паролю не співпадає з паролем";
+
+"Oops" = "Упс";
+
+/* No comment provided by engineer. */
+"password" = "пароль";
+
+/* No comment provided by engineer. */
+"searchForAUser" = "Шукати";
+
+/* No comment provided by engineer. */
 "signup2Error" = "Невідома помилка. Ви були зареєстровані, але без опису та ключових слів";
 
-"searchForAUser" = "Шукати";
-"noChatsSelected" = "Жодного чату не обрано";
+/* No comment provided by engineer. */
+"signupError" = "Користувач з такою адресою електронної пошти вже зареєстровано, спробуйте іншу адресу";
+
+/* No comment provided by engineer. */
 "typeYourMsgHere" = "Набирайте повідомлення...";
+
+/* No comment provided by engineer. */
 "wasActiveAt" = "учора";
+
+/* No comment provided by engineer. */
+"weakPass" = "Пароль мусить складатися принаймні з 8 символів та містити:\
+    - 1 маленьку букву\
+    - 1 велику букву\
+    - 1 цифру\
+    - 1 спеціальний символ";
+
+/* No comment provided by engineer. */
+"Cancel" = "";
+
+/* No comment provided by engineer. */
+"demo@example.com" = "";
+
+/* No comment provided by engineer. */
+"Dismiss" = "";
+
+/* No comment provided by engineer. */
+"Do your custom work here" = "";
+
+/* No comment provided by engineer. */
+"Fonts" = "";
+
+/* No comment provided by engineer. */
+"IQKeyboardManager" = "";
+
+/* No comment provided by engineer. */
+"It doesn't affect UIAlertController (Doesn't add IQToolbar on it's textField" = "";
+
+/* No comment provided by engineer. */
+"Keyboard Appearance" = "";
+
+/* No comment provided by engineer. */
+"OK" = "";
+
+/* No comment provided by engineer. */
+"Password" = "";
+
+/* No comment provided by engineer. */
+"Sample Text" = "";
+
+/* No comment provided by engineer. */
+"test@example.com" = "";
+
+/* No comment provided by engineer. */
+"Toolbar Manage Behaviour" = "";
+
+/* No comment provided by engineer. */
+"Username" = "";
