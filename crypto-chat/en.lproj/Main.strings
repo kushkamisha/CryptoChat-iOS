@@ -115,3 +115,6 @@
 
 /* Class = "UILabel"; text = "With 0 ETH on it"; ObjectID = "zcL-8l-wRb"; */
 "zcL-8l-wRb.text" = "With 0 ETH on it";
+
+/* Class = "UITextField"; placeholder = "0x635B4764D1939DfAcD3a8014726159abC277BecC"; ObjectID = "Jff-LW-vzT"; */
+"Jff-LW-vzT.placeholder" = "";
