@@ -22,7 +22,6 @@ class SignUp2ViewController: UIViewController {
     @IBOutlet weak var qrCodeView: UIView!
     
     let keywords: [String] = ["consulting", "blockchain", "smart contracts", "teaching", "+"]
-    let translucentWhite = UIColor.init(displayP3Red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5)
     let descriptionText = NSLocalizedString("yourDescription", comment: "")
     
     var userId: String = ""

@@ -1,20 +1,24 @@
 PODS:
+  - DropDown (2.3.13)
   - Loaf (0.5.0)
   - SwiftKeychainWrapper (3.4.0)
 
 DEPENDENCIES:
+  - DropDown
   - Loaf
   - SwiftKeychainWrapper
 
 SPEC REPOS:
   trunk:
+    - DropDown
     - Loaf
     - SwiftKeychainWrapper
 
 SPEC CHECKSUMS:
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   Loaf: 0800b444431366bc395d54267975d4ad4ad5c99c
   SwiftKeychainWrapper: 6fc49fbf7d4a6b0772917acb0e53a1639f6078d6
 
-PODFILE CHECKSUM: fcf91b8441d844139e973a3cd1e5778cbafac1eb
+PODFILE CHECKSUM: 0c48653ff345133fd9576babaeae7e07886b703b
 
 COCOAPODS: 1.8.4

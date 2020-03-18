@@ -1,3 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-crypto-chat/Pods-crypto-chat-frameworks.sh
+${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework
 ${BUILT_PRODUCTS_DIR}/Loaf/Loaf.framework
 ${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework

@@ -6,6 +6,7 @@ target 'crypto-chat' do
   use_frameworks!
   pod 'Loaf'
   pod 'SwiftKeychainWrapper'
+  pod 'DropDown'
   
 end
 
