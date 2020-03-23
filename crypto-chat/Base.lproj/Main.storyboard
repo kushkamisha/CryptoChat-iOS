@@ -1611,10 +1611,10 @@
                                         <rect key="frame" x="343" y="0.0" width="26" height="28"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="in-out-arrows" translatesAutoresizingMaskIntoConstraints="NO" id="gNf-PE-atK">
-                                                <rect key="frame" x="5.5" y="7" width="15" height="15"/>
+                                                <rect key="frame" x="3" y="4.5" width="20" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="15" id="T6S-kh-dVE"/>
-                                                    <constraint firstAttribute="width" constant="15" id="zCJ-uQ-c0T"/>
+                                                    <constraint firstAttribute="height" constant="20" id="T6S-kh-dVE"/>
+                                                    <constraint firstAttribute="width" constant="20" id="zCJ-uQ-c0T"/>
                                                 </constraints>
                                             </imageView>
                                         </subviews>
@@ -1680,13 +1680,6 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="in-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="7uW-Xs-8A3">
-                                                    <rect key="frame" x="350" y="5" width="12" height="12"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="12" id="184-zb-EVJ"/>
-                                                        <constraint firstAttribute="width" constant="12" id="JlO-Zw-3RM"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OS1-7p-2EV">
                                                     <rect key="frame" x="377" y="2" width="66" height="18"/>
                                                     <constraints>
@@ -1696,9 +1689,16 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="in-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="7uW-Xs-8A3">
+                                                    <rect key="frame" x="346" y="1" width="20" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="184-zb-EVJ"/>
+                                                        <constraint firstAttribute="width" constant="20" id="JlO-Zw-3RM"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="OS1-7p-2EV" firstAttribute="leading" secondItem="7uW-Xs-8A3" secondAttribute="trailing" constant="15" id="KQM-WP-lKy"/>
+                                                <constraint firstItem="OS1-7p-2EV" firstAttribute="leading" secondItem="7uW-Xs-8A3" secondAttribute="trailing" constant="11" id="KQM-WP-lKy"/>
                                                 <constraint firstItem="021-n6-d8J" firstAttribute="centerY" secondItem="bzj-k9-77N" secondAttribute="centerY" id="OMa-Al-xjZ"/>
                                                 <constraint firstItem="7uW-Xs-8A3" firstAttribute="centerY" secondItem="bzj-k9-77N" secondAttribute="centerY" id="PfU-Cx-YCf"/>
                                                 <constraint firstItem="OS1-7p-2EV" firstAttribute="trailing" secondItem="bzj-k9-77N" secondAttribute="trailingMargin" id="Rns-rx-ofL"/>
@@ -1706,7 +1706,7 @@
                                                 <constraint firstItem="021-n6-d8J" firstAttribute="centerY" secondItem="bzj-k9-77N" secondAttribute="centerY" id="q3N-J1-gLz"/>
                                                 <constraint firstItem="OS1-7p-2EV" firstAttribute="centerY" secondItem="bzj-k9-77N" secondAttribute="centerY" id="qO3-kd-OZa"/>
                                                 <constraint firstItem="021-n6-d8J" firstAttribute="leading" secondItem="Kt0-hN-5wJ" secondAttribute="trailing" constant="15" id="tpu-Qp-gE4"/>
-                                                <constraint firstItem="7uW-Xs-8A3" firstAttribute="leading" secondItem="021-n6-d8J" secondAttribute="trailing" constant="15" id="tzI-cE-tKR"/>
+                                                <constraint firstItem="7uW-Xs-8A3" firstAttribute="leading" secondItem="021-n6-d8J" secondAttribute="trailing" constant="11" id="tzI-cE-tKR"/>
                                                 <constraint firstItem="Kt0-hN-5wJ" firstAttribute="leading" secondItem="bzj-k9-77N" secondAttribute="leadingMargin" id="yJT-By-feB"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -1779,7 +1779,7 @@
         <image name="calendar" width="22" height="23.5"/>
         <image name="filter" width="25" height="20"/>
         <image name="in-arrow" width="12" height="12"/>
-        <image name="in-out-arrows" width="12.5" height="17"/>
+        <image name="in-out-arrows" width="18" height="18.5"/>
         <image name="send message" width="25" height="25"/>
         <image name="settings" width="25" height="25"/>
         <image name="upload-photo" width="192.5" height="279.5"/>

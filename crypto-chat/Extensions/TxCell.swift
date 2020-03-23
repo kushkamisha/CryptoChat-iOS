@@ -37,7 +37,7 @@ class TxCell: UITableViewCell {
     func setTx(tx: Tx) {
         date.text = tx.date
         userName.text = tx.userName
-//        txDirectionImg
+        txDirectionImg.image = tx.direction == "in" ? #imageLiteral(resourceName: "in-arrow") : #imageLiteral(resourceName: "out-arrow")
         amount.text = tx.amount
     }
 

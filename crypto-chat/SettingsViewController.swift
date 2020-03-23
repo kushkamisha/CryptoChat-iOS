@@ -25,9 +25,9 @@ class SettingsViewController: UIViewController {
     var currentLangCode: String = Locale.current.languageCode ?? ""
     let txs: [Tx] = [
         Tx(date: "15 June 2015 99:99:99", userName: "David Coperfield", direction: "in", amount: "0.00000"),
+        Tx(date: "15 June 2015 99:99:99", userName: "David Coperfield", direction: "out", amount: "0.00000"),
         Tx(date: "15 June 2015 99:99:99", userName: "David Coperfield", direction: "in", amount: "0.00000"),
-        Tx(date: "15 June 2015 99:99:99", userName: "David Coperfield", direction: "in", amount: "0.00000"),
-        Tx(date: "15 June 2015 99:99:99", userName: "David Coperfield", direction: "in", amount: "0.00000"),
+        Tx(date: "15 June 2015 99:99:99", userName: "David Coperfield", direction: "out", amount: "0.00000"),
         Tx(date: "15 June 2015 99:99:99", userName: "David Coperfield", direction: "in", amount: "0.00000")
     ]
     
