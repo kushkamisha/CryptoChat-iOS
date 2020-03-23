@@ -1512,22 +1512,18 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IHb-Ik-85x">
-                                        <rect key="frame" x="0.0" y="397" width="346" height="87"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="346" id="Rp4-a8-iaj"/>
-                                            <constraint firstAttribute="height" constant="87" id="hMS-a0-t9J"/>
-                                        </constraints>
-                                    </pickerView>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fJr-SM-b6y">
-                                        <rect key="frame" x="0.0" y="484" width="346" height="32"/>
+                                        <rect key="frame" x="0.0" y="405" width="346" height="32"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="346" id="Z3H-g1-hp5"/>
+                                            <constraint firstAttribute="width" constant="346" id="UU3-TL-uEc"/>
                                         </constraints>
                                         <segments>
                                             <segment title="Українська"/>
                                             <segment title="English"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="changeLang:" destination="9CV-zH-N0a" eventType="valueChanged" id="nPj-LN-pxd"/>
+                                        </connections>
                                     </segmentedControl>
                                 </subviews>
                                 <constraints>
@@ -1536,7 +1532,6 @@
                                     <constraint firstAttribute="trailing" secondItem="n9L-CM-OJe" secondAttribute="trailing" id="9fj-3M-Jvw"/>
                                     <constraint firstItem="ZUR-vP-dzF" firstAttribute="leading" secondItem="dWH-R2-lUr" secondAttribute="leading" id="AUX-Pq-QaU"/>
                                     <constraint firstAttribute="bottom" secondItem="ZUR-vP-dzF" secondAttribute="bottom" constant="185" id="Byb-xt-LsD"/>
-                                    <constraint firstItem="fJr-SM-b6y" firstAttribute="top" secondItem="IHb-Ik-85x" secondAttribute="bottom" id="Bye-OO-Pv8"/>
                                     <constraint firstItem="acw-Z6-ydw" firstAttribute="top" secondItem="M3b-IP-ffJ" secondAttribute="bottom" constant="24" id="DJJ-sP-kpP"/>
                                     <constraint firstAttribute="width" constant="346" id="Lze-WJ-aDD"/>
                                     <constraint firstItem="ZUR-vP-dzF" firstAttribute="top" secondItem="acw-Z6-ydw" secondAttribute="bottom" constant="24" id="VQz-zm-34p"/>
@@ -1546,14 +1541,13 @@
                                     <constraint firstItem="5Jz-CV-gop" firstAttribute="leading" secondItem="M3b-IP-ffJ" secondAttribute="trailing" constant="8" symbolic="YES" id="bNR-hr-Dau"/>
                                     <constraint firstItem="M3b-IP-ffJ" firstAttribute="top" secondItem="dWH-R2-lUr" secondAttribute="top" constant="20" symbolic="YES" id="d2Q-MC-2yT"/>
                                     <constraint firstItem="acw-Z6-ydw" firstAttribute="leading" secondItem="dWH-R2-lUr" secondAttribute="leading" id="eta-2H-tmh"/>
-                                    <constraint firstItem="IHb-Ik-85x" firstAttribute="centerX" secondItem="dWH-R2-lUr" secondAttribute="centerX" id="gAR-Ir-Q9n"/>
+                                    <constraint firstItem="fJr-SM-b6y" firstAttribute="centerX" secondItem="dWH-R2-lUr" secondAttribute="centerX" id="fLE-1s-n7P"/>
                                     <constraint firstItem="5Jz-CV-gop" firstAttribute="top" secondItem="dWH-R2-lUr" secondAttribute="top" constant="40" id="iQm-h8-6Ra"/>
                                     <constraint firstItem="ZUR-vP-dzF" firstAttribute="top" secondItem="acw-Z6-ydw" secondAttribute="bottom" constant="24" id="jkD-yI-0BZ"/>
+                                    <constraint firstItem="fJr-SM-b6y" firstAttribute="top" secondItem="oFT-HB-NFy" secondAttribute="bottom" constant="8" symbolic="YES" id="lyE-Aj-ugX"/>
                                     <constraint firstItem="M3b-IP-ffJ" firstAttribute="leading" secondItem="dWH-R2-lUr" secondAttribute="leading" constant="20" id="mzq-aP-cst"/>
                                     <constraint firstItem="n9L-CM-OJe" firstAttribute="leading" secondItem="M3b-IP-ffJ" secondAttribute="trailing" constant="8" symbolic="YES" id="o19-gX-je0"/>
-                                    <constraint firstItem="fJr-SM-b6y" firstAttribute="centerX" secondItem="dWH-R2-lUr" secondAttribute="centerX" id="oVA-4f-e1b"/>
                                     <constraint firstAttribute="height" constant="540" id="p3f-lZ-ahj"/>
-                                    <constraint firstItem="IHb-Ik-85x" firstAttribute="top" secondItem="oFT-HB-NFy" secondAttribute="bottom" id="vTf-S4-hYB"/>
                                     <constraint firstAttribute="trailing" secondItem="acw-Z6-ydw" secondAttribute="trailing" id="vzf-sy-3Pc"/>
                                 </constraints>
                             </view>
@@ -1578,7 +1572,6 @@
                         <outlet property="descriptionTextView" destination="W18-eg-UWF" id="xG0-6O-aUf"/>
                         <outlet property="descriptionTitleView" destination="w69-Oh-20S" id="YMy-6E-YKl"/>
                         <outlet property="keywordsCollectionView" destination="acw-Z6-ydw" id="Xdc-es-O0A"/>
-                        <outlet property="langPicker" destination="IHb-Ik-85x" id="QbL-o4-uwg"/>
                         <outlet property="langSegmentedControl" destination="fJr-SM-b6y" id="eZw-pd-NHc"/>
                     </connections>
                 </viewController>

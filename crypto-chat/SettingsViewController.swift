@@ -13,7 +13,6 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var keywordsCollectionView: UICollectionView!
     @IBOutlet weak var descriptionTitleView: UIView!
     @IBOutlet weak var descriptionTextView: UITextView!
-    @IBOutlet weak var langPicker: UIPickerView!
     @IBOutlet weak var langSegmentedControl: UISegmentedControl!
     
     let descriptionText = NSLocalizedString("noDescription", comment: "")
@@ -33,4 +32,28 @@ class SettingsViewController: UIViewController {
         setupInputFields()
     }
     
+    @IBAction func changeLang(_ sender: Any) {
+        if currentLangCode != languages[langSegmentedControl.selectedSegmentIndex][1] {
+            currentLangCode = languages[langSegmentedControl.selectedSegmentIndex][1]
+            print("The language was changed")
+            UserDefaults.standard.set([currentLangCode], forKey: "AppleLanguages")
+            UserDefaults.standard.synchronize()
+            
+            // Alert to restart app to change the app language
+            let alertController = UIAlertController(title: NSLocalizedString("langChange", comment: ""), message: NSLocalizedString("langChangeDescr", comment: ""), preferredStyle: .alert)
+            let okAction = UIAlertAction(title: NSLocalizedString("yes", comment: ""), style: UIAlertAction.Style.default) {
+                UIAlertAction in
+                NSLog("OK Pressed")
+                exit(0)
+            }
+            let cancelAction = UIAlertAction(title: NSLocalizedString("restartLater", comment: ""), style: UIAlertAction.Style.cancel) {
+                UIAlertAction in
+                NSLog("Cancel Pressed")
+            }
+            alertController.addAction(okAction)
+            alertController.addAction(cancelAction)
+            self.present(alertController, animated: true, completion: nil)
+        }
+        print(currentLangCode)
+    }
 }
