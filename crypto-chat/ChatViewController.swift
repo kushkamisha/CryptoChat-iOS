@@ -60,6 +60,11 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
         refreshControl.endRefreshing()
     }
     
+    @IBAction func goToSettings(_ sender: Any) {
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SettingsScreen") as! SettingsViewController
+        self.present(vc, animated: true, completion: nil)
+    }
+    
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
         //return UIStatusBarStyle.default   // Make dark again
