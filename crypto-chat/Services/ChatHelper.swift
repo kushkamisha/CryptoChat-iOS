@@ -15,7 +15,7 @@ extension ChatViewController {
     
     func establishSocketConnection() {
         // Establish a socket connection
-        self.socket = Socket.init(token: self.jwt)
+        self.socket = Socket.init(token: jwt)
         self.socket.connect()
     }
     
@@ -24,7 +24,7 @@ extension ChatViewController {
             print("event new-message")
             let message = JSON(data)[0]
             print(message)
-            if message["userId"].stringValue != self.userId && message["chatId"].stringValue == self.selectedChat.chatId {
+            if message["userId"].stringValue != userId && message["chatId"].stringValue == self.selectedChat.chatId {
                 self.msgs.append(Message(
                     msgId: message["msgId"].stringValue,
                     userId: message["userId"].stringValue,
@@ -42,7 +42,7 @@ extension ChatViewController {
     func loadChats() {
         // Send request to load chats to the server
         AF.request("http://localhost:8080/chat/chatList",
-                   parameters: ["token": self.jwt]).responseJSON { response in
+                   parameters: ["token": jwt]).responseJSON { response in
             switch response.result {
                 case .success(let data):
                     let chats = JSON(data)["chats"]
@@ -65,7 +65,7 @@ extension ChatViewController {
                                 chatTypeSelectedImage = #imageLiteral(resourceName: "unlocked white")
                                 break
                             case "paying":
-                                if self.userId == chat["fromUser"].stringValue {
+                                if userId == chat["fromUser"].stringValue {
                                     chatTypeImage = #imageLiteral(resourceName: "ethereum-out-purple")
                                     chatTypeSelectedImage = #imageLiteral(resourceName: "ethereum-out-white")
                                 } else {
@@ -102,7 +102,7 @@ extension ChatViewController {
     func getMessages(chat: Chat) {
         AF.request("http://localhost:8080/chat/messages",
                    parameters: [
-                       "token": self.jwt,
+                       "token": jwt,
                        "chatId": self.selectedChat.chatId
                    ]).responseJSON { response in
             switch response.result {
@@ -132,14 +132,14 @@ extension ChatViewController {
     func pay4Msgs() {
         let chatType = self.selectedChat.chatType
         let fromUserId = self.selectedChat.fromUser
-        if (chatType == "paying" && fromUserId == self.userId) {
+        if (chatType == "paying" && fromUserId == userId) {
             print("paying chat")
 
             var totalAmount = 0.0
             var lastMsgId = ""
             var lastUserId = ""
             for msg in self.msgs {
-                if (msg.userId != self.userId && !msg.isRead) {
+                if (msg.userId != userId && !msg.isRead) {
                     print("msg.msg: \(msg.msg)")
                     msg.isRead = true
                     totalAmount += Double(msg.msg.count) * self.CHARACTER_PRICE
@@ -158,7 +158,7 @@ extension ChatViewController {
         print("read messages")
         AF.request("http://localhost:8080/chat/readMessages",
                    method: .post,
-                   parameters: ["token": self.jwt, "chatId": self.selectedChat.chatId],
+                   parameters: ["token": jwt, "chatId": self.selectedChat.chatId],
                    encoder: JSONParameterEncoder.default).responseJSON { status in
             print(status)
         }
@@ -167,7 +167,7 @@ extension ChatViewController {
     func sendMessage(chatId: String, message: String) {
         AF.request("http://localhost:8080/chat/message",
                    method: .post,
-                   parameters: ["token": self.jwt, "chatId": chatId, "message": message],
+                   parameters: ["token": jwt, "chatId": chatId, "message": message],
                    encoder: JSONParameterEncoder.default).responseJSON { status in
             print(status)
         }
@@ -183,7 +183,7 @@ extension ChatViewController {
         AF.request("http://localhost:8080/bc/signTransferByUserId",
                    method: .post,
                    parameters: [
-                       "token": self.jwt,
+                       "token": jwt,
                        "msgId": msgId,
                        "toUserId": toUser,
                        "amount": String(amount * 1000000000000000000),

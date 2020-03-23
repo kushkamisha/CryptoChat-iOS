@@ -85,8 +85,7 @@ extension SignUp2ViewController: UICollectionViewDataSource, UICollectionViewDel
                     if (status == "success") {
                         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "MessagesScreen") as! ChatViewController
                         vc.modalPresentationStyle = .fullScreen
-                        vc.jwt = self.token
-                        vc.userId = self.userId
+                        jwt = self.token
                         self.present(vc, animated: true, completion: nil)
                     } else {
                         Loaf(NSLocalizedString("signup2Error", comment: ""), state: .error, sender: self).show()

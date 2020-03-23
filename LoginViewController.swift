@@ -64,10 +64,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     let status = dict["status"] as! String
                     print(dict)
                     if (status == "success") {
+                        // Save as global variables
+                        jwt = dict["token"] as! String
+                        userId = "\(dict["userId"]!)"
+
                         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "MessagesScreen") as! ChatViewController
                         vc.modalPresentationStyle = .fullScreen
-                        vc.jwt = dict["token"] as! String
-                        vc.userId = "\(dict["userId"]!)"
                         self.present(vc, animated: true, completion: nil)
                     } else {
                         Loaf(NSLocalizedString("loginError", comment: ""), state: .error, sender: self).show()

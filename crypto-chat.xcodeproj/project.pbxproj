@@ -38,6 +38,7 @@
 		52731C6023ECA6E2009A6C2A /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52731C5F23ECA6E2009A6C2A /* UIViewController.swift */; };
 		529018872428D32A0029BF8F /* TxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529018862428D32A0029BF8F /* TxCell.swift */; };
 		529018892428D3A50029BF8F /* Tx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529018882428D3A50029BF8F /* Tx.swift */; };
+		5290188B242913A50029BF8F /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5290188A242913A50029BF8F /* Globals.swift */; };
 		529180C923F59C7100BD6751 /* UILabel.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529180C823F59C7100BD6751 /* UILabel.ext.swift */; };
 		52924352240E7ADA00962773 /* SignUp2Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52924351240E7ADA00962773 /* SignUp2Helper.swift */; };
 		529B7C8B2403F75B00C32272 /* ChatTables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B7C8A2403F75B00C32272 /* ChatTables.swift */; };
@@ -135,6 +136,7 @@
 		5287030923FEA260004DB7EC /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
 		529018862428D32A0029BF8F /* TxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TxCell.swift; sourceTree = "<group>"; };
 		529018882428D3A50029BF8F /* Tx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tx.swift; sourceTree = "<group>"; };
+		5290188A242913A50029BF8F /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		529180C823F59C7100BD6751 /* UILabel.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.ext.swift; sourceTree = "<group>"; };
 		52924351240E7ADA00962773 /* SignUp2Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp2Helper.swift; sourceTree = "<group>"; };
 		529B7C8A2403F75B00C32272 /* ChatTables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTables.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 				5228DEC723E9DA5700D4F08B /* Extensions */,
 				52731C5E23ECA377009A6C2A /* ViewControllers */,
 				5228DE8D23E9BC6A00D4F08B /* AppDelegate.swift */,
+				5290188A242913A50029BF8F /* Globals.swift */,
 				5228DE8F23E9BC6A00D4F08B /* SceneDelegate.swift */,
 				5228DE9323E9BC6A00D4F08B /* Main.storyboard */,
 				5228DE9623E9BC6C00D4F08B /* Assets.xcassets */,
@@ -539,6 +542,7 @@
 				52FF99E123FE92C9000758A6 /* Socket.swift in Sources */,
 				529018872428D32A0029BF8F /* TxCell.swift in Sources */,
 				5248085923F5CE6700700620 /* MessageLeftCell.swift in Sources */,
+				5290188B242913A50029BF8F /* Globals.swift in Sources */,
 				5225A4D323F2B3DC00EB677B /* ChatCell.swift in Sources */,
 				5225A4D723F2EBC800EB677B /* TableViewCell.ext.swift in Sources */,
 				5228DEC623E9D6AB00D4F08B /* LoginViewController.swift in Sources */,

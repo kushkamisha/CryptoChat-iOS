@@ -27,7 +27,7 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
         }
         
         let msg = msgs[indexPath.row]
-        if (msg.userId == self.userId) {
+        if (msg.userId == userId) {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MessageRightCell") as! MessageRightCell
             cell.setMessage(message: msg)
             return cell

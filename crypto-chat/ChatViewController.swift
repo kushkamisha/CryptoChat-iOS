@@ -34,13 +34,13 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var sendMessageButton: UIButton!
     @IBOutlet weak var sendMessageView: UIView!
     
-    var userId: String = ""
+//    var userId: String = ""
     var username: String = ""
     var selectedChat: Chat = Chat(chatId: "", socketId: "", name: "", chatType: "", fromUser: "", avatar: UIImage(), chatTypeImage: UIImage(), chatTypeSelectedImage: UIImage())
     var chats: [Chat] = []
     var msgs: [Message] = []
     var socket: Socket!
-    var jwt: String = ""
+//    var jwt: String = ""
     var chatSelected: Bool = false
     let CHARACTER_PRICE = 0.00001 // ETH = about $0.001
     
@@ -120,7 +120,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
             let hour = calendar.component(.hour, from: date)
             let minutes = calendar.component(.minute, from: date)
             
-            msgs.append(Message(msgId: "", userId: self.userId, msg: msg, isRead: false, time: "\(hour):\(minutes)"))
+            msgs.append(Message(msgId: "", userId: userId, msg: msg, isRead: false, time: "\(hour):\(minutes)"))
             
             sendMessageTextField.text = ""
             updateMessages()
