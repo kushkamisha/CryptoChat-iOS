@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Round corners
+ */
 extension UIView
 {
     func roundCorners(corners:UIRectCorner, radius: CGFloat)

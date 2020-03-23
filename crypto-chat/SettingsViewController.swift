@@ -37,6 +37,10 @@ class SettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(rightSwipeAction(swipe:)))
+        rightSwipe.direction = UISwipeGestureRecognizer.Direction.right
+        self.view.addGestureRecognizer(rightSwipe)
 
         setStatusBarBackgroundColor(color : purple)
         self.view.backgroundColor = purple
@@ -69,5 +73,12 @@ class SettingsViewController: UIViewController {
             self.present(alertController, animated: true, completion: nil)
         }
         print(currentLangCode)
+    }
+    
+    @objc func rightSwipeAction(swipe: UISwipeGestureRecognizer) {
+        NSLog("right swipe action")
+        
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "MessagesScreen") as! ChatViewController
+        self.present(vc, animated: true, completion: nil)
     }
 }

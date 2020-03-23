@@ -19,7 +19,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="mQ7-Bv-H2h">
             <objects>
-                <viewController storyboardIdentifier="SignUpScreen" id="mEa-Ob-iEM" customClass="SignUpViewController" customModule="Crypto_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpScreen" modalPresentationStyle="fullScreen" id="mEa-Ob-iEM" customClass="SignUpViewController" customModule="Crypto_Chat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bKb-Lt-7GA">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -493,7 +493,7 @@
         <!--Sign Up2 View Controller-->
         <scene sceneID="IOn-6G-Vc9">
             <objects>
-                <viewController storyboardIdentifier="SignUp2Screen" id="5b0-f5-cpD" customClass="SignUp2ViewController" customModule="Crypto_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUp2Screen" modalPresentationStyle="fullScreen" id="5b0-f5-cpD" customClass="SignUp2ViewController" customModule="Crypto_Chat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sMr-zA-hbu">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -774,7 +774,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Crypto_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Crypto_Chat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -987,7 +987,7 @@
         <!--Chat View Controller-->
         <scene sceneID="ekY-yw-uKf">
             <objects>
-                <viewController storyboardIdentifier="MessagesScreen" id="7c5-gH-Y0g" customClass="ChatViewController" customModule="Crypto_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MessagesScreen" wantsFullScreenLayout="YES" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="7c5-gH-Y0g" customClass="ChatViewController" customModule="Crypto_Chat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jaa-ii-CgZ">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1384,7 +1384,7 @@
         <!--Settings View Controller-->
         <scene sceneID="CWf-C2-EUp">
             <objects>
-                <viewController id="9CV-zH-N0a" customClass="SettingsViewController" customModule="Crypto_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="9CV-zH-N0a" customClass="SettingsViewController" customModule="Crypto_Chat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K2X-eB-eoM">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
