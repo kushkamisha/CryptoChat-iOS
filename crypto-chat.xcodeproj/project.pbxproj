@@ -36,6 +36,8 @@
 		525691E123EB360700DB09D9 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525691E023EB360700DB09D9 /* ChatViewController.swift */; };
 		525691E323EB443000DB09D9 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525691E223EB443000DB09D9 /* Utils.swift */; };
 		52731C6023ECA6E2009A6C2A /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52731C5F23ECA6E2009A6C2A /* UIViewController.swift */; };
+		529018872428D32A0029BF8F /* TxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529018862428D32A0029BF8F /* TxCell.swift */; };
+		529018892428D3A50029BF8F /* Tx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529018882428D3A50029BF8F /* Tx.swift */; };
 		529180C923F59C7100BD6751 /* UILabel.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529180C823F59C7100BD6751 /* UILabel.ext.swift */; };
 		52924352240E7ADA00962773 /* SignUp2Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52924351240E7ADA00962773 /* SignUp2Helper.swift */; };
 		529B7C8B2403F75B00C32272 /* ChatTables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529B7C8A2403F75B00C32272 /* ChatTables.swift */; };
@@ -131,6 +133,8 @@
 		525691E223EB443000DB09D9 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		52731C5F23ECA6E2009A6C2A /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		5287030923FEA260004DB7EC /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
+		529018862428D32A0029BF8F /* TxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TxCell.swift; sourceTree = "<group>"; };
+		529018882428D3A50029BF8F /* Tx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tx.swift; sourceTree = "<group>"; };
 		529180C823F59C7100BD6751 /* UILabel.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.ext.swift; sourceTree = "<group>"; };
 		52924351240E7ADA00962773 /* SignUp2Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp2Helper.swift; sourceTree = "<group>"; };
 		529B7C8A2403F75B00C32272 /* ChatTables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTables.swift; sourceTree = "<group>"; };
@@ -279,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				5225A4D223F2B3DC00EB677B /* ChatCell.swift */,
+				529018862428D32A0029BF8F /* TxCell.swift */,
 				5225A4D623F2EBC800EB677B /* TableViewCell.ext.swift */,
 				5225585B24082C9E00357C09 /* KeywordCell.swift */,
 				52E1EB9E23F46BCD008BA69E /* MessageRightCell.swift */,
@@ -311,6 +316,7 @@
 				5225A4D423F2B53E00EB677B /* Chat.swift */,
 				52E1EBA023F473F8008BA69E /* Message.swift */,
 				52C9C4E6240D5601002B3953 /* UserData.swift */,
+				529018882428D3A50029BF8F /* Tx.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -531,6 +537,7 @@
 				529B7C922404005700C32272 /* ChatHelper.swift in Sources */,
 				52122E5F242271EB007D0736 /* Colors.swift in Sources */,
 				52FF99E123FE92C9000758A6 /* Socket.swift in Sources */,
+				529018872428D32A0029BF8F /* TxCell.swift in Sources */,
 				5248085923F5CE6700700620 /* MessageLeftCell.swift in Sources */,
 				5225A4D323F2B3DC00EB677B /* ChatCell.swift in Sources */,
 				5225A4D723F2EBC800EB677B /* TableViewCell.ext.swift in Sources */,
@@ -542,6 +549,7 @@
 				529180C923F59C7100BD6751 /* UILabel.ext.swift in Sources */,
 				52E1EB9F23F46BCD008BA69E /* MessageRightCell.swift in Sources */,
 				52C9C4E7240D5601002B3953 /* UserData.swift in Sources */,
+				529018892428D3A50029BF8F /* Tx.swift in Sources */,
 				525691E323EB443000DB09D9 /* Utils.swift in Sources */,
 				5228DE8E23E9BC6A00D4F08B /* AppDelegate.swift in Sources */,
 				52731C6023ECA6E2009A6C2A /* UIViewController.swift in Sources */,
