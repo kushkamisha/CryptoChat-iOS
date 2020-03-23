@@ -27,7 +27,7 @@
 "langChange" = "Language change";
 
 /* No comment provided by engineer. */
-"langChangeDescr" = "To change the language you need to restart application, do you want to restart?";
+"langChangeDescr" = "To change the language you need\nto restart application\n Continue?";
 
 /* No comment provided by engineer. */
 "loginError" = "Email or password is incorrect. Please, try again";

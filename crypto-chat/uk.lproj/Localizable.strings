@@ -27,7 +27,7 @@
 "langChange" = "Зміна мови";
 
 /* No comment provided by engineer. */
-"langChangeDescr" = "Для зміни мови потрібно перезапустити додаток, продовжити?";
+"langChangeDescr" = "Для зміни мови потрібно \nперезапустити додаток\nПродовжити?";
 
 /* No comment provided by engineer. */
 "loginError" = "Неправильний логін або пароль, спробуйте знову";

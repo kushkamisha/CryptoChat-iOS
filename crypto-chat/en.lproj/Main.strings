@@ -116,6 +116,9 @@
 /* Class = "UILabel"; text = "With 0 ETH on it"; ObjectID = "zcL-8l-wRb"; */
 "zcL-8l-wRb.text" = "With 0 ETH on it";
 
+/* Class = "UILabel"; text = "David Coperfield"; ObjectID = "021-n6-d8J"; */
+"021-n6-d8J.text" = "";
+
 /* Class = "UILabel"; text = "John Doe"; ObjectID = "5Jz-CV-gop"; */
 "5Jz-CV-gop.text" = "";
 
@@ -125,11 +128,23 @@
 /* Class = "UIButton"; normalTitle = "Withdraw funds"; ObjectID = "bxE-AI-2aM"; */
 "bxE-AI-2aM.normalTitle" = "";
 
+/* Class = "UILabel"; text = "Amount"; ObjectID = "EOT-aY-kve"; */
+"EOT-aY-kve.text" = "";
+
 /* Class = "UISegmentedControl"; fJr-SM-b6y.segmentTitles[0] = "Українська"; ObjectID = "fJr-SM-b6y"; */
 "fJr-SM-b6y.segmentTitles[0]" = "";
 
 /* Class = "UISegmentedControl"; fJr-SM-b6y.segmentTitles[1] = "English"; ObjectID = "fJr-SM-b6y"; */
 "fJr-SM-b6y.segmentTitles[1]" = "";
+
+/* Class = "UIButton"; normalTitle = "Publish micropayment"; ObjectID = "h29-ye-xRW"; */
+"h29-ye-xRW.normalTitle" = "";
+
+/* Class = "UILabel"; text = "Date"; ObjectID = "Hcl-QG-dIW"; */
+"Hcl-QG-dIW.text" = "";
+
+/* Class = "UILabel"; text = "00 Jan 0000 00:00:00"; ObjectID = "Kt0-hN-5wJ"; */
+"Kt0-hN-5wJ.text" = "";
 
 /* Class = "UILabel"; text = "15 June 1985"; ObjectID = "n9L-CM-OJe"; */
 "n9L-CM-OJe.text" = "";
@@ -137,11 +152,17 @@
 /* Class = "UILabel"; text = "Your interface language"; ObjectID = "oFT-HB-NFy"; */
 "oFT-HB-NFy.text" = "";
 
+/* Class = "UILabel"; text = "0.00000"; ObjectID = "OS1-7p-2EV"; */
+"OS1-7p-2EV.text" = "";
+
 /* Class = "UILabel"; text = "Your balance is 0 ETH"; ObjectID = "w0a-2y-7C9"; */
 "w0a-2y-7C9.text" = "";
 
 /* Class = "UILabel"; text = "Description"; ObjectID = "YCJ-0v-GTU"; */
 "YCJ-0v-GTU.text" = "";
+
+/* Class = "UILabel"; text = "User Name"; ObjectID = "ZQo-Hh-jCL"; */
+"ZQo-Hh-jCL.text" = "";
 
 /* Class = "UILabel"; text = "label"; ObjectID = "zTM-mX-hC4"; */
 "zTM-mX-hC4.text" = "";
