@@ -17,10 +17,16 @@ extension SettingsViewController: UICollectionViewDataSource, UICollectionViewDe
         return txs.count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 30
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tx = txs[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "TxCell") as! TxCell
         cell.setTx(tx: tx)
+        
+        cell.backgroundColor = indexPath.row % 2 == 0 ? purple : UIColor.init(red: 1, green: 1, blue: 1, alpha: 0.1)
         
         return cell
     }
@@ -28,6 +34,9 @@ extension SettingsViewController: UICollectionViewDataSource, UICollectionViewDe
      Txs table end
      */
     
+    /**
+     Keywords collection start
+     */
     // Number of views
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return keywords.count
@@ -41,10 +50,14 @@ extension SettingsViewController: UICollectionViewDataSource, UICollectionViewDe
         
         return cell
     }
+    /**
+     Keywords collection end
+     */
     
     func setupInputFields() {
         self.txTableView.delegate = self
         self.txTableView.dataSource = self
+        self.txTableView.backgroundColor = purple
         
         selectCorrectLang()
         

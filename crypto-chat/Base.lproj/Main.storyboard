@@ -1584,47 +1584,47 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kyY-Qo-lIh">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kyY-Qo-lIh">
                                 <rect key="frame" x="493" y="134" width="458" height="548"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TxCell" id="LjG-NU-DCs" customClass="TxCell" customModule="Crypto_Chat" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="458" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TxCell" rowHeight="22" id="LjG-NU-DCs" customClass="TxCell" customModule="Crypto_Chat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="458" height="22"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LjG-NU-DCs" id="bzj-k9-77N">
-                                            <rect key="frame" x="0.0" y="0.0" width="458" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="458" height="22"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 Jan 0000 00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kt0-hN-5wJ">
-                                                    <rect key="frame" x="15" y="13" width="165" height="18"/>
+                                                    <rect key="frame" x="15" y="2" width="165" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="165" id="G3T-aL-4fJ"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="David Coperfield" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="021-n6-d8J">
-                                                    <rect key="frame" x="195" y="13" width="140" height="18"/>
+                                                    <rect key="frame" x="195" y="2" width="140" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="140" id="etg-gC-cHn"/>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="ewO-kp-JjI"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="in-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="7uW-Xs-8A3">
-                                                    <rect key="frame" x="350" y="16" width="12" height="12"/>
+                                                    <rect key="frame" x="350" y="5" width="12" height="12"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="12" id="184-zb-EVJ"/>
                                                         <constraint firstAttribute="width" constant="12" id="JlO-Zw-3RM"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OS1-7p-2EV">
-                                                    <rect key="frame" x="377" y="13" width="66" height="18"/>
+                                                    <rect key="frame" x="377" y="2" width="66" height="18"/>
                                                     <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1641,6 +1641,7 @@
                                                 <constraint firstItem="Kt0-hN-5wJ" firstAttribute="leading" secondItem="bzj-k9-77N" secondAttribute="leadingMargin" id="yJT-By-feB"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.47843137250000001" green="0.54901960780000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="amount" destination="OS1-7p-2EV" id="0Kv-uX-zf3"/>
                                             <outlet property="date" destination="Kt0-hN-5wJ" id="qwQ-CG-ffL"/>
