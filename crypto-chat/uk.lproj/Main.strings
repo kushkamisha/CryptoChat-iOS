@@ -23,6 +23,9 @@
 /* Class = "UILabel"; text = "Last Name"; ObjectID = "7eC-xs-StW"; */
 "7eC-xs-StW.text" = "Прізвище";
 
+/* Class = "UILabel"; text = "Settings"; ObjectID = "7ZP-vy-UUp"; */
+"7ZP-vy-UUp.text" = "Налаштування";
+
 /* Class = "UILabel"; text = "Help others to find you by a keyword"; ObjectID = "bME-VB-c18"; */
 "bME-VB-c18.text" = "Допоможіть знайти Вас за ключовим словом";
 
@@ -62,6 +65,9 @@
 /* Class = "UILabel"; text = "First Name"; ObjectID = "LRI-GU-POd"; */
 "LRI-GU-POd.text" = "Ім'я";
 
+/* Class = "UILabel"; text = "Your interface language"; ObjectID = "oFT-HB-NFy"; */
+"oFT-HB-NFy.text" = "Ваша мова інтерфейсу";
+
 /* Class = "UILabel"; text = "Email"; ObjectID = "OK7-AR-FEw"; */
 "OK7-AR-FEw.text" = "Емейл";
 
@@ -95,8 +101,14 @@
 /* Class = "UILabel"; text = "Pass"; ObjectID = "xUt-4t-8F4"; */
 "xUt-4t-8F4.text" = "Пароль";
 
+/* Class = "UILabel"; text = "Description"; ObjectID = "YCJ-0v-GTU"; */
+"YCJ-0v-GTU.text" = "Опис";
+
 /* Class = "UILabel"; text = "With 0 ETH on it"; ObjectID = "zcL-8l-wRb"; */
 "zcL-8l-wRb.text" = "З 0 ETH на ній";
+
+/* Class = "UILabel"; text = "John Doe"; ObjectID = "5Jz-CV-gop"; */
+"5Jz-CV-gop.text" = "";
 
 /* Class = "UILabel"; text = "Message"; ObjectID = "7Y8-36-bgr"; */
 "7Y8-36-bgr.text" = "";
@@ -110,11 +122,14 @@
 /* Class = "UILabel"; text = "9:99 AM"; ObjectID = "Ici-DB-G62"; */
 "Ici-DB-G62.text" = "";
 
-/* Class = "UITextField"; placeholder = "0x635B4764D1939DfAcD3a8014726159abC277BecC"; ObjectID = "Jff-LW-vzT"; */
-"Jff-LW-vzT.placeholder" = "";
-
 /* Class = "UILabel"; text = "9:99 AM"; ObjectID = "l5f-Cx-KZt"; */
 "l5f-Cx-KZt.text" = "";
 
+/* Class = "UILabel"; text = "15 June 1985"; ObjectID = "n9L-CM-OJe"; */
+"n9L-CM-OJe.text" = "";
+
 /* Class = "UILabel"; text = "Message"; ObjectID = "q8Z-c2-QpF"; */
 "q8Z-c2-QpF.text" = "";
+
+/* Class = "UILabel"; text = "label"; ObjectID = "zTM-mX-hC4"; */
+"zTM-mX-hC4.text" = "";

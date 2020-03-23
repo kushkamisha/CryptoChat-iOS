@@ -17,8 +17,8 @@ class SettingsViewController: UIViewController {
     
     let descriptionText = NSLocalizedString("noDescription", comment: "")
     let keywords: [String] = ["consulting", "blockchain", "smart contracts", "teaching", "+"]
-    let languages = ["Українська", "English"]
-    var currentLang: String = ""
+    let languages = [["Українська", "uk"], ["English", "en"]]
+    var currentLangCode: String = ""
     
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return UIStatusBarStyle.lightContent

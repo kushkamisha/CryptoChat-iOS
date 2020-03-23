@@ -116,5 +116,20 @@
 /* Class = "UILabel"; text = "With 0 ETH on it"; ObjectID = "zcL-8l-wRb"; */
 "zcL-8l-wRb.text" = "With 0 ETH on it";
 
-/* Class = "UITextField"; placeholder = "0x635B4764D1939DfAcD3a8014726159abC277BecC"; ObjectID = "Jff-LW-vzT"; */
-"Jff-LW-vzT.placeholder" = "";
+/* Class = "UILabel"; text = "John Doe"; ObjectID = "5Jz-CV-gop"; */
+"5Jz-CV-gop.text" = "";
+
+/* Class = "UILabel"; text = "Settings"; ObjectID = "7ZP-vy-UUp"; */
+"7ZP-vy-UUp.text" = "";
+
+/* Class = "UILabel"; text = "15 June 1985"; ObjectID = "n9L-CM-OJe"; */
+"n9L-CM-OJe.text" = "";
+
+/* Class = "UILabel"; text = "Your interface language"; ObjectID = "oFT-HB-NFy"; */
+"oFT-HB-NFy.text" = "";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "YCJ-0v-GTU"; */
+"YCJ-0v-GTU.text" = "";
+
+/* Class = "UILabel"; text = "label"; ObjectID = "zTM-mX-hC4"; */
+"zTM-mX-hC4.text" = "";

@@ -1506,7 +1506,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your interface language" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFT-HB-NFy">
                                         <rect key="frame" x="0.0" y="379" width="346" height="18"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="346" id="OWX-jt-Ug2"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="346" id="OWX-jt-Ug2"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

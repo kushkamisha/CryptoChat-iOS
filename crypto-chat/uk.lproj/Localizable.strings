@@ -33,6 +33,9 @@
 "noChatsSelected" = "Жодного чату не обрано";
 
 /* No comment provided by engineer. */
+"noDescription" = "Наразі у Вас відсутній опис...";
+
+/* No comment provided by engineer. */
 "notSameRepeatPass" = "Повторення паролю не співпадає з паролем";
 
 "Oops" = "Упс";
@@ -63,6 +66,9 @@
     - 1 спеціальний символ";
 
 /* No comment provided by engineer. */
+"yourDescription" = "Напишіть щось про свої навички...";
+
+/* No comment provided by engineer. */
 "Cancel" = "";
 
 /* No comment provided by engineer. */
@@ -87,6 +93,15 @@
 "Keyboard Appearance" = "";
 
 /* No comment provided by engineer. */
+"langChange" = "Зміна мови";
+
+/* No comment provided by engineer. */
+"langChangeDescr" = "Для зміни мови потрібно перезапустити додаток, продовжити?";
+
+"yes" = "Так";
+"restartLater" = "Пізніше";
+
+/* No comment provided by engineer. */
 "OK" = "";
 
 /* No comment provided by engineer. */
@@ -103,7 +118,3 @@
 
 /* No comment provided by engineer. */
 "Username" = "";
-
-
-"yourDescription" = "Напишіть щось про свої навички...";
-"noDescription" = "Наразі у Вас відсутній опис...";
