@@ -1588,7 +1588,7 @@
                                 <rect key="frame" x="493" y="134" width="458" height="614"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="LjG-NU-DCs" customClass="TxCell" customModule="Crypto_Chat" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TxCell" id="LjG-NU-DCs" customClass="TxCell" customModule="Crypto_Chat" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="458" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LjG-NU-DCs" id="bzj-k9-77N">
@@ -1682,6 +1682,7 @@
                         <outlet property="descriptionTitleView" destination="w69-Oh-20S" id="YMy-6E-YKl"/>
                         <outlet property="keywordsCollectionView" destination="acw-Z6-ydw" id="Xdc-es-O0A"/>
                         <outlet property="langSegmentedControl" destination="fJr-SM-b6y" id="eZw-pd-NHc"/>
+                        <outlet property="txTableView" destination="kyY-Qo-lIh" id="T1t-Ao-SSI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oRT-u3-zji" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

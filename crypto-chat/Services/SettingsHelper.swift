@@ -8,7 +8,25 @@
 
 import UIKit
 
-extension SettingsViewController: UICollectionViewDataSource, UICollectionViewDelegate, UITextViewDelegate {
+extension SettingsViewController: UICollectionViewDataSource, UICollectionViewDelegate, UITextViewDelegate, UITableViewDataSource, UITableViewDelegate {
+    
+    /**
+     Txs table start
+     */
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return txs.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let tx = txs[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TxCell") as! TxCell
+        cell.setTx(tx: tx)
+        
+        return cell
+    }
+    /**
+     Txs table end
+     */
     
     // Number of views
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -25,6 +43,9 @@ extension SettingsViewController: UICollectionViewDataSource, UICollectionViewDe
     }
     
     func setupInputFields() {
+        self.txTableView.delegate = self
+        self.txTableView.dataSource = self
+        
         selectCorrectLang()
         
         langSegmentedControl.setTitleTextAttributes([
