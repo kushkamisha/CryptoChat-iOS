@@ -13,10 +13,12 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var keywordsCollectionView: UICollectionView!
     @IBOutlet weak var descriptionTitleView: UIView!
     @IBOutlet weak var descriptionTextView: UITextView!
-    @IBOutlet weak var chooseLangButton: UIButton!
+    @IBOutlet weak var langPicker: UIPickerView!
     
     let descriptionText = NSLocalizedString("noDescription", comment: "")
     let keywords: [String] = ["consulting", "blockchain", "smart contracts", "teaching", "+"]
+    let languages = ["Українська", "English"]
+    var currentLang: String = ""
     
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
