@@ -81,6 +81,12 @@ extension SettingsViewController: UICollectionViewDataSource, UICollectionViewDe
         self.langPicker.delegate = self
         self.langPicker.dataSource = self
         
+        langSegmentedControl.setTitleTextAttributes([
+            NSAttributedString.Key.foregroundColor: UIColor.white,
+            NSAttributedString.Key.font: UIFont(name: "SF Pro Text", size: 15) ?? UIFont.systemFont(ofSize: 15)
+        ], for: .normal)
+        langSegmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: .selected)
+        
         keywordsCollectionView.backgroundColor = purple
         descriptionTitleView.roundCorners(corners: [.topLeft, .topRight], radius: 10)
         descriptionTextView.text = descriptionText
