@@ -25,11 +25,7 @@ extension SettingsViewController: UICollectionViewDataSource, UICollectionViewDe
     }
     
     func setupInputFields() {
-        for i in 0..<languages.count {
-            if languages[i][1] == currentLangCode {
-                langSegmentedControl.selectedSegmentIndex = i
-            }
-        }
+        selectCorrectLang()
         
         langSegmentedControl.setTitleTextAttributes([
             NSAttributedString.Key.foregroundColor: UIColor.white,
@@ -54,6 +50,14 @@ extension SettingsViewController: UICollectionViewDataSource, UICollectionViewDe
         if descriptionTextView.text.isEmpty {
             descriptionTextView.text = descriptionText
             descriptionTextView.textColor = translucentWhite
+        }
+    }
+    
+    func selectCorrectLang() {
+        for i in 0..<languages.count {
+            if languages[i][1] == currentLangCode {
+                langSegmentedControl.selectedSegmentIndex = i
+            }
         }
     }
 }

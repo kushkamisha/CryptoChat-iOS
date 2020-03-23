@@ -1525,6 +1525,12 @@
                                             <action selector="changeLang:" destination="9CV-zH-N0a" eventType="valueChanged" id="nPj-LN-pxd"/>
                                         </connections>
                                     </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your balance is 0 ETH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0a-2y-7C9">
+                                        <rect key="frame" x="0.0" y="460" width="346" height="18"/>
+                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="ZUR-vP-dzF" secondAttribute="trailing" id="2JG-1u-Xs5"/>
@@ -1542,9 +1548,12 @@
                                     <constraint firstItem="M3b-IP-ffJ" firstAttribute="top" secondItem="dWH-R2-lUr" secondAttribute="top" constant="20" symbolic="YES" id="d2Q-MC-2yT"/>
                                     <constraint firstItem="acw-Z6-ydw" firstAttribute="leading" secondItem="dWH-R2-lUr" secondAttribute="leading" id="eta-2H-tmh"/>
                                     <constraint firstItem="fJr-SM-b6y" firstAttribute="centerX" secondItem="dWH-R2-lUr" secondAttribute="centerX" id="fLE-1s-n7P"/>
+                                    <constraint firstAttribute="trailing" secondItem="w0a-2y-7C9" secondAttribute="trailing" id="fU3-Nl-M1d"/>
                                     <constraint firstItem="5Jz-CV-gop" firstAttribute="top" secondItem="dWH-R2-lUr" secondAttribute="top" constant="40" id="iQm-h8-6Ra"/>
                                     <constraint firstItem="ZUR-vP-dzF" firstAttribute="top" secondItem="acw-Z6-ydw" secondAttribute="bottom" constant="24" id="jkD-yI-0BZ"/>
+                                    <constraint firstItem="w0a-2y-7C9" firstAttribute="leading" secondItem="dWH-R2-lUr" secondAttribute="leading" id="koz-Ee-tOZ"/>
                                     <constraint firstItem="fJr-SM-b6y" firstAttribute="top" secondItem="oFT-HB-NFy" secondAttribute="bottom" constant="8" symbolic="YES" id="lyE-Aj-ugX"/>
+                                    <constraint firstItem="w0a-2y-7C9" firstAttribute="top" secondItem="fJr-SM-b6y" secondAttribute="bottom" constant="24" id="mQa-SV-gni"/>
                                     <constraint firstItem="M3b-IP-ffJ" firstAttribute="leading" secondItem="dWH-R2-lUr" secondAttribute="leading" constant="20" id="mzq-aP-cst"/>
                                     <constraint firstItem="n9L-CM-OJe" firstAttribute="leading" secondItem="M3b-IP-ffJ" secondAttribute="trailing" constant="8" symbolic="YES" id="o19-gX-je0"/>
                                     <constraint firstAttribute="height" constant="540" id="p3f-lZ-ahj"/>
