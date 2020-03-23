@@ -23,7 +23,15 @@ class TxCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+        if (selected) {
+            date.textColor = black
+            userName.textColor = black
+            amount.textColor = black
+        } else {
+            date.textColor = white
+            userName.textColor = white
+            amount.textColor = white
+        }
     }
     
     func setTx(tx: Tx) {

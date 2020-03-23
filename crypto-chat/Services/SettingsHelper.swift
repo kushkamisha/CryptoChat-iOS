@@ -27,6 +27,7 @@ extension SettingsViewController: UICollectionViewDataSource, UICollectionViewDe
         cell.setTx(tx: tx)
         
         cell.backgroundColor = indexPath.row % 2 == 0 ? purple : UIColor.init(red: 1, green: 1, blue: 1, alpha: 0.1)
+        cell.selectionColor = white
         
         return cell
     }

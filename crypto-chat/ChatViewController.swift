@@ -67,7 +67,6 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let purple = UIColor.init(red: 122/255, green: 140/255, blue: 255/255, alpha: 1)
         setStatusBarBackgroundColor(color : purple)
         topBarView.backgroundColor = purple
 

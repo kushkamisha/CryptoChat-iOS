@@ -32,8 +32,7 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var uploadUserPhotoButton: UIButton!
-    
-    let purple = UIColor.init(red: 122/255, green: 140/255, blue: 255/255, alpha: 1)
+
     let imagePicker = UIImagePickerController()
     
     override var preferredStatusBarStyle : UIStatusBarStyle {

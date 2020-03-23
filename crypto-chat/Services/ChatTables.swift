@@ -21,7 +21,7 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ChatCell") as! ChatCell
             cell.setChat(chat: chat)
             
-            cell.selectionColor = UIColor.init(red: 122/255, green: 140/255, blue: 255/255, alpha: 1)
+            cell.selectionColor = purple
             
             return cell
         }
