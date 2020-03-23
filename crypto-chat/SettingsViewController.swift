@@ -15,6 +15,9 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var langSegmentedControl: UISegmentedControl!
     @IBOutlet weak var txTableView: UITableView!
+
+    @IBOutlet weak var headerDate: UILabel!
+    @IBOutlet weak var headerAmount: UILabel!
     
     let descriptionText = NSLocalizedString("noDescription", comment: "")
     let keywords: [String] = ["consulting", "blockchain", "smart contracts", "teaching", "+"]

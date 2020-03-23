@@ -62,6 +62,9 @@ extension SettingsViewController: UICollectionViewDataSource, UICollectionViewDe
         
         selectCorrectLang()
         
+        headerDate.roundCorners(corners: [.topLeft], radius: 10)
+        headerAmount.roundCorners(corners: [.topRight], radius: 10)
+        
         langSegmentedControl.setTitleTextAttributes([
             NSAttributedString.Key.foregroundColor: UIColor.white,
             NSAttributedString.Key.font: UIFont(name: "SF Pro Text", size: 15) ?? UIFont.systemFont(ofSize: 15)
