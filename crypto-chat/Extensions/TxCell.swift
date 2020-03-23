@@ -14,7 +14,6 @@ class TxCell: UITableViewCell {
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var txDirectionImg: UIImageView!
     @IBOutlet weak var amount: UILabel!
-    @IBOutlet weak var publishButton: UIButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,7 +31,6 @@ class TxCell: UITableViewCell {
         userName.text = tx.userName
 //        txDirectionImg
         amount.text = tx.amount
-//        publishButton
     }
 
 }
