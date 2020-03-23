@@ -1515,7 +1515,7 @@
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fJr-SM-b6y">
                                         <rect key="frame" x="0.0" y="405" width="346" height="32"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="346" id="UU3-TL-uEc"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="346" id="UU3-TL-uEc"/>
                                         </constraints>
                                         <segments>
                                             <segment title="Українська"/>

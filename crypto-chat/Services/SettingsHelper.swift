@@ -25,6 +25,12 @@ extension SettingsViewController: UICollectionViewDataSource, UICollectionViewDe
     }
     
     func setupInputFields() {
+        for i in 0..<languages.count {
+            if languages[i][1] == currentLangCode {
+                langSegmentedControl.selectedSegmentIndex = i
+            }
+        }
+        
         langSegmentedControl.setTitleTextAttributes([
             NSAttributedString.Key.foregroundColor: UIColor.white,
             NSAttributedString.Key.font: UIFont(name: "SF Pro Text", size: 15) ?? UIFont.systemFont(ofSize: 15)
