@@ -24,6 +24,12 @@
 "john" = "Джон";
 
 /* No comment provided by engineer. */
+"langChange" = "Зміна мови";
+
+/* No comment provided by engineer. */
+"langChangeDescr" = "Для зміни мови потрібно перезапустити додаток, продовжити?";
+
+/* No comment provided by engineer. */
 "loginError" = "Неправильний логін або пароль, спробуйте знову";
 
 /* No comment provided by engineer. */
@@ -42,6 +48,9 @@
 
 /* No comment provided by engineer. */
 "password" = "пароль";
+
+/* No comment provided by engineer. */
+"restartLater" = "Пізніше";
 
 /* No comment provided by engineer. */
 "searchForAUser" = "Шукати";
@@ -64,6 +73,9 @@
     - 1 велику букву\
     - 1 цифру\
     - 1 спеціальний символ";
+
+/* No comment provided by engineer. */
+"yes" = "Так";
 
 /* No comment provided by engineer. */
 "yourDescription" = "Напишіть щось про свої навички...";
@@ -91,15 +103,6 @@
 
 /* No comment provided by engineer. */
 "Keyboard Appearance" = "";
-
-/* No comment provided by engineer. */
-"langChange" = "Зміна мови";
-
-/* No comment provided by engineer. */
-"langChangeDescr" = "Для зміни мови потрібно перезапустити додаток, продовжити?";
-
-"yes" = "Так";
-"restartLater" = "Пізніше";
 
 /* No comment provided by engineer. */
 "OK" = "";

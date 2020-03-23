@@ -1531,6 +1531,22 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxE-AI-2aM" customClass="MyButton" customModule="Crypto_Chat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="486" width="346" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="P0H-xv-C2W"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="346" id="zdc-V8-1Qn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
+                                        <state key="normal" title="Withdraw funds">
+                                            <color key="titleColor" white="0.30345676370000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showNextScreen:" destination="mEa-Ob-iEM" eventType="touchUpInside" id="pqW-GP-ZR0"/>
+                                            <action selector="signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z40-jx-gvT"/>
+                                            <action selector="updateUserData:" destination="5b0-f5-cpD" eventType="touchUpInside" id="BCa-Zq-1Y5"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="ZUR-vP-dzF" secondAttribute="trailing" id="2JG-1u-Xs5"/>
@@ -1541,6 +1557,7 @@
                                     <constraint firstItem="acw-Z6-ydw" firstAttribute="top" secondItem="M3b-IP-ffJ" secondAttribute="bottom" constant="24" id="DJJ-sP-kpP"/>
                                     <constraint firstAttribute="width" constant="346" id="Lze-WJ-aDD"/>
                                     <constraint firstItem="ZUR-vP-dzF" firstAttribute="top" secondItem="acw-Z6-ydw" secondAttribute="bottom" constant="24" id="VQz-zm-34p"/>
+                                    <constraint firstItem="bxE-AI-2aM" firstAttribute="centerX" secondItem="dWH-R2-lUr" secondAttribute="centerX" id="VoA-UN-Laq"/>
                                     <constraint firstItem="oFT-HB-NFy" firstAttribute="centerX" secondItem="dWH-R2-lUr" secondAttribute="centerX" id="YCZ-52-5uK"/>
                                     <constraint firstAttribute="trailing" secondItem="5Jz-CV-gop" secondAttribute="trailing" id="ZBA-FA-rbd"/>
                                     <constraint firstItem="n9L-CM-OJe" firstAttribute="top" secondItem="5Jz-CV-gop" secondAttribute="bottom" constant="10" id="bCn-sW-geA"/>
@@ -1558,6 +1575,7 @@
                                     <constraint firstItem="n9L-CM-OJe" firstAttribute="leading" secondItem="M3b-IP-ffJ" secondAttribute="trailing" constant="8" symbolic="YES" id="o19-gX-je0"/>
                                     <constraint firstAttribute="height" constant="540" id="p3f-lZ-ahj"/>
                                     <constraint firstAttribute="trailing" secondItem="acw-Z6-ydw" secondAttribute="trailing" id="vzf-sy-3Pc"/>
+                                    <constraint firstItem="bxE-AI-2aM" firstAttribute="top" secondItem="w0a-2y-7C9" secondAttribute="bottom" constant="8" symbolic="YES" id="xYo-sc-oEV"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ZP-vy-UUp">

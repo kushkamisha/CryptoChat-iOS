@@ -24,6 +24,12 @@
 "john" = "John";
 
 /* No comment provided by engineer. */
+"langChange" = "Language change";
+
+/* No comment provided by engineer. */
+"langChangeDescr" = "To change the language you need to restart application, do you want to restart?";
+
+/* No comment provided by engineer. */
 "loginError" = "Email or password is incorrect. Please, try again";
 
 /* No comment provided by engineer. */
@@ -42,6 +48,9 @@
 
 /* No comment provided by engineer. */
 "password" = "password";
+
+/* No comment provided by engineer. */
+"restartLater" = "Restart later";
 
 /* No comment provided by engineer. */
 "searchForAUser" = "Search for a user";
@@ -64,6 +73,9 @@
 - 1 uppdercase letter\
 - 1 digit\
 - 1 special character";
+
+/* No comment provided by engineer. */
+"yes" = "Yes";
 
 /* No comment provided by engineer. */
 "yourDescription" = "Write something about your skills...";
@@ -91,15 +103,6 @@
 
 /* No comment provided by engineer. */
 "Keyboard Appearance" = "";
-
-/* No comment provided by engineer. */
-"langChange" = "Language change";
-
-/* No comment provided by engineer. */
-"langChangeDescr" = "To change the language you need to restart application, do you want to restart?";
-
-"yes" = "Yes";
-"restartLater" = "Restart later";
 
 /* No comment provided by engineer. */
 "OK" = "";

@@ -122,11 +122,23 @@
 /* Class = "UILabel"; text = "Settings"; ObjectID = "7ZP-vy-UUp"; */
 "7ZP-vy-UUp.text" = "";
 
+/* Class = "UIButton"; normalTitle = "Withdraw funds"; ObjectID = "bxE-AI-2aM"; */
+"bxE-AI-2aM.normalTitle" = "";
+
+/* Class = "UISegmentedControl"; fJr-SM-b6y.segmentTitles[0] = "Українська"; ObjectID = "fJr-SM-b6y"; */
+"fJr-SM-b6y.segmentTitles[0]" = "";
+
+/* Class = "UISegmentedControl"; fJr-SM-b6y.segmentTitles[1] = "English"; ObjectID = "fJr-SM-b6y"; */
+"fJr-SM-b6y.segmentTitles[1]" = "";
+
 /* Class = "UILabel"; text = "15 June 1985"; ObjectID = "n9L-CM-OJe"; */
 "n9L-CM-OJe.text" = "";
 
 /* Class = "UILabel"; text = "Your interface language"; ObjectID = "oFT-HB-NFy"; */
 "oFT-HB-NFy.text" = "";
+
+/* Class = "UILabel"; text = "Your balance is 0 ETH"; ObjectID = "w0a-2y-7C9"; */
+"w0a-2y-7C9.text" = "";
 
 /* Class = "UILabel"; text = "Description"; ObjectID = "YCJ-0v-GTU"; */
 "YCJ-0v-GTU.text" = "";
