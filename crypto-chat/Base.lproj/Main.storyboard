@@ -1094,36 +1094,36 @@
                                     <constraint firstAttribute="width" constant="360" id="Ftk-Tc-Hh7"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" indentationWidth="10" reuseIdentifier="ChatCell" rowHeight="75" id="RjV-FA-r2L" customClass="ChatCell" customModule="Crypto_Chat" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="360" height="75"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" indentationWidth="10" reuseIdentifier="ChatCell" rowHeight="76" id="RjV-FA-r2L" customClass="ChatCell" customModule="Crypto_Chat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="360" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RjV-FA-r2L" id="Ed0-xe-DRp">
-                                            <rect key="frame" x="0.0" y="0.0" width="360" height="75"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="360" height="76"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ans-HW-ncC">
-                                                    <rect key="frame" x="20" y="12.5" width="50" height="50"/>
+                                                    <rect key="frame" x="20" y="13" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="Cnh-Fp-Xhi"/>
                                                         <constraint firstAttribute="width" secondItem="Ans-HW-ncC" secondAttribute="height" multiplier="1:1" id="Vsb-fS-Bwq"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JYu-Ca-elK">
-                                                    <rect key="frame" x="315" y="25" width="25" height="25"/>
+                                                    <rect key="frame" x="315" y="25.5" width="25" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="25" id="7If-kJ-bIR"/>
                                                         <constraint firstAttribute="width" secondItem="JYu-Ca-elK" secondAttribute="height" multiplier="1:1" id="GlT-Bc-V4x"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kAl-fX-wD1" userLabel="Chat type selected">
-                                                    <rect key="frame" x="315" y="25" width="25" height="25"/>
+                                                    <rect key="frame" x="315" y="25.5" width="25" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="kAl-fX-wD1" secondAttribute="height" multiplier="1:1" id="Nta-BS-lac"/>
                                                         <constraint firstAttribute="width" constant="25" id="a96-D9-uiP"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Az9-Fz-fie">
-                                                    <rect key="frame" x="78" y="18.5" width="229" height="38"/>
+                                                    <rect key="frame" x="78" y="19" width="229" height="38"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="76Z-WH-ua8">
                                                             <rect key="frame" x="0.0" y="0.0" width="229" height="18"/>
@@ -1396,7 +1396,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dWH-R2-lUr" userLabel="Left">
                                 <rect key="frame" x="74" y="134" width="346" height="614"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-3" translatesAutoresizingMaskIntoConstraints="NO" id="M3b-IP-ffJ">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-default" translatesAutoresizingMaskIntoConstraints="NO" id="M3b-IP-ffJ">
                                         <rect key="frame" x="20" y="20" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="WxI-Oz-CUI"/>
@@ -1787,7 +1787,7 @@
         <image name="send message" width="25" height="25"/>
         <image name="settings" width="25" height="25"/>
         <image name="upload-photo" width="192.5" height="279.5"/>
-        <image name="user-3" width="50" height="50"/>
+        <image name="user-default" width="50" height="50"/>
         <image name="video call" width="25" height="15"/>
     </resources>
 </document>

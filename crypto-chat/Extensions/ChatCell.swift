@@ -21,6 +21,7 @@ class ChatCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        avatarImageView.cornerRadius = 25
         msgTimeLabel.text = NSLocalizedString("wasActiveAt", comment: "")
     }
 

@@ -73,7 +73,7 @@ extension SignUp2ViewController: UICollectionViewDataSource, UICollectionViewDel
                    method: .post,
                    parameters: [
                         "token": self.token,
-                        "description": descriptionTextBox.text,
+                        "description": descriptionTextBox.text == descriptionText ? "" : descriptionTextBox.text,
                         "keywords": "",
                    ],
                    encoder: JSONParameterEncoder.default).responseJSON { response in

@@ -80,13 +80,23 @@ extension ChatViewController {
                         }
                         
                         let name = "\(chat["firstName"].stringValue) \(chat["lastName"].stringValue)"
+                        let imageBase64String = chat["avatar"].stringValue
+                        let imageData = Data(base64Encoded: imageBase64String)
+                        let avatar = UIImage(data: imageData ?? Data())
+                        
+                        let lastMsgText = chat["lastMsgText"].stringValue
+                        let lastMsgTime = chat["lastMsgTime"].stringValue
+                        
+                        NSLog(lastMsgText)
+                        NSLog(lastMsgTime)
+                        
                         self.chats.append(Chat(
                             chatId: chat["chatId"].stringValue,
                             socketId: "",
                             name: name,
                             chatType: chat["chatType"].stringValue,
                             fromUser: chat["fromUser"].stringValue,
-                            avatar: #imageLiteral(resourceName: "user-default"),
+                            avatar: avatar ?? #imageLiteral(resourceName: "user-default"),
                             chatTypeImage: chatTypeImage,
                             chatTypeSelectedImage: chatTypeSelectedImage
                         ))

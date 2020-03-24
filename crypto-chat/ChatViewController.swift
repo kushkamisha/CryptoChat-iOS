@@ -34,13 +34,11 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var sendMessageButton: UIButton!
     @IBOutlet weak var sendMessageView: UIView!
     
-//    var userId: String = ""
     var username: String = ""
     var selectedChat: Chat = Chat(chatId: "", socketId: "", name: "", chatType: "", fromUser: "", avatar: UIImage(), chatTypeImage: UIImage(), chatTypeSelectedImage: UIImage())
     var chats: [Chat] = []
     var msgs: [Message] = []
     var socket: Socket!
-//    var jwt: String = ""
     var chatSelected: Bool = false
     let CHARACTER_PRICE = 0.00001 // ETH = about $0.001
     
@@ -74,6 +72,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         setStatusBarBackgroundColor(color : purple)
         topBarView.backgroundColor = purple
+        topBarAvatar.cornerRadius = 25
 
         searchUserBar.backgroundImage = UIImage()
         searchUserBar.searchBarStyle = UISearchBar.Style.prominent
@@ -93,7 +92,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
         noChatsSelectedLabel.layer.cornerRadius = 10
         
         msgsTableView.rowHeight = UITableView.automaticDimension
-        chatsTableView.rowHeight = 75
+        chatsTableView.rowHeight = 76
         
         sendMessageTextField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("typeYourMsgHere", comment: ""), attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(displayP3Red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5)])
         
