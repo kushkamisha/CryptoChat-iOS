@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 extension SettingsViewController: UICollectionViewDataSource, UICollectionViewDelegate, UITextViewDelegate, UITableViewDataSource, UITableViewDelegate {
     
@@ -56,6 +58,8 @@ extension SettingsViewController: UICollectionViewDataSource, UICollectionViewDe
      */
     
     func setupInputFields() {
+        getUserProfile()
+        
         self.txTableView.delegate = self
         self.txTableView.dataSource = self
         self.txTableView.backgroundColor = purple
@@ -64,6 +68,7 @@ extension SettingsViewController: UICollectionViewDataSource, UICollectionViewDe
         
         headerDate.roundCorners(corners: [.topLeft], radius: 10)
         headerAmount.roundCorners(corners: [.topRight], radius: 10)
+        avatar.cornerRadius = 60
         
         langSegmentedControl.setTitleTextAttributes([
             NSAttributedString.Key.foregroundColor: UIColor.white,
@@ -78,7 +83,7 @@ extension SettingsViewController: UICollectionViewDataSource, UICollectionViewDe
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
-        if descriptionTextView.textColor == translucentWhite {
+        if descriptionTextView.textColor == translucentWhite && descriptionTextView.text == descriptionText {
             descriptionTextView.text = nil
             descriptionTextView.textColor = UIColor.white
         }
@@ -95,6 +100,37 @@ extension SettingsViewController: UICollectionViewDataSource, UICollectionViewDe
         for i in 0..<languages.count {
             if languages[i][1] == currentLangCode {
                 langSegmentedControl.selectedSegmentIndex = i
+            }
+        }
+    }
+
+    func getUserProfile() {
+        AF.request("http://localhost:8080/auth/myProfile", parameters: ["token": jwt]
+                ).responseJSON { response in
+            switch response.result {
+                case .success(let data):
+                    let json = JSON(data)
+                    let status = json["status"].stringValue
+                    if (status == "success") {
+                        // email, firstName, middleName, lastName, birthDate, description, avatar
+                        let imageBase64String = json["avatar"].stringValue
+                        let imageData = Data(base64Encoded: imageBase64String)
+                        self.avatar.image = UIImage(data: imageData ?? Data())
+                        self.fullName.text = "\(json["firstName"].stringValue) \(json["middleName"].stringValue) \(json["lastName"].stringValue)"
+                        
+                        let bdArr = json["birthDate"].stringValue.components(separatedBy: " ")
+                        self.birthDate.text = "\(bdArr[2]) \(NSLocalizedString(self.months[Int(bdArr[1]) ?? 0], comment: "")) \(bdArr[0])"
+                        
+                        let desc = json["description"].stringValue
+                        if desc != "" {
+                            self.descriptionTextView.text = desc
+                            self.descriptionTextView.textColor = UIColor.white
+                        }
+                    } else {
+                        NSLog("Can't load user's profile because of an internal server error")
+                    }
+                case .failure(let error):
+                    NSLog(error.localizedDescription)
             }
         }
     }

@@ -10,6 +10,10 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
+    @IBOutlet weak var avatar: UIImageView!
+    @IBOutlet weak var fullName: UILabel!
+    @IBOutlet weak var birthDate: UILabel!
+    
     @IBOutlet weak var keywordsCollectionView: UICollectionView!
     @IBOutlet weak var descriptionTitleView: UIView!
     @IBOutlet weak var descriptionTextView: UITextView!
@@ -30,6 +34,7 @@ class SettingsViewController: UIViewController {
         Tx(date: "15 June 2015 99:99:99", userName: "David Coperfield", direction: "out", amount: "0.00000"),
         Tx(date: "15 June 2015 99:99:99", userName: "David Coperfield", direction: "in", amount: "0.00000")
     ]
+    let months = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
     
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
