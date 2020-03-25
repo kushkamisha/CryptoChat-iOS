@@ -15,14 +15,14 @@ class ChatCell: UITableViewCell {
     @IBOutlet weak var chatTypeSelected: UIImageView!
 
     @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var userMsgLabel: UILabel!
-    @IBOutlet weak var msgTimeLabel: UILabel!
+    @IBOutlet weak var lastUserMsg: UILabel!
+    @IBOutlet weak var lastUserMsgTime: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         avatarImageView.cornerRadius = 25
-        msgTimeLabel.text = NSLocalizedString("wasActiveAt", comment: "")
+        lastUserMsgTime.text = NSLocalizedString("wasActiveAt", comment: "")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -31,14 +31,14 @@ class ChatCell: UITableViewCell {
         // Configure the view for the selected state
         if (selected) {
             usernameLabel.textColor = UIColor.white
-            msgTimeLabel.textColor = UIColor.white
-            userMsgLabel.textColor = UIColor.white
+            lastUserMsgTime.textColor = UIColor.white
+            lastUserMsg.textColor = UIColor.white
             chatTypeImageView.isHidden = true
             chatTypeSelected.isHidden = false
         } else {
             usernameLabel.textColor = UIColor.black
-            msgTimeLabel.textColor = UIColor.black
-            userMsgLabel.textColor = UIColor.black
+            lastUserMsgTime.textColor = UIColor.black
+            lastUserMsg.textColor = UIColor.black
             chatTypeImageView.isHidden = false
             chatTypeSelected.isHidden = true
         }
@@ -49,6 +49,8 @@ class ChatCell: UITableViewCell {
         chatTypeImageView.image = chat.chatTypeImage
         chatTypeSelected.image = chat.chatTypeSelectedImage
         usernameLabel.text = chat.name
+        lastUserMsg.text = chat.lastMsgText
+        lastUserMsgTime.text = chat.lastMsgTime
     }
 
 }

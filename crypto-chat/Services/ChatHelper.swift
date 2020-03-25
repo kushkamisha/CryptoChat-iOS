@@ -84,12 +84,6 @@ extension ChatViewController {
                         let imageData = Data(base64Encoded: imageBase64String)
                         let avatar = UIImage(data: imageData ?? Data())
                         
-                        let lastMsgText = chat["lastMsgText"].stringValue
-                        let lastMsgTime = chat["lastMsgTime"].stringValue
-                        
-                        NSLog(lastMsgText)
-                        NSLog(lastMsgTime)
-                        
                         self.chats.append(Chat(
                             chatId: chat["chatId"].stringValue,
                             socketId: "",
@@ -97,6 +91,8 @@ extension ChatViewController {
                             chatType: chat["chatType"].stringValue,
                             fromUser: chat["fromUser"].stringValue,
                             avatar: avatar ?? #imageLiteral(resourceName: "user-default"),
+                            lastMsgText: chat["lastMsgText"].stringValue,
+                            lastMsgTime: chat["lastMsgTime"].stringValue,
                             chatTypeImage: chatTypeImage,
                             chatTypeSelectedImage: chatTypeSelectedImage
                         ))

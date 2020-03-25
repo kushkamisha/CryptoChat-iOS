@@ -17,16 +17,20 @@ class Chat {
     var chatType: String
     var fromUser: String
     var avatar: UIImage
+    var lastMsgText: String
+    var lastMsgTime: String
     var chatTypeImage: UIImage
     var chatTypeSelectedImage: UIImage
     
-    init (chatId: String, socketId: String, name: String, chatType: String, fromUser: String, avatar: UIImage, chatTypeImage: UIImage, chatTypeSelectedImage: UIImage) {
+    init (chatId: String, socketId: String, name: String, chatType: String, fromUser: String, avatar: UIImage, lastMsgText: String, lastMsgTime: String, chatTypeImage: UIImage, chatTypeSelectedImage: UIImage) {
         self.chatId = chatId
         self.socketId = socketId
         self.name = name
         self.chatType = chatType
         self.fromUser = fromUser
         self.avatar = avatar
+        self.lastMsgText = lastMsgText
+        self.lastMsgTime = lastMsgTime
         self.chatTypeImage = chatTypeImage
         self.chatTypeSelectedImage = chatTypeSelectedImage
     }

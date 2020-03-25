@@ -35,7 +35,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var sendMessageView: UIView!
     
     var username: String = ""
-    var selectedChat: Chat = Chat(chatId: "", socketId: "", name: "", chatType: "", fromUser: "", avatar: UIImage(), chatTypeImage: UIImage(), chatTypeSelectedImage: UIImage())
+    var selectedChat: Chat = Chat(chatId: "", socketId: "", name: "", chatType: "", fromUser: "", avatar: UIImage(), lastMsgText: "", lastMsgTime: "", chatTypeImage: UIImage(), chatTypeSelectedImage: UIImage())
     var chats: [Chat] = []
     var msgs: [Message] = []
     var socket: Socket!
