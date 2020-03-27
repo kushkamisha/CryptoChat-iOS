@@ -176,6 +176,9 @@ extension ChatViewController {
                    parameters: ["token": jwt, "chatId": chatId, "message": message],
                    encoder: JSONParameterEncoder.default).responseJSON { status in
             print(status)
+            if (self.chats[0].chatId != chatId) {
+                self.loadChats()
+            }
         }
     }
     
