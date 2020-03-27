@@ -1,4 +1,4 @@
-github "Alamofire/Alamofire" "5.0.2"
+github "Alamofire/Alamofire" "5.0.5"
 github "SwiftyJSON/SwiftyJSON" "5.0.0"
 github "daltoniam/Starscream" "3.1.1"
 github "fmo91/microfutures" "0.1.2"
