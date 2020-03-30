@@ -147,8 +147,10 @@ extension SettingsViewController: UICollectionViewDataSource, UICollectionViewDe
                         
                         self.txs = []
                         for (_, tx) in txs {
+                            let arr = tx["createdAt"].stringValue.split(separator: " ")
+                            let date = "\(arr[0]) \(NSLocalizedString(String(arr[1]), comment: "")) \(arr[2]) \(arr[3])"
                             self.txs.append(Tx(
-                                date: tx["createdAt"].stringValue,
+                                date: date,
                                 userName: tx["fullName"].stringValue,
                                 direction: tx["direction"].stringValue,
                                 amount: tx["amount"].stringValue)

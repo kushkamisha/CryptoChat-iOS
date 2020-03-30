@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9CV-zH-N0a">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
@@ -1679,10 +1679,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="458" height="22"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 Jan 0000 00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kt0-hN-5wJ">
-                                                    <rect key="frame" x="15" y="2" width="165" height="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 Jan 0000 00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kt0-hN-5wJ">
+                                                    <rect key="frame" x="0.0" y="2" width="187" height="18"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="165" id="XQC-5f-ta7"/>
+                                                        <constraint firstAttribute="width" constant="187" id="XQC-5f-ta7"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1720,9 +1720,9 @@
                                                 <constraint firstItem="OS1-7p-2EV" firstAttribute="leading" secondItem="7uW-Xs-8A3" secondAttribute="trailing" constant="11" id="lZg-TW-08Z"/>
                                                 <constraint firstItem="Kt0-hN-5wJ" firstAttribute="centerY" secondItem="bzj-k9-77N" secondAttribute="centerY" id="me3-sN-OgN"/>
                                                 <constraint firstItem="021-n6-d8J" firstAttribute="centerY" secondItem="bzj-k9-77N" secondAttribute="centerY" id="q3N-J1-gLz"/>
-                                                <constraint firstItem="021-n6-d8J" firstAttribute="leading" secondItem="Kt0-hN-5wJ" secondAttribute="trailing" constant="15" id="tpu-Qp-gE4"/>
+                                                <constraint firstItem="021-n6-d8J" firstAttribute="leading" secondItem="Kt0-hN-5wJ" secondAttribute="trailing" constant="8" id="tpu-Qp-gE4"/>
                                                 <constraint firstItem="7uW-Xs-8A3" firstAttribute="leading" secondItem="021-n6-d8J" secondAttribute="trailing" constant="11" id="tzI-cE-tKR"/>
-                                                <constraint firstItem="Kt0-hN-5wJ" firstAttribute="leading" secondItem="bzj-k9-77N" secondAttribute="leadingMargin" id="yJT-By-feB"/>
+                                                <constraint firstItem="Kt0-hN-5wJ" firstAttribute="leading" secondItem="bzj-k9-77N" secondAttribute="leadingMargin" constant="-15" id="yJT-By-feB"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.47843137250000001" green="0.54901960780000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
