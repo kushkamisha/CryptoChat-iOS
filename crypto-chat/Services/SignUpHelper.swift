@@ -24,8 +24,6 @@ extension SignUpViewController: UINavigationControllerDelegate, UIImagePickerCon
         repeatPassLabel.roundCorners(corners: [.topLeft, .bottomLeft], radius: 10)
         birthDateLabel.roundCorners(corners: [.topLeft, .bottomLeft], radius: 10)
         
-//        NSLocalizedString("", comment: "")
-        
         let translucentWhite = UIColor.init(displayP3Red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5)
         emailInputField.attributedPlaceholder = NSAttributedString(string: "john@mail.com", attributes: [NSAttributedString.Key.foregroundColor: translucentWhite])
         firstNameInputField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("john", comment: ""), attributes: [NSAttributedString.Key.foregroundColor: translucentWhite])

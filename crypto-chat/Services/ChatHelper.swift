@@ -84,6 +84,9 @@ extension ChatViewController {
                         let imageData = Data(base64Encoded: imageBase64String)
                         let avatar = UIImage(data: imageData ?? Data())
                         
+                        let arr = chat["lastMsgTime"].stringValue.components(separatedBy: " ")
+                        let timeLabel = arr.count == 2 ? "\(arr[0]) \(NSLocalizedString(arr[1], comment: ""))" : NSLocalizedString(arr[0], comment: "")
+                        
                         self.chats.append(Chat(
                             chatId: chat["chatId"].stringValue,
                             socketId: "",
@@ -92,7 +95,7 @@ extension ChatViewController {
                             fromUser: chat["fromUser"].stringValue,
                             avatar: avatar ?? #imageLiteral(resourceName: "user-default"),
                             lastMsgText: chat["lastMsgText"].stringValue,
-                            lastMsgTime: self.datetimeToMsgLabel(datetime: chat["lastMsgTime"].stringValue),
+                            lastMsgTime: timeLabel,
                             chatTypeImage: chatTypeImage,
                             chatTypeSelectedImage: chatTypeSelectedImage
                         ))
@@ -176,9 +179,7 @@ extension ChatViewController {
                    parameters: ["token": jwt, "chatId": chatId, "message": message],
                    encoder: JSONParameterEncoder.default).responseJSON { status in
             print(status)
-            if (self.chats[0].chatId != chatId) {
-                self.loadChats()
-            }
+            self.loadChats()
         }
     }
     
@@ -234,80 +235,5 @@ extension ChatViewController {
             noChatsSelectedView.isHidden = false
         }
     }
-    
-    /**
-     Utils
-     */
-    func datetimeToMsgLabel(datetime: String) -> String {
-        let timeLabels: [String: String] = [
-            "justNow": "just now",
-            "minuteAgo": "minute ago",
-            "minutesAgo": "minutes ago",
-            "hourAgo": "hour ago",
-            "hoursAgo": "hours ago",
-            "dayAgo": "day ago",
-            "daysAgo": "days ago",
-            "monthAgo": "month ago",
-            "monthsAgo": "months ago",
-            "yearAgo": "year ago",
-            "yearsAgo": "years ago"
-        ]
 
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "E MMM dd yyyy HH:mm:ss 'GMT'Z"
-        let date = dateFormatter.date(from: datetime)!
-        let curr = Date()
-
-        let calendar = Calendar.current
-        let year = calendar.component(.year, from: date)
-        let month = calendar.component(.month, from: date)
-        let day = calendar.component(.day, from: date)
-        let hour = calendar.component(.hour, from: date)
-        let minute = calendar.component(.minute, from: date)
-
-        let yearCurr = calendar.component(.year, from: curr)
-        let monthCurr = calendar.component(.month, from: curr)
-        let dayCurr = calendar.component(.day, from: curr)
-        let hourCurr = calendar.component(.hour, from: curr)
-        let minuteCurr = calendar.component(.minute, from: curr)
-
-        var msg = ""
-        if (yearCurr - year > 1) {
-            msg = "\(yearCurr - year) \(timeLabels["yearsAgo"] ?? "")"
-        } else if (yearCurr - year > 0) {
-            if (monthCurr >= month) {
-                msg = "\(yearCurr - year) \(timeLabels["yearAgo"] ?? "")"
-            } else {
-                msg = "\(12 - month + monthCurr) \(timeLabels["monthsAgo"] ?? "")"
-            }
-        } else if (monthCurr - month > 1) {
-            msg = "\(monthCurr - month) \(timeLabels["monthsAgo"] ?? "")"
-        } else if (monthCurr - month > 0) {
-            if (dayCurr >= day) {
-                msg = "\(monthCurr - month) \(timeLabels["monthAgo"] ?? "")"
-            } else {
-                msg = "\(30 - day + dayCurr) \(timeLabels["daysAgo"] ?? "")"
-            }
-        } else if (dayCurr - day > 1) {
-            msg = "\(dayCurr - day) \(timeLabels["daysAgo"] ?? "")"
-        } else if (dayCurr - day > 0) {
-            msg = "\(dayCurr - day) \(timeLabels["dayAgo"] ?? "")"
-        } else if (hourCurr - hour > 1) {
-            msg = "\(hourCurr - hour) \(timeLabels["hoursAgo"] ?? "")"
-        } else if (hourCurr - hour > 0) {
-            if (minuteCurr >= minute) {
-                msg = "\(hourCurr - hour) \(timeLabels["hourAgo"] ?? "")"
-            } else {
-               msg = "\(60 - minute + minuteCurr) \(timeLabels["minutesAgo"] ?? "")"
-            }
-        } else if (minuteCurr - minute > 1) {
-            msg = "\(minuteCurr - minute) \(timeLabels["minutesAgo"] ?? "")"
-        } else if (minuteCurr - minute > 0) {
-            msg = "\(minuteCurr - minute) \(timeLabels["minuteAgo"] ?? "")"
-        } else {
-            msg = timeLabels["justNow"] ?? ""
-        }
-
-        return msg
-    }
 }

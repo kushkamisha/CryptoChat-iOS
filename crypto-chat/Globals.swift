@@ -6,5 +6,5 @@
 //  Copyright © 2020 Misha Kushka. All rights reserved.
 //
 
-var userId: String = ""
-var jwt: String = ""
+var userId: String = "2"
+var jwt: String = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTU4NTA2NDY2NiwiZXhwIjoxNjIxMDYxMDY2fQ.zGWSB9TfzxBVKNdDtrDzrBoxjsO6taUNDnaNxhIsoa4"
