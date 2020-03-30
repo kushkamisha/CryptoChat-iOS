@@ -134,4 +134,33 @@ extension SettingsViewController: UICollectionViewDataSource, UICollectionViewDe
             }
         }
     }
+    
+    func getUnpublishedTxs() {
+        AF.request("http://localhost:8080/bc/transfers", parameters: ["token": jwt]
+                ).responseJSON { response in
+            switch response.result {
+                case .success(let data):
+                    let json = JSON(data)
+                    let status = json["status"].stringValue
+                    if (status == "success") {
+                        let txs = json["txs"]
+                        
+                        self.txs = []
+                        for (_, tx) in txs {
+                            self.txs.append(Tx(
+                                date: tx["createdAt"].stringValue,
+                                userName: tx["fullName"].stringValue,
+                                direction: tx["direction"].stringValue,
+                                amount: tx["amount"].stringValue)
+                            )
+                        }
+                        self.txTableView.reloadData()
+                    } else {
+                        NSLog("Can't load transactions because of an internal server error")
+                    }
+                case .failure(let error):
+                    NSLog(error.localizedDescription)
+            }
+        }
+    }
 }
