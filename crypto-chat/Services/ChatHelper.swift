@@ -15,12 +15,12 @@ extension ChatViewController {
     
     func establishSocketConnection() {
         // Establish a socket connection
-        self.socket = Socket.init(token: jwt)
-        self.socket.connect()
+        socket = Socket.init(token: jwt)
+        socket.connect()
     }
     
     func listen4NewMessages() {
-        self.socket.socket.on("new-message") { data, ack in
+        socket.socket.on("new-message") { data, ack in
             print("event new-message")
             let message = JSON(data)[0]
             print(message)
@@ -129,8 +129,9 @@ extension ChatViewController {
                         ))
                     }
                     
-                    if (chat.chatType == "paying") {
-                        self.topBarEthereum.text = "\(json["amount"].stringValue) ETH"
+                    let amount = json["amount"].stringValue
+                    if (chat.chatType == "paying" && amount != "") {
+                        self.topBarEthereum.text = "\(amount) ETH"
                     }
                     
                     self.pay4Msgs()
