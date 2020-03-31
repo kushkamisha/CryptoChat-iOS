@@ -69,6 +69,7 @@ extension SettingsViewController: UICollectionViewDataSource, UICollectionViewDe
         self.txTableView.backgroundColor = purple
         
         selectCorrectLang()
+        loadUserBalance()
         
         headerDate.roundCorners(corners: [.topLeft], radius: 10)
         headerAmount.roundCorners(corners: [.topRight], radius: 10)
@@ -164,6 +165,25 @@ extension SettingsViewController: UICollectionViewDataSource, UICollectionViewDe
                         self.txTableView.reloadData()
                     } else {
                         NSLog("Can't load transactions because of an internal server error")
+                    }
+                case .failure(let error):
+                    NSLog(error.localizedDescription)
+            }
+        }
+    }
+    
+    func loadUserBalance() {
+        AF.request("http://localhost:8080/bc/balanceInContract", parameters: ["token": jwt]).responseJSON { response in
+            switch response.result {
+                case .success(let data):
+                    let json = JSON(data)
+                    let status = json["status"].stringValue
+                    if (status == "success") {
+                        let balance = json["balanceInEth"]
+                        self.userBalance.text = self.userBalance.text?.split(separator: " ").dropLast(2).joined(separator: " ")
+                        self.userBalance.text! += " \(balance) ETH"
+                    } else {
+                        NSLog("Can't load user balance because of an internal server error")
                     }
                 case .failure(let error):
                     NSLog(error.localizedDescription)

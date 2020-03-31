@@ -19,7 +19,8 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var langSegmentedControl: UISegmentedControl!
     @IBOutlet weak var txTableView: UITableView!
-
+    @IBOutlet weak var userBalance: UILabel!
+    
     @IBOutlet weak var headerDate: UILabel!
     @IBOutlet weak var headerAmount: UILabel!
     
