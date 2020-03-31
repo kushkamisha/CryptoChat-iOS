@@ -167,3 +167,8 @@
 "років" = "years ago";
 "рік" = "year ago";
 "роки" = "years ago";
+
+"attention" = "Attention";
+"publishTx" = "After publishing transaction some time will be needed to add it to the blockchain until the transaction will be valid. Please, be patient";
+"publish" = "Publish";
+"cancel" = "Cancel";

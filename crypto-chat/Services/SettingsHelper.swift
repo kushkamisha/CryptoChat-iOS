@@ -23,6 +23,10 @@ extension SettingsViewController: UICollectionViewDataSource, UICollectionViewDe
         return 30
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedTxIndex = indexPath.row
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tx = txs[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "TxCell") as! TxCell
@@ -150,6 +154,7 @@ extension SettingsViewController: UICollectionViewDataSource, UICollectionViewDe
                             let arr = tx["createdAt"].stringValue.split(separator: " ")
                             let date = "\(arr[0]) \(NSLocalizedString(String(arr[1]), comment: "")) \(arr[2]) \(arr[3])"
                             self.txs.append(Tx(
+                                id: tx["txId"].stringValue,
                                 date: date,
                                 userName: tx["fullName"].stringValue,
                                 direction: tx["direction"].stringValue,
@@ -162,6 +167,27 @@ extension SettingsViewController: UICollectionViewDataSource, UICollectionViewDe
                     }
                 case .failure(let error):
                     NSLog(error.localizedDescription)
+            }
+        }
+    }
+    
+    func publishTransaction(tx: Tx) {
+        print("publishing tx")
+        AF.request("http://localhost:8080/bc/publishTransfer",
+                   method: .post,
+                   parameters: [
+                       "token": jwt,
+                       "txId": tx.id
+                   ],
+                   encoder: JSONParameterEncoder.default).responseJSON { response in
+            switch response.result {
+                case .success(let data):
+                    let json = JSON(data)
+                    let hash = json["txHash"].stringValue
+                    print("The tx is now mining and it's hash is \(hash)")
+                    break
+                case .failure(let error):
+                    print(error.localizedDescription)
             }
         }
     }

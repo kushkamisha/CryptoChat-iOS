@@ -26,16 +26,11 @@ class SettingsViewController: UIViewController {
     let descriptionText = NSLocalizedString("noDescription", comment: "")
     let keywords: [String] = ["consulting", "blockchain", "smart contracts", "teaching", "+"]
     let languages = [["Українська", "uk"], ["English", "en"]]
-    var currentLangCode: String = Locale.current.languageCode ?? ""
-//    let txs: [Tx] = [
-//        Tx(date: "15 June 2015 99:99:99", userName: "David Coperfield", direction: "in", amount: "0.00000"),
-//        Tx(date: "15 June 2015 99:99:99", userName: "David Coperfield", direction: "out", amount: "0.00000"),
-//        Tx(date: "15 June 2015 99:99:99", userName: "David Coperfield", direction: "in", amount: "0.00000"),
-//        Tx(date: "15 June 2015 99:99:99", userName: "David Coperfield", direction: "out", amount: "0.00000"),
-//        Tx(date: "15 June 2015 99:99:99", userName: "David Coperfield", direction: "in", amount: "0.00000")
-//    ]
-    var txs: [Tx] = []
     let months = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
+
+    var currentLangCode: String = Locale.current.languageCode ?? ""
+    var txs: [Tx] = []
+    var selectedTxIndex: Int = -1
     
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
@@ -80,6 +75,25 @@ class SettingsViewController: UIViewController {
             self.present(alertController, animated: true, completion: nil)
         }
         print(currentLangCode)
+    }
+    
+    @IBAction func publishTx(_ sender: Any) {
+        if (self.selectedTxIndex != -1) {
+            let alertController = UIAlertController(title: NSLocalizedString("attention", comment: ""), message: NSLocalizedString("publishTx", comment: ""), preferredStyle: .alert)
+            let okAction = UIAlertAction(title: NSLocalizedString("publish", comment: ""), style: UIAlertAction.Style.default) {
+                UIAlertAction in
+                // Publish tx
+                self.publishTransaction(tx: self.txs[self.selectedTxIndex])
+                print("OK Pressed")
+            }
+            let cancelAction = UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: UIAlertAction.Style.cancel) {
+                UIAlertAction in
+                print("Cancel Pressed")
+            }
+            alertController.addAction(okAction)
+            alertController.addAction(cancelAction)
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
     
     @objc func rightSwipeAction(swipe: UISwipeGestureRecognizer) {

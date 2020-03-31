@@ -1746,6 +1746,7 @@
                                     <color key="titleColor" white="0.30345676370000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="publishTx:" destination="9CV-zH-N0a" eventType="touchUpInside" id="ca5-bZ-E6R"/>
                                     <action selector="showNextScreen:" destination="mEa-Ob-iEM" eventType="touchUpInside" id="8pU-PD-RD5"/>
                                     <action selector="signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XNp-UK-O1T"/>
                                     <action selector="updateUserData:" destination="5b0-f5-cpD" eventType="touchUpInside" id="qda-Hi-L0Z"/>

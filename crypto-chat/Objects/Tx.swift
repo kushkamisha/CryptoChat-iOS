@@ -8,12 +8,14 @@
 
 class Tx {
     
+    var id: String = ""
     var date: String = ""
     var userName: String = ""
     var direction: String = ""
     var amount: String = ""
     
-    init(date: String, userName: String, direction: String, amount: String) {
+    init(id: String, date: String, userName: String, direction: String, amount: String) {
+        self.id = id
         self.date = date
         self.userName = userName
         self.direction = direction
