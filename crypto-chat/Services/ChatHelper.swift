@@ -116,7 +116,8 @@ extension ChatViewController {
                    ]).responseJSON { response in
             switch response.result {
                 case .success(let data):
-                    let msgs = JSON(data)["messages"]
+                    let json = JSON(data)
+                    let msgs = json["messages"]
                     self.msgs = []
                     for (_, msg) in msgs {
                         self.msgs.append(Message(
@@ -126,6 +127,10 @@ extension ChatViewController {
                             isRead: msg["isRead"].boolValue,
                             time: msg["time"].stringValue
                         ))
+                    }
+                    
+                    if (chat.chatType == "paying") {
+                        self.topBarEthereum.text = "\(json["amount"].stringValue) ETH"
                     }
                     
                     self.pay4Msgs()
