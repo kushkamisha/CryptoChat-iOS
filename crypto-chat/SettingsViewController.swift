@@ -33,6 +33,21 @@ class SettingsViewController: UIViewController {
     var txs: [Tx] = []
     var selectedTxIndex: Int = -1
     
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action:
+            #selector(ChatViewController.handleRefresh(_:)),
+                                 for: UIControl.Event.valueChanged)
+        refreshControl.tintColor = white
+        
+        return refreshControl
+    }()
+    
+    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+        self.getUnpublishedTxs()
+        refreshControl.endRefreshing()
+    }
+    
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
     }

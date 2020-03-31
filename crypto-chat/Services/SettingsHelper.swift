@@ -67,6 +67,7 @@ extension SettingsViewController: UICollectionViewDataSource, UICollectionViewDe
         self.txTableView.delegate = self
         self.txTableView.dataSource = self
         self.txTableView.backgroundColor = purple
+        self.txTableView.addSubview(self.refreshControl)
         
         selectCorrectLang()
         loadUserBalance()
