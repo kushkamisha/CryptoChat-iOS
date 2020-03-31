@@ -61,6 +61,8 @@ class SettingsViewController: UIViewController {
 
         setStatusBarBackgroundColor(color : purple)
         self.view.backgroundColor = purple
+        
+        listenForGlobalSocketMsgs()
         setupInputFields()
         getUnpublishedTxs()
     }

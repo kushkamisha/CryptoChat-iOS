@@ -176,3 +176,5 @@ transaction will be valid.\
 Please, be patient";
 "publish" = "Publish";
 "cancel" = "Cancel";
+
+"txConfirmed" = "The transaction was added to the blockchain";

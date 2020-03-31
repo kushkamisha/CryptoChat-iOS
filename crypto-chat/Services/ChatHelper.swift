@@ -20,6 +20,7 @@ extension ChatViewController {
     }
     
     func listen4NewMessages() {
+        listenForGlobalSocketMsgs()
         socket.socket.on("new-message") { data, ack in
             print("event new-message")
             let message = JSON(data)[0]

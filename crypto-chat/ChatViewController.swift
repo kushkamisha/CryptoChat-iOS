@@ -38,7 +38,6 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     var selectedChat: Chat = Chat(chatId: "", socketId: "", name: "", chatType: "", fromUser: "", avatar: UIImage(), lastMsgText: "", lastMsgTime: "", chatTypeImage: UIImage(), chatTypeSelectedImage: UIImage())
     var chats: [Chat] = []
     var msgs: [Message] = []
-    var socket: Socket!
     var chatSelected: Bool = false
     let CHARACTER_PRICE = 0.00001 // ETH = about $0.001
     

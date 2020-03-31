@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SwiftyJSON
+import Loaf
 
 extension UIViewController {
     
@@ -41,6 +43,20 @@ extension UIViewController {
         } else {
             let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView
             statusBar?.backgroundColor = color
+        }
+    }
+    
+    func listenForGlobalSocketMsgs() {
+        socket.socket.on("tx-confirmed") { data, ack in
+            print("event tx-confirmed")
+            let event = JSON(data)[0]
+            
+            print(event["userId"].stringValue)
+            print(event["txHash"].stringValue)
+            
+            if event["userId"].stringValue == userId {
+                Loaf(NSLocalizedString("txConfirmed", comment: ""), state: .success, location: .top, sender: self).show()
+            }
         }
     }
 
