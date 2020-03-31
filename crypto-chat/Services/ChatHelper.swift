@@ -33,9 +33,27 @@ extension ChatViewController {
                     isRead: message["isRead"].boolValue,
                     time: message["createdAt"].stringValue
                 ))
+                
+                if self.selectedChat.chatType == "paying" {
+                    self.topBarEthereum.text = "\(message["amount"].stringValue) ETH"
+                }
 
                 self.pay4Msgs()
                 self.updateMessages()
+            }
+        }
+    }
+    
+    func listen4AmountChanges() {
+        socket.socket.on("upd-amount") { data, ack in
+            print("event upd-amount")
+            let event = JSON(data)[0]
+            
+            if userId == event["toUserId"].stringValue &&
+                self.selectedChat.fromUser == event["fromUserId"].stringValue &&
+                self.selectedChat.chatType == "paying"
+            {
+                self.topBarEthereum.text = "\(event["amount"].stringValue) ETH"
             }
         }
     }
@@ -180,10 +198,10 @@ extension ChatViewController {
         }
     }
     
-    func sendMessage(chatId: String, message: String) {
+    func sendMessage(message: String) {
         AF.request("http://localhost:8080/chat/message",
                    method: .post,
-                   parameters: ["token": jwt, "chatId": chatId, "message": message],
+                   parameters: ["token": jwt, "chatId": self.selectedChat.chatId, "message": message],
                    encoder: JSONParameterEncoder.default).responseJSON { status in
             print(status)
             self.loadChats()

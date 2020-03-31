@@ -100,6 +100,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
         isChatSelected(status: false)
         establishSocketConnection()
         listen4NewMessages()
+        listen4AmountChanges()
         loadChats()
     }
     
@@ -110,7 +111,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
         let msg = sendMessageTextField.text!
         
         if (msg != "") {
-            sendMessage(chatId: self.selectedChat.chatId, message: msg)
+            sendMessage(message: msg)
 
             // Current time
             let date = Date()
