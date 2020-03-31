@@ -1427,7 +1427,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="acw-Z6-ydw">
-                                        <rect key="frame" x="0.0" y="230" width="346" height="66"/>
+                                        <rect key="frame" x="0.0" y="236" width="346" height="66"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="66" id="cUa-NX-bqz"/>
                                         </constraints>
@@ -1472,7 +1472,7 @@
                                         </connections>
                                     </collectionView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUR-vP-dzF" userLabel="Description" customClass="InputBox" customModule="Crypto_Chat" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="320" width="346" height="121"/>
+                                        <rect key="frame" x="0.0" y="326" width="346" height="121"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w69-Oh-20S" userLabel="Title">
                                                 <rect key="frame" x="0.0" y="0.0" width="346" height="28"/>
@@ -1518,13 +1518,13 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your interface language" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFT-HB-NFy">
-                                        <rect key="frame" x="20" y="465" width="306" height="18"/>
+                                        <rect key="frame" x="20" y="471" width="306" height="18"/>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fJr-SM-b6y">
-                                        <rect key="frame" x="0.0" y="491" width="346" height="32"/>
+                                        <rect key="frame" x="0.0" y="497" width="346" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="346" id="UU3-TL-uEc"/>
                                         </constraints>
@@ -1536,12 +1536,16 @@
                                             <action selector="changeLang:" destination="9CV-zH-N0a" eventType="valueChanged" id="nPj-LN-pxd"/>
                                         </connections>
                                     </segmentedControl>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your balance is 0 ETH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0a-2y-7C9">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UiX-yS-WH8" userLabel="User Balance button">
                                         <rect key="frame" x="0.0" y="546" width="346" height="18"/>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <state key="normal" title="Your balance is 0 ETH" image="refresh-small">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="refreshUserBalance:" destination="9CV-zH-N0a" eventType="touchUpInside" id="hcz-hY-pPh"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxE-AI-2aM" customClass="MyButton" customModule="Crypto_Chat" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="572" width="346" height="42"/>
                                         <constraints>
@@ -1565,15 +1569,14 @@
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="bxE-AI-2aM" firstAttribute="top" secondItem="w0a-2y-7C9" secondAttribute="bottom" constant="8" id="3ie-ao-JpI"/>
-                                    <constraint firstItem="w0a-2y-7C9" firstAttribute="top" secondItem="fJr-SM-b6y" secondAttribute="bottom" constant="24" id="4cd-lW-1Ea"/>
+                                    <constraint firstItem="UiX-yS-WH8" firstAttribute="leading" secondItem="dWH-R2-lUr" secondAttribute="leading" id="BSH-gu-9yE"/>
                                     <constraint firstItem="n9L-CM-OJe" firstAttribute="leading" secondItem="M3b-IP-ffJ" secondAttribute="trailing" id="DLd-7g-mgY"/>
+                                    <constraint firstAttribute="trailing" secondItem="UiX-yS-WH8" secondAttribute="trailing" id="FaH-E5-r9p"/>
                                     <constraint firstAttribute="trailing" secondItem="5Jz-CV-gop" secondAttribute="trailing" constant="8" id="G0i-KM-f63"/>
                                     <constraint firstItem="ZUR-vP-dzF" firstAttribute="leading" secondItem="dWH-R2-lUr" secondAttribute="leading" id="GjR-h9-T9z"/>
                                     <constraint firstItem="oFT-HB-NFy" firstAttribute="leading" secondItem="dWH-R2-lUr" secondAttribute="leading" constant="20" symbolic="YES" id="K3l-qD-4Ci"/>
                                     <constraint firstItem="ZUR-vP-dzF" firstAttribute="top" secondItem="acw-Z6-ydw" secondAttribute="bottom" constant="24" id="KEe-qq-FzS"/>
                                     <constraint firstAttribute="trailing" secondItem="acw-Z6-ydw" secondAttribute="trailing" id="KGH-Kn-0Rf"/>
-                                    <constraint firstItem="w0a-2y-7C9" firstAttribute="leading" secondItem="dWH-R2-lUr" secondAttribute="leading" id="KcV-R2-wJm"/>
                                     <constraint firstItem="fJr-SM-b6y" firstAttribute="top" secondItem="oFT-HB-NFy" secondAttribute="bottom" constant="8" symbolic="YES" id="KiF-ie-UHN"/>
                                     <constraint firstItem="5Jz-CV-gop" firstAttribute="top" secondItem="dWH-R2-lUr" secondAttribute="top" constant="52" id="M0u-gs-0gc"/>
                                     <constraint firstAttribute="trailing" secondItem="ZUR-vP-dzF" secondAttribute="trailing" id="Mia-iO-78e"/>
@@ -1584,11 +1587,12 @@
                                     <constraint firstItem="bxE-AI-2aM" firstAttribute="leading" secondItem="dWH-R2-lUr" secondAttribute="leading" id="Zj7-rQ-SM3"/>
                                     <constraint firstItem="fJr-SM-b6y" firstAttribute="leading" secondItem="dWH-R2-lUr" secondAttribute="leading" id="bRe-qE-PFF"/>
                                     <constraint firstItem="oFT-HB-NFy" firstAttribute="top" secondItem="ZUR-vP-dzF" secondAttribute="bottom" constant="24" id="gNA-t7-Vda"/>
-                                    <constraint firstAttribute="trailing" secondItem="w0a-2y-7C9" secondAttribute="trailing" id="iWb-Ki-orW"/>
                                     <constraint firstAttribute="trailing" secondItem="oFT-HB-NFy" secondAttribute="trailing" constant="20" symbolic="YES" id="lXU-jJ-idZ"/>
                                     <constraint firstAttribute="trailing" secondItem="bxE-AI-2aM" secondAttribute="trailing" id="lcw-sQ-i4a"/>
                                     <constraint firstAttribute="trailing" secondItem="n9L-CM-OJe" secondAttribute="trailing" constant="8" id="nLp-fr-xc1"/>
                                     <constraint firstItem="M3b-IP-ffJ" firstAttribute="leading" secondItem="dWH-R2-lUr" secondAttribute="leading" constant="20" id="oRG-Xc-hQY"/>
+                                    <constraint firstItem="bxE-AI-2aM" firstAttribute="top" secondItem="UiX-yS-WH8" secondAttribute="bottom" constant="8" id="odN-kh-Y7r"/>
+                                    <constraint firstItem="UiX-yS-WH8" firstAttribute="top" secondItem="fJr-SM-b6y" secondAttribute="bottom" constant="18" id="rHM-ew-qJc"/>
                                     <constraint firstItem="acw-Z6-ydw" firstAttribute="leading" secondItem="dWH-R2-lUr" secondAttribute="leading" id="vme-Lq-56y"/>
                                     <constraint firstItem="5Jz-CV-gop" firstAttribute="leading" secondItem="M3b-IP-ffJ" secondAttribute="trailing" id="zHP-6j-hSt"/>
                                 </constraints>
@@ -1785,7 +1789,7 @@
                         <outlet property="keywordsCollectionView" destination="acw-Z6-ydw" id="Xdc-es-O0A"/>
                         <outlet property="langSegmentedControl" destination="fJr-SM-b6y" id="eZw-pd-NHc"/>
                         <outlet property="txTableView" destination="kyY-Qo-lIh" id="T1t-Ao-SSI"/>
-                        <outlet property="userBalance" destination="w0a-2y-7C9" id="rVv-3c-vFi"/>
+                        <outlet property="userBalance" destination="UiX-yS-WH8" id="LFE-sF-NHo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oRT-u3-zji" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1800,6 +1804,7 @@
         <image name="filter" width="25" height="20"/>
         <image name="in-arrow" width="12" height="12"/>
         <image name="in-out-arrows" width="18" height="18.5"/>
+        <image name="refresh-small" width="20" height="15"/>
         <image name="send message" width="25" height="25"/>
         <image name="settings" width="25" height="25"/>
         <image name="upload-photo" width="192.5" height="279.5"/>

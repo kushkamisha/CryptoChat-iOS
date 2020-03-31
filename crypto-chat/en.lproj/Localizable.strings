@@ -1,6 +1,24 @@
 
+"Apr" = "Apr";
+
+"april" = "April";
+
+/* No comment provided by engineer. */
+"attention" = "Attention";
+
+"Aug" = "Aug";
+
+"august" = "August";
+
+/* No comment provided by engineer. */
+"cancel" = "Cancel";
+
 /* No comment provided by engineer. */
 "connectionError" = "Can not connect to the server. Try again later";
+
+"Dec" = "Dec";
+
+"december" = "December";
 
 /* No comment provided by engineer. */
 "doe" = "Doe";
@@ -14,14 +32,30 @@
 /* No comment provided by engineer. */
 "emptyRepeatPass" = "Repeat password can not be empty";
 
+"Feb" = "Feb";
+
+"february" = "February";
+
 /* No comment provided by engineer. */
 "incorrectEmailFormat" = "Your email has incorrect format";
 
 /* No comment provided by engineer. */
 "james" = "James";
 
+"Jan" = "Jan";
+
+"january" = "January";
+
 /* No comment provided by engineer. */
 "john" = "John";
+
+"Jul" = "Jul";
+
+"july" = "July";
+
+"Jun" = "Jun";
+
+"june" = "June";
 
 /* No comment provided by engineer. */
 "langChange" = "Language change";
@@ -31,6 +65,14 @@
 
 /* No comment provided by engineer. */
 "loginError" = "Email or password is incorrect. Please, try again";
+
+"Mar" = "Mar";
+
+"march" = "March";
+
+"may" = "May";
+
+"May" = "May";
 
 /* No comment provided by engineer. */
 "mm/dd/yyyy" = "mm/dd/yyyy";
@@ -44,10 +86,28 @@
 /* No comment provided by engineer. */
 "notSameRepeatPass" = "Repeat password does not equal to password";
 
+"Nov" = "Nov";
+
+"november" = "November";
+
+"Oct" = "Oct";
+
+"october" = "October";
+
 "Oops" = "Oops";
 
 /* No comment provided by engineer. */
 "password" = "password";
+
+/* No comment provided by engineer. */
+"publish" = "Publish";
+
+/* No comment provided by engineer. */
+"publishTx" = "After publishing transaction some\
+time will be needed to add it to\
+the blockchain until the\
+transaction will be valid.\
+Please, be patient";
 
 /* No comment provided by engineer. */
 "restartLater" = "Restart later";
@@ -55,11 +115,18 @@
 /* No comment provided by engineer. */
 "searchForAUser" = "Search for a user";
 
+"Sep" = "Sep";
+
+"september" = "September";
+
 /* No comment provided by engineer. */
 "signup2Error" = "Unknown error on a server. You was signed up, but without description and keywords";
 
 /* No comment provided by engineer. */
 "signupError" = "There is already a user with such email address. Please, try another one";
+
+/* No comment provided by engineer. */
+"txConfirmed" = "The transaction was added to the blockchain";
 
 /* No comment provided by engineer. */
 "typeYourMsgHere" = "Type your message here...";
@@ -79,6 +146,44 @@
 
 /* No comment provided by engineer. */
 "yourDescription" = "Write something about your skills...";
+
+"годин" = "hours ago";
+
+"години" = "hours ago";
+
+"годину" = "hour ago";
+
+"день" = "day ago";
+
+"дні" = "days ago";
+
+"днів" = "days ago";
+
+"місяць" = "month ago";
+
+"місяці" = "months ago";
+
+"місяців" = "months ago";
+
+"роки" = "years ago";
+
+"років" = "years ago";
+
+"рік" = "year ago";
+
+"тиждень" = "week ago";
+
+"тижні" = "weeks ago";
+
+"тижнів" = "weeks ago";
+
+"хвилин" = "minutes ago";
+
+"хвилини" = "minutes ago";
+
+"хвилину" = "minute ago";
+
+"щойно" = "just now";
 
 /* No comment provided by engineer. */
 "Cancel" = "";
@@ -121,60 +226,3 @@
 
 /* No comment provided by engineer. */
 "Username" = "";
-
-"january" = "January";
-"february" = "February";
-"march" = "March";
-"april" = "April";
-"may" = "May";
-"june" = "June";
-"july" = "July";
-"august" = "August";
-"september" = "September";
-"october" = "October";
-"november" = "November";
-"december" = "December";
-
-"Jan" = "Jan";
-"Feb" = "Feb";
-"Mar" = "Mar";
-"Apr" = "Apr";
-"May" = "May";
-"Jun" = "Jun";
-"Jul" = "Jul";
-"Aug" = "Aug";
-"Sep" = "Sep";
-"Oct" = "Oct";
-"Nov" = "Nov";
-"Dec" = "Dec";
-
-"щойно" = "just now";
-"хвилин" = "minutes ago";
-"хвилину" = "minute ago";
-"хвилини" = "minutes ago";
-"годин" = "hours ago";
-"годину" = "hour ago";
-"години" = "hours ago";
-"днів" = "days ago";
-"день" = "day ago";
-"дні" = "days ago";
-"тижнів" = "weeks ago";
-"тиждень" = "week ago";
-"тижні" = "weeks ago";
-"місяців" = "months ago";
-"місяць" = "month ago";
-"місяці" = "months ago";
-"років" = "years ago";
-"рік" = "year ago";
-"роки" = "years ago";
-
-"attention" = "Attention";
-"publishTx" = "After publishing transaction some\
-time will be needed to add it to\
-the blockchain until the\
-transaction will be valid.\
-Please, be patient";
-"publish" = "Publish";
-"cancel" = "Cancel";
-
-"txConfirmed" = "The transaction was added to the blockchain";

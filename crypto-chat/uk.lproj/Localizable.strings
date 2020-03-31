@@ -1,6 +1,24 @@
 
+"Apr" = "квіт.";
+
+"april" = "квітня";
+
+/* No comment provided by engineer. */
+"attention" = "Увага";
+
+"Aug" = "серп.";
+
+"august" = "серпня";
+
+/* No comment provided by engineer. */
+"cancel" = "Відміна";
+
 /* No comment provided by engineer. */
 "connectionError" = "Не вдалося під'єднатися до сервера, спробуйте пізніше";
+
+"Dec" = "груд.";
+
+"december" = "грудня";
 
 /* No comment provided by engineer. */
 "doe" = "Доу";
@@ -14,14 +32,30 @@
 /* No comment provided by engineer. */
 "emptyRepeatPass" = "Повторення паролю не може бути порожнім";
 
+"Feb" = "лют.";
+
+"february" = "лютого";
+
 /* No comment provided by engineer. */
 "incorrectEmailFormat" = "Емейл має неправильний формат";
 
 /* No comment provided by engineer. */
 "james" = "Джеймс";
 
+"Jan" = "січ.";
+
+"january" = "січня";
+
 /* No comment provided by engineer. */
 "john" = "Джон";
+
+"Jul" = "лип.";
+
+"july" = "липня";
+
+"Jun" = "черв.";
+
+"june" = "червня";
 
 /* No comment provided by engineer. */
 "langChange" = "Зміна мови";
@@ -31,6 +65,14 @@
 
 /* No comment provided by engineer. */
 "loginError" = "Неправильний логін або пароль, спробуйте знову";
+
+"Mar" = "берез.";
+
+"march" = "березня";
+
+"may" = "травня";
+
+"May" = "трав.";
 
 /* No comment provided by engineer. */
 "mm/dd/yyyy" = "мм/дд/рррр";
@@ -44,10 +86,27 @@
 /* No comment provided by engineer. */
 "notSameRepeatPass" = "Повторення паролю не співпадає з паролем";
 
+"Nov" = "листоп.";
+
+"november" = "листопада";
+
+"Oct" = "жовт.";
+
+"october" = "жовтня";
+
 "Oops" = "Упс";
 
 /* No comment provided by engineer. */
 "password" = "пароль";
+
+/* No comment provided by engineer. */
+"publish" = "Опублікувати";
+
+/* No comment provided by engineer. */
+"publishTx" = "Після публікації транзакції потрібен\
+буде деякий час, щоб її додали до\
+блокчейну та вона вважалася\
+підтвердженою. Будь-ласка, чекайте";
 
 /* No comment provided by engineer. */
 "restartLater" = "Пізніше";
@@ -55,11 +114,18 @@
 /* No comment provided by engineer. */
 "searchForAUser" = "Шукати";
 
+"Sep" = "верес.";
+
+"september" = "вересня";
+
 /* No comment provided by engineer. */
 "signup2Error" = "Невідома помилка. Ви були зареєстровані, але без опису та ключових слів";
 
 /* No comment provided by engineer. */
 "signupError" = "Користувач з такою адресою електронної пошти вже зареєстровано, спробуйте іншу адресу";
+
+/* No comment provided by engineer. */
+"txConfirmed" = "Транзакцію додано до блокчейну";
 
 /* No comment provided by engineer. */
 "typeYourMsgHere" = "Набирайте повідомлення...";
@@ -79,6 +145,44 @@
 
 /* No comment provided by engineer. */
 "yourDescription" = "Напишіть щось про свої навички...";
+
+"годин" = "годин тому";
+
+"години" = "години тому";
+
+"годину" = "годину тому";
+
+"день" = "день тому";
+
+"дні" = "дні тому";
+
+"днів" = "днів тому";
+
+"місяць" = "місяць тому";
+
+"місяці" = "місяці тому";
+
+"місяців" = "місяців тому";
+
+"роки" = "роки тому";
+
+"років" = "років тому";
+
+"рік" = "рік тому";
+
+"тиждень" = "тиждень тому";
+
+"тижні" = "тижні тому";
+
+"тижнів" = "тижнів тому";
+
+"хвилин" = "хвилин тому";
+
+"хвилини" = "хвилини тому";
+
+"хвилину" = "хвилину тому";
+
+"щойно" = "щойно";
 
 /* No comment provided by engineer. */
 "Cancel" = "";
@@ -121,71 +225,3 @@
 
 /* No comment provided by engineer. */
 "Username" = "";
-
-"january" = "січня";
-"february" = "лютого";
-"march" = "березня";
-"april" = "квітня";
-"may" = "травня";
-"june" = "червня";
-"july" = "липня";
-"august" = "серпня";
-"september" = "вересня";
-"october" = "жовтня";
-"november" = "листопада";
-"december" = "грудня";
-
-"Jan" = "січ.";
-"Feb" = "лют.";
-"Mar" = "берез.";
-"Apr" = "квіт.";
-"May" = "трав.";
-"Jun" = "черв.";
-"Jul" = "лип.";
-"Aug" = "серп.";
-"Sep" = "верес.";
-"Oct" = "жовт.";
-"Nov" = "листоп.";
-"Dec" = "груд.";
-
-"justNow" = "щойно";
-"minuteAgo" = "хвилину тому";
-"minutesAgo" = "хвилини тому";
-"hourAgo" = "годину тому";
-"hoursAgo" = "години тому";
-"dayAgo" = "день тому";
-"daysAgo" = "дні тому";
-"monthAgo" = "місяць тому";
-"monthsAgo" = "місяців тому";
-"yearAgo" = "рік тому";
-"yearsAgo" = "роки тому";
-
-"щойно" = "щойно";
-"хвилин" = "хвилин тому";
-"хвилину" = "хвилину тому";
-"хвилини" = "хвилини тому";
-"годин" = "годин тому";
-"годину" = "годину тому";
-"години" = "години тому";
-"днів" = "днів тому";
-"день" = "день тому";
-"дні" = "дні тому";
-"тижнів" = "тижнів тому";
-"тиждень" = "тиждень тому";
-"тижні" = "тижні тому";
-"місяців" = "місяців тому";
-"місяць" = "місяць тому";
-"місяці" = "місяці тому";
-"років" = "років тому";
-"рік" = "рік тому";
-"роки" = "роки тому";
-
-"attention" = "Увага";
-"publishTx" = "Після публікації транзакції потрібен\
-буде деякий час, щоб її додали до\
-блокчейну та вона вважалася\
-підтвердженою. Будь-ласка, чекайте";
-"publish" = "Опублікувати";
-"cancel" = "Відміна";
-
-"txConfirmed" = "Транзакцію додано до блокчейну";

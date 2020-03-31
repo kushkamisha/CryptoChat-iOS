@@ -155,8 +155,8 @@
 /* Class = "UILabel"; text = "0.00000"; ObjectID = "OS1-7p-2EV"; */
 "OS1-7p-2EV.text" = "";
 
-/* Class = "UILabel"; text = "Your balance is 0 ETH"; ObjectID = "w0a-2y-7C9"; */
-"w0a-2y-7C9.text" = "";
+/* Class = "UIButton"; normalTitle = "Your balance is 0 ETH"; ObjectID = "UiX-yS-WH8"; */
+"UiX-yS-WH8.normalTitle" = "";
 
 /* Class = "UILabel"; text = "Description"; ObjectID = "YCJ-0v-GTU"; */
 "YCJ-0v-GTU.text" = "";

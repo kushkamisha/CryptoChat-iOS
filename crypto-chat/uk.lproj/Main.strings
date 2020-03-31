@@ -47,6 +47,9 @@
 /* Class = "UILabel"; text = "0.0 ETH"; ObjectID = "ccc-bL-moh"; */
 "ccc-bL-moh.text" = "0.0 ETH";
 
+/* Class = "UILabel"; text = "Amount"; ObjectID = "EOT-aY-kve"; */
+"EOT-aY-kve.text" = "Сума";
+
 /* Class = "UISegmentedControl"; fJr-SM-b6y.segmentTitles[0] = "Українська"; ObjectID = "fJr-SM-b6y"; */
 "fJr-SM-b6y.segmentTitles[0]" = "Українська";
 
@@ -58,6 +61,12 @@
 
 /* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "G1Y-k3-G3R"; */
 "G1Y-k3-G3R.normalTitle" = "Зареєструватися";
+
+/* Class = "UIButton"; normalTitle = "Publish micropayment"; ObjectID = "h29-ye-xRW"; */
+"h29-ye-xRW.normalTitle" = "Опублікувати мікроплатіж";
+
+/* Class = "UILabel"; text = "Date"; ObjectID = "Hcl-QG-dIW"; */
+"Hcl-QG-dIW.text" = "Дата";
 
 /* Class = "UILabel"; text = "An Ethereum address was generated for you"; ObjectID = "IQn-se-y3C"; */
 "IQn-se-y3C.text" = "Ми створили Вам ефіріум адресу";
@@ -110,9 +119,6 @@
 /* Class = "UILabel"; text = "*"; ObjectID = "tQt-qT-j39"; */
 "tQt-qT-j39.text" = "*";
 
-/* Class = "UILabel"; text = "Your balance is 0 ETH"; ObjectID = "w0a-2y-7C9"; */
-"w0a-2y-7C9.text" = "Ваш баланс 0 ETH";
-
 /* Class = "UILabel"; text = "Sign Up"; ObjectID = "xEu-lP-TCv"; */
 "xEu-lP-TCv.text" = "Реєстрація";
 
@@ -125,23 +131,17 @@
 /* Class = "UILabel"; text = "With 0 ETH on it"; ObjectID = "zcL-8l-wRb"; */
 "zcL-8l-wRb.text" = "З 0 ETH на ній";
 
+/* Class = "UILabel"; text = "User Name"; ObjectID = "ZQo-Hh-jCL"; */
+"ZQo-Hh-jCL.text" = "Ім'я користувача";
+
 /* Class = "UILabel"; text = "David Coperfield"; ObjectID = "021-n6-d8J"; */
 "021-n6-d8J.text" = "";
 
 /* Class = "UILabel"; text = "Message"; ObjectID = "7Y8-36-bgr"; */
 "7Y8-36-bgr.text" = "";
 
-/* Class = "UILabel"; text = "Amount"; ObjectID = "EOT-aY-kve"; */
-"EOT-aY-kve.text" = "Сума";
-
 /* Class = "UILabel"; text = "Label"; ObjectID = "FgS-rx-MT9"; */
 "FgS-rx-MT9.text" = "";
-
-/* Class = "UIButton"; normalTitle = "Publish micropayment"; ObjectID = "h29-ye-xRW"; */
-"h29-ye-xRW.normalTitle" = "Опублікувати мікроплатіж";
-
-/* Class = "UILabel"; text = "Date"; ObjectID = "Hcl-QG-dIW"; */
-"Hcl-QG-dIW.text" = "Дата";
 
 /* Class = "UILabel"; text = "label"; ObjectID = "htQ-r1-AfS"; */
 "htQ-r1-AfS.text" = "";
@@ -161,8 +161,8 @@
 /* Class = "UILabel"; text = "Message"; ObjectID = "q8Z-c2-QpF"; */
 "q8Z-c2-QpF.text" = "";
 
-/* Class = "UILabel"; text = "User Name"; ObjectID = "ZQo-Hh-jCL"; */
-"ZQo-Hh-jCL.text" = "Ім'я користувача";
+/* Class = "UIButton"; normalTitle = "Your balance is 0 ETH"; ObjectID = "UiX-yS-WH8"; */
+"UiX-yS-WH8.normalTitle" = "Ваш баланс 0 ETH";
 
 /* Class = "UILabel"; text = "label"; ObjectID = "zTM-mX-hC4"; */
 "zTM-mX-hC4.text" = "";

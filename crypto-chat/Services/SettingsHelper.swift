@@ -183,8 +183,9 @@ extension SettingsViewController: UICollectionViewDataSource, UICollectionViewDe
                     let status = json["status"].stringValue
                     if (status == "success") {
                         let balance = json["balanceInEth"]
-                        self.userBalance.text = self.userBalance.text?.split(separator: " ").dropLast(2).joined(separator: " ")
-                        self.userBalance.text! += " \(balance) ETH"
+                        self.userBalance.setTitle(self.userBalance?.titleLabel?.text?.split(separator: " ").dropLast(2).joined(separator: " "), for: .normal)
+                        guard let text = self.userBalance.titleLabel?.text else { return }
+                        self.userBalance.setTitle("\(text) \(balance) ETH", for: .normal)
                     } else {
                         NSLog("Can't load user balance because of an internal server error")
                     }
@@ -208,6 +209,7 @@ extension SettingsViewController: UICollectionViewDataSource, UICollectionViewDe
                     let json = JSON(data)
                     let hash = json["txHash"].stringValue
                     print("The tx is now mining and it's hash is \(hash)")
+                    self.getUnpublishedTxs()
                     break
                 case .failure(let error):
                     print(error.localizedDescription)

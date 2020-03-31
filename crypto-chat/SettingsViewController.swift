@@ -19,7 +19,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var langSegmentedControl: UISegmentedControl!
     @IBOutlet weak var txTableView: UITableView!
-    @IBOutlet weak var userBalance: UILabel!
+    @IBOutlet weak var userBalance: UIButton!
     
     @IBOutlet weak var headerDate: UILabel!
     @IBOutlet weak var headerAmount: UILabel!
@@ -112,6 +112,10 @@ class SettingsViewController: UIViewController {
             alertController.addAction(cancelAction)
             self.present(alertController, animated: true, completion: nil)
         }
+    }
+    
+    @IBAction func refreshUserBalance(_ sender: Any) {
+        self.loadUserBalance()
     }
     
     @objc func rightSwipeAction(swipe: UISwipeGestureRecognizer) {
