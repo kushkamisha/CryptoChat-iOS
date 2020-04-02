@@ -36,6 +36,7 @@
 		525691E123EB360700DB09D9 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525691E023EB360700DB09D9 /* ChatViewController.swift */; };
 		525691E323EB443000DB09D9 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525691E223EB443000DB09D9 /* Utils.swift */; };
 		52731C6023ECA6E2009A6C2A /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52731C5F23ECA6E2009A6C2A /* UIViewController.swift */; };
+		5280CAEB243647900058A832 /* ProductInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5280CAEA243647900058A832 /* ProductInfoViewController.swift */; };
 		529018872428D32A0029BF8F /* TxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529018862428D32A0029BF8F /* TxCell.swift */; };
 		529018892428D3A50029BF8F /* Tx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529018882428D3A50029BF8F /* Tx.swift */; };
 		5290188B242913A50029BF8F /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5290188A242913A50029BF8F /* Globals.swift */; };
@@ -133,6 +134,7 @@
 		525691E023EB360700DB09D9 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		525691E223EB443000DB09D9 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		52731C5F23ECA6E2009A6C2A /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		5280CAEA243647900058A832 /* ProductInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfoViewController.swift; sourceTree = "<group>"; };
 		5287030923FEA260004DB7EC /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
 		529018862428D32A0029BF8F /* TxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TxCell.swift; sourceTree = "<group>"; };
 		529018882428D3A50029BF8F /* Tx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tx.swift; sourceTree = "<group>"; };
@@ -309,6 +311,7 @@
 				522558572408182E00357C09 /* SignUp2ViewController.swift */,
 				525691E023EB360700DB09D9 /* ChatViewController.swift */,
 				52122E5A24226A33007D0736 /* SettingsViewController.swift */,
+				5280CAEA243647900058A832 /* ProductInfoViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -559,6 +562,7 @@
 				52731C6023ECA6E2009A6C2A /* UIViewController.swift in Sources */,
 				529B7C8B2403F75B00C32272 /* ChatTables.swift in Sources */,
 				5228DE9023E9BC6A00D4F08B /* SceneDelegate.swift in Sources */,
+				5280CAEB243647900058A832 /* ProductInfoViewController.swift in Sources */,
 				5225585A24082A6B00357C09 /* SignUpHelper.swift in Sources */,
 				52DB60AA2408516600EF4D46 /* KeywordStyle.swift in Sources */,
 				5225585C24082C9E00357C09 /* KeywordCell.swift in Sources */,
