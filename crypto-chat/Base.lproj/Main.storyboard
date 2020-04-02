@@ -1842,20 +1842,31 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="github" translatesAutoresizingMaskIntoConstraints="NO" id="fVy-a1-wLw">
                                 <rect key="frame" x="379" y="357" width="24" height="24"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="3eO-Px-CZ7"/>
-                                    <constraint firstAttribute="width" constant="24" id="XMm-ep-Hd8"/>
+                                    <constraint firstAttribute="height" constant="24" id="PDy-qo-nyh"/>
+                                    <constraint firstAttribute="width" constant="24" id="uYq-ih-5yu"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="github.com/kushkamisha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6v-yu-Zzw">
-                                <rect key="frame" x="411" y="357" width="235" height="24"/>
-                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZBZ-SE-P3Y">
-                                <rect key="frame" x="70" y="47" width="54" height="27"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="i5m-cB-Usv">
+                                <rect key="frame" x="52" y="52" width="20" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="27" id="6ki-hU-QKq"/>
+                                    <constraint firstAttribute="height" constant="20" id="J72-op-KyM"/>
+                                    <constraint firstAttribute="width" constant="20" id="phh-0h-LCI"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7S2-IR-aQx">
+                                <rect key="frame" x="411" y="351" width="235" height="36"/>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="20"/>
+                                <state key="normal" title="github.com/kushkamisha">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="githubOpen:" destination="P6s-G3-htb" eventType="touchUpInside" id="bec-zW-Tw9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZBZ-SE-P3Y">
+                                <rect key="frame" x="74" y="52" width="47" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="bQX-hM-vOq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="20"/>
                                 <state key="normal" title="Back">
@@ -1865,34 +1876,32 @@
                                     <segue destination="9CV-zH-N0a" kind="show" id="VWH-kd-Chv"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="i5m-cB-Usv">
-                                <rect key="frame" x="48" y="50" width="20" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="FUB-yF-Nh8"/>
-                                    <constraint firstAttribute="width" constant="20" id="XCa-Fx-nlj"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.47843137250000001" green="0.54901960780000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="mz7-ix-45U" firstAttribute="centerX" secondItem="aDP-SL-Pvg" secondAttribute="centerX" id="3AE-2Z-jUU"/>
-                            <constraint firstItem="o56-wK-3W8" firstAttribute="centerX" secondItem="aDP-SL-Pvg" secondAttribute="centerX" id="6ij-38-b4S"/>
-                            <constraint firstItem="o56-wK-3W8" firstAttribute="top" secondItem="i6v-yu-Zzw" secondAttribute="bottom" constant="20" id="Ax9-If-5bo"/>
-                            <constraint firstItem="fVy-a1-wLw" firstAttribute="leading" secondItem="ppA-cS-pfA" secondAttribute="leading" constant="379" id="CUJ-NA-bqg"/>
-                            <constraint firstItem="i6v-yu-Zzw" firstAttribute="top" secondItem="mz7-ix-45U" secondAttribute="bottom" constant="20" id="HUe-WB-O6P"/>
-                            <constraint firstItem="i6v-yu-Zzw" firstAttribute="leading" secondItem="fVy-a1-wLw" secondAttribute="trailing" constant="8" id="Pjt-dG-ttV"/>
-                            <constraint firstItem="mz7-ix-45U" firstAttribute="top" secondItem="ppA-cS-pfA" secondAttribute="top" constant="277" id="RhR-BH-TcO"/>
-                            <constraint firstItem="76N-zC-Cyp" firstAttribute="top" secondItem="o56-wK-3W8" secondAttribute="bottom" constant="8" id="Zpj-IQ-ETJ"/>
-                            <constraint firstItem="ZBZ-SE-P3Y" firstAttribute="top" secondItem="ppA-cS-pfA" secondAttribute="top" constant="47" id="cvt-5A-SdK"/>
-                            <constraint firstItem="ZBZ-SE-P3Y" firstAttribute="leading" secondItem="i5m-cB-Usv" secondAttribute="trailing" constant="2" id="dz2-Fy-sqU"/>
-                            <constraint firstItem="fVy-a1-wLw" firstAttribute="top" secondItem="mz7-ix-45U" secondAttribute="bottom" constant="20" id="hms-D0-vSE"/>
-                            <constraint firstItem="i5m-cB-Usv" firstAttribute="leading" secondItem="ppA-cS-pfA" secondAttribute="leading" constant="48" id="lUk-Q6-zRp"/>
-                            <constraint firstItem="76N-zC-Cyp" firstAttribute="centerX" secondItem="aDP-SL-Pvg" secondAttribute="centerX" id="mVb-nb-hMr"/>
-                            <constraint firstItem="i5m-cB-Usv" firstAttribute="top" secondItem="ppA-cS-pfA" secondAttribute="top" constant="50" id="nWj-1B-ih7"/>
+                            <constraint firstItem="mz7-ix-45U" firstAttribute="centerX" secondItem="aDP-SL-Pvg" secondAttribute="centerX" id="1gd-xP-bKT"/>
+                            <constraint firstItem="mz7-ix-45U" firstAttribute="centerX" secondItem="76N-zC-Cyp" secondAttribute="centerX" id="5Uj-dv-GFq"/>
+                            <constraint firstItem="ppA-cS-pfA" firstAttribute="bottom" secondItem="fVy-a1-wLw" secondAttribute="bottom" constant="387" id="6Hu-zG-nBE"/>
+                            <constraint firstItem="o56-wK-3W8" firstAttribute="top" secondItem="7S2-IR-aQx" secondAttribute="bottom" constant="14" id="LeY-dy-4pk"/>
+                            <constraint firstItem="ppA-cS-pfA" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ZBZ-SE-P3Y" secondAttribute="trailing" symbolic="YES" id="Qkh-t6-liQ"/>
+                            <constraint firstItem="fVy-a1-wLw" firstAttribute="top" secondItem="mz7-ix-45U" secondAttribute="bottom" constant="20" id="UMe-tt-XY2"/>
+                            <constraint firstItem="ZBZ-SE-P3Y" firstAttribute="leading" secondItem="i5m-cB-Usv" secondAttribute="trailing" constant="2" id="WBg-wh-yfy"/>
+                            <constraint firstItem="fVy-a1-wLw" firstAttribute="leading" secondItem="ppA-cS-pfA" secondAttribute="leading" constant="379" id="YD5-uo-YL7"/>
+                            <constraint firstItem="76N-zC-Cyp" firstAttribute="top" secondItem="o56-wK-3W8" secondAttribute="bottom" constant="8" symbolic="YES" id="Z0b-AC-2OP"/>
+                            <constraint firstItem="mz7-ix-45U" firstAttribute="centerX" secondItem="o56-wK-3W8" secondAttribute="centerX" id="aiT-sC-m7O"/>
+                            <constraint firstItem="ZBZ-SE-P3Y" firstAttribute="top" secondItem="ppA-cS-pfA" secondAttribute="top" constant="52" id="cXn-ad-Rjn"/>
+                            <constraint firstItem="ppA-cS-pfA" firstAttribute="trailing" secondItem="7S2-IR-aQx" secondAttribute="trailing" constant="378" id="dQB-pZ-It5"/>
+                            <constraint firstItem="i5m-cB-Usv" firstAttribute="top" secondItem="ppA-cS-pfA" secondAttribute="top" constant="52" id="drd-1Z-XvY"/>
+                            <constraint firstItem="7S2-IR-aQx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fVy-a1-wLw" secondAttribute="trailing" constant="8" symbolic="YES" id="gpK-gU-I5K"/>
+                            <constraint firstItem="i5m-cB-Usv" firstAttribute="leading" secondItem="ppA-cS-pfA" secondAttribute="leading" constant="52" id="k4K-8R-srS"/>
+                            <constraint firstItem="fVy-a1-wLw" firstAttribute="centerY" secondItem="7S2-IR-aQx" secondAttribute="centerY" id="kK1-Ki-8QB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ppA-cS-pfA"/>
                     </view>
                     <navigationItem key="navigationItem" id="0oL-m7-m6m"/>
+                    <connections>
+                        <outlet property="githubUrl" destination="7S2-IR-aQx" id="sgf-Za-goM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pit-WF-P4h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1900,7 +1909,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rlP-QK-SlT"/>
+        <segue reference="VWH-kd-Chv"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Background.png" width="971" height="680"/>

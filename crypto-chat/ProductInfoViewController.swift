@@ -9,6 +9,8 @@
 import UIKit
 
 class ProductInfoViewController: UIViewController {
+    
+    @IBOutlet weak var githubUrl: UIButton!
 
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
@@ -16,6 +18,12 @@ class ProductInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction func githubOpen(_ sender: Any) {
+        if let url = URL(string: "https://www.github.com/kushkamisha") {
+            UIApplication.shared.open(url)
+        }
     }
 
 }
