@@ -58,6 +58,7 @@
 		52E1EBA123F473F8008BA69E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E1EBA023F473F8008BA69E /* Message.swift */; };
 		52E94DBF23FE9EAA00ABD416 /* SocketIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E94DBE23FE9EAA00ABD416 /* SocketIO.framework */; };
 		52E94DC023FE9EAA00ABD416 /* SocketIO.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52E94DBE23FE9EAA00ABD416 /* SocketIO.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		52F855152439106A001BF2FB /* UIImage.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F855142439106A001BF2FB /* UIImage.ext.swift */; };
 		52FF99E123FE92C9000758A6 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FF99E023FE92C9000758A6 /* Socket.swift */; };
 /* End PBXBuildFile section */
 
@@ -154,6 +155,7 @@
 		52E94DB723FE98FB00ABD416 /* SwiftSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSocket.framework; path = Carthage/Build/iOS/SwiftSocket.framework; sourceTree = "<group>"; };
 		52E94DB823FE98FB00ABD416 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		52E94DBE23FE9EAA00ABD416 /* SocketIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SocketIO.framework; path = Carthage/Build/iOS/SocketIO.framework; sourceTree = "<group>"; };
+		52F855142439106A001BF2FB /* UIImage.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.ext.swift; sourceTree = "<group>"; };
 		52FF99E023FE92C9000758A6 /* Socket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
 		B27DD069B7C70D0AAAB9A897 /* Pods_crypto_chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_crypto_chat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3679EE945E128D810648400 /* Pods-crypto-chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-crypto-chat.debug.xcconfig"; path = "Target Support Files/Pods-crypto-chat/Pods-crypto-chat.debug.xcconfig"; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 				529180C823F59C7100BD6751 /* UILabel.ext.swift */,
 				529C8D6423FEE419005B6A1C /* Microfutures.swift */,
 				52DB60A92408516600EF4D46 /* KeywordStyle.swift */,
+				52F855142439106A001BF2FB /* UIImage.ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -565,6 +568,7 @@
 				5280CAEB243647900058A832 /* ProductInfoViewController.swift in Sources */,
 				5225585A24082A6B00357C09 /* SignUpHelper.swift in Sources */,
 				52DB60AA2408516600EF4D46 /* KeywordStyle.swift in Sources */,
+				52F855152439106A001BF2FB /* UIImage.ext.swift in Sources */,
 				5225585C24082C9E00357C09 /* KeywordCell.swift in Sources */,
 				52DA96072407DD920060B432 /* SignUpViewController.swift in Sources */,
 				5228DECD23E9E74E00D4F08B /* InputBox.swift in Sources */,

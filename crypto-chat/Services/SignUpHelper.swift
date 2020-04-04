@@ -83,7 +83,7 @@ extension SignUpViewController: UINavigationControllerDelegate, UIImagePickerCon
         let email = emailInputField.text ?? ""
         let pass = passInputField.text ?? ""
         let repeatPass = repeatPassInputField.text ?? ""
-        
+
         if (email == "") {
             emailGlowingView.isHidden = false
             Loaf(NSLocalizedString("emptyEmail", comment: ""), state: .error, sender: self).show()
@@ -101,16 +101,16 @@ extension SignUpViewController: UINavigationControllerDelegate, UIImagePickerCon
             Loaf(NSLocalizedString("notSameRepeatPass", comment: ""), state: .error, sender: self).show()
             return false
         }
-        
+
         emailGlowingView.isHidden = true
         passGlowingView.isHidden = true
         repeatPassGlowingView.isHidden = true
-        
+
         let rangeEmail = NSRange(location: 0, length: email.utf16.count)
         let regexEmail = try! NSRegularExpression(pattern: "^\\w+@[a-zA-Z_]+?\\.[a-zA-Z]{2,3}$")
         let rangePass = NSRange(location: 0, length: pass.utf16.count)
         let regexPass = try! NSRegularExpression(pattern: "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\\$%\\^&\\*])(?=.{8,})")
-        
+
         if regexEmail.matches(in: email, options: [], range: rangeEmail).count == 0 {
             Loaf(NSLocalizedString("incorrectEmailFormat", comment: ""), state: .error, sender: self).show()
             emailGlowingView.isHidden = false
@@ -149,6 +149,12 @@ extension SignUpViewController: UINavigationControllerDelegate, UIImagePickerCon
         guard let data = passInputField.text?.data(using: .utf8) else { return }
         let passHash = SHA512.hash(data: data).hexStr
         
+        var avatarBase64 = ""
+        if !(userImage.image?.isEqualToImage(image: UIImage(named: "upload-photo")!) ?? true) {
+            avatarBase64 = userImage.image?.jpegData(compressionQuality: 1)?.base64EncodedString() ?? ""
+            print(avatarBase64)
+        }
+        
         AF.request("http://localhost:8080/auth/register",
                    method: .post,
                    parameters: [
@@ -157,7 +163,8 @@ extension SignUpViewController: UINavigationControllerDelegate, UIImagePickerCon
                         "firstName": firstNameInputField.text ?? "",
                         "middleName": middleNameInputField.text ?? "",
                         "lastName": lastNameInputField.text ?? "",
-                        "birthDate": birthDateInputField.text ?? ""
+                        "birthDate": birthDateInputField.text ?? "",
+                        "avatar": avatarBase64
                    ],
                    encoder: JSONParameterEncoder.default).responseJSON { response in
             switch response.result {
@@ -166,7 +173,7 @@ extension SignUpViewController: UINavigationControllerDelegate, UIImagePickerCon
                     let json = JSON(data)
                     print(json)
                     let status = json["status"].stringValue
-                    
+
                     if (status == "success") {
                         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SignUp2Screen") as! SignUp2ViewController
                         vc.modalPresentationStyle = .fullScreen
@@ -174,7 +181,7 @@ extension SignUpViewController: UINavigationControllerDelegate, UIImagePickerCon
                         vc.userId = json["userId"].stringValue
                         vc.address = json["address"].stringValue
                         vc.token = json["token"].stringValue
-                        
+
                         // Save ethereum private key to keychain
                         let saveSuccessful: Bool = KeychainWrapper.standard.set(json["prKey"].stringValue, forKey: "prKey")
                         print("Saving prKey to keychain: \(saveSuccessful)")
@@ -183,7 +190,7 @@ extension SignUpViewController: UINavigationControllerDelegate, UIImagePickerCon
                     } else {
                         Loaf(NSLocalizedString("signupError", comment: ""), state: .error, sender: self).show()
                     }
-                    
+
                     break
                 case .failure(let error):
                     print(error.localizedDescription)
