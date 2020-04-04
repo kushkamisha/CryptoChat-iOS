@@ -119,6 +119,9 @@
 /* Class = "UILabel"; text = "*"; ObjectID = "tQt-qT-j39"; */
 "tQt-qT-j39.text" = "*";
 
+/* Class = "UIButton"; normalTitle = "Your balance is 0 ETH"; ObjectID = "UiX-yS-WH8"; */
+"UiX-yS-WH8.normalTitle" = "Ваш баланс 0 ETH";
+
 /* Class = "UILabel"; text = "Sign Up"; ObjectID = "xEu-lP-TCv"; */
 "xEu-lP-TCv.text" = "Реєстрація";
 
@@ -136,6 +139,12 @@
 
 /* Class = "UILabel"; text = "David Coperfield"; ObjectID = "021-n6-d8J"; */
 "021-n6-d8J.text" = "";
+
+/* Class = "UILabel"; text = "All rights reserved"; ObjectID = "76N-zC-Cyp"; */
+"76N-zC-Cyp.text" = "Усі права захищено";
+
+/* Class = "UIButton"; normalTitle = "github.com/kushkamisha"; ObjectID = "7S2-IR-aQx"; */
+"7S2-IR-aQx.normalTitle" = "github.com/kushkamisha";
 
 /* Class = "UILabel"; text = "Message"; ObjectID = "7Y8-36-bgr"; */
 "7Y8-36-bgr.text" = "";
@@ -155,14 +164,20 @@
 /* Class = "UILabel"; text = "9:99 AM"; ObjectID = "l5f-Cx-KZt"; */
 "l5f-Cx-KZt.text" = "";
 
+/* Class = "UILabel"; text = "Crypto Chat"; ObjectID = "mz7-ix-45U"; */
+"mz7-ix-45U.text" = "Крипто Чат";
+
+/* Class = "UILabel"; text = " © 2020 Misha Kushka"; ObjectID = "o56-wK-3W8"; */
+"o56-wK-3W8.text" = " © 2020 Михайло Кушка";
+
 /* Class = "UILabel"; text = "0.00000"; ObjectID = "OS1-7p-2EV"; */
 "OS1-7p-2EV.text" = "";
 
 /* Class = "UILabel"; text = "Message"; ObjectID = "q8Z-c2-QpF"; */
 "q8Z-c2-QpF.text" = "";
 
-/* Class = "UIButton"; normalTitle = "Your balance is 0 ETH"; ObjectID = "UiX-yS-WH8"; */
-"UiX-yS-WH8.normalTitle" = "Ваш баланс 0 ETH";
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "ZBZ-SE-P3Y"; */
+"ZBZ-SE-P3Y.normalTitle" = "Назад";
 
 /* Class = "UILabel"; text = "label"; ObjectID = "zTM-mX-hC4"; */
 "zTM-mX-hC4.text" = "";
