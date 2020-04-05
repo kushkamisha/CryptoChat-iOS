@@ -37,8 +37,10 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     var username: String = ""
     var selectedChat: Chat = Chat(chatId: "", socketId: "", name: "", chatType: "", fromUser: "", avatar: UIImage(), lastMsgText: "", lastMsgTime: "", chatTypeImage: UIImage(), chatTypeSelectedImage: UIImage())
     var chats: [Chat] = []
+//    var filteredChats: [Chat] = []
     var msgs: [Message] = []
     var chatSelected: Bool = false
+//    let searchController = UISearchController()
     let CHARACTER_PRICE = 0.00001 // ETH = about $0.001
     
     lazy var refreshControl: UIRefreshControl = {
@@ -102,6 +104,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
         listen4NewMessages()
         listen4AmountChanges()
         loadChats()
+        searchBarSetup()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool { sendMsg(); return true } // By "Enter" press...

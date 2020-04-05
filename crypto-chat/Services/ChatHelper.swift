@@ -262,3 +262,22 @@ extension ChatViewController {
     }
 
 }
+
+//extension ChatViewController: UISearchBarDelegate, UISearchDisplayDelegate {
+//
+//    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+//        print("begin editing")
+//    }
+//    
+//    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+//        print("end editing")
+//    }
+//    
+//    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+//        print("cancel clicked")
+//    }
+//    
+//    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+//        print("search clicked")
+//    }
+//}

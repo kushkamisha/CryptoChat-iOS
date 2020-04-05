@@ -64,3 +64,31 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
 }
+
+extension ChatViewController: UISearchBarDelegate {
+
+    func searchBarSetup() {
+        let searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 100, height: 70))
+        searchBar.showsScopeBar = true
+        searchBar.scopeButtonTitles = ["Name", "Year", "By"]
+        
+        searchBar.delegate = self
+        
+        chatsTableView.tableHeaderView = searchBar
+    }
+    
+    // MARK: - search bar delegate
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filter(index: searchBar.selectedScopeButtonIndex, text: searchText)
+    }
+    
+    func filter(index: Int, text: String) {
+        print("Filtering index: \(index)")
+        
+        chats = chats.filter({ (chat: Chat) -> Bool in
+            return chat.name.contains(text)
+        })
+        chatsTableView.reloadData()
+    }
+    
+}
