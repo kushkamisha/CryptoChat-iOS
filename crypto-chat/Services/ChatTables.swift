@@ -11,15 +11,24 @@ import UIKit
 extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableView == msgsTableView ? msgs.count : chats.count
+        if (tableView == msgsTableView) {
+            return msgs.count
+        } else {
+            if isFiltering { return filteredChats.count }
+            return chats.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if (tableView == chatsTableView) {
-            let chat = chats[indexPath.row]
             let cell = tableView.dequeueReusableCell(withIdentifier: "ChatCell") as! ChatCell
+            let chat: Chat
+            if isFiltering {
+                chat = filteredChats[indexPath.row]
+            } else {
+                chat = chats[indexPath.row]
+            }
             cell.setChat(chat: chat)
-            
             cell.selectionColor = purple
             
             return cell
@@ -67,28 +76,14 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension ChatViewController: UISearchBarDelegate {
 
-    func searchBarSetup() {
-        let searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 100, height: 70))
-        searchBar.showsScopeBar = true
-        searchBar.scopeButtonTitles = ["Name", "Year", "By"]
-        
-        searchBar.delegate = self
-        
-        chatsTableView.tableHeaderView = searchBar
-    }
-    
-    // MARK: - search bar delegate
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        filter(index: searchBar.selectedScopeButtonIndex, text: searchText)
+        filter(searchText, category: searchBar.selectedScopeButtonIndex)
     }
     
-    func filter(index: Int, text: String) {
-        print("Filtering index: \(index)")
-        
-        chats = chats.filter({ (chat: Chat) -> Bool in
-            return chat.name.contains(text)
+    func filter(_ searchText: String, category: Int = 0) {
+        filteredChats = chats.filter({ (chat: Chat) -> Bool in
+            return chat.name.lowercased().contains(searchText.lowercased())
         })
         chatsTableView.reloadData()
     }
-    
 }
