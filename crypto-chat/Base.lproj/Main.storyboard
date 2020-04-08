@@ -794,7 +794,7 @@
                                 <rect key="frame" x="319" y="206" width="715" height="356"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpc-jx-KZY">
-                                        <rect key="frame" x="459" y="134.5" width="356" height="87.5"/>
+                                        <rect key="frame" x="459" y="133" width="356" height="90"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="356" id="1bT-gK-nnw"/>
                                         </constraints>

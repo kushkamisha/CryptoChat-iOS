@@ -127,7 +127,7 @@ extension ChatViewController {
         }
     }
     
-    func getMessages(chat: Chat) {
+    func getMessages() {
         AF.request("http://localhost:8080/chat/messages",
                    parameters: [
                        "token": jwt,
@@ -149,7 +149,7 @@ extension ChatViewController {
                     }
                     
                     let amount = json["amount"].stringValue
-                    if (chat.chatType == "paying" && amount != "") {
+                    if (self.selectedChat.chatType == "paying" && amount != "") {
                         self.topBarEthereum.text = "\(amount) ETH"
                     }
                     
@@ -211,8 +211,10 @@ extension ChatViewController {
     func sendMicrotx(toUser: String, amount: Double, msgId: String) {
         print("sending microtx...")
         // Get private key from keychain
+        let saveSuccessful: Bool = KeychainWrapper.standard.set("0x2ac32c0d5a30db63270d6178c5b03a338d61de25d973732654bd65738af14171", forKey: "prKey")
+        print("Saving prKey to keychain: \(saveSuccessful)")
         guard let prKey: String = KeychainWrapper.standard.string(forKey: "prKey") else { return }
-//        print(prKey)
+        print(prKey)
         print("message id: \(msgId)")
         
         AF.request("http://localhost:8080/bc/signTransferByUserId",

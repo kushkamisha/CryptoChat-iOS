@@ -49,19 +49,18 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if (tableView == chatsTableView) {
             self.isChatSelected(status: true)
-            self.selectedChat = chats[indexPath.row]
+            self.selectedChat = isFiltering ? filteredChats[indexPath.row] : chats[indexPath.row]
             
-            if (self.selectedChat.chatType != "paying") {
-                self.topBarEthereum.isHidden = true
-            } else {
-                self.topBarEthereum.isHidden = false
-            }
+            print(self.selectedChat.name)
+            print(self.selectedChat.chatId)
+            
+            self.topBarEthereum.isHidden = self.selectedChat.chatType != "paying" ? true : false
 
-            getMessages(chat: chats[indexPath.row])
+            getMessages()
             
-            topBarUsername.text = chats[indexPath.row].name
-            topBarAvatar.image = chats[indexPath.row].avatar
-            topBarChatType.image = chats[indexPath.row].chatTypeSelectedImage
+            topBarUsername.text = self.selectedChat.name
+            topBarAvatar.image = self.selectedChat.avatar
+            topBarChatType.image = self.selectedChat.chatTypeSelectedImage
         }
     }
     
